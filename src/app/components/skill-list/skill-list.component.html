@@ -1,9 +1,7 @@
-<button (click)="createNewSkill()">click</button>
+
 <div class="skills--grid">
     <app-skill-card
         [skill]="skill"
         *ngFor="let skill of skillList"
-        (deleteSkill)="deleteSkill($event)"
-        (showSkill)="onShowDetail($event)"
     ></app-skill-card>
 </div>

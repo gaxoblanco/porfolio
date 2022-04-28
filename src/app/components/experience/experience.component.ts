@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExperienceService } from 'src/app/services/experience.service';
 import {Experience} from '../../models/experienceObj';
 
 @Component({
@@ -8,33 +9,16 @@ import {Experience} from '../../models/experienceObj';
 })
 export class ExperienceComponent implements OnInit {
 
-  experiences: Experience[] = [
-    {
-      id: '1',
-      title: 'HTML',
-      description: 'texto',
-      image: 'sad',
-      url: 'asd',
-    },
-    {
-      id: '2',
-      title: 'CSS',
-      description: 'diseno web',
-      image: 'sad',
-      url: 'asd',
-    },
-    {
-      id: '3',
-      title: 'angular',
-      description: 'dise;o web',
-      image: 'sad',
-      url: 'asd',
-    }
-  ];
+  exp: any = [];
 
-  constructor() { }
+  constructor(private experienceServ: ExperienceService) { }
 
   ngOnInit(): void {
+    this.experienceServ.getAllSkills()
+    .subscribe(data =>{
+      console.log(data);
+      this.exp = data;
+    });
   }
 
 }

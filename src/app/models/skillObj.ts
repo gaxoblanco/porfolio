@@ -1,9 +1,9 @@
 export interface Skill{
     id: string,
-    title: string,
-    description: string,
-    image: string,
+    nombre: string,
+    descripcion: string,
     url: string,
+    logo: string,
 }
 
 export interface CreateSkillDTO extends Omit<Skill, 'id'>{}

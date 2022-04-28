@@ -50,6 +50,7 @@
   height: 100px;
   background: #000;
   border-radius: 0 20px 0 20px ;
+  margin-bottom: 40px;
 }
 .triangle {
   margin-left: 250px;
@@ -62,11 +63,9 @@
   position: absolute;
 }
 .triangle:before {
-    margin-left: -10px;
   transform: rotate(45deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
 }
 .triangle:after {
-    margin-top:-8px;
   transform: rotate(315deg) skewY(-45deg) scale(.707,1.414) translate(50%);
 }
 .delete{

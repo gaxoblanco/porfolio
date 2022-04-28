@@ -10,8 +10,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsersService {
-  url:string="http://localhost:8080/";
- // private Url = `${environment.API_URL}/api/users`;
+  private url = `${environment.API_URL}`;
 
   constructor(
     private http: HttpClient

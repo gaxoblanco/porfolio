@@ -1,7 +1,10 @@
 export interface Experience{
-    id: string,
-    title: string,
-    description: string,
-    image: string,
-    url: string,
+    id: String,
+    trabajo: String,
+    puesto: String,
+    description: String,
+    inicio: String,
+    final: String,
+    logo: String,
+    url: String,
 }

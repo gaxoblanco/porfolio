@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Skill} from '../../models/skillObj';
+import {SkillService} from '../../services/skill.service';
 
 @Component({
   selector: 'app-skill-card',
@@ -8,18 +9,21 @@ import {Skill} from '../../models/skillObj';
 })
 export class SkillCardComponent implements OnInit {
 
+
+
+
   @Input() skill: Skill={
-    id:'',
-    title:'',
-    description:'',
-    image: '',
+    id: '',
+    nombre: '',
+    descripcion: '',
     url: '',
+    logo: '',
   };
 
   @Output() deleteSkill = new EventEmitter<Skill>();
   @Output() showSkill = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private skillService: SkillService) { }
 
   ngOnInit(): void {
   }
@@ -28,5 +32,9 @@ export class SkillCardComponent implements OnInit {
   }
   onShowDetail(){
     this.showSkill.emit(this.skill.id)
+  }
+
+  traertodos(){
+
   }
 }

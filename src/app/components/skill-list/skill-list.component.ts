@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ArrayService} from '../../services/array.service';
-
-import {Skill, CreateSkillDTO} from '../../models/skillObj';
+import { Skill } from 'src/app/models/skillObj';
+import {SkillService} from '../../services/skill.service';
 
 @Component({
   selector: 'app-skill-list',
@@ -9,36 +8,23 @@ import {Skill, CreateSkillDTO} from '../../models/skillObj';
   styleUrls: ['./skill-list.component.scss']
 })
 export class SkillListComponent implements OnInit {
-  skillList: any;
+
+  skillList: Skill[] = [];
+
   constructor(
-    private arrayService: ArrayService) { }
+    private skillService: SkillService,
+    ) { }
+
 
   ngOnInit(): void {
-    this.arrayService.getAllSkills()
+    this.skillService.getAllSkills()
     .subscribe(data =>{
+      console.log(data);
       this.skillList = data;
     });
   }
 
-  deleteSkill(skill: Skill){
-    console.log(skill);
-  }
-  onShowDetail(id: string){
-    this.arrayService.getSkill(id)
-    .subscribe(data =>{
-      console.log('skill', data)
-    })
-  }
-  createNewSkill(){
-    const skill: CreateSkillDTO = {
-      title:'Sumando',
-      description:'prueba A ',
-      image: '',
-      url: 'http',
-    }
-    this.arrayService.create(skill)
-    .subscribe(data =>{
-      console.log('create', data)
-    })
+  getAllSkill(){
+    this.skillService.getAllSkills();
   }
 }

@@ -10,9 +10,12 @@ export class ExperienceCardComponent implements OnInit {
 
   @Input() experience: Experience={
     id:'',
-    title:'',
+    trabajo:'',
+    puesto: '',
     description:'',
-    image: '',
+    inicio: '',
+    final: '',
+    logo: '',
     url: '',
   };
 
@@ -21,12 +24,6 @@ export class ExperienceCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-  onAddExperienceList(){
-    this.addedExperience.emit(this.experience);
-  }
-  delete(){
-    
   }
 
 }
