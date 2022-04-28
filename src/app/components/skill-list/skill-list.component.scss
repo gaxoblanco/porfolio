@@ -1,0 +1,9 @@
+.skills--grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+app-skill-card{
+    margin-top: 24px;
+}

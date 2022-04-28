@@ -1,0 +1,36 @@
+
+<div class="contact-container">
+  <div class="triangle-contact"></div>
+  <div class="i-am-container">
+    <div class="i-am-container--text"></div>
+    <div class="i-am-container--text-angle"></div>
+    <div class="i-am--text">
+      <h3>Nombre</h3>
+      <p>Ciudad</p>
+      <p>telefono</p>
+      <p>email@contacto.com</p>
+    </div>
+  </div>
+  
+  <div class="form-container">
+    <form class="form" (ngSubmit)="onRegister()" #myForm="ngForm">
+      <div class="input-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" required id="name" [(ngModel)]="contact.name" > 
+        <p>Mensaje de error</p>
+      </div>
+      <div class="input-group">
+        <label for="email">email</label>
+        <input type="text" name="email" required id="email" [(ngModel)]="contact.email" > 
+        <p>Mensaje de error</p>
+      </div>
+      <div class="input-group">
+        <label for="message">message</label>
+        <input class="messege-box" type="text" name="message" required id="message" [(ngModel)]="contact.message" > 
+        <p>Mensaje de error</p>
+      </div>
+      <button [disabled]="myForm.invalid" type="submit">Registrar</button>
+    </form>
+  </div>
+</div>
+  

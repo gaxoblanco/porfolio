@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    background: #919897;
+    display:grid;
+    place-items: center;
+}
+
+app-menu{
+    margin-top: 20px;
+}
