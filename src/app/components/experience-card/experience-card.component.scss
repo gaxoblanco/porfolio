@@ -1,10 +1,12 @@
 //card
 .card-experience{
     width: 100%;
-    margin-top: 84px;
+    margin-top: 30px;
+
 }
 .card-angle-rigth{
     position: relative;
+    padding-top: 20px;
   }
   .card-angle-rigth div{
     position: absolute;
@@ -18,10 +20,10 @@
 
   .card-conte--text{
     background: #446063;
-    width: 200px;
+    width: 208px;
     height: 68px;
     margin-top:10px;
-    margin-left: 6px;
+    margin-left: 8px;
     border-radius: 12px 12px 0 12px;
   }
   .card-conte--text-angle {
@@ -30,7 +32,7 @@
     background:#446063;
     border-radius: 12px 12px 18px 0;
     transform: rotate(0deg) skewX(30deg) scale(1,.866);
-    margin-left: 164px;
+    margin-left: 170px;
     margin-top: -6px;
   }
  h2{
@@ -38,35 +40,15 @@
  }
  p{
      margin: 0 0 4px 10px;
+     font-size: 1.6rem;
  }
 
-//triangle
-.triangle,
-.triangle:before,
-.triangle:after {
-  position: relative;
-  display:block;
-  width:  100px;
-  height: 100px;
-  background: #000;
-  border-radius: 0 20px 0 20px ;
-  margin-bottom: 40px;
-}
-.triangle {
-  margin-left: 250px;
-  margin-top: 30px;
-  transform: rotate(-60deg) skewX(-30deg) scale(.95,.826);
-}
-.triangle:before,
-.triangle:after {
-  content: '';
-  position: absolute;
-}
-.triangle:before {
-  transform: rotate(45deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
-}
-.triangle:after {
-  transform: rotate(315deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+.logo{
+  width:180px;
+  margin-left: 220px;
+  margin-top: -30px;
+  margin-bottom: 10px;
+  position:relative;
 }
 .delete{
   position: absolute;

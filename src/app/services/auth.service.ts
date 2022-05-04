@@ -9,17 +9,17 @@ import {Auth} from './../models/auth.model';
 })
 export class AuthService {
 
-  private Url = `${environment.API_URL}/api/auth`;
+  private Url = `${environment.API_URL}`;
 
   constructor(
     private http: HttpClient
   ) { }
 
   login(email: string, password: string){
-    return this.http.post<Auth>(`${this.Url}/login`, {email, password})
+    return this.http.post<Auth>(this.Url + "login", {email, password})
   }
 
   profile(){
-    return this.http.get(`${this.Url}/profile`)
+    return this.http.get(`${this.Url}profile`)
   }
 }

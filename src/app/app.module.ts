@@ -18,6 +18,8 @@ import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesi
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { InterceptorService } from './services/interceptor.service';
+import { EstudioCardComponent } from './components/estudio-card/estudio-card.component';
+import { EstudioComponent } from './components/estudio/estudio.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { InterceptorService } from './services/interceptor.service';
     MenuComponent,
     LoginComponent,
     IniciarSesionComponent,
-    HomeComponent
+    HomeComponent,
+    EstudioCardComponent,
+    EstudioComponent
   ],
   imports: [
     BrowserModule,

@@ -4,12 +4,16 @@ import { IniciarSesionComponent} from './components/iniciar-sesion/iniciar-sesio
 import {HomeComponent} from './components/home/home.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { SkillListComponent } from './components/skill-list/skill-list.component';
+import { EstudioComponent } from './components/estudio/estudio.component';
+import { IAmComponent } from './components/i-am/i-am.component';
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
-  {path:'iniciar-sesion',component:IniciarSesionComponent},
+  {path:'login',component:IniciarSesionComponent},
   {path: 'experience', component:ExperienceComponent},
   {path: 'skill', component:SkillListComponent},
+  {path: 'study', component:EstudioComponent},
+  {path: 'about', component: IAmComponent},
 ];
 
 @NgModule({

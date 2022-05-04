@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { About } from 'src/app/models/about';
 
 
 @Component({
@@ -8,6 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IAmComponent implements OnInit {
 
+  @Input() about: About = {
+    id: '',
+    titulo: '',
+    descripcion: '',
+    foto: '',
+  }
   constructor() { }
 
   ngOnInit(): void {

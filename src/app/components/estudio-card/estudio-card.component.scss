@@ -1,0 +1,59 @@
+//card
+.card-experience{
+  width: 100%;
+  margin-top: 30px;
+
+}
+.card-angle-rigth{
+  position: relative;
+  padding-top: 20px;
+  margin-right: 20px;
+}
+.card-angle-rigth div{
+  position: absolute;
+}
+.rectangle{
+  background: #CCD1D7;
+  width: 300px;
+  height: 110px;
+  border-radius: 12px;
+  margin-left: 100px;
+}
+
+.card-conte--text{
+  background: #fcfcfc;
+  width: 208px;
+  height: 68px;
+  margin-top:10px;
+  margin-left: 82px;
+  border-radius: 12px 12px 12px 0;
+}
+.card-conte--text-angle {
+  width:  70px;
+  height: 79px;
+  background:#446063;
+  border-radius: 18px 0px 12px 12px;
+  transform: rotate(0deg) skewX(-30deg) scale(1,.866);
+  margin-left: -28px;
+  margin-top: -30px;
+}
+h2{
+   margin: 6px 0 0 10px;
+}
+p{
+   margin: 0 0 4px 10px;
+   font-size: 1.6rem;
+}
+
+.logo{
+width:180px;
+margin-right: 250px;
+margin-top: -30px;
+margin-bottom: 10px;
+position:relative;
+}
+.delete{
+position: absolute;
+margin-left: 350px;
+margin-top: -20px;
+}

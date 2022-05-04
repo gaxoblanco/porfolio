@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Skill } from '../models/skillObj';
 
 
@@ -8,7 +9,8 @@ import { Skill } from '../models/skillObj';
 })
 export class SkillService {
 
-  url: string = "localhost:8080/";
+  url: string = `${environment.API_URL}`;
+  //  url: string = "http://localhost:8080/";
 
   constructor(private http: HttpClient) { }
 

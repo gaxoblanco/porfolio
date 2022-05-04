@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
     .subscribe(rta =>{
       console.log(rta.access_token);
     })
+    console.log("login");
   }
 
 }

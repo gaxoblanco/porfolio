@@ -7,9 +7,7 @@
             <p> {{skill.descripcion}} </p>
         </div>
     </div>
-    <div class="triangle">
-    <img src="">
-    </div>
+    <img class="logo" [src]="skill.logo">
     <button *ngIf() type="button" (click)="onShowDetail()" class="consultaId">consultar id</button>
     <button type="button" (click)="onDelete()" class="delete">X</button>
 </div>

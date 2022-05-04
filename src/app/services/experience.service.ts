@@ -13,7 +13,7 @@ export class ExperienceService {
 
   constructor(private http: HttpClient) { }
 
-  getAllSkills():Observable<Experience[]>{
-    return this.http.get<any>("http://fakestoreapi.com/products");
+  getAllExperiences():Observable<Experience[]>{
+    return this.http.get<Experience[]>(this.url + "ver/experiencia");
   }
 }
