@@ -3,8 +3,8 @@ export interface Experience{
     trabajo: String,
     puesto: String,
     description: String,
-    inicio: String,
-    final: String,
+    ini: String,
+    fin: String,
     logo: String,
     url: String,
 }

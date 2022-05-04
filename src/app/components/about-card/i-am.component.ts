@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { About } from 'src/app/models/about';
+import { AboutService } from 'src/app/services/about.service';
 
 
 @Component({
@@ -14,8 +15,9 @@ export class IAmComponent implements OnInit {
     titulo: '',
     descripcion: '',
     foto: '',
-  }
-  constructor() { }
+  };
+
+  constructor(private aboutServ: AboutService) { }
 
   ngOnInit(): void {
   }

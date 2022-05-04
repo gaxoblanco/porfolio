@@ -11,7 +11,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
 import { SkillListComponent } from './components/skill-list/skill-list.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { IAmComponent } from './components/i-am/i-am.component';
+import { IAmComponent } from './components/about-card/i-am.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LoginComponent } from './components/login/login.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
@@ -20,6 +20,7 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { InterceptorService } from './services/interceptor.service';
 import { EstudioCardComponent } from './components/estudio-card/estudio-card.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EstudioComponent } from './components/estudio/estudio.component';
     IniciarSesionComponent,
     HomeComponent,
     EstudioCardComponent,
-    EstudioComponent
+    EstudioComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -33,14 +33,14 @@ export class MenuComponent implements OnInit {
       link: '<app-study></app-study>',
     },
     {
-      title: 'I-am',
+      title: 'About',
       link: '<app-i-am></app-i-am>',
     },
     {
       title: 'Contact',
       link: '<app-contact></app-contact>',
     },
-    
+
   ]
 
   constructor() { }

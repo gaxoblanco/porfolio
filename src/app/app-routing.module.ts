@@ -5,7 +5,8 @@ import {HomeComponent} from './components/home/home.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { SkillListComponent } from './components/skill-list/skill-list.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
-import { IAmComponent } from './components/i-am/i-am.component';
+import { IAmComponent } from './components/about-card/i-am.component';
+import { ContactComponent } from './components/contact/contact.component';
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'skill', component:SkillListComponent},
   {path: 'study', component:EstudioComponent},
   {path: 'about', component: IAmComponent},
+  {path: 'contact', component: ContactComponent},
 ];
 
 @NgModule({

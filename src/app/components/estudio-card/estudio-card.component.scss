@@ -15,17 +15,17 @@
 .rectangle{
   background: #CCD1D7;
   width: 300px;
-  height: 110px;
+  height: 116px;
   border-radius: 12px;
   margin-left: 100px;
 }
 
 .card-conte--text{
-  background: #fcfcfc;
-  width: 208px;
+  background: #446063;
+  width: 212px;
   height: 68px;
   margin-top:10px;
-  margin-left: 82px;
+  margin-left: 78px;
   border-radius: 12px 12px 12px 0;
 }
 .card-conte--text-angle {
@@ -34,8 +34,8 @@
   background:#446063;
   border-radius: 18px 0px 12px 12px;
   transform: rotate(0deg) skewX(-30deg) scale(1,.866);
-  margin-left: -28px;
-  margin-top: -30px;
+  margin-left: 54px;
+  margin-top: 4.5px;
 }
 h2{
    margin: 6px 0 0 10px;
@@ -52,6 +52,70 @@ margin-top: -30px;
 margin-bottom: 10px;
 position:relative;
 }
+//botton card
+.rectangle-rigth{
+  background: #FBA31B;
+  width: 35px;
+  height: 26px;
+  position: absolute;
+  margin-left:60px;
+  margin-top:84px;
+  border-radius: 6px 6px 6px 0;
+  padding-top: 10px;
+
+}
+.angle-rigth {
+  width:  20px;
+  height: 32px;
+  background: #FBA31B;
+  border-radius: 4px 4px 0 8px ;
+  position: absolute;
+  transform: rotate(0deg) skewX(-30deg) scale(1,.866);
+  margin-top: 81px;
+  margin-left:50px;
+}
+.rectangle-rigth p{
+  margin-left: -14px;
+  color: white;
+}
+.estudio-date{
+  margin-left: 116px;
+  margin-top: 88px;
+}
+
+.card-conte--button-date-buttom p{
+  font-size: 1.4rem;
+  margin-top: -4px;
+  text-align: center;
+  font-weight: normal;
+
+}
+
+.rectangle-left{
+  background: #FBA31B;
+  width: 30px;
+  height: 26px;
+  position: absolute;
+  margin-top:84px;
+  margin-left:220px;
+  border-radius: 6px 6px 0 6px;
+  padding-top: 10px;
+}
+.angle-left {
+  width:  20px;
+  height: 32px;
+  background: #FBA31B;
+  border-radius: 4px 8px 4px 0 ;
+  position: absolute;
+  transform: rotate(0deg) skewX(30deg) scale(1,.866);
+  margin-top: 81px;
+  margin-left:242px;
+}
+.rectangle-left p{
+  margin-left: 6px;
+  color: white;
+}
+
 .delete{
 position: absolute;
 margin-left: 350px;

@@ -1,97 +1,113 @@
-.contact-container{
-    margin: 10px 36px;
-    border-radius: 20px;
-    position: relative;
-    background: #CCD1D7;
+//card
+*{
+  font-size:1.6rem;
 }
-//triangle
-.triangle-contact,
-.triangle-contact:before,
-.triangle-contact:after {
-  position: relative;
-  display:block;
-  width:  100px;
-  height: 100px;
-  background: #000;
-  border-radius: 0 20px 0 20px ;
+a{
+  color: black;
+  text-decoration: none;
 }
-.triangle-contact {
-  margin-top: 40px;
-  transform: rotate(-60deg) skewX(-30deg) scale(.95,.826);
+.about-container{
+  width: 100%;
 }
-.triangle-contact:before,
-.triangle-contact:after {
-  content: '';
+.about-container--information{
+  margin-top: 55px;
+  margin-left: 20px;
+  background: #CCD1D7;
+  width: 310px;
+  height: 450px;
+  border-radius: 12px;
+  display:grid;
+  justify-content: center;
+}
+
+.about-input-container{
+  background: #446063;
+  width: 216px;
+  height: 84px;
+  border-radius: 12px 12px 12px 0;
+  margin-left: 70px;
+  margin-top: 6px;
+}
+.about-input-container-angle {
+  width:  70px;
+  height: 97px;
+  background:#446063;
+  border-radius: 18px 0px 12px 12px;
+  transform: rotate(0deg) skewX(-30deg) scale(1,.866);
+  margin-left: 36px;
   position: absolute;
 }
-.triangle-contact:before {
-  transform: rotate(45deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+h2{
+   margin: 6px 0 0 10px;
 }
-.triangle-contact:after {
-  transform: rotate(315deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+p{
+   margin: 0 0 4px 10px;
+   font-size: 1.6rem;
 }
 
-//container i-am
-.i-am-container--text{
-    background: #446063;
-    width: auto;
-    height: 106px;
-    margin-left: 148px;
-    margin-right: 18px;
-    margin-top: -80px;
-    border-radius: 0 12px 12px 0;
- 
-  }
-  .i-am-container--text-angle {
-    width:  70px;
-    height: 122px;
-    background:#446063;
-    border-radius: 12px 0 0 18px;
-    transform: rotate(0deg) skewX(-30deg) scale(1,.866);
-    margin-left: 108px;
-    margin-top: -114px;
-  }
-  .i-am--text{
-      position: absolute;
-      margin-top: -110px;
-      margin-left:120px;
-  }
-  .i-am--text h3{
-      margin:4px;
-      padding-left: 32px;
-  }
-  .i-am--text p{
-      margin: 2px;
-  }
-  .i-am--text p:nth-child(2){
-    margin-left: 20px;
-  }
-  .i-am--text p:nth-child(3){
-    margin-left: 12px;
-  }
+.logo{
+  //background-color: purple;
+  width:130px;
+  height:130px;
+  position: absolute;
+  margin-left: -50px;
+  margin-top: -50px;
+}
 
-  .form-container{
-      margin-top: 20px;
-      display: grid;
-      place-items: center;
-  }
+.about-input--container{
+  position: absolute;
+  //falta definir que sea columna
+}
+.about-input--container h2{
+  margin-left: 110px;
+}
 
-  .form-container .input-group{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-  }
-  input{
-      border: none;
-      border-radius: 6px;
-      padding: 6px;
-      width: 200px;
-  }
+.label-name{
+  margin: 12px 6px 0 60px;
+}
+.label-email{
+  margin: 6px 6px 0 48px;
+}
+.about-input--container input{
+  border-radius: 6px;
+  width: 180px;
+  padding-left: 0.6rem;
+}
+.comentari-input input{
+  width: 280px;
+  height:300px;
+  border-radius: 6px;
+  padding-left: 0.6rem;
+}
+.contact-networks svg{
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0.6rem;
+}
+.contact-networks a{
+  margin-left: 0.2rem;
+  margin-right: 1.8rem;
 
-.messege-box{
-    border-radius: 20px;
-    width: auto;
-    min-width: 200px;
-    max-width: 400px;
-    min-height: 140px; 
+}
+
+.rectangle-left{
+  background: #FBA31B;
+  width: 46px;
+  height: 26px;
+  position: absolute;
+  margin-top:-22px;
+  margin-left:218px;
+  border-radius: 6px 6px 0 6px;
+  padding-top: 4px;
+}
+.angle-left {
+  width:  20px;
+  height: 32px;
+  background: #FBA31B;
+  border-radius: 4px 8px 8px 0 ;
+  position: absolute;
+  transform: rotate(0deg) skewX(30deg) scale(1,.866);
+  margin-top: -25px;
+  margin-left:256px;
 }
 

@@ -13,8 +13,8 @@ export class ExperienceCardComponent implements OnInit {
     trabajo:'',
     puesto: '',
     description:'',
-    inicio: '',
-    final: '',
+    ini: '',
+    fin: '',
     logo: '',
     url: '',
   };

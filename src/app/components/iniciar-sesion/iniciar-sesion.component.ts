@@ -18,7 +18,7 @@ export class IniciarSesionComponent implements OnInit {
         id: [''],
         email:['',[Validators.required,Validators.email]],
         password:['',[Validators.required,Validators.minLength(8)]],
-        nombre: "Jhon",
+        //nombre: "Jhon",
        // apellido: "customer",
        // foto: "url"
       }
