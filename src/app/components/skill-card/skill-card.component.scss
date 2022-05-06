@@ -39,12 +39,11 @@
   position:relative;
 }
 .delete{
+  color: red;
   position: absolute;
-  margin-top: -12px;
-  margin-left: 350px;
+  margin-top: -20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
 }
-.consultaId{
-  background: red;
-  width: 100px;
-  height: 100px;
-}
+

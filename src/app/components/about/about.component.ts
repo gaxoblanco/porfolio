@@ -16,8 +16,9 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.aboutServ.getAllAbouts()
     .subscribe(data =>{
+      console.log(data);
       this.aboutList = data;
-    });
+    })
   }
 
 }

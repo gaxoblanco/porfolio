@@ -18,7 +18,7 @@ export class SkillService {
     return this.http.get<Skill[]>(this.url + "ver/skill");
   }
 
-  getSkill(){
-    return this.http.get<Skill>(this.url + "");
+  deleteSkill(){
+    return this.http.delete<boolean>(this.url + "delete/skill/"); //+ `${id}`
   }
 }

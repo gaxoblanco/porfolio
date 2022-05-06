@@ -21,6 +21,7 @@ import { InterceptorService } from './services/interceptor.service';
 import { EstudioCardComponent } from './components/estudio-card/estudio-card.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { AboutComponent } from './components/about/about.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AboutComponent } from './components/about/about.component';
     HomeComponent,
     EstudioCardComponent,
     EstudioComponent,
-    AboutComponent
+    AboutComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

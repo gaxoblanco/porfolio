@@ -22,23 +22,23 @@ export class MenuComponent implements OnInit {
     },
     {
       title: 'Experiences',
-      link: '<app-experiences></app-experiences>',
+      link: '/experience',
     },
     {
       title: 'Skill',
-      link: '<app-skill></app-skill>',
+      link: '/skill',
     },
     {
       title: 'Studies',
-      link: '<app-study></app-study>',
+      link: '/study',
     },
     {
       title: 'About',
-      link: '<app-i-am></app-i-am>',
+      link: '/about',
     },
     {
       title: 'Contact',
-      link: '<app-contact></app-contact>',
+      link: '/contact',
     },
 
   ]

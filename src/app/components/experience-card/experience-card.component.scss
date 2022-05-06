@@ -116,10 +116,11 @@
 }
 
 
-
-
 .delete{
+  color: red;
   position: absolute;
-  margin-left: 350px;
-  margin-top: -20px;
+  margin-top: -3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
 }

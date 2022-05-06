@@ -24,7 +24,5 @@ export class SkillListComponent implements OnInit {
     });
   }
 
-  getAllSkill(){
-    this.skillService.getAllSkills();
-  }
+
 }
