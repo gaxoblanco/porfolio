@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 })
 export class IniciarSesionComponent implements OnInit {
   form:FormGroup;
+
   constructor(private formBuilder: FormBuilder,
               private autenticacionService: AutenticacionService,
               private ruta:Router) {

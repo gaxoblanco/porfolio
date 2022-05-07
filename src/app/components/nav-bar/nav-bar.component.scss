@@ -1,4 +1,4 @@
-
+nav{background: #141E1D;}
 .nav-container{
     display: grid;
     justify-content: center;
@@ -134,7 +134,9 @@ a div{
   place-items: center;
   transform: translateY(120%);
   transition: all ease-out .5s;
+  display: none;
   &.active{
     transform: translateY(0);
+    display: grid;
   }
 }

@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Skill } from '../models/skillObj';
+import { CreateSkillDTO, Skill } from '../models/skillObj';
 
 
 @Injectable({
@@ -20,5 +21,9 @@ export class SkillService {
 
   deleteSkill(){
     return this.http.delete<boolean>(this.url + "delete/skill/"); //+ `${id}`
+  }
+
+  addNewSkill(skillDto: CreateSkillDTO):Observable<Skill>{
+    return this.http.post<Skill>(this.url + "new/skill", skillDto) //falta configurar el header
   }
 }

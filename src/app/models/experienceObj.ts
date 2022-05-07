@@ -8,3 +8,4 @@ export interface Experience{
     logo: String,
     url: String,
 }
+export interface CreateExpDTO extends Omit<Experience, 'id'>{}

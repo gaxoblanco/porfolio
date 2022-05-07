@@ -17,11 +17,14 @@ import { LoginComponent } from './components/login/login.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule} from '@angular/forms';
-import { InterceptorService } from './services/interceptor.service';
+//import { InterceptorService } from './services/interceptor.service';
 import { EstudioCardComponent } from './components/estudio-card/estudio-card.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { AboutComponent } from './components/about/about.component';
 import { PostComponent } from './components/post/post.component';
+import { SkillPostComponent } from './components/postOptions/skill-post/skill-post.component';
+import { ExperiencePostComponent } from './components/postOptions/experience-post/experience-post.component';
+import { EstudyComponent } from './components/postOptions/estudy/estudy.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { PostComponent } from './components/post/post.component';
     EstudioCardComponent,
     EstudioComponent,
     AboutComponent,
-    PostComponent
+    PostComponent,
+    SkillPostComponent,
+    ExperiencePostComponent,
+    EstudyComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,7 @@ import { PostComponent } from './components/post/post.component';
     ReactiveFormsModule,
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
+ //   {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]
 })

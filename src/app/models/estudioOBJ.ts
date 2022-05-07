@@ -7,3 +7,4 @@ export interface Estudio{
   url: String,
   logo: String
 }
+export interface CreateStudyDTO extends Omit<Estudio, 'id'>{}

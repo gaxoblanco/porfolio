@@ -2,7 +2,7 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-    font-size: 62.5%;
+  font-size: 62.5%;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -12,6 +12,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  background: #141E1D;
 }
 ol, ul {
 	list-style: none;

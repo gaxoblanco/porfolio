@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+/*
   createUser(){
     this.usersService.create({
       name: 'Gaston',
@@ -43,5 +43,5 @@ export class LoginComponent implements OnInit {
     })
     console.log("login");
   }
-
+*/
 }
