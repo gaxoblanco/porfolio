@@ -24,7 +24,8 @@ import { AboutComponent } from './components/about/about.component';
 import { PostComponent } from './components/post/post.component';
 import { SkillPostComponent } from './components/postOptions/skill-post/skill-post.component';
 import { ExperiencePostComponent } from './components/postOptions/experience-post/experience-post.component';
-import { EstudyComponent } from './components/postOptions/estudy/estudy.component';
+import { EstudyPostComponent } from './components/postOptions/estudy-post/estudy-post.component';
+import { AboutPostComponent } from './components/postOptions/about-post/about-post.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { EstudyComponent } from './components/postOptions/estudy/estudy.componen
     PostComponent,
     SkillPostComponent,
     ExperiencePostComponent,
-    EstudyComponent
+    EstudyPostComponent,
+    AboutPostComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,7 @@ import { EstudyComponent } from './components/postOptions/estudy/estudy.componen
     ReactiveFormsModule,
   ],
   providers: [
- //   {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
+  //  {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]
 })

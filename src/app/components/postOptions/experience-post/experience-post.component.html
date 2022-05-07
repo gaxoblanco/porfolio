@@ -1,0 +1,55 @@
+<div class="post-exp">
+  <form [formGroup]="ExpDTO">
+    <div class="form-container">
+    <label for="" class="">Trabajo</label>
+    <input type="text"
+      id="name"
+      placeholder="Your full name"
+      formControlName="trabajo"
+    >
+
+    <label for="" class="">puesto</label>
+    <input type="text"
+      id="descripcion"
+      placeholder="Your full name"
+      formControlName="puesto"
+    >
+
+    <label for="" class="">descripcion</label>
+    <input type="text"
+      id="descripcion"
+      placeholder="Your full name"
+      formControlName="descripcion"
+    >
+
+    <label for="" class="">inicio</label>
+    <input type="date"
+      id="descripcion"
+      placeholder="Your full name"
+      formControlName="ini"
+    >
+
+    <label for="" class="">final</label>
+    <input type="date"
+      id="descripcion"
+      placeholder="Your full name"
+      formControlName="fin"
+    >
+
+    <label for="" class="">url</label>
+    <input type="text"
+      id="url"
+      placeholder="Your full name"
+      formControlName="url"
+    >
+
+    <label for="" class="">logo</label>
+    <input type="text"
+      id="logo"
+      placeholder="Your full name"
+      formControlName="logo"
+    >
+    </div>
+    <button class="button-exp--add" (click)="saveNew()" >Post</button>
+  </form>
+</div>

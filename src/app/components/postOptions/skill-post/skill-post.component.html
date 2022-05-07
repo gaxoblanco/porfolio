@@ -1,0 +1,34 @@
+<div class="post-skill">
+  <form [formGroup]="SkillDTO">
+    <div class="form-container">
+    <label for="" class="">nombre</label>
+    <input type="text"
+      id="name"
+      placeholder="Your full name"
+      formControlName="nombre"
+    >
+
+    <label for="" class="">descripcion</label>
+    <input type="text"
+      id="descripcion"
+      placeholder="Your full name"
+      formControlName="descripcion"
+    >
+
+    <label for="" class="">url</label>
+    <input type="text"
+      id="url"
+      placeholder="Your full name"
+      formControlName="url"
+    >
+
+    <label for="" class="">logo</label>
+    <input type="text"
+      id="logo"
+      placeholder="Your full name"
+      formControlName="logo"
+    >
+    </div>
+    <button class="button-skill--add" (click)="saveNew()" >Post</button>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+*{
+  font-size: 1.6rem;
+  color: white;
+}
+
+.post-container{
+  background: #CCD1D7;
+  border-radius: 1.2rem;
+  width: 30rem;
+  display: grid;
+  place-items: center;
+  padding-bottom: 1rem;
+}
+
+ul li{
+  display:none;
+}
+.hover--options li:hover>ul{
+  display: block;
+}
+
+.post-container--data{
+}
