@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { ExperienceService } from 'src/app/services/experience.service';
 import { Experience} from '../../models/experienceObj';
 
 @Component({
@@ -19,11 +21,18 @@ export class ExperienceCardComponent implements OnInit {
     url: '',
   };
 
-  @Output() addedExperience = new EventEmitter<Experience>();
-
-  constructor() { }
+  constructor(
+    private expServ: ExperienceService,
+    private ruta:Router
+    ) { }
 
   ngOnInit(): void {
+  }
+
+  deleteExp():void{
+    this.expServ.deletExperience(this.experience.id)
+    .subscribe();
+    this.ruta.navigate(['/experience']);
   }
 
 }

@@ -27,6 +27,9 @@ export class EstudyPostComponent implements OnInit {
 
   saveNewEs(){
     let saveStudy: CreateStudyDTO = this.StudyDTO.value;
-    this.studyServ.addNewEstudy(saveStudy)
+    this.studyServ.addNewStudy(saveStudy)
+    .subscribe(() => {
+      console.log("post")
+    })
   }
 }

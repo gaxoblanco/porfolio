@@ -10,14 +10,37 @@
   display: grid;
   place-items: center;
   padding-bottom: 1rem;
+  margin-top: 10rem;
+  text-align: center;
+}
+ul {
+  padding-left: 0;
+}
+ul li{
+ display: inline-block;
+ margin:1rem 0.6rem;
+}
+li button{
+  padding: 0.4rem 0.6rem;
+  background: #FBA31B;
+  border-radius: 0.4rem;
 }
 
-ul li{
-  display:none;
-}
+
+
+
+
+
 .hover--options li:hover>ul{
   display: block;
 }
 
-.post-container--data{
+.change{
+  display: grid;
+  place-items: center;
+  display: none;
+  &.active{
+    transform: translateY(0);
+    display: grid;
+  }
 }

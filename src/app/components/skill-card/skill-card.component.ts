@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import {Skill} from '../../models/skillObj';
 import {SkillService} from '../../services/skill.service';
 
@@ -20,21 +21,18 @@ export class SkillCardComponent implements OnInit {
     logo: '',
   };
 
-  @Output() deleteSkill = new EventEmitter<Skill>();
-  @Output() showSkill = new EventEmitter<string>();
-
-  constructor(private skillService: SkillService) { }
+  constructor(
+    private skillServ: SkillService,
+    private ruta:Router
+    ) { }
 
   ngOnInit(): void {
   }
-  onDelete(){
-    this.deleteSkill.emit(this.skill)
-  }
-  onShowDetail(){
-    this.showSkill.emit(this.skill.id)
-  }
-
-  traertodos(){
-
+  deletSki():void{
+    this.skillServ.deletSkill(this.skill.id)
+    .subscribe(()=>{
+      console.log("delete")
+      this.ruta.navigate(['/skill']);
+    });
   }
 }

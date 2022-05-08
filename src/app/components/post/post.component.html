@@ -1,24 +1,32 @@
 <div class="post-container">
   <div>
-    <a href="" class="hover--options">que vamos a sumar</a>
     <ul>
       <li>
-        <a href="">Estudy</a>
+        <button (click)="activeEstudy()">Estudy</button>
       </li>
       <li>
-        <a>Experience</a>
+        <button (click)="activeExperience()">Experience</button>
       </li>
       <li>
-        <a>Skill</a>
+        <button (click)="activeSkill()">Skill</button>
       </li>
       <li>
-        <a>About</a>
+        <button (click)="activeAbout()">About</button>
       </li>
     </ul>
   </div>
   <div class="post-container--data">
-    <div>
+    <div class="change" [class.active]="active.activeEst">
+      <app-estudy-post></app-estudy-post>
+    </div>
+    <div class="change" [class.active]="active.activeExp">
+      <app-experience-post></app-experience-post>
+    </div>
+    <div class="change" [class.active]="active.activeSki">
       <app-skill-post></app-skill-post>
+    </div>
+    <div class="change" [class.active]="active.activeAbo">
+      <app-about-post></app-about-post>
     </div>
   </div>
 </div>

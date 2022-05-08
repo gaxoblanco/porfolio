@@ -19,4 +19,8 @@ export class AboutService {
   addNewAbout(aboutDto: CreateAboutDTO):Observable<About>{
     return this.http.post<About>(this.url + "new/about", aboutDto)
   }
+
+  deleteAbout(id: any):Observable<{}>{
+    return this.http.delete<{}>(this.url + "delete/about/" + ` ${id}`)
+  }
 }

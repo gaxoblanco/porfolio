@@ -1,4 +1,4 @@
-//card
+  //card
 *{
   font-size:1.6rem;
 }
@@ -6,10 +6,10 @@ a{
   color: white;
   text-decoration: none;
 }
-.about-container{
+.contact-container{
   width: 100%;
 }
-.about-container--information{
+.contact-container--information{
   margin-top: 5.6rem;
   margin-left: 2rem;
   background: #CCD1D7;
@@ -27,7 +27,7 @@ a{
   margin-left: -50px;
   margin-top: -50px;
 }
-.about-input-container{
+.contact-input-container{
   background: #446063;
   width: 21rem;
   height: 8.4rem;
@@ -35,7 +35,7 @@ a{
   margin-left: 7rem;
   margin-top: 0.6rem;
 }
-.about-input-container-angle {
+.contact-input-container-angle {
   width:  7rem;
   height: 9.7rem;
   background:#446063;
@@ -44,16 +44,14 @@ a{
   margin-left: 3.6rem;
   position: absolute;
 }
-.about-input--container{
+.contact-input--container{
   position: absolute;
   display: grid;
   place-items: center;
-}
-.about-input--container form{
   width: 30rem;
 }
-.about-input--container h2{
-   margin: 0.6rem 0 0 1rem;
+.contact-input--container h2{
+   margin: 0.6rem 0 0 2rem;
 }
 .label-name{
   margin: 12px 6px 0 60px;
@@ -61,7 +59,7 @@ a{
 .label-email{
   margin: 6px 6px 0 48px;
 }
-.about-input--container input{
+.contact-input--container input{
   border-radius: 0.6rem;
   width: 18rem;
   padding-left: 0.6rem;
@@ -70,7 +68,7 @@ a{
   width: 28rem;
   height:30rem;
   margin-top: 2rem;
-  margin-left: -3.4rem;
+  margin-left: 1rem;
   border-radius: 0.6rem;
   padding-left: 0.6rem;
 }
@@ -78,7 +76,7 @@ a{
 .button{
   height: 3.2rem;
   margin-top: 1rem;
-  margin-left: 13rem;
+  margin-left: 18rem;
   border-radius: 0.6rem 0.6rem 0 0.6rem;
 
 }

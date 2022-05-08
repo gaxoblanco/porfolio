@@ -1,4 +1,4 @@
-<div (ngSubmit)="onDelete()" class="card-skill">
+<div class="card-skill">
     <div Class="card-angle-rigth">
         <div Class="rectangle"></div>
         <div Class="angle-rigth"></div>
@@ -7,6 +7,6 @@
             <p> {{skill.descripcion}} </p>
         </div>
     </div>
-    <button type="button" (click)="onDelete()" class="delete">X</button>
+    <a (click)="deletSki()" class="delete">X</a>
     <img class="logo" [src]="skill.logo">
 </div>

@@ -25,6 +25,9 @@ export class AboutPostComponent implements OnInit {
 
   saveNewAbout(){
     let saveAbout: CreateAboutDTO = this.aboutDTO.value;
-    this.aboutServ.addNewAbout(saveAbout).subscribe
+    this.aboutServ.addNewAbout(saveAbout)
+    .subscribe(() => {
+      console.log("post")
+    })
   }
 }

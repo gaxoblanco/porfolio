@@ -17,7 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule} from '@angular/forms';
-//import { InterceptorService } from './services/interceptor.service';
+import { InterceptorService } from './services/interceptor.service';
 import { EstudioCardComponent } from './components/estudio-card/estudio-card.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { AboutComponent } from './components/about/about.component';
@@ -58,7 +58,7 @@ import { AboutPostComponent } from './components/postOptions/about-post/about-po
     ReactiveFormsModule,
   ],
   providers: [
-  //  {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]
 })

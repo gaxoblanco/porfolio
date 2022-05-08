@@ -18,6 +18,9 @@ export class ExperienceService {
   }
 
   addNewExp(expDTO: CreateExpDTO): Observable<Experience>{
-    return this.http.post<Experience>(this.url + "new/experience", expDTO)
+    return this.http.post<Experience>(this.url + "new/experiencia", expDTO)
+  }
+  deletExperience(id: any):Observable<{}>{
+    return this.http.delete<{}>(this.url + "delete/experiencia/" +` ${id}`)
   }
 }

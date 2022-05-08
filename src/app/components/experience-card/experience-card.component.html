@@ -14,8 +14,8 @@
             </div>
           </a>
           <div class="experiecne-date">
-            <p> {{experience.ini}}4/04/2022 </p>
-            <p> {{experience.fin}}4/05/2024</p>
+            <p> {{experience.ini}} </p>
+            <p> {{experience.fin}}</p>
           </div>
           <a href="" class="buttonR">
             <div Class="angle-rigth"></div>
@@ -24,6 +24,6 @@
         </div>
       </div>
     </div>
-    <a href="" class="delete">X</a>
+    <a (click)="deleteExp()" class="delete">X</a>
     <img class="logo" [src]="experience.logo">
 </div>

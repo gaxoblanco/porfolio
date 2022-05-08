@@ -19,12 +19,11 @@ export class SkillService {
     return this.http.get<Skill[]>(this.url + "ver/skill");
   }
 
-  deleteSkill(){
-    return this.http.delete<boolean>(this.url + "delete/skill/"); //+ `${id}`
-  }
-
   addNewSkill(saveSkill: CreateSkillDTO):Observable<Skill>{
     console.log(saveSkill);
     return this.http.post<Skill>(this.url + "new/skill", saveSkill) //falta configurar el header
+  }
+  deletSkill(id: any):Observable<{}>{
+    return this.http.delete<{}>(this.url + "delete/skill/" + `${id}`);
   }
 }

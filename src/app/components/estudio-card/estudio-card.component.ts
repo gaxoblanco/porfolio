@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Estudio } from 'src/app/models/estudioOBJ';
+import { EstudioService } from 'src/app/services/estudio.service';
 
 @Component({
   selector: 'app-estudio-card',
@@ -18,9 +20,20 @@ export class EstudioCardComponent implements OnInit {
     logo: '',
   };
 
-  constructor() { }
+  constructor(
+    private studyServ : EstudioService,
+    private ruta:Router
+    ) { }
 
   ngOnInit(): void {
+  }
+
+  deletEst():void{
+    this.studyServ.deletEstudy(this.estudio.id)
+    .subscribe(() => {
+      console.log("delete")
+    })
+    this.ruta.navigate(['/study']);
   }
 
 }

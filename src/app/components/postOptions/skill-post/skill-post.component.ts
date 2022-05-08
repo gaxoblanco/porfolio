@@ -30,6 +30,8 @@ export class SkillPostComponent implements OnInit {
     console.log("holaaa");
     let saveSkill: CreateSkillDTO = this.SkillDTO.value;
     this.skillservice.addNewSkill(saveSkill)
-    .subscribe
+    .subscribe(() => {
+      console.log("post")
+    })
   }
 }

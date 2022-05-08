@@ -16,7 +16,10 @@ export class EstudioService {
   getAllEstudios():Observable<Estudio[]>{
     return this.http.get<Estudio[]>(this.url + "ver/estudio");
   }
-  addNewEstudy(studyDto: CreateStudyDTO): Observable<Estudio>{
-    return this.http.post<Estudio>(this.url + "new/estudio", studyDto)
+  addNewStudy(studyDto: CreateStudyDTO): Observable<Estudio>{
+    return this.http.post<Estudio>(this.url + "new/estudio", studyDto);
+  }
+  deletEstudy(id: any):Observable<{}>{
+    return this.http.delete<{}>(this.url + "delete/estudio/" +`${id}`)
   }
 }

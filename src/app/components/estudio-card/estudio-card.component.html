@@ -14,8 +14,8 @@
           </div>
         </a>
         <div class="estudio-date">
-          <p> {{estudio.ini}}4/04/2022 </p>
-          <p> {{estudio.fin}}4/05/2024</p>
+          <p> {{estudio.ini}}</p>
+          <p> {{estudio.fin}}</p>
         </div>
         <a href="" class="buttonR">
           <div Class="angle-rigth"></div>
@@ -24,6 +24,6 @@
       </div>
     </div>
   </div>
-  <a href="" class="delete">X</a>
+  <a (click)="deletEst()" class="delete">X</a>
   <img class="logo" [src]="estudio.logo">
 </div>

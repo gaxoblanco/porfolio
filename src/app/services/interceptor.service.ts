@@ -10,7 +10,15 @@ export class InterceptorService implements HttpInterceptor{
 
   constructor(private autenticacionService:AutenticacionService) { }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    throw new Error('Method not implemented.');
+
+    var currentUser = this.autenticacionService.UsuarioAutenticado;
+    if (currentUser && currentUser.UsuarioAutenticado) {
+      req = req.clone({
+        // Headers:{
+        //   Authorization: `Bearer ${token}`
+        // }
+      })
+    }
 
     return next.handle(req)
   }

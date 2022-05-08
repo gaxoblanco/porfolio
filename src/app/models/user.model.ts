@@ -6,3 +6,5 @@ export interface User{
   }
 
   export interface CreateUserDTO extends Omit<User, 'id'>{}
+
+  export interface LoginObj extends Omit<CreateUserDTO, 'name'>{}
