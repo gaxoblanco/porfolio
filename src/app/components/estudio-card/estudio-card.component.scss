@@ -14,43 +14,45 @@
 }
 .rectangle{
   background: #CCD1D7;
-  width: 300px;
-  height: 116px;
+  width: 29rem;
+  height: 11.6rem;
   border-radius: 12px;
-  margin-left: 100px;
+  margin-left: 6.4rem;
 }
 
 .card-conte--text{
   background: #446063;
-  width: 212px;
-  height: 68px;
-  margin-top:10px;
-  margin-left: 78px;
+  width: 19rem;
+  height: 7rem;
+  margin-top:0.8rem;
+  margin-left: 9rem;
   border-radius: 12px 12px 12px 0;
 }
 .card-conte--text-angle {
-  width:  70px;
-  height: 79px;
+  width:  7rem;
+  height: 8.2rem;
   background:#446063;
   border-radius: 18px 0px 12px 12px;
   transform: rotate(0deg) skewX(-30deg) scale(1,.866);
-  margin-left: 54px;
-  margin-top: 4.5px;
+  margin-left: 6.6rem;
+  margin-top: 0.2rem;
 }
 h2{
-   margin: 6px 0 0 10px;
+  margin: 0.6rem 0 0 1rem;
+  font-size: 2rem;
 }
 p{
-   margin: 0 0 4px 10px;
-   font-size: 1.6rem;
+  margin: 0 0 0.4rem 1rem;
+  font-size: 1.6rem;
 }
 
 .logo{
-width:180px;
-margin-right: 250px;
-margin-top: -30px;
-margin-bottom: 10px;
-position:relative;
+  max-width:180px;
+  margin-left: -30px;
+  margin-right: 250px;
+  margin-top: -2.2rem;
+  margin-bottom: 10px;
+  position:relative;
 }
 //botton card
 .rectangle-rigth{

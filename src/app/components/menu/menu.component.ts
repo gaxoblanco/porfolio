@@ -25,12 +25,12 @@ export class MenuComponent implements OnInit {
       link: '/experience',
     },
     {
-      title: 'Skill',
-      link: '/skill',
-    },
-    {
       title: 'Studies',
       link: '/study',
+    },
+    {
+      title: 'Skill',
+      link: '/skill',
     },
     {
       title: 'About',

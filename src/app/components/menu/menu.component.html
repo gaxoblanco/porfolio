@@ -1,18 +1,18 @@
 <div class="menu-container">
 
-    <div
+    <a [routerLink]="page.link"
         calss="card"
         *ngFor="let page of pages">
         <div Class="card-angle-rigth">
             <div Class="rectangle"></div>
             <div Class="angle-rigth"></div>
             <div >
-                <a [routerLink]="page.link"> {{page.title}} </a>
+                <p> {{page.title}} </p>
             </div>
         </div>
         <div class="triangle">
         <img src="">
         </div>
-    </div>
+      </a>
 
-</div>
+  </div>

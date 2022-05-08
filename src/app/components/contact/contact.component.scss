@@ -3,30 +3,37 @@
   font-size:1.6rem;
 }
 a{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .about-container{
   width: 100%;
 }
 .about-container--information{
-  margin-top: 55px;
-  margin-left: 20px;
+  margin-top: 5.6rem;
+  margin-left: 2rem;
   background: #CCD1D7;
-  width: 310px;
-  height: 450px;
-  border-radius: 12px;
+  width: 31rem;
+  height: 46rem;
+  border-radius: 1.2rem;
   display:grid;
   justify-content: center;
 }
-
+.logo{
+  //background-color: purple;
+  width:13rem;
+  height:13rem;
+  position: absolute;
+  margin-left: -50px;
+  margin-top: -50px;
+}
 .about-input-container{
   background: #446063;
   width: 21rem;
   height: 8.4rem;
   border-radius: 12px 12px 12px 0;
-  margin-left: 70px;
-  margin-top: 6px;
+  margin-left: 7rem;
+  margin-top: 0.6rem;
 }
 .about-input-container-angle {
   width:  7rem;
@@ -34,37 +41,20 @@ a{
   background:#446063;
   border-radius: 18px 0px 12px 12px;
   transform: rotate(0deg) skewX(-30deg) scale(1,.866);
-  margin-left: 36px;
+  margin-left: 3.6rem;
   position: absolute;
+}
+.about-input--container{
+  position: absolute;
+  display: grid;
+  place-items: center;
 }
 .about-input--container form{
   width: 30rem;
 }
-h2{
-   margin: 6px 0 0 10px;
-}
-p{
-   margin: 0 0 4px 10px;
-   font-size: 1.6rem;
-}
-
-.logo{
-  //background-color: purple;
-  width:130px;
-  height:130px;
-  position: absolute;
-  margin-left: -50px;
-  margin-top: -50px;
-}
-
-.about-input--container{
-  position: absolute;
-  //falta definir que sea columna
-}
 .about-input--container h2{
-  margin-left: 110px;
+   margin: 0.6rem 0 0 1rem;
 }
-
 .label-name{
   margin: 12px 6px 0 60px;
 }
@@ -72,20 +62,59 @@ p{
   margin: 6px 6px 0 48px;
 }
 .about-input--container input{
-  border-radius: 6px;
-  width: 180px;
+  border-radius: 0.6rem;
+  width: 18rem;
   padding-left: 0.6rem;
 }
 .comentari-input input{
-  width: 280px;
-  height:300px;
-  border-radius: 6px;
+  width: 28rem;
+  height:30rem;
+  margin-top: 2rem;
+  margin-left: -3.4rem;
+  border-radius: 0.6rem;
   padding-left: 0.6rem;
+}
+
+.button{
+  height: 3.2rem;
+  margin-top: 1rem;
+  margin-left: 13rem;
+  border-radius: 0.6rem 0.6rem 0 0.6rem;
+
+}
+button{
+  background: #FBA31B;
+  border-radius: 0.6rem 0.6rem 0 0.6rem;
+  padding-left: 0.4rem;
+  padding-top: 0.4rem;
+  padding-right: 1rem;
+}
+.button-angle-left {
+  width:  2.4rem;
+  height: 3.9rem;
+  background: #FBA31B;
+  position: absolute;
+  border-radius: 0.4rem 0.8rem 0.8rem 0 ;
+  transform: rotate(0deg) skewX(30deg) scale(1,.866);
+  margin-top: -0.2rem;
+  margin-left:5.8rem;
+}
+p{
+  font-size: 2rem;
+  color: white;
+}
+
+.contact-networks {
+  width: 12rem;
+  height: 3.2rem;
+  padding: 0.4em;
+  margin-top: 30.8rem;
+  border-radius: 0.6rem;
+  background: #446063;
 }
 .contact-networks svg{
   height: 2rem;
   width: 2rem;
-  margin-top: 0.6rem;
 }
 .contact-networks a{
   margin-left: 0.2rem;
@@ -93,24 +122,4 @@ p{
 
 }
 
-.rectangle-left{
-  background: #FBA31B;
-  width: 46px;
-  height: 26px;
-  position: absolute;
-  margin-top:-22px;
-  margin-left:218px;
-  border-radius: 6px 6px 0 6px;
-  padding-top: 4px;
-}
-.angle-left {
-  width:  20px;
-  height: 32px;
-  background: #FBA31B;
-  border-radius: 4px 8px 8px 0 ;
-  position: absolute;
-  transform: rotate(0deg) skewX(30deg) scale(1,.866);
-  margin-top: -25px;
-  margin-left:256px;
-}
 

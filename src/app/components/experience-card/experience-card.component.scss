@@ -13,31 +13,32 @@
   }
   .rectangle{
     background: #CCD1D7;
-    width: 300px;
-    height: 116px;
+    width: 29rem;
+    height: 11.6rem;
     border-radius: 12px;
     display: grid;
   }
 
   .card-conte--text{
     background: #446063;
-    width: 208px;
-    height: 68px;
-    margin-top:10px;
+    width: 19rem;
+    height: 7rem;
+    margin-top:0.6rem;
     margin-left: 8px;
     border-radius: 12px 12px 0 12px;
   }
   .card-conte--text-angle {
-    width:  70px;
-    height: 79px;
+    width:  7rem;
+    height: 8.2rem;
     background:#446063;
     border-radius: 12px 12px 18px 0;
     transform: rotate(0deg) skewX(30deg) scale(1,.866);
-    margin-left: 170px;
+    margin-left: 145px;
     margin-top: -6px;
   }
  h2{
-     margin: 6px 0 0 10px;
+     margin: 0.6rem 0 0 1rem;
+     font-size: 2rem;
  }
  p{
      margin: 0 0 4px 10px;
@@ -46,7 +47,7 @@
 
 .logo{
   width:180px;
-  margin-left: 220px;
+  margin-left: 200px;
   margin-top: -30px;
   margin-bottom: 10px;
   position:relative;
