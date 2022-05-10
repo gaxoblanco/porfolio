@@ -1,0 +1,77 @@
+.triagle--container{
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+//triangle
+.triangle,
+.triangle:before,
+.triangle:after {
+  position: relative;
+  display:block;
+  width:  28rem;
+  height: 28rem;
+  background: #FBA31B;
+  border-radius: 0 2.6rem 0 2.6rem ;
+}
+.triangle {
+  transform: rotate(-60deg) skewX(-30deg) scale(.58,.5);
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+.triangle:before,
+.triangle:after {
+  content: '';
+  position: absolute;
+}
+.triangle:before {
+  transform: rotate(45deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+  transform: rotate(315deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+
+//triangle nav img
+.triangle-nav-img,
+.triangle-nav-img:before,
+.triangle-nav-img:after {
+  display:block;
+  width:  29.8rem;
+  height: 29.8rem;
+  background-color: #e2e2e0;
+  background-image: linear-gradient(225deg, #141e1d 0%, #e2e2e0 33%, #e2e2e0 77%, #141e1d 100%);
+  border-radius: 0 2rem 0 5.6rem ;
+}
+
+
+
+.triangle-nav-img {
+  transform: rotate(-60deg) skewX(-30deg) scale(.46,.4);
+  margin-top: -29.8rem;
+}
+.triangle-nav-img:before,
+.triangle-nav-img:after {
+  content: '';
+  position: absolute;
+}
+.triangle-nav-img:before {
+  transform: rotate(45deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+  border-radius:0 5.6rem 0 23rem;
+}
+.triangle-nav-img:after {
+  transform: rotate(315deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+  border-radius:0 5.6rem 0 23rem;
+}
+img{
+  width: 25.8rem;
+  margin-top: 6.6rem;
+  position: absolute;
+}
+
+h1{
+  font-size: 1.8rem;
+  position: absolute;
+  margin-top: 2.4rem;
+  color: black;
+}

@@ -6,10 +6,18 @@
   right: 6rem;
   margin-top:-6rem;
 }
+svg{
+  color: #FBA31B;
+  position: absolute;
+  height: 2.8rem;
+  width: 2.8rem;
+  right: 4.8rem;
+  margin-top: 46rem;
+}
 .about-container{
     margin-top: 90px;
     background: #E2E2E0;
-    width: 80vw;
+    width: 84vw;
     max-width: 500px;
     border-radius: 20px;
     font-size: 1.6rem;
@@ -37,6 +45,9 @@
     position: absolute;
     border-radius: 6px 6px 0 6px;
     margin-top: 10px;
+    text-align: center;
+    padding-top: -10rem;
+    font-size: 6rem;
 }
 .angle-left {
     width:  40px;
@@ -89,4 +100,23 @@
   font-size: 1.6rem;
   text-align: center;
   padding: 1rem;
+}
+
+.eddition-container{
+  display: grid;
+  place-items: center;
+}
+.change{
+  border: 0.4rem solid #FBA31B;
+  background: #B3B3B3;
+  border-radius: 2rem;
+  padding: 1rem;
+  position: absolute;
+  margin-top: 40rem;
+  display: none;
+  &.active{
+    transform: translateY(0);
+    display: grid;
+  }
+
 }

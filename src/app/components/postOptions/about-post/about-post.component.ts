@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CreateAboutDTO } from 'src/app/models/about';
+import { About, CreateAboutDTO } from 'src/app/models/about';
 import { AboutService } from 'src/app/services/about.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AboutService } from 'src/app/services/about.service';
 })
 export class AboutPostComponent implements OnInit {
 
-  aboutDTO: FormGroup;
+  @Input() aboutDTO: FormGroup;
 
   constructor(private aboutServ: AboutService) {
     this.aboutDTO = new FormGroup({
@@ -24,10 +24,10 @@ export class AboutPostComponent implements OnInit {
   }
 
   saveNewAbout(){
-    let saveAbout: CreateAboutDTO = this.aboutDTO.value;
+    let saveAbout: About = this.aboutDTO.value;
     this.aboutServ.addNewAbout(saveAbout)
     .subscribe(() => {
-      console.log("post")
+      console.log("post" + this.aboutDTO)
     })
   }
 }

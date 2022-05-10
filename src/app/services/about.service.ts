@@ -17,10 +17,14 @@ export class AboutService {
   }
 
   addNewAbout(aboutDto: CreateAboutDTO):Observable<About>{
-    return this.http.post<About>(this.url + "new/about", aboutDto)
+    return this.http.post<About>(this.url + "new/about", aboutDto);
   }
 
   deleteAbout(id: any):Observable<{}>{
-    return this.http.delete<{}>(this.url + "delete/about/" + ` ${id}`)
+    return this.http.delete<{}>(this.url + "delete/about/" + ` ${id}`);
+  }
+
+  getAboutById(id: string):Observable<About>{
+    return this.http.get<About>(this.url + "ver/about" + ` ${id}`);
   }
 }

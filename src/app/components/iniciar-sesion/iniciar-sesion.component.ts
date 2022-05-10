@@ -36,7 +36,6 @@ export class IniciarSesionComponent implements OnInit {
   onEnviar(event:Event){
 
     let conectar: LoginObj = this.form.value;
-
     event.preventDefault;
     this.autenticacionService.IniciarSesion(conectar).subscribe(data=>{
       console.log("DATA: " + JSON.stringify(data));

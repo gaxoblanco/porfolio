@@ -17,7 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule} from '@angular/forms';
-import { InterceptorService } from './services/interceptor.service';
+//import { InterceptorService } from './services/interceptor.service';
 import { EstudioCardComponent } from './components/estudio-card/estudio-card.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { AboutComponent } from './components/about/about.component';
@@ -26,6 +26,8 @@ import { SkillPostComponent } from './components/postOptions/skill-post/skill-po
 import { ExperiencePostComponent } from './components/postOptions/experience-post/experience-post.component';
 import { EstudyPostComponent } from './components/postOptions/estudy-post/estudy-post.component';
 import { AboutPostComponent } from './components/postOptions/about-post/about-post.component';
+import { AboutUpDataComponent } from './components/upData/about-up-data/about-up-data.component';
+import { SkillUpDataComponent } from './components/upData/skill-up-data/skill-up-data.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { AboutPostComponent } from './components/postOptions/about-post/about-po
     SkillPostComponent,
     ExperiencePostComponent,
     EstudyPostComponent,
-    AboutPostComponent
+    AboutPostComponent,
+    AboutUpDataComponent,
+    SkillUpDataComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,9 +60,10 @@ import { AboutPostComponent } from './components/postOptions/about-post/about-po
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
+ //   {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]
 })

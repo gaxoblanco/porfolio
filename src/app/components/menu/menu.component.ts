@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   pages: Page[] =[
     {
       title: 'Home',
-      link: '<app-home></app-home>',
+      link: '/',
     },
     {
       title: 'Experiences',
