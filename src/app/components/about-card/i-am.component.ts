@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { About } from 'src/app/models/about';
+import { About, UpAbout } from 'src/app/models/about';
 import { AboutService } from 'src/app/services/about.service';
 
 
@@ -34,17 +34,22 @@ export class IAmComponent implements OnInit {
   deleteAbo():void{
     this.aboutServ.deleteAbout(this.about.id)
     .subscribe(() =>{
-      console.log("delete")
     })
     this.ruta.navigate(['/about']);
   }
-  editAbout():void{
-    this.aboutServ.addNewAbout(this.about)
-
-    .subscribe(() => {
-      console.log("post")
-     console.log(this.about.id)
-    })
+  editAbout(DatoaSubir: UpAbout):void{
+    DatoaSubir.id = this.about.id;
+    if(DatoaSubir.foto == ''){
+      DatoaSubir.foto = this.about.foto
+    }
+    if(DatoaSubir.titulo == ''){
+      DatoaSubir.titulo = this.about.titulo
+    }
+    if(DatoaSubir.descripcion == ''){
+      DatoaSubir.descripcion = this.about.descripcion
+    }
+    this.aboutServ.addNewAbout(DatoaSubir)
+    .subscribe()
   }
 
 }

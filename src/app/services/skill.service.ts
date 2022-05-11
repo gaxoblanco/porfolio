@@ -20,7 +20,6 @@ export class SkillService {
   }
 
   addNewSkill(saveSkill: CreateSkillDTO):Observable<Skill>{
-    console.log(saveSkill);
     return this.http.post<Skill>(this.url + "new/skill", saveSkill) //falta configurar el header
   }
   deletSkill(id: any):Observable<{}>{

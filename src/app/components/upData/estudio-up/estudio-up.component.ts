@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CreateStudyDTO } from 'src/app/models/estudioOBJ';
-import { EstudioService } from 'src/app/services/estudio.service';
+import { EstudioCardComponent } from '../../estudio-card/estudio-card.component';
 
 @Component({
-  selector: 'app-estudy-post',
-  templateUrl: './estudy-post.component.html',
-  styleUrls: ['./estudy-post.component.scss']
+  selector: 'app-estudio-up',
+  templateUrl: './estudio-up.component.html',
+  styleUrls: ['./estudio-up.component.scss']
 })
-export class EstudyPostComponent implements OnInit {
+export class EstudioUpComponent implements OnInit {
 
   StudyDTO : FormGroup;
 
-  constructor( private studyServ: EstudioService) {
+  constructor( private studyCard: EstudioCardComponent) {
     this.StudyDTO = new FormGroup({
       Estudio: new FormControl(''),
       descripcion: new FormControl(''),
@@ -23,12 +23,11 @@ export class EstudyPostComponent implements OnInit {
     })
    }
 
-  ngOnInit(): void {}
-
-  saveNewEs(){
-    let saveStudy: CreateStudyDTO = this.StudyDTO.value;
-    this.studyServ.addNewStudy(saveStudy)
-    .subscribe(() => {
-    })
+  ngOnInit(): void {
   }
+  upStudy():void{
+    let saveStudy: CreateStudyDTO = this.StudyDTO.value;
+    this.studyCard.editEstudy(saveStudy)
+  }
+
 }

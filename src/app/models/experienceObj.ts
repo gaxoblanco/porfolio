@@ -9,3 +9,6 @@ export interface Experience{
     url: String,
 }
 export interface CreateExpDTO extends Omit<Experience, 'id'>{}
+export interface upExpDTO extends CreateExpDTO{
+  id?: String,
+}

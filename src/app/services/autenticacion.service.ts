@@ -21,7 +21,7 @@ export class AutenticacionService {
     return this.http.post(this.url + "login", credenciales).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       this.currentUserSubject.next(data);
-      console.log("IniciarSesion-point2")
+      console.log(data)
       return data;
     }))
   }

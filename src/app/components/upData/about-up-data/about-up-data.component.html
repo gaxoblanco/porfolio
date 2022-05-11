@@ -1,0 +1,28 @@
+
+<div class="post-about">
+  <form [formGroup]="aboutDTO">
+    <div class="form-container">
+    <label for="" class="">nombre</label>
+    <input type="text"
+      id="name"
+      placeholder="Your full name"
+      formControlName="titulo"
+    >
+
+    <label for="" class="">descripcion</label>
+    <input type="text"
+      id="descripcion"
+      placeholder="Your full name"
+      formControlName="descripcion"
+    >
+
+    <label for="" class="">logo</label>
+    <input type="text"
+      id="logo"
+      placeholder="Your full name"
+      formControlName="foto"
+    >
+    </div>
+    <button class="button-about--add" (click)="saveAbout()" >Up</button>
+  </form>
+</div>

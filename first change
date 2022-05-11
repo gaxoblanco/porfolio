@@ -1,0 +1,65 @@
+[33mcommit adbc2df342b69c4880f819b0be4eeeb6450223b2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Sun May 8 20:34:02 2022 -0300
+
+    Bueno fue un finde maratonico. y hoy un progreso fenomenal, el post get y delet quedaron funcionando sin problemas. Y en aunque usted no lo crea, el login funciona !! o al menos funciona hoy. Termine por este domingo
+
+[33mcommit ae4cda159f4525c84cf97b8dc1cbf50994bf3080[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Sat May 7 21:05:40 2022 -0300
+
+    bueno, me quede 1 hs mas de lo planeado. re escribi el html de contact ya que el formulario estaba muy mal armado. y tuve que reparar el CSS para el nuevo html. las demas paginas quedaron muy bien
+
+[33mcommit cd1b14c129fe78791412a8cad8600a8425dde162[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Sat May 7 16:03:05 2022 -0300
+
+    a falta de internet durate la manana borre y cree nuevos archivos ya que me olvide del post en los ultimos. y ahora no funciona el post de skill, voy a resolver eso y terminar de maquetar las pantallas
+
+[33mcommit ba7115be2b51e9e0710c27cc87c2c08ef73bcddf[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Fri May 6 22:13:00 2022 -0300
+
+    bueno, se fue el internet y para poder terminar de maquetar me falta info.
+
+[33mcommit 7b5451fd56e6469791a6df303ceb0771e23084a0[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Fri May 6 09:38:42 2022 -0300
+
+    modifique la forma en que llamo a la ruta de experienceService para que no me de error stackblitz
+
+[33mcommit 081212018cb27a15d33c8077a20390daab98987f[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Fri May 6 09:33:59 2022 -0300
+
+    hoy planeo reparar el nav que rompi el otro dia, y hacer la pantalla faltante
+
+[33mcommit b785ab0cb179cc03e70a242601e5cb4636eb9e2f[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Wed May 4 20:30:59 2022 -0300
+
+    Terminado por hoy, en lugar de hacer el back que estoy estancado una vez mas aprobeche el tiempo y termine las pantallas. Solo falta la pantalla para los post
+
+[33mcommit 1cc814f1f698ae4b4b79f0930412db228b2a3c43[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Wed May 4 10:36:12 2022 -0300
+
+    subo lo realizado hasta el momento al git, para poder compartir con la clase del viernes.
+
+[33mcommit a518491f0511845c1c729f9c9bf2d90849d9d49a[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Thu Apr 28 16:01:08 2022 -0300
+
+    tenemos un error al a hora de llamar los datos de la API, Angular todo en orden, pero a la hora de traer en consola tengo error
+
+[33mcommit 7ebc6a23df85abc5d9e07767db413b0fa7d8a3e9[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Thu Apr 28 10:43:33 2022 -0300
+
+    backEnd completo, me voy a enfocar en traer los skill y renderizar
+
+[33mcommit a02db112da67c4eabeeec7ffed6b5ad240498efe[m
+Author: gaxoblanco <94192138+gaxoblanco@users.noreply.github.com>
+Date:   Sun Apr 3 12:13:43 2022 -0300
+
+    initial commit

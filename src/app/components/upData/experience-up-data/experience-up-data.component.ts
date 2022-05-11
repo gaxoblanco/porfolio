@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ExperienceService } from 'src/app/services/experience.service';
 import { CreateExpDTO } from 'src/app/models/experienceObj';
+import { ExperienceCardComponent } from '../../experience-card/experience-card.component';
+
 @Component({
-  selector: 'app-experience-post',
-  templateUrl: './experience-post.component.html',
-  styleUrls: ['./experience-post.component.scss']
+  selector: 'app-experience-up-data',
+  templateUrl: './experience-up-data.component.html',
+  styleUrls: ['./experience-up-data.component.scss']
 })
-export class ExperiencePostComponent implements OnInit {
+export class ExperienceUpDataComponent implements OnInit {
 
   ExpDTO: FormGroup;
 
-  constructor(private expServ: ExperienceService) {
+  constructor(private expCard: ExperienceCardComponent) {
     this.ExpDTO = new FormGroup({
       trabajo: new FormControl(''),
       puesto: new FormControl(''),
@@ -27,9 +28,8 @@ export class ExperiencePostComponent implements OnInit {
   }
 
   saveNew(){
-    let saveExp: CreateExpDTO = this.ExpDTO.value;
-    this.expServ.addNewExp(saveExp)
-    .subscribe()
+    let upExp: CreateExpDTO = this.ExpDTO.value;
+    this.expCard.editExp(upExp)
   }
 
 }

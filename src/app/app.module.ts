@@ -28,6 +28,8 @@ import { EstudyPostComponent } from './components/postOptions/estudy-post/estudy
 import { AboutPostComponent } from './components/postOptions/about-post/about-post.component';
 import { AboutUpDataComponent } from './components/upData/about-up-data/about-up-data.component';
 import { SkillUpDataComponent } from './components/upData/skill-up-data/skill-up-data.component';
+import { EstudioUpComponent } from './components/upData/estudio-up/estudio-up.component';
+import { ExperienceUpDataComponent } from './components/upData/experience-up-data/experience-up-data.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { SkillUpDataComponent } from './components/upData/skill-up-data/skill-up
     AboutPostComponent,
     AboutUpDataComponent,
     SkillUpDataComponent,
+    EstudioUpComponent,
+    ExperienceUpDataComponent,
   ],
   imports: [
     BrowserModule,

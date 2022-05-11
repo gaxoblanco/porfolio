@@ -8,4 +8,6 @@ export interface Skill{
 
 export interface CreateSkillDTO extends Omit<Skill, 'id'>{}
 
-export interface UpdateSkillDTO extends Partial<CreateSkillDTO>{}
+export interface UpdateSkillDTO extends CreateSkillDTO{
+  id?: String;
+}

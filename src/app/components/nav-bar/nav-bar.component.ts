@@ -19,7 +19,7 @@ export class NavBarComponent implements OnInit {
   pages: Page[] =[
 
     {
-      title: 'Contact',
+      title: 'About',
       link: '/about',
     },
 

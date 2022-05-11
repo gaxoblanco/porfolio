@@ -2,7 +2,7 @@
 
     <a [routerLink]="page.link"
         calss="card"
-        *ngFor="let page of pages">
+        *ngFor="let page of pages" (click)="ClickAlert()">
         <div Class="card-angle-rigth">
             <div Class="rectangle"></div>
             <div Class="angle-rigth"></div>

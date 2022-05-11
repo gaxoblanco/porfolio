@@ -6,3 +6,7 @@ export interface About{
 }
 
 export interface CreateAboutDTO extends Omit<About, 'id'>{}
+
+export interface UpAbout extends CreateAboutDTO{
+  id?: String;
+}

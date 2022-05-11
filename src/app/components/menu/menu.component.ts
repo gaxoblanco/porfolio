@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Page} from '../../models/pagesObjs';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-menu',
@@ -42,13 +43,15 @@ export class MenuComponent implements OnInit {
     },
 
   ]
-
-  constructor() { }
+  constructor(private navCom :NavBarComponent) { }
 
   ngOnInit(): void {
   }
   onAddPageList(){
     this.addedPage.emit(this.page);
+  }
+  ClickAlert(){
+    this.navCom.toggleMenu();
   }
 
 }

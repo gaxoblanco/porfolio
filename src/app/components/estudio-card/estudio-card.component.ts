@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Estudio } from 'src/app/models/estudioOBJ';
+import { Estudio, UpdateStudyDTO } from 'src/app/models/estudioOBJ';
 import { EstudioService } from 'src/app/services/estudio.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { EstudioService } from 'src/app/services/estudio.service';
 })
 export class EstudioCardComponent implements OnInit {
 
+  active: boolean = false;
   @Input() estudio: Estudio = {
     id:'',
     Estudio:'',
@@ -27,6 +28,9 @@ export class EstudioCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  activeEstady(){
+    this.active = !this.active;
+  }
 
   deletEst():void{
     this.studyServ.deletEstudy(this.estudio.id)
@@ -36,4 +40,30 @@ export class EstudioCardComponent implements OnInit {
     this.ruta.navigate(['/study']);
   }
 
+  editEstudy(StudyInformation: UpdateStudyDTO):void{
+    StudyInformation.id = this.estudio.id;
+
+    if(StudyInformation.logo == ''){
+      StudyInformation.logo = this.estudio.logo
+    }
+    if(StudyInformation.url == ''){
+      StudyInformation.url = this.estudio.url
+    }
+    if(StudyInformation.Estudio == ''){
+      StudyInformation.Estudio = this.estudio.Estudio
+    }
+    if(StudyInformation.descripcion == ''){
+      StudyInformation.descripcion = this.estudio.descripcion
+    }
+
+    if(StudyInformation.ini == ''){
+      StudyInformation.ini = this.estudio.ini
+    }
+    if(StudyInformation.fin == ''){
+      StudyInformation.fin = this.estudio.fin
+    }
+    this.studyServ.addNewStudy(StudyInformation)
+    .subscribe()
+
+  }
 }

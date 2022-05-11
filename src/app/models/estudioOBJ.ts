@@ -8,3 +8,6 @@ export interface Estudio{
   logo: String
 }
 export interface CreateStudyDTO extends Omit<Estudio, 'id'>{}
+export interface UpdateStudyDTO extends CreateStudyDTO{
+  id?: String,
+}

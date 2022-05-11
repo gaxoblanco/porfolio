@@ -5,24 +5,35 @@
         <div class="contact-input-container-angle"></div>
         <div class="contact-input-container"></div>
       </div>
-    <form class="contact-input--container">
+    <form class="contact-input--container" [formGroup]="emailListo">
       <h2> Ponte en contacto </h2>
       <div>
         <label for="" class="form-label label-name">Name</label>
-        <input type="text" id="name" placeholder="Your full name">
+        <input
+          type="text"
+          id="name"
+          placeholder="Your full name"
+          formControlName="name">
         <label for="" class="form-label label-email">Email</label>
-        <input type="text" id="name"placeholder="Your or Company">
+        <input
+          type="text"
+          id="email"
+          placeholder="Your or Company"
+          formControlName="email">
       </div>
 
       <div class="comentari-input">
         <label for="" class="form-label label-comentari"></label>
-        <textarea id="name" type="text" ></textarea>
+        <textarea
+          id="message"
+          type="text"
+          formControlName="message"></textarea>
       </div>
 
         <a href="">
           <div class="button">
             <div class="button-angle-left"></div>
-            <button class="button-rectangle-left"><p>Enviar</p></button>
+            <button class="button-rectangle-left" (click)="enviarEmail()"><p>Enviar</p></button>
           </div>
         </a>
 
