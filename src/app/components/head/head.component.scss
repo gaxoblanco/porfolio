@@ -1,0 +1,32 @@
+.header{
+  width: 100vw;
+}
+.header-container{
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+.header-container .img-left{
+  justify-items: left;
+}
+.header-container .img-rigth{
+  justify-items: right;
+}
+.header-container .span-container{
+  margin-top: 1rem;
+  text-align: center;
+}
+.span-container h1{
+  font-size: 2.2rem;
+}
+.span-container p{
+  font-size: 1.6rem;
+  padding: 0.4rem;
+  background-color: #141e1dd2;
+  border-radius: 1rem;
+}
+img{
+  height: 12rem;
+}
+.img-rigth{
+  display: grid;
+}

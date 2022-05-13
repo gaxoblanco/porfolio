@@ -26,6 +26,5 @@ export class SkillUpDataComponent implements OnInit {
   upSkill():void{
     let SkillInformation: CreateSkillDTO = this.SkillDTO.value;
     this.SkillCard.editSkill(SkillInformation)
-
   }
 }

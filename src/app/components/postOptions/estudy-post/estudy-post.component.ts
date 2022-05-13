@@ -14,7 +14,7 @@ export class EstudyPostComponent implements OnInit {
 
   constructor( private studyServ: EstudioService) {
     this.StudyDTO = new FormGroup({
-      Estudio: new FormControl(''),
+      estudiado: new FormControl(''),
       descripcion: new FormControl(''),
       ini: new FormControl(''),
       fin: new FormControl(''),

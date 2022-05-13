@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { About, UpAbout } from 'src/app/models/about';
 import { AboutService } from 'src/app/services/about.service';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
+import { AboutComponent } from '../about/about.component';
 
 
 
@@ -12,7 +14,7 @@ import { AboutService } from 'src/app/services/about.service';
 })
 export class IAmComponent implements OnInit {
   active: boolean = false;
-
+  logeado: boolean = false;
   @Input() about: About = {
     id: '',
     titulo: '',
@@ -22,9 +24,14 @@ export class IAmComponent implements OnInit {
 
   constructor(
     private aboutServ: AboutService,
-    private ruta:Router) { }
+    private ruta:Router,
+    private authServ : AutenticacionService,
+    private aboCompo : AboutComponent) { }
 
   ngOnInit(): void {
+    if (this.authServ.UsuarioAutenticado == true){
+      this.logeado = this.authServ.UsuarioAutenticado
+    }
   }
 
   activeEstady(){
@@ -50,6 +57,12 @@ export class IAmComponent implements OnInit {
     }
     this.aboutServ.addNewAbout(DatoaSubir)
     .subscribe()
+  }
+  paginationMenos(){
+    this.aboCompo.RestarPagina();
+  }
+  paginationMas(){
+    this.aboCompo.SumarPagina();
   }
 
 }

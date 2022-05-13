@@ -13,7 +13,6 @@ import { SkillListComponent } from './components/skill-list/skill-list.component
 import { ContactComponent } from './components/contact/contact.component';
 import { IAmComponent } from './components/about-card/i-am.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { LoginComponent } from './components/login/login.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule} from '@angular/forms';
@@ -30,6 +29,9 @@ import { AboutUpDataComponent } from './components/upData/about-up-data/about-up
 import { SkillUpDataComponent } from './components/upData/skill-up-data/skill-up-data.component';
 import { EstudioUpComponent } from './components/upData/estudio-up/estudio-up.component';
 import { ExperienceUpDataComponent } from './components/upData/experience-up-data/experience-up-data.component';
+import { HeadComponent } from './components/head/head.component';
+import { EmailsComponent } from './components/emails/emails.component';
+import { EmailsCardComponent } from './components/emails-card/emails-card.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,6 @@ import { ExperienceUpDataComponent } from './components/upData/experience-up-dat
     ContactComponent,
     IAmComponent,
     MenuComponent,
-    LoginComponent,
     IniciarSesionComponent,
     HomeComponent,
     EstudioCardComponent,
@@ -57,6 +58,9 @@ import { ExperienceUpDataComponent } from './components/upData/experience-up-dat
     SkillUpDataComponent,
     EstudioUpComponent,
     ExperienceUpDataComponent,
+    HeadComponent,
+    EmailsComponent,
+    EmailsCardComponent,
   ],
   imports: [
     BrowserModule,

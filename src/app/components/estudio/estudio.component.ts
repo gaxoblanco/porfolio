@@ -15,7 +15,6 @@ export class EstudioComponent implements OnInit {
   ngOnInit(): void {
     this.estudioServ.getAllEstudios()
     .subscribe(data =>{
-      console.log(data);
       this.est = data;
     })
   }

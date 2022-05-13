@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { ExperienceService } from 'src/app/services/experience.service';
 import { Experience, upExpDTO} from '../../models/experienceObj';
 
@@ -10,30 +11,35 @@ import { Experience, upExpDTO} from '../../models/experienceObj';
 })
 export class ExperienceCardComponent implements OnInit {
   active: boolean = false;
+  logeado: boolean = false;
   @Input() experience: Experience={
     id:'',
     trabajo:'',
     puesto: '',
-    description:'',
-    ini: '',
-    fin: '',
+    descripcion:'',
+    ini: new Date(),
+    fin: new Date(),
     logo: '',
     url: '',
   };
 
   constructor(
     private expServ: ExperienceService,
-    private ruta:Router
+    private ruta:Router,
+    private authServ : AutenticacionService,
     ) { }
 
   ngOnInit(): void {
+    if (this.authServ.UsuarioAutenticado == true){
+      this.logeado = this.authServ.UsuarioAutenticado
+    }
   }
   activeEstady(){
     this.active = !this.active;
   }
-  deleteExp():void{
+  deleteExp(){
     this.expServ.deletExperience(this.experience.id)
-    .subscribe();
+    .subscribe()
     this.ruta.navigate(['/experience']);
   }
 
@@ -49,16 +55,16 @@ export class ExperienceCardComponent implements OnInit {
     if(upexp.puesto == ''){
       upexp.puesto = this.experience.puesto
     }
-    if(upexp.description == ''){
-      upexp.description = this.experience.description
+    if(upexp.descripcion == ''){
+      upexp.descripcion = this.experience.descripcion
     }
     if(upexp.trabajo == ''){
       upexp.trabajo = this.experience.trabajo
     }
-    if(upexp.ini == ''){
+    if(upexp.ini == new Date){
       upexp.ini = this.experience.ini
     }
-    if(upexp.fin == ''){
+    if(upexp.fin == new Date){
       upexp.fin = this.experience.fin
     }
     this.expServ.addNewExp(upexp)

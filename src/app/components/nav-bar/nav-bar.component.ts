@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { Page } from '../../models/pagesObjs';
 
 @Component({
@@ -25,9 +26,10 @@ export class NavBarComponent implements OnInit {
 
   ]
 
-  constructor() { }
+  constructor(private authServ : AutenticacionService) { }
 
   ngOnInit(): void {
+
   }
 
   toggleMenu(){

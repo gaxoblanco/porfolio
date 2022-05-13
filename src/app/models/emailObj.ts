@@ -1,10 +1,8 @@
 export interface Email{
   id?: String,
-  Estudio: String,
-  descripcion: String,
-  ini: String,
-  fin: String,
-  url: String,
-  logo: String
+  nombre: String,
+  email: String,
+  mensaje: String,
+  fecha?: Date,
 }
 export interface CreateEmailDTO extends Omit<Email, 'id'>{}

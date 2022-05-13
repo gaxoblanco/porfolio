@@ -1,0 +1,43 @@
+p{
+  font-size: 1.6rem;
+}
+.emails{
+  display: grid;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.emails-container{
+  width: 28rem;
+  height: 100%;
+  background-color: #CCD1D7;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.emails-container--info{
+  background-color: #446063;
+  border-radius: 1rem;
+  padding: 1rem 0 0.4rem 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.emails-container--msn{
+  width: 100%;
+  background-color: #446063;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.delete-container{
+display: grid;
+grid-template-columns: auto 1fr;
+}
+.delete{
+  margin-top: 1rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 1.2rem;
+  background: #db2323;
+  border-radius: 0.4rem;
+  right: 2rem;
+  grid-column: 3;
+  color: white;
+}

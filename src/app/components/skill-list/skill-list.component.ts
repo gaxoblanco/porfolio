@@ -19,7 +19,6 @@ export class SkillListComponent implements OnInit {
   ngOnInit(): void {
     this.skillService.getAllSkills()
     .subscribe(data =>{
-      console.log(data);
       this.skillList = data;
     });
   }

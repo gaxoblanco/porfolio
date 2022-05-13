@@ -4,6 +4,9 @@
   margin-top: 30px;
 
 }
+h2{
+  font-size:2rem;
+}
 .card-angle-rigth{
   position: relative;
   padding-top: 2rem;
@@ -23,8 +26,8 @@
 .card-conte--text{
   background: #446063;
   width: 19rem;
-  height: 7rem;
-  margin-top:0.8rem;
+  height: 7.2rem;
+  margin-top:0.7rem;
   margin-left: 9rem;
   border-radius: 12px 12px 12px 0;
 }
@@ -37,12 +40,12 @@
   margin-left: 6.6rem;
   margin-top: 0.2rem;
 }
-h2{
-  margin: 0.6rem 0 0 1rem;
+.card-conte--text h2{
+  margin: 0.4rem 0 0 0.6rem;
   font-size: 2rem;
 }
-p{
-  margin: 0 0 0.4rem 1rem;
+.card-conte--text p{
+  margin: 0 0 0.4rem -0.4rem;
   font-size: 1.6rem;
 }
 
@@ -81,8 +84,8 @@ p{
   color: white;
 }
 .estudio-date{
-  margin-left: 116px;
-  margin-top: 88px;
+  margin-left: 14rem;
+  margin-top: 8.4rem;
 }
 
 .card-conte--button-date-buttom p{
@@ -147,6 +150,12 @@ svg{
   display: none;
   &.active{
     transform: translateY(0);
+    display: grid;
+  }
+}
+.option{
+  display: none;
+  &.active{
     display: grid;
   }
 }

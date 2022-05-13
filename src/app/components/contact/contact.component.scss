@@ -14,7 +14,7 @@ a{
   margin-left: 2rem;
   background: #CCD1D7;
   width: 31rem;
-  height: 46rem;
+  height: 48rem;
   border-radius: 1.2rem;
   display:grid;
   justify-content: center;
@@ -28,15 +28,15 @@ a{
 }
 .contact-input-container{
   background: #446063;
-  width: 21rem;
-  height: 8.4rem;
+  width: 22rem;
+  height: 8.6rem;
   border-radius: 12px 12px 12px 0;
   margin-left: 7rem;
   margin-top: 0.6rem;
 }
 .contact-input-container-angle {
   width:  7rem;
-  height: 9.7rem;
+  height: 9.9rem;
   background:#446063;
   border-radius: 18px 0px 12px 12px;
   transform: rotate(0deg) skewX(-30deg) scale(1,.866);
@@ -104,9 +104,9 @@ p{
 
 .contact-networks {
   width: 12rem;
-  height: 3.2rem;
+  height: 3.4rem;
   padding: 0.4em;
-  margin-top: 30.8rem;
+  margin-top: 32.6rem;
   border-radius: 0.6rem;
   background: #446063;
 }
@@ -117,10 +117,17 @@ p{
 .contact-networks a{
   margin-left: 0.2rem;
   margin-right: 1.8rem;
-
+}
+.info-input-container{
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.info-input{
+  margin-top: 0.4rem;
+  padding:0;
+}
+.container--email-text{
+  margin-left: 6rem;
+  margin-top: 1rem;
 }
 
-
-
-
-/* Style the submit button with a specific background color etc */

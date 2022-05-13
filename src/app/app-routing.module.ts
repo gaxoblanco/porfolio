@@ -8,6 +8,7 @@ import { EstudioComponent } from './components/estudio/estudio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { PostComponent } from './components/post/post.component';
+import { EmailsComponent } from './components/emails/emails.component';
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'study', component:EstudioComponent},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
-  {path: 'post', component: PostComponent}
+  {path: 'post', component: PostComponent},
+  {path: 'email', component: EmailsComponent},
 ];
 
 @NgModule({

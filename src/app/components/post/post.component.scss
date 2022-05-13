@@ -44,3 +44,9 @@ li button{
     display: grid;
   }
 }
+.option{
+  display: none;
+  &.active{
+    display: grid;
+  }
+}

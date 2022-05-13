@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,8 @@ import { interval } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  logeado: boolean = false;
+
    saludos = [
     "Hola",
     "Hello",
@@ -17,11 +20,9 @@ export class HomeComponent implements OnInit {
     "안녕하세요"
   ]
 
-  // saludoRandom = Math.floor(Math.random()*this.saludos.length);
-  // nSaludo = this.saludos[this.saludoRandom];
   SALUDO = '';
 
-  constructor() {
+  constructor(private authServ : AutenticacionService) {
 
   }
 

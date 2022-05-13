@@ -2,9 +2,9 @@ export interface Experience{
     id: String,
     trabajo: String,
     puesto: String,
-    description: String,
-    ini: String,
-    fin: String,
+    descripcion: String,
+    ini: Date,
+    fin: Date,
     logo: String,
     url: String,
 }

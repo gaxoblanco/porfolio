@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Page } from 'src/app/models/pagesObjs';
-import { AboutPostComponent } from '../postOptions/about-post/about-post.component';
+import { Router } from '@angular/router';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 
 
 @Component({
@@ -9,32 +9,38 @@ import { AboutPostComponent } from '../postOptions/about-post/about-post.compone
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-
-active: any = [
-  {activeEst : false},
-  {activeExp : false},
-  {activeSki : false},
-  {activeAbo : false}
-];
+  logeado: boolean = false;
+  active: any = [
+    {activeEst : false},
+    {activeExp : false},
+    {activeSki : false},
+    {activeAbo : false}
+  ];
 
   isActiv = this.active.every((item: boolean) => item <= false)
 
 
 
 
-  constructor() { }
+  constructor(
+    private authServ : AutenticacionService,
+    private ruta:Router) { }
 
 
   ngOnInit(): void {
+    if (this.authServ.UsuarioAutenticado == true){
+      this.logeado = this.authServ.UsuarioAutenticado
+    } else{
+      this.ruta.navigate(['/home']);
+    }
   }
   activeEstudy(){
     if (this.isActiv == true){
       this.active.forEach((activ: boolean) =>{
-        activ = false, console.log("salio mal")
+        activ = false;
       })
     } else{
       this.active.activeEst = !this.active.activeEst;
-    console.log(this.active)
     }
 
   }

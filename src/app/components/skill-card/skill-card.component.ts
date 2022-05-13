@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import {Skill, UpdateSkillDTO} from '../../models/skillObj';
 import {SkillService} from '../../services/skill.service';
 
@@ -12,6 +13,7 @@ export class SkillCardComponent implements OnInit {
 
 
   active: boolean = false;
+  logeado: boolean = false;
 
   @Input() skill: Skill={
     id: '',
@@ -23,19 +25,27 @@ export class SkillCardComponent implements OnInit {
 
   constructor(
     private skillServ: SkillService,
-    private ruta:Router
+    private ruta:Router,
+    private authServ : AutenticacionService,
     ) { }
 
   ngOnInit(): void {
+    if (this.authServ.UsuarioAutenticado == true){
+      this.logeado = this.authServ.UsuarioAutenticado
+    }
   }
+
+   activeOption(){
+     this.logeado = !this.logeado;
+   }
   activeEstady(){
     this.active = !this.active;
   }
   deletSki():void{
     this.skillServ.deletSkill(this.skill.id)
     .subscribe(()=>{
-      console.log("delete")
       this.ruta.navigate(['/skill']);
+      console.log('se borro')
     });
   }
 
@@ -55,7 +65,8 @@ export class SkillCardComponent implements OnInit {
       SkillInformation.descripcion = this.skill.descripcion
     }
     this.skillServ.addNewSkill(SkillInformation)
-    .subscribe()
-
+    .subscribe(()=>{
+      this.ruta.navigate(['/skill']);
+    });
   }
 }

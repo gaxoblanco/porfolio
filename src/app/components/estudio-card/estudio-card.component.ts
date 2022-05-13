@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Estudio, UpdateStudyDTO } from 'src/app/models/estudioOBJ';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { EstudioService } from 'src/app/services/estudio.service';
 
 @Component({
@@ -11,22 +12,27 @@ import { EstudioService } from 'src/app/services/estudio.service';
 export class EstudioCardComponent implements OnInit {
 
   active: boolean = false;
+  logeado: boolean = false;
   @Input() estudio: Estudio = {
     id:'',
-    Estudio:'',
+    estudiado:'',
     descripcion:'',
-    ini: '',
-    fin: '',
+    ini: new Date(),
+    fin: new Date(),
     url: '',
     logo: '',
   };
 
   constructor(
     private studyServ : EstudioService,
-    private ruta:Router
+    private ruta:Router,
+    private authServ : AutenticacionService
     ) { }
 
   ngOnInit(): void {
+    if (this.authServ.UsuarioAutenticado == true){
+      this.logeado = this.authServ.UsuarioAutenticado
+    }
   }
   activeEstady(){
     this.active = !this.active;
@@ -35,7 +41,6 @@ export class EstudioCardComponent implements OnInit {
   deletEst():void{
     this.studyServ.deletEstudy(this.estudio.id)
     .subscribe(() => {
-      console.log("delete")
     })
     this.ruta.navigate(['/study']);
   }
@@ -49,17 +54,17 @@ export class EstudioCardComponent implements OnInit {
     if(StudyInformation.url == ''){
       StudyInformation.url = this.estudio.url
     }
-    if(StudyInformation.Estudio == ''){
-      StudyInformation.Estudio = this.estudio.Estudio
+    if(StudyInformation.estudiado == ''){
+      StudyInformation.estudiado = this.estudio.estudiado
     }
     if(StudyInformation.descripcion == ''){
       StudyInformation.descripcion = this.estudio.descripcion
     }
 
-    if(StudyInformation.ini == ''){
+    if(StudyInformation.ini == new Date){
       StudyInformation.ini = this.estudio.ini
     }
-    if(StudyInformation.fin == ''){
+    if(StudyInformation.fin == new Date){
       StudyInformation.fin = this.estudio.fin
     }
     this.studyServ.addNewStudy(StudyInformation)
