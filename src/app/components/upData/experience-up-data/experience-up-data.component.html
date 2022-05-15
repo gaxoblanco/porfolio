@@ -1,5 +1,5 @@
-<div class="post-exp">
-  <form [formGroup]="ExpDTO">
+<div>
+  <form [formGroup]="ExpDTO" class="post-exp">
     <div class="form-container">
     <label for="" class="">Trabajo</label>
     <input type="text"
@@ -50,6 +50,6 @@
       formControlName="logo"
     >
     </div>
-    <button class="button-exp--add" (click)="saveNew()" >Post</button>
+    <button class="button-post" (click)="saveNew()" >Post</button>
   </form>
 </div>

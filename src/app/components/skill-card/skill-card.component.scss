@@ -1,6 +1,5 @@
 //card
 .card-skill{
-
 }
 .card-angle-rigth{
   position: relative;
@@ -79,5 +78,10 @@ svg{
   display: none;
   &.active{
     display: grid;
+  }
+}
+@media (min-width: 800px){
+  .card-skill{
+    margin-left: 6rem;
   }
 }

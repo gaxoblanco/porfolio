@@ -61,7 +61,6 @@ export class EstudioCardComponent implements OnInit {
     if(StudyInformation.descripcion == ''){
       StudyInformation.descripcion = this.estudio.descripcion
     }
-
     if(StudyInformation.ini == new Date){
       StudyInformation.ini = this.estudio.ini
     }

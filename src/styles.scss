@@ -8,3 +8,23 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+.button-post{
+  background: #FBA31B;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.form-container{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.form-container label{
+  margin-left: 1rem;
+  margin-bottom: 0.4rem;
+}
+.form-container input{
+  margin: 0.4rem 1rem;
+  border-radius: 0.4rem;
+  padding-left: 0.4rem;
+}

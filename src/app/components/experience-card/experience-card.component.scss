@@ -2,7 +2,6 @@
 .card-experience{
     width: 100%;
     margin-top: 30px;
-
 }
 .card-angle-rigth{
     position: relative;
@@ -156,5 +155,10 @@ svg{
   display: none;
   &.active{
     display: grid;
+  }
+}
+@media (min-width: 900px){
+  .card-experience{
+    margin-left: 6rem;
   }
 }

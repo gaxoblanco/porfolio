@@ -1,6 +1,5 @@
-<h2>Skill</h2>
-<div class="post-skill">
-  <form [formGroup]="SkillDTO">
+<div>
+  <form [formGroup]="SkillDTO" class="post-skill">
     <div class="form-container">
     <label for="" class="">nombre</label>
     <input type="text"
@@ -30,6 +29,6 @@
       formControlName="logo"
     >
     </div>
-    <button class="button-skill--add" (click)="saveNew()" >Post</button>
+    <button class="button-post" (click)="saveNew()" >Post</button>
   </form>
 </div>

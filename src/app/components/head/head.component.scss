@@ -1,5 +1,5 @@
 .header{
-  width: 100vw;
+  width: 100%;
   background-color: #141e1dd2;
 }
 .header-container{
@@ -27,4 +27,43 @@ img{
 }
 .img-rigth{
   display: grid;
+}
+.eddit-container{
+  display: grid;
+  justify-items: center;
+}
+button{
+  background: none;
+  margin-top: -6rem;
+
+}
+button svg{
+  color: #FBA31B;
+  width: 3rem;
+  height: auto;
+}
+.eddition-container{
+  margin-top: 2rem;
+  display: grid;
+  place-items: center;
+}
+.change{
+  z-index: 1;
+  margin-top: 14rem;
+  position: absolute;
+  border: 0.4rem solid #FBA31B;
+  background: #B3B3B3;
+  border-radius: 2rem;
+  padding: 1rem;
+  display: none;
+  &.active{
+    transform: translateY(0);
+    display: grid;
+  }
+}
+.option{
+  display: none;
+  &.active{
+    display: grid;
+  }
 }

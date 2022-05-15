@@ -3,3 +3,9 @@
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 900px){
+  .study--grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+}

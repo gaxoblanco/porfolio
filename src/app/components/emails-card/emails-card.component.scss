@@ -4,7 +4,7 @@ p{
 .emails{
   display: grid;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 14rem;
 }
 
 .emails-container{
@@ -40,4 +40,10 @@ grid-template-columns: auto 1fr;
   right: 2rem;
   grid-column: 3;
   color: white;
+}
+@media (min-width: 800px){
+  .emails{
+    margin-left: 6rem;
+    margin-top: 6rem;
+  }
 }

@@ -1,4 +1,9 @@
-
+<app-head ></app-head>
+<div class="closeSesion-container" [class.active]="closeLogin">
+  <button class="closeSesion" (click)="disconect()">
+    <a>Close Session</a>
+  </button>
+</div>
 <div class="triagle--container" (click)="activeEstady()">
   <div class="triangle">
   </div>
@@ -10,8 +15,4 @@
 <div class="iniSesion" [class.active]="openLogin">
   <app-iniciar-sesion></app-iniciar-sesion>
 </div>
-<div class="closeSesion-container" [class.active]="closeLogin">
-    <button class="closeSesion" (click)="disconect()">
-      <a>Close Session</a>
-    </button>
-</div>
+

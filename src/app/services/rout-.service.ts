@@ -16,7 +16,6 @@ export class RoutService {
     descripcion: '',
   };
 
-  private rutaActual$ = new BehaviorSubject<Ruta>(this.rutaActual)
 
   url: string = `${environment.API_URL}`;
 
@@ -26,17 +25,11 @@ export class RoutService {
     return this.http.get<Ruta[]>(this.url + "ver/rout");
   }
 
-  editRout(saveSkill: Ruta):Observable<Ruta>{
-    return this.http.post<Ruta>(this.url + "new/rout", saveSkill) //falta configurar el header
+  editRout(saveRout: Ruta):Observable<Ruta>{
+    return this.http.post<Ruta>(this.url + "new/rout", saveRout)
   }
   deletRout(id: any):Observable<{}>{
     return this.http.delete<{}>(this.url + "delete/rout/" + `${id}`);
   }
 
-  get selecRuta$():Observable<Ruta>{
-    return this.rutaActual$.asObservable();
-  }
-  setRuta(ruta:Ruta):void{
-    this.rutaActual$.next(ruta);
-  }
 }

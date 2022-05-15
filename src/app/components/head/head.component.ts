@@ -1,8 +1,8 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, Input, OnInit, } from '@angular/core';
+import { ActivatedRoute, ParamMap, } from '@angular/router';
 import { Ruta } from 'src/app/models/rout-Obj';
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { RoutService } from 'src/app/services/rout-.service';
-import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-head',
@@ -10,21 +10,65 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
   styleUrls: ['./head.component.scss']
 })
 export class HeadComponent implements OnInit {
+  active: boolean = false;
+  logeado: boolean = false;
 
-  headerT: Ruta = {
+  PRutas : Ruta[] = [
+  ];
+
+  actual : any = {
+    url: '',
     nombre: '',
-    ruta: '',
-    descripcion: '',
   };
+  PrintRuta : Ruta = {
+    ruta: '',
+    nombre: '',
+    descripcion: '',
+  }
+  @Input() headerData: Ruta = {};
 
   constructor(
+    private authServ : AutenticacionService,
+    private actiRout : ActivatedRoute,
     private routSer : RoutService) { }
 
   ngOnInit(): void {
-    this.routSer.selecRuta$.subscribe((ruta: Ruta) => this.headerT = ruta)
-    console.log("buen dia madrugador " + this.headerT.ruta)
+    this.actual = this.actiRout
+    this.routSer.getAllRout()
+    .subscribe(data =>{
+      this.PRutas = data;
+      this.array();
+    })
+
+    if (this.authServ.UsuarioAutenticado == true){
+      this.logeado = this.authServ.UsuarioAutenticado
+    }
   }
-  pageTitle(){
+  array(){
+  //guardamos el valor de actiRout - url y lo filtramos con el array de routSer
+    const rutaFiltrada = this.PRutas.filter(PRutas => PRutas.ruta == this.actual._routerState.snapshot.url)
+    //iteramos para guardarlo en el objeto
+    this.PrintRuta = (rutaFiltrada[0]);
+  }
+  activeEstady(){
+    this.active = !this.active;
+  }
+
+  editRout(DataRout: Ruta):void{
+    DataRout.id = this.PrintRuta.id;
+    DataRout.ruta = this.PrintRuta.ruta;
+    DataRout.acess = this.PrintRuta.acess;
+
+    if(DataRout.nombre == ''){
+      DataRout.nombre = this.PrintRuta.nombre
+    }
+    if(DataRout.descripcion == ''){
+      DataRout.descripcion = this.PrintRuta.descripcion
+    }
+    this.routSer.editRout(DataRout)
+    .subscribe(()=>{
+      this.ngOnInit();
+    });
   }
 
 }

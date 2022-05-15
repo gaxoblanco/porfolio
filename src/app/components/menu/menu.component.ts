@@ -12,19 +12,6 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 })
 export class MenuComponent implements OnInit {
 
-  home: Ruta = {
-    nombre: 'Home',
-      ruta: '/',
-    };
-  post: Ruta = {
-    nombre: 'post',
-      ruta: '/post',
-    };
-  emails: Ruta = {
-    nombre: 'email',
-      ruta: '/email',
-    };
-
   @Input() page: Ruta={
     nombre: '',
     ruta: '',

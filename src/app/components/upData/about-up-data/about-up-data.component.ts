@@ -26,7 +26,6 @@ export class AboutUpDataComponent implements OnInit {
   saveAbout(){
     let aboutCard: CreateAboutDTO = this.aboutDTO.value;
     this.aboutCard.editAbout(aboutCard)
-    console.log("post" + this.aboutDTO)
   }
 }
 

@@ -1,8 +1,7 @@
 //card
-.card-experience{
+.card-study{
   width: 100%;
   margin-top: 30px;
-
 }
 h2{
   font-size:2rem;
@@ -157,5 +156,10 @@ svg{
   display: none;
   &.active{
     display: grid;
+  }
+}
+@media (min-width: 900px){
+  .card-study{
+    margin-left: 6rem;
   }
 }

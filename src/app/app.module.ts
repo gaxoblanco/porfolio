@@ -32,6 +32,7 @@ import { ExperienceUpDataComponent } from './components/upData/experience-up-dat
 import { HeadComponent } from './components/head/head.component';
 import { EmailsComponent } from './components/emails/emails.component';
 import { EmailsCardComponent } from './components/emails-card/emails-card.component';
+import { RoutUpDataComponent } from './components/upData/rout-up-data/rout-up-data.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { EmailsCardComponent } from './components/emails-card/emails-card.compon
     HeadComponent,
     EmailsComponent,
     EmailsCardComponent,
+    RoutUpDataComponent,
   ],
   imports: [
     BrowserModule,

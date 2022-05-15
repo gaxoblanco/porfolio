@@ -1,6 +1,5 @@
-<h3>About</h3>
-<div class="post-about">
-  <form [formGroup]="aboutDTO">
+<div>
+  <form [formGroup]="aboutDTO" class="post-about">
     <div class="form-container">
     <label for="" class="">nombre</label>
     <input type="text"
@@ -23,6 +22,6 @@
       formControlName="foto"
     >
     </div>
-    <button class="button-about--add" (click)="saveNewAbout()" >Post</button>
+    <button class="button-post" (click)="saveNewAbout()" >Post</button>
   </form>
 </div>

@@ -10,20 +10,6 @@ import { Ruta } from 'src/app/models/rout-Obj';
 export class NavBarComponent implements OnInit {
   activeMenu = false;
 
-  contact: Ruta={
-    nombre: 'Contact',
-    ruta: '/contact',
-  }
-  experience: Ruta={
-    nombre: 'Experience',
-    ruta: '/experience',
-  }
-  study: Ruta={
-    nombre: 'Study',
-    ruta: '/study',
-  }
-
-
   @Output() addedPage = new EventEmitter<Ruta>();
 
   constructor() { }

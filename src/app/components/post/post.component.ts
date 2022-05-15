@@ -37,7 +37,7 @@ export class PostComponent implements OnInit {
   activeEstudy(){
     if (this.isActiv == true){
       this.active.forEach((activ: boolean) =>{
-        activ = false;
+        this.active = false;
       })
     } else{
       this.active.activeEst = !this.active.activeEst;
