@@ -75,3 +75,35 @@ h1{
   margin-top: 2.4rem;
   color: black;
 }
+
+.iniSesion{
+  display: none;
+  &.active{
+    display: grid;
+    margin-top: -6rem;
+    margin-left: 5rem;
+  }
+}
+
+.closeSesion{
+  width: 12rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  background-color: #FBA31B;
+  color: rgb(245, 245, 245);
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 0.6rem;
+}
+
+.closeSesion-container{
+  display: none;
+  width: 12rem;
+  height: 4rem;
+  &.active{
+    display: grid;
+    margin-top: 2rem;
+    margin-left: 8.4rem;
+  }
+}

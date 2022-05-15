@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Ruta } from 'src/app/models/rout-Obj';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
-import {Page} from '../../models/pagesObjs';
+import { RoutService } from 'src/app/services/rout-.service';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 @Component({
@@ -10,63 +12,46 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 })
 export class MenuComponent implements OnInit {
 
-  post: Page = {
-      title: 'post',
-      link: '/post',
+  home: Ruta = {
+    nombre: 'Home',
+      ruta: '/',
     };
-  emails: Page = {
-      title: 'emials',
-      link: '/email',
+  post: Ruta = {
+    nombre: 'post',
+      ruta: '/post',
+    };
+  emails: Ruta = {
+    nombre: 'email',
+      ruta: '/email',
     };
 
-
-  @Input() page: Page={
-    title: '',
-    link: '',
+  @Input() page: Ruta={
+    nombre: '',
+    ruta: '',
   }
+  @Output() addedPage = new EventEmitter<Ruta>();
 
-  @Output() addedPage = new EventEmitter<Page>();
-
-  pages: Page[] =[
-    {
-      title: 'Home',
-      link: '/',
-    },
-    {
-      title: 'Experiences',
-      link: '/experience',
-    },
-    {
-      title: 'Studies',
-      link: '/study',
-    },
-    {
-      title: 'Skill',
-      link: '/skill',
-    },
-    {
-      title: 'About',
-      link: '/about',
-    },
-    {
-      title: 'Contact',
-      link: '/contact',
-    },
-  ]
+  rutaA: Ruta = {};
+  pages: Ruta[] =[];
 
   constructor(
-    private navCom :NavBarComponent,
-    private authServ : AutenticacionService) { }
+    public routSer : RoutService,
+    public navCom :NavBarComponent,
+    public authServ : AutenticacionService) { }
 
   ngOnInit(): void{
-    if (this.authServ.UsuarioAutenticado == true){
-      this.pages.push(this.emails);
-      this.pages.push(this.post)
-    }
+    this.routSer.getAllRout()
+    .subscribe(data =>{
+      if (this.authServ.UsuarioAutenticado == true){
+        this.pages = data;
+      }else{
+        this.pages = data.filter(item => item.acess)
+      }
+    });
+
+
   }
-  onAddPageList(){
-      this.addedPage.emit(this.page);
-  }
+
   ClickAlert(){
     this.navCom.toggleMenu();
   }

@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Email } from 'src/app/models/emailObj';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { EmailService } from 'src/app/services/email.service';
+import { EmailsComponent } from '../emails/emails.component';
 
 @Component({
   selector: 'app-emails-card',
@@ -21,7 +21,7 @@ export class EmailsCardComponent implements OnInit {
   }
 
   constructor(
-    private ruta : Router,
+    private reload : EmailsComponent,
     private emailServ : EmailService,
     private authServ : AutenticacionService) { }
 
@@ -32,7 +32,8 @@ export class EmailsCardComponent implements OnInit {
   }
   deletEst():void{
     this.emailServ.deletEmail(this.email.id)
-    .subscribe(() => {
-    })
+    .subscribe(()=>{
+      this.reload.ngOnInit();
+    });
   }
 }

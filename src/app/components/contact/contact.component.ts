@@ -32,10 +32,6 @@ export class ContactComponent implements OnInit {
     let output =
       String(this.fechaActual.getDate()).padStart(2, '0') + '/' +
       String(this.fechaActual.getMonth() + 1).padStart(2, '0') + '/' + this.fechaActual.getFullYear();
-    console.log(output);
-  }
-  onRegister(){
-    console.log(this.emailListo);
   }
 
   enviarEmail(){
@@ -44,7 +40,6 @@ export class ContactComponent implements OnInit {
       this.emailSer.addNewEmail(email)
     .subscribe()
     this.ruta.navigate(['/home']);
-    console.log(email)
     }else{
     }
   }

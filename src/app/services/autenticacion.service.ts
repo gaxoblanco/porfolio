@@ -12,8 +12,8 @@ export class AutenticacionService {
   private url = `${environment.API_URL}`;
 
   currentUserSubject: BehaviorSubject<any>;
+
   constructor(private http:HttpClient) {
-    console.log("El servicio de autenticaciones esta corriendo");
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')|| '{}'));
   }
 
@@ -21,12 +21,18 @@ export class AutenticacionService {
     return this.http.post(this.url + "login", credenciales).pipe(map(data=>{
       sessionStorage.setItem('currentUser', JSON.stringify(data));
       this.currentUserSubject.next(data);
-      console.log(data)
       return data;
     }))
   }
 
   get UsuarioAutenticado(){
     return this.currentUserSubject.value;
+  }
+  disconection(){
+    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')|| '{}'));
+    this.currentUserSubject.next(this.currentUserSubject);
+
+    console.log('hola' + this.currentUserSubject)
+
   }
 }

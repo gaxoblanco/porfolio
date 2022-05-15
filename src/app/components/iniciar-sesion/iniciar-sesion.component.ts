@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {AutenticacionService} from '../../services/autenticacion.service';
 import {Router} from '@angular/router';
 import { LoginObj } from 'src/app/models/user.model';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -12,9 +13,10 @@ import { LoginObj } from 'src/app/models/user.model';
 export class IniciarSesionComponent implements OnInit {
   form:FormGroup;
 
-  constructor(private formBuilder: FormBuilder,
-              private autenticacionService: AutenticacionService,
-              private ruta:Router) {
+  constructor(
+    private loginActive : HomeComponent,
+    private formBuilder: FormBuilder,
+    private autenticacionService: AutenticacionService) {
     this.form = this.formBuilder.group({
         id: [''],
         email:['',[Validators.required,Validators.email]],
@@ -34,14 +36,12 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   onEnviar(event:Event){
-
     let conectar: LoginObj = this.form.value;
     event.preventDefault;
-    this.autenticacionService.IniciarSesion(conectar).subscribe(data=>{
-      console.log("DATA: " + JSON.stringify(data));
-      this.ruta.navigate(['/home']);
-      console.log("Te lograste conectar sin problemas")
+    this.autenticacionService.IniciarSesion(conectar).subscribe(()=>{
+      this.loginActive.activeEstady();
     })
+
   }
 
 }

@@ -42,8 +42,8 @@ svg{
     width: 56px;
     height: 41px;
     border-radius: 6px 6px 0 6px;
-    text-align: center;
-    font-size: 6rem;
+    position: absolute;
+    margin-top: -1.4rem;
 }
 .angle-left {
     width:  40px;
@@ -53,7 +53,7 @@ svg{
     position: absolute;
     transform: rotate(0deg) skewX(30deg) scale(1,.866);
     margin-left: 4.4rem;
-    margin-top: -4.4rem;
+    margin-top: -1.6rem;
 }
 .triangle-photo img{
   width: 160px;

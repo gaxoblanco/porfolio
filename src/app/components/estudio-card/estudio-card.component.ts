@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Estudio, UpdateStudyDTO } from 'src/app/models/estudioOBJ';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { EstudioService } from 'src/app/services/estudio.service';
+import { EstudioComponent } from '../estudio/estudio.component';
 
 @Component({
   selector: 'app-estudio-card',
@@ -25,8 +26,8 @@ export class EstudioCardComponent implements OnInit {
 
   constructor(
     private studyServ : EstudioService,
-    private ruta:Router,
-    private authServ : AutenticacionService
+    private reload : EstudioComponent,
+    private authServ : AutenticacionService,
     ) { }
 
   ngOnInit(): void {
@@ -40,9 +41,9 @@ export class EstudioCardComponent implements OnInit {
 
   deletEst():void{
     this.studyServ.deletEstudy(this.estudio.id)
-    .subscribe(() => {
-    })
-    this.ruta.navigate(['/study']);
+    .subscribe(()=>{
+      this.reload.ngOnInit();
+    });
   }
 
   editEstudy(StudyInformation: UpdateStudyDTO):void{
@@ -68,7 +69,9 @@ export class EstudioCardComponent implements OnInit {
       StudyInformation.fin = this.estudio.fin
     }
     this.studyServ.addNewStudy(StudyInformation)
-    .subscribe()
+    .subscribe(()=>{
+      this.reload.ngOnInit();
+    });
 
   }
 }

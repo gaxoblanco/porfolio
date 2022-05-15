@@ -14,7 +14,7 @@ export class EstudioUpComponent implements OnInit {
 
   constructor( private studyCard: EstudioCardComponent) {
     this.StudyDTO = new FormGroup({
-      Estudio: new FormControl(''),
+      estudiado: new FormControl(''),
       descripcion: new FormControl(''),
       ini: new FormControl(''),
       fin: new FormControl(''),

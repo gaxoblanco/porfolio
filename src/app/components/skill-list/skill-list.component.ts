@@ -24,4 +24,5 @@ export class SkillListComponent implements OnInit {
   }
 
 
+
 }

@@ -24,7 +24,6 @@ export class IAmComponent implements OnInit {
 
   constructor(
     private aboutServ: AboutService,
-    private ruta:Router,
     private authServ : AutenticacionService,
     private aboCompo : AboutComponent) { }
 
@@ -40,9 +39,9 @@ export class IAmComponent implements OnInit {
 
   deleteAbo():void{
     this.aboutServ.deleteAbout(this.about.id)
-    .subscribe(() =>{
-    })
-    this.ruta.navigate(['/about']);
+    .subscribe(()=>{
+      this.aboCompo.ngOnInit();
+    });
   }
   editAbout(DatoaSubir: UpAbout):void{
     DatoaSubir.id = this.about.id;
@@ -56,7 +55,9 @@ export class IAmComponent implements OnInit {
       DatoaSubir.descripcion = this.about.descripcion
     }
     this.aboutServ.addNewAbout(DatoaSubir)
-    .subscribe()
+    .subscribe(()=>{
+      this.aboCompo.ngOnInit();
+    });
   }
   paginationMenos(){
     this.aboCompo.RestarPagina();

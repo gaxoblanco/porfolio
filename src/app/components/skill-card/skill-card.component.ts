@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import {Skill, UpdateSkillDTO} from '../../models/skillObj';
 import {SkillService} from '../../services/skill.service';
+import { SkillListComponent } from '../skill-list/skill-list.component';
 
 @Component({
   selector: 'app-skill-card',
@@ -27,6 +28,7 @@ export class SkillCardComponent implements OnInit {
     private skillServ: SkillService,
     private ruta:Router,
     private authServ : AutenticacionService,
+    public reload: SkillListComponent
     ) { }
 
   ngOnInit(): void {
@@ -44,8 +46,7 @@ export class SkillCardComponent implements OnInit {
   deletSki():void{
     this.skillServ.deletSkill(this.skill.id)
     .subscribe(()=>{
-      this.ruta.navigate(['/skill']);
-      console.log('se borro')
+      this.reload.ngOnInit();
     });
   }
 
@@ -66,7 +67,7 @@ export class SkillCardComponent implements OnInit {
     }
     this.skillServ.addNewSkill(SkillInformation)
     .subscribe(()=>{
-      this.ruta.navigate(['/skill']);
+      this.reload.ngOnInit();
     });
   }
 }

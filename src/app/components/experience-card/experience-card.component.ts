@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { ExperienceService } from 'src/app/services/experience.service';
 import { Experience, upExpDTO} from '../../models/experienceObj';
+import { ExperienceComponent } from '../experience/experience.component';
 
 @Component({
   selector: 'app-experience-card',
@@ -25,7 +26,7 @@ export class ExperienceCardComponent implements OnInit {
 
   constructor(
     private expServ: ExperienceService,
-    private ruta:Router,
+    private reload : ExperienceComponent,
     private authServ : AutenticacionService,
     ) { }
 
@@ -39,8 +40,9 @@ export class ExperienceCardComponent implements OnInit {
   }
   deleteExp(){
     this.expServ.deletExperience(this.experience.id)
-    .subscribe()
-    this.ruta.navigate(['/experience']);
+    .subscribe(()=>{
+      this.reload.ngOnInit();
+    });
   }
 
   editExp(upexp: upExpDTO):void{
@@ -68,8 +70,9 @@ export class ExperienceCardComponent implements OnInit {
       upexp.fin = this.experience.fin
     }
     this.expServ.addNewExp(upexp)
-    .subscribe()
-
+    .subscribe(()=>{
+      this.reload.ngOnInit();
+    });
   }
 
 }

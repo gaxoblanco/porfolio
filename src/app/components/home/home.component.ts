@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
+import { BehaviorSubject, interval } from 'rxjs';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  openLogin: boolean = false;
+  closeLogin: boolean = false;
   logeado: boolean = false;
 
    saludos = [
@@ -26,6 +28,7 @@ export class HomeComponent implements OnInit {
 
   }
 
+
   ngOnInit(): void {
     const time$ = interval(2000);
     time$.subscribe(() =>{
@@ -36,7 +39,27 @@ export class HomeComponent implements OnInit {
       //imprimo el saludo
     this.SALUDO = nSaludo;
       return this.SALUDO;
-    })
+    });
+
+    if (this.authServ.UsuarioAutenticado == true){
+      this.logeado = this.authServ.UsuarioAutenticado;
+      this.isLogeado();
+    }
+  }
+  activeEstady(){
+    if (this.closeLogin == false) {
+      this.openLogin = !this.openLogin;
+    }
+  }
+  isLogeado(){
+    if(this.logeado == true){
+      this.closeLogin = !this.closeLogin;
+    }
+   }
+  disconect(){
+   // this.authServ.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')|| '{}'));
+   this.authServ.disconection();
+   this.ngOnInit();
   }
 
 }

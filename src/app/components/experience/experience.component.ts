@@ -15,7 +15,6 @@ export class ExperienceComponent implements OnInit {
   ngOnInit(): void {
     this.experienceServ.getAllExperiences()
     .subscribe(data =>{
-      console.log(data);
       this.exp = data;
     });
   }

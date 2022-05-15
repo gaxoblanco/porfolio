@@ -18,20 +18,6 @@ export class ArrayService {
   constructor(
     private http:HttpClient
   ) { }
-  getAllExperiencias(){
-    return this.http.get<Experience[]>(this.url + 'ver/experiencia');
-  }
 
-  getSkill(id: string){
-    return this.http.get<Skill[]>(`${this.url}/${id}`);
-  }
-  create(dto: CreateSkillDTO){
-    return this.http.post<Skill>(this.url, dto);
-  }
-  update(id: string, dto: UpdateSkillDTO){
-    return this.http.put<Skill>(`${this.url}/${id}`, dto);
-  }
-  delete(id: string){
-    return this.http.delete<boolean>(`${this.url}/${id}`);
-  }
+
 }

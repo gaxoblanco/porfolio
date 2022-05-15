@@ -3,14 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+app-head{
+  position: fixed;
+  z-index: 1;
+}
 .pantallas-container{
     background: #141E1D;
     display:grid;
     place-items: center;
+    padding-top: 10rem;
     margin-bottom: 10rem;
-}
-app-head{
 }
 app-nav-bar {
   position: fixed;

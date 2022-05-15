@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AutenticacionService } from 'src/app/services/autenticacion.service';
-import { Page } from '../../models/pagesObjs';
+import { BehaviorSubject } from 'rxjs';
+import { Ruta } from 'src/app/models/rout-Obj';
 
 @Component({
   selector: 'app-nav-bar',
@@ -10,26 +10,25 @@ import { Page } from '../../models/pagesObjs';
 export class NavBarComponent implements OnInit {
   activeMenu = false;
 
-  contact: Page={
-    title: 'Contact',
-      link: '/contact',
+  contact: Ruta={
+    nombre: 'Contact',
+    ruta: '/contact',
+  }
+  experience: Ruta={
+    nombre: 'Experience',
+    ruta: '/experience',
+  }
+  study: Ruta={
+    nombre: 'Study',
+    ruta: '/study',
   }
 
-  @Output() addedPage = new EventEmitter<Page>();
 
-  pages: Page[] =[
+  @Output() addedPage = new EventEmitter<Ruta>();
 
-    {
-      title: 'About',
-      link: '/about',
-    },
-
-  ]
-
-  constructor(private authServ : AutenticacionService) { }
+  constructor() { }
 
   ngOnInit(): void {
-
   }
 
   toggleMenu(){
