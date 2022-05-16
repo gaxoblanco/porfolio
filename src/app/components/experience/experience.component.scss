@@ -1,12 +1,24 @@
 .experience--grid{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: 900px){
   .experience--grid{
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr auto ;
+    width: 80vw;
+  }
+}
+@media (min-width: 1000px){
+  .experience--grid{
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1400px){
+  .experience--grid{
+    margin-left: 2%;
   }
 }

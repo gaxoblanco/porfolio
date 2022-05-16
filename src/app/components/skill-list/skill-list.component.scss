@@ -11,9 +11,18 @@ app-skill-card{
 @media (min-width: 900px){
   .skills--grid{
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr auto;
+    width: 80vw;
   }
 }
-app-head{
-  width: 100vw;
+@media (min-width: 950px){
+  .skills--grid{
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1400px){
+  .skills--grid{
+    margin-left: 2%;
+  }
 }

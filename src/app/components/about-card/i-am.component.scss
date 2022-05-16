@@ -1,21 +1,6 @@
-//i-am-container
-.delete{
-  color: red;
-  font-size: 2rem;
-  position: absolute;
-  right: 6rem;
-  margin-top:-6rem;
-}
-svg{
-  color: #FBA31B;
-  position: absolute;
-  height: 2.8rem;
-  width: 2.8rem;
-  right: 4.8rem;
-  margin-top: 46rem;
-}
+
 .about-container{
-    margin-top: 90px;
+    margin-top: 70px;
     background: #E2E2E0;
     width: 84vw;
     max-width: 400px;
@@ -89,7 +74,6 @@ svg{
   height:400px;
   margin: 0 auto;
   border-radius: 12px;
-
 }
 .about-containter--text h3{
   font-size: 2rem;
@@ -101,10 +85,24 @@ svg{
   text-align: center;
   padding: 1rem;
 }
-
-.eddition-container{
+.edition-about-container{
   display: grid;
-  place-items: center;
+  justify-items: center;
+}
+
+
+.delete{
+  color: red;
+  font-size: 2rem;
+  right: 28%;
+  position: absolute;
+}
+svg{
+  color: #FBA31B;
+  height: 2.8rem;
+  width: 2.8rem;
+  left: 26%;
+  position: absolute;
 }
 .change{
   border: 0.4rem solid #FBA31B;
@@ -126,3 +124,13 @@ svg{
   }
 }
 
+@media (min-width: 600px){
+  .about-container{
+    margin-top: 3rem;
+    max-width: 66rem;
+  }
+  .about-containter--text{
+    width: 90%;
+    height:32rem;
+  }
+}

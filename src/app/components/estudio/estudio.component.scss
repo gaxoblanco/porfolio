@@ -6,6 +6,19 @@
 @media (min-width: 900px){
   .study--grid{
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr auto;
+    width: 80vw;
+  }
+}
+
+@media (min-width: 1000px){
+  .study--grid{
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1300px){
+  .study--grid{
+    margin-left: 3%;
   }
 }

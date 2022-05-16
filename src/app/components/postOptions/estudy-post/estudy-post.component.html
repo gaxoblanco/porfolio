@@ -1,4 +1,7 @@
 <div>
+  <div class="post-taitle">
+    <h3>Study</h3>
+  </div>
   <form [formGroup]="StudyDTO" class="post-study">
     <div class="form-container">
     <label for="" class="">Estudio</label>
@@ -17,14 +20,14 @@
 
     <label for="" class="">Inicio</label>
     <input type="date"
-      id="url"
+      id="ini"
       placeholder="Your full name"
       formControlName="ini"
     >
 
     <label for="" class="">Final</label>
     <input type="date"
-      id="url"
+      id="fin"
       placeholder="Your full name"
       formControlName="fin"
     >
@@ -43,6 +46,6 @@
       formControlName="logo"
     >
     </div>
-    <button class="button-post" (click)="saveNewEs()" >Post</button>
+    <button class="button-post" (click)="saveNewEs()" > <a>Post</a> </button>
   </form>
 </div>

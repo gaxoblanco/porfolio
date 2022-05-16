@@ -8,6 +8,9 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+app-head{
+  width: 100vw;
+}
 .button-post{
   background: #FBA31B;
   padding: 0.6rem 1.2rem;
@@ -27,4 +30,17 @@ html{
   margin: 0.4rem 1rem;
   border-radius: 0.4rem;
   padding-left: 0.4rem;
+}
+.post-taitle{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.post-taitle h3{
+  border-radius: 0.6rem;
+  padding:1rem;
+  background: #FBA31B;
+  color: white;
+}
+.container-component{
+  display: grid;
 }

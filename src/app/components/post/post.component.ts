@@ -19,9 +19,6 @@ export class PostComponent implements OnInit {
 
   isActiv = this.active.every((item: boolean) => item <= false)
 
-
-
-
   constructor(
     private authServ : AutenticacionService,
     private ruta:Router) { }
@@ -33,25 +30,31 @@ export class PostComponent implements OnInit {
     } else{
       this.ruta.navigate(['/home']);
     }
+    const alguno = this.active.filter((item: boolean) => item)
+    this.activeSkill()
+    return console.log(alguno);
+
   }
   activeEstudy(){
-    if (this.isActiv == true){
-      this.active.forEach((activ: boolean) =>{
-        this.active = false;
-      })
-    } else{
-      this.active.activeEst = !this.active.activeEst;
-    }
-
+    this.desactivate();
+    this.active.activeEst = !this.active.activeEst;
   }
-
   activeExperience(){
+    this.desactivate();
     this.active.activeExp = !this.active.activeExp;
   }
   activeSkill(){
+    this.desactivate();
     this.active.activeSki = !this.active.activeSki;
   }
   activeAbout(){
+    this.desactivate();
     this.active.activeAbo = !this.active.activeAbo;
+  }
+  desactivate(){
+    this.active.activeEst = false;
+    this.active.activeExp = false;
+    this.active.activeSki = false;
+    this.active.activeAbo = false;
   }
 }

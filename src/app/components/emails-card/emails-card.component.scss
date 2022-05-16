@@ -20,12 +20,28 @@ p{
   padding: 1rem 0 0.4rem 1rem;
   margin-bottom: 1.4rem;
 }
-
 .emails-container--msn{
   width: 100%;
   background-color: #446063;
   border-radius: 1rem;
   padding: 1rem;
+}
+.date-and-delete{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-top: 1px solid #446063;
+}
+.date-info{
+  background-color: #446063;
+  border-radius: 0.6rem;
+  text-align: center;
+  padding: 0.2rem 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.date-info h3{
+  font-size: 1.4rem;
 }
 .delete-container{
 display: grid;

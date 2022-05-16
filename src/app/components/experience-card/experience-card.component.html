@@ -7,22 +7,22 @@
             <p> {{experience.descripcion}} </p>
         </div>
         <div class="card-conte--button-date-buttom">
-
-          <a href="/email" >
+          <a [href]="experience.url" target="_blank">
             <div Class="angle-rigth"> {{experience.url}} </div>
-            <div Class="rectangle-rigth"><p>Git</p></div>
+            <div Class="rectangle-rigth"><p>Link</p></div>
           </a>
+
           <div class="experiecne-date">
             <p> {{experience.ini| date:'MM-yyyy' }} </p>
             <p> {{experience.fin| date:'MM-yyyy' }}</p>
           </div>
 
-          <a class="buttonL" href="">
-            <div>
-              <div Class="angle-left"></div>
-              <div Class="rectangle-left"><p>Web</p></div>
-            </div>
-          </a>
+          <div Class="angle-left"></div>
+          <div Class="rectangle-left">
+            <a [href]="experience.url" target="_blank">
+              <p>Link</p>
+            </a>
+          </div>
         </div>
       </div>
       <a

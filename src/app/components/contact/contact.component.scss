@@ -7,7 +7,8 @@ a{
   text-decoration: none;
 }
 .contact-container{
-  width: 100%;
+  display: grid;
+  justify-items: center;
 }
 .contact-container--information{
   margin-top: 5.6rem;
@@ -99,7 +100,7 @@ p{
 }
 
 .contact-networks {
-  z-index: 1;
+  z-index: 0;
   width: 12rem;
   height: 3.4rem;
   padding: 0.4em;
@@ -126,5 +127,53 @@ p{
 .container--email-text{
   margin-left: 6rem;
   margin-top: 1rem;
+}
+@media (min-width: 800px){
+  .contact-container--information{
+    margin-top: 1rem;
+    width: 56rem;
+    height: 46rem;
+  }
+  .contact-input--container{
+    display: inline-block;
+    width: 40rem;
+  }
+  .contact-input--container h2{
+    font-size: 2rem;
+    margin-left: 20rem;
+  }
+  .contact-input--container label{
+    margin-left: 6rem;
+  }
+  .contact-input--container input{
+    margin-left: 3rem;
+    width: 32rem;
+  }
+  .backgroud-input-container{
+    margin-top: 1rem;
+  }
+  .contact-input-container{
+    width: 46rem;
+    height: 10rem;
+  }
+  .contact-input-container-angle{
+    height: 11.4rem;
+  }
+  .contact-input--container{
+    margin-top: 1.8rem;
+  }
+  .comentari-input textarea{
+    width: 53.4rem;
+    height:28rem;
+    margin-top: 1rem;
+    margin-left: 1.2rem;
+  }
+  .button-contact--enviar{
+    margin-left: 26.4rem;
+  }
+  .contact-networks{
+    margin-top: 30rem;
+  }
+
 }
 

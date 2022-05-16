@@ -12,12 +12,12 @@
   background: #446063;
   width: 20rem;
   height: 7rem;
-  margin-top:0.4rem;
+  margin-top:0.45rem;
   border-radius: 12px 12px 0 12px;
 }
 .angle-rigth {
   width:  7rem;
-  height: 8rem;
+  height: 8.1rem;
   background:#446063;
   border-radius: 12px 12px 12px 0;
   transform: rotate(0deg) skewX(30deg) scale(1,.866);
@@ -42,6 +42,31 @@ p{
   margin-bottom: 20px;
   position:relative;
 }
+
+
+.rectangle-left{
+  background: #FBA31B;
+  width: 3.4rem;
+  height: 2.4rem;
+  margin-top:4.4rem;
+  margin-left:20.2rem;
+  border-radius: 6px 6px 0 6px;
+}
+.angle-left {
+  width:  2.2rem;
+  height: 2.8rem;
+  background: #FBA31B;
+  border-radius: 4px 8px 4px 0 ;
+  transform: rotate(0deg) skewX(30deg) scale(1,.866);
+  margin-left:22.2rem;
+  margin-top:4.2rem;
+}
+.rectangle-left p{
+  margin-left: 6px;
+  color: white;
+}
+
+
 .delete{
   color: red;
   position: absolute;

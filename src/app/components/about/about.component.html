@@ -1,7 +1,10 @@
-<app-head ></app-head>
-<div class="about--grid">
-  <app-i-am
-      [about]="about"
-      *ngFor="let about of about1"
-  ></app-i-am>
+<div class="container-component">
+  <app-head>
+  </app-head>
+  <div class="about--grid">
+    <app-i-am
+        [about]="about"
+        *ngFor="let about of about1"
+    ></app-i-am>
+  </div>
 </div>

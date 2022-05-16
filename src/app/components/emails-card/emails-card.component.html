@@ -1,9 +1,5 @@
 <main class="emails">
   <section class="emails-container">
-    <div>
-      <div class="emails-container--info">
-        <h3>Fecha: {{email.fecha | date:'dd-MM-yyyy'}}</h3>
-      </div>
       <div class="emails-container--info">
         <h3>Nombre: {{email.nombre}}</h3>
       </div>
@@ -13,9 +9,13 @@
       <div class="emails-container--msn">
         <p> {{email.mensaje}} </p>
       </div>
-      <div class="delete-container">
-        <button class="delete" (click)="deletEst()" >Delete</button>
+      <div class="date-and-delete">
+        <div class="date-info">
+          <h3>Fecha: {{email.fecha | date:'dd-MM-yyyy'}}</h3>
+        </div>
+        <div class="delete-container">
+          <button class="delete" (click)="deletEst()" >Delete</button>
+        </div>
       </div>
-    </div>
   </section>
 </main>

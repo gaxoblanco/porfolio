@@ -11,7 +11,6 @@ import { CreateSkillDTO, Skill } from '../models/skillObj';
 export class SkillService {
 
   url: string = `${environment.API_URL}`;
-  //  url: string = "http://localhost:8080/";
 
   constructor(private http: HttpClient) { }
 
