@@ -86,10 +86,9 @@
   padding: 1rem;
 }
 .edition-about-container{
-  display: grid;
-  justify-items: center;
+display: grid;
+justify-items: center;
 }
-
 
 .delete{
   color: red;
@@ -105,12 +104,6 @@ svg{
   position: absolute;
 }
 .change{
-  border: 0.4rem solid #FBA31B;
-  background: #B3B3B3;
-  border-radius: 2rem;
-  padding: 1rem;
-  position: absolute;
-  margin-top: 40rem;
   display: none;
   &.active{
     transform: translateY(0);
@@ -118,6 +111,7 @@ svg{
   }
 }
 .option{
+  margin-top: -1.4rem;
   display: none;
   &.active{
     display: grid;
