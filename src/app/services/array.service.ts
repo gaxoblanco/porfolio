@@ -1,12 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
 //url global
 import {environment} from './../../environments/environment';
-
-import {Skill, CreateSkillDTO, UpdateSkillDTO} from './../models/skillObj';
-
-import {Experience} from './../models/experienceObj';
 
 @Injectable({
   providedIn: 'root'
