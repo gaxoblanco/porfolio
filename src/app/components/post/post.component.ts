@@ -32,7 +32,6 @@ export class PostComponent implements OnInit {
     }
     const alguno = this.active.filter((item: boolean) => item)
     this.activeSkill()
-    return console.log(alguno);
 
   }
   activeEstudy(){

@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CreateEmailDTO, Email } from 'src/app/models/emailObj';
 import { EmailService } from 'src/app/services/email.service';
-import { Contact} from '../../models/formObj'
 
 @Component({
   selector: 'app-contact',

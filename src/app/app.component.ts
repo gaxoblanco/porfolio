@@ -1,6 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { HeadComponent } from './components/head/head.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { Ruta } from './models/rout-Obj';
 
 @Component({

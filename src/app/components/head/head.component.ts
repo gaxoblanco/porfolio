@@ -14,6 +14,7 @@ export class HeadComponent implements OnInit {
   logeado: boolean = false;
 
   PRutas : Ruta[] = [
+
   ];
 
   actual : any = {
@@ -38,6 +39,7 @@ export class HeadComponent implements OnInit {
     .subscribe(data =>{
       this.PRutas = data;
       this.array();
+
     })
 
     if (this.authServ.UsuarioAutenticado == true){
@@ -46,7 +48,7 @@ export class HeadComponent implements OnInit {
   }
   array(){
   //guardamos el valor de actiRout - url y lo filtramos con el array de routSer
-    const rutaFiltrada = this.PRutas.filter(PRutas => PRutas.ruta == this.actual._routerState.snapshot.url)
+    const rutaFiltrada = this.PRutas.filter(PRutas => PRutas.ruta == this.actual._routerState.snapshot.url);
     //iteramos para guardarlo en el objeto
     this.PrintRuta = (rutaFiltrada[0]);
   }
