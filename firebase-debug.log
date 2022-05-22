@@ -1,0 +1,69 @@
+[debug] [2022-05-21T20:21:18.655Z] ----------------------------------------------------------------------
+[debug] [2022-05-21T20:21:18.657Z] Command:       D:\Applications\NodeJS\node.exe C:\Users\Kraken 2\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-21T20:21:18.657Z] CLI Version:   10.9.2
+[debug] [2022-05-21T20:21:18.657Z] Platform:      win32
+[debug] [2022-05-21T20:21:18.657Z] Node Version:  v16.13.2
+[debug] [2022-05-21T20:21:18.659Z] Time:          Sat May 21 2022 17:21:18 GMT-0300 (hora estándar de Argentina)
+[debug] [2022-05-21T20:21:18.659Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-21T20:21:18.736Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-21T20:21:18.737Z] > authorizing via signed-in user (gax0blanco93@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Kraken 2\Desktop\CV - Documentado\angular-scss2
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-05-21T20:21:27.564Z] Using project from CLI flag: porfolioweb-34e5e
+[debug] [2022-05-21T20:21:27.567Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/porfolioweb-34e5e [none]
+[debug] [2022-05-21T20:21:27.998Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/porfolioweb-34e5e 200
+[debug] [2022-05-21T20:21:27.998Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/porfolioweb-34e5e {"projectId":"porfolioweb-34e5e","projectNumber":"1072974532249","displayName":"PorfolioWeb","name":"projects/porfolioweb-34e5e","resources":{"hostingSite":"porfolioweb-34e5e"},"state":"ACTIVE"}
+[info] i  Using project porfolioweb-34e5e (PorfolioWeb) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-05-22T12:02:33.510Z] ----------------------------------------------------------------------
+[debug] [2022-05-22T12:02:33.514Z] Command:       D:\Applications\NodeJS\node.exe C:\Users\Kraken 2\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2022-05-22T12:02:33.515Z] CLI Version:   10.9.2
+[debug] [2022-05-22T12:02:33.515Z] Platform:      win32
+[debug] [2022-05-22T12:02:33.516Z] Node Version:  v16.13.2
+[debug] [2022-05-22T12:02:33.587Z] Time:          Sun May 22 2022 09:02:33 GMT-0300 (hora estándar de Argentina)
+[debug] [2022-05-22T12:02:33.587Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-05-22T12:02:33.705Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-05-22T12:02:33.706Z] > authorizing via signed-in user (gax0blanco93@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Kraken 2\Desktop\CV - Documentado\angular-scss2
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
