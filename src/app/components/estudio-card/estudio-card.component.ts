@@ -14,6 +14,8 @@ export class EstudioCardComponent implements OnInit {
 
   active: boolean = false;
   logeado: boolean = false;
+  more: boolean = false;
+
   @Input() estudio: Estudio = {
     id:'',
     estudiado:'',
@@ -37,6 +39,9 @@ export class EstudioCardComponent implements OnInit {
   }
   activeEstady(){
     this.active = !this.active;
+  }
+  activeMore(){
+    this.more = !this.more;
   }
 
   deletEst():void{

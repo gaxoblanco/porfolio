@@ -8,14 +8,16 @@
       <div class="card-conte--text-angle"></div>
       <div class="card-conte--text">
         <h2> {{estudio.estudiado}} </h2>
-        <p> {{estudio.descripcion}} </p>
+        <p> donde lo realice </p>
       </div>
 
       <div class="card-conte--button-date-buttom">
         <div Class="angle-rigth"></div>
         <div Class="rectangle-rigth">
-        <a class="buttonL" [href]="estudio.url" target="_blank">
-          <p>link</p>
+        <a class="buttonL"
+          [class.active]="more"
+          (click)="activeMore()">
+          <p>More</p>
         </a>
         </div>
         <div class="estudio-date">
@@ -40,6 +42,10 @@
       </svg>
     </a>
   </div>
+
+  <span class="more--container option" [class.active]="more">
+    <p> {{estudio.descripcion}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores amet alias, laboriosam expedita eveniet veritatis eligendi, ea obcaecati voluptatum provident reiciendis. Libero soluta ratione excepturi iusto porro veniam, facilis error!</p>
+  </span>
   <a
     (click)="deletEst()"
     class="delete option"

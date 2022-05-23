@@ -1,24 +1,20 @@
 <div class="card-skill">
-    <div Class="card-angle-rigth">
-      <div Class="rectangle"></div>
-      <div Class="angle-rigth"></div>
+    <section Class="card-angle-rigth">
+      <div>
+        <div Class="rectangle"></div>
+        <div Class="angle-rigth"></div>
+      </div>
       <div class="information-skill-container">
-        <div>
+        <div class="information-skill-text">
           <h2> {{skill.nombre}} </h2>
           <p> {{skill.descripcion}} </p>
         </div>
-        <div>
-          <a class="buttonL" [href]="skill.url" target="_blank">
-            <div>
-              <div Class="angle-left"></div>
-              <div Class="rectangle-left"><p>Link</p></div>
-            </div>
+          <a class="buttonL"[href]="skill.url" target="_blank">
+              <div Class="button-angle-left"></div>
+              <div Class="button-rectangle-left"><p>Link</p></div>
           </a>
-        </div>
       </div>
-
-
-    </div>
+    </section>
   <a
   class="edit option"
   (click)="activeEstady()"

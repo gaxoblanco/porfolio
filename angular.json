@@ -106,6 +106,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "CV:build:production",
+            "firebaseProject": "porfolioweb-34e5e",
+            "firebaseHostingSite": "porfolioweb-34e5e"
+          }
         }
       }
     }

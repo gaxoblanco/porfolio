@@ -1,30 +1,34 @@
 <article class="card-experience">
-    <section Class="card-angle-rigth">
-      <div Class="rectangle">
+    <section class="card-angle-rigth">
+      <div class="rectangle">
         <div class="card-conte--text-angle"></div>
         <div class="card-conte--text">
             <h2> {{experience.trabajo}} - <span> {{experience.puesto}}</span> </h2>
-            <p> {{experience.descripcion}} </p>
+
         </div>
         <div class="card-conte--button-date-buttom">
-          <a [href]="experience.url" target="_blank">
-            <div Class="angle-rigth"> {{experience.url}} </div>
-            <div Class="rectangle-rigth"><p>Link</p></div>
-          </a>
-
           <div class="experiecne-date">
             <p> {{experience.ini| date:'MM-yyyy' }} </p>
             <p> {{experience.fin| date:'MM-yyyy' }}</p>
           </div>
-
-          <div Class="angle-left"></div>
-          <div Class="rectangle-left">
+          <a>
+            <div class="angle-rigth"></div>
+            <button
+              (click)="activeMore()"
+              class="rectangle-rigth"
+              [class.active]="more">
+                <p>More</p>
+              </button>
+          </a>
+          <div class="angle-left"></div>
+          <div class="rectangle-left">
             <a [href]="experience.url" target="_blank">
               <p>Link</p>
             </a>
           </div>
         </div>
       </div>
+
       <a
         class="edit option"
         (click)="activeEstady()"
@@ -45,4 +49,11 @@
         ExpDTO="experience" ></app-experience-up-data>
       </div>
     </span>
+
+    <span class="more--container option" [class.active]="more">
+      <p> {{experience.descripcion}} </p>
+    </span>
+
+
+
 </article>

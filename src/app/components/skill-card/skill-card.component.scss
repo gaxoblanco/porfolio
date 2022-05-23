@@ -1,10 +1,16 @@
 //card
 .card-skill{
+  width: 100%;
+  margin-top: 4rem;
 }
-.card-angle-rigth{
-  position: relative;
-  padding-top: 10px;
+h2{
+  margin: 0.4rem 0 0 1rem;
 }
+
+.information-skill-container{
+   display: grid;
+   grid-template-rows: auto 1fr;
+ }
 .card-angle-rigth div{
   position: absolute;
 }
@@ -24,49 +30,46 @@
   margin-left: 18rem;
   margin-top:-0.1rem;
 }
-
-h2{
-  margin: 0.4rem 0 0 1rem;
-}
-p{
+.information-skill-text p{
   padding-top: 0.4rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin: 0 0 4px 10px;
   width: 24rem;
 }
-
- .logo{
-  width:120px;
-  margin-left: 230px;
-  margin-top: -20px;
-  margin-bottom: 20px;
-  position:relative;
+.buttonL{
+  position: absolute;
+  top: 4.8rem;
+  left: 19.2rem;
 }
-
-
-.rectangle-left{
+.buttonL .button-rectangle-left{
   background: #FBA31B;
   width: 3.4rem;
-  height: 2.4rem;
-  margin-top:4.4rem;
-  margin-left:20.2rem;
+  height: 2rem;
+  padding-top: 0.3rem;
   border-radius: 6px 6px 0 6px;
 }
-.angle-left {
+.buttonL .button-angle-left {
   width:  2.2rem;
-  height: 2.8rem;
+  height: 2.3rem;
   background: #FBA31B;
-  border-radius: 4px 8px 4px 0 ;
+  border-radius: 4px 8px 8px 0 ;
   transform: rotate(0deg) skewX(30deg) scale(1,.866);
-  margin-left:22.2rem;
-  margin-top:4.2rem;
+  left:2rem;
+  top:-0.16rem;
 }
-.rectangle-left p{
+.button-rectangle-left p{
+  font-size: 1.2rem;
   margin-left: 6px;
   color: white;
 }
 
-
+svg{
+  color: #FBA31B;
+  position: absolute;
+  height: 2.8rem;
+  width: 2.8rem;
+  margin-top: -2.4rem;
+}
 .delete{
   color: red;
   position: absolute;
@@ -76,13 +79,12 @@ p{
   font-weight: bold;
   text-decoration: none;
 }
-
-svg{
-  color: #FBA31B;
-  position: absolute;
-  height: 2.8rem;
-  width: 2.8rem;
-  margin-top: -2.4rem;
+.logo{
+  width:120px;
+  margin-left: 230px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  position:relative;
 }
 .eddition-container{
   display: grid;

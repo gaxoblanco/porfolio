@@ -6,11 +6,16 @@
 h2{
   font-size:2rem;
 }
+a{
+  text-decoration: none;
+}
+
 .card-angle-rigth{
   display: grid;
   grid-template-columns: auto 1fr;
   padding-top: 2rem;
-  margin-right: -5rem;
+  position: relative;
+  right: -2.4rem;
 }
 .rectangle{
   background: #CCD1D7;
@@ -21,7 +26,7 @@ h2{
   grid-template-columns: auto 1fr;
 }
 .logo{
-  max-width:180px;
+  width:18rem;
   margin-left: -10rem;
   margin-top: -2rem;
   position:absolute;
@@ -31,19 +36,19 @@ h2{
   background: #446063;
   width: 19rem;
   height: 7.2rem;
-  margin-top:0.7rem;
+  margin-top:0.6rem;
   margin-left: 9.2rem;
   border-radius: 12px 12px 12px 0;
   position: absolute;
 }
 .card-conte--text-angle {
   width:  7rem;
-  height: 8.3rem;
+  height: 8.28rem;
   background:#446063;
   border-radius: 18px 0px 12px 12px;
   transform: rotate(0deg) skewX(-30deg) scale(1,.866);
   margin-left: 6rem;
-  margin-top: 0.2rem;
+  margin-top: 1px;
 
 }
 .card-conte--text h2{
@@ -66,13 +71,13 @@ h2{
 .rectangle-rigth{
   grid-column: 1;
   background: #FBA31B;
-  width: 35px;
+  width: 3.8rem;
   height: 2.8rem;
   position: absolute;
   margin-left:-7rem;
   margin-top:7.2rem;
   border-radius: 6px 6px 6px 0;
-  padding-top: 0.6rem;
+  padding-top: 0.8rem;
 }
 .angle-rigth {
   grid-column: 1;
@@ -81,8 +86,8 @@ h2{
   background: #FBA31B;
   border-radius: 4px 4px 0 8px ;
   transform: rotate(0deg) skewX(-30deg) scale(1,.866);
-  margin-top: 7.4rem;
-  margin-left:10rem;
+  margin-top: 7.2rem;
+  margin-left:9.4rem;
 }
 .rectangle-rigth p{
   margin-left: -14px;
@@ -92,6 +97,9 @@ h2{
   grid-column: 2;
   color: #141E1D;
   margin-left: 6rem;
+}
+.estudio-date p{
+  color: #141E1D;
 }
 .estudio-date p:nth-child(1){
   margin-top: 8.2rem;
@@ -109,8 +117,8 @@ h2{
 .rectangle-left{
   grid-column: 3;
   background: #FBA31B;
-  width: 30px;
-  height: 26px;
+  width: 3rem;
+  height: 2.8rem;
   position: absolute;
   margin-top:2.2rem;
   margin-left:-0.8rem;
@@ -119,21 +127,40 @@ h2{
 }
 .angle-left {
   grid-column: 3;
-  width:  20px;
-  height: 32px;
+  width:  2rem;
+  height: 3.2rem;
   background: #FBA31B;
   border-radius: 4px 8px 8px 0 ;
   position: absolute;
   transform: rotate(0deg) skewX(30deg) scale(1,.866);
-  margin-top: 1.9rem;
-  margin-left:1rem;
+  margin-top: 2rem;
+  margin-left:1.4rem;
 }
 .rectangle-left p{
   margin-top: 0.4rem;
   margin-left: 0.4rem;
   color: white;
 }
+.more--container{
+  width: 26rem;
+  height: auto;
+  display: grid;
+  background: #CCD1D7;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 1.4rem;
+  padding: 0.6rem;
+  position: relative;
+  left: 5rem;
 
+}
+.more--container p{
+  font-size: 1.4rem;
+  padding: 0.6rem 0.6rem 1rem 0.6rem;
+  background: #446063;
+  border-radius: 1rem;
+  margin-bottom: 0;
+}
 .delete{
   color: red;
   position: absolute;

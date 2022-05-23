@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "gbporfolio-7e0ad": {
+      "hosting": {
+        "CV": [
+          "gbporfolio-7e0ad"
+        ]
+      }
+    },
+    "porfolioweb-34e5e": {
+      "hosting": {
+        "CV": [
+          "porfolioweb-34e5e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "porfolioweb-34e5e"
+  }
+}

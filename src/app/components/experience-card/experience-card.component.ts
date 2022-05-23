@@ -13,6 +13,8 @@ import { ExperienceComponent } from '../experience/experience.component';
 export class ExperienceCardComponent implements OnInit {
   active: boolean = false;
   logeado: boolean = false;
+  more: boolean = false;
+
   @Input() experience: Experience={
     id:'',
     trabajo:'',
@@ -37,6 +39,9 @@ export class ExperienceCardComponent implements OnInit {
   }
   activeEstady(){
     this.active = !this.active;
+  }
+  activeMore(){
+    this.more = !this.more;
   }
   deleteExp(){
     this.expServ.deletExperience(this.experience.id)

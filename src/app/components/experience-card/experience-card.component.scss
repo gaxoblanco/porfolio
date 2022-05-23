@@ -2,13 +2,21 @@
 p{
   font-size: 1.6rem;
 }
+a{
+  text-decoration: none;
+}
+h2{
+  margin-left: 0.4rem;
+  font-size: 2rem;
+  grid-row: 1;
+}
 .card-experience{
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 .card-angle-rigth{
-    position: relative;
-    padding-top: 20px;
+    display: grid;
+    grid-template-rows: 1fr auto;
   }
   .card-angle-rigth div{
     position: absolute;
@@ -26,60 +34,45 @@ p{
   .card-conte--text{
     background: #446063;
     width: 18.9rem;
-    height: 8.6rem;
-    margin-top:0.6rem;
+    height: 8.5rem;
+    margin-top:0.7rem;
     margin-left: 0.8rem;
     border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
   }
   .card-conte--text-angle {
     width:  7rem;
-    height: 9.6rem;
+    height: 9.8rem;
     background:#446063;
     border-radius: 12px 12px 18px 0;
     transform: rotate(0deg) skewX(30deg) scale(1,.866);
     margin-left: 15rem;
-    margin-top: 0.2rem;
   }
- h2{
-     margin-left: 0.4rem;
-     font-size: 2rem;
-     grid-row: 1;
- }
- .card-conte--text p{
-     margin-left: 0.6rem;
-     width: 20rem;
- }
-
-.logo{
-  width:18rem;
-  margin-left: 20rem;
-  margin-top: -2rem;
-  margin-bottom: 1rem;
-  position:relative;
-}
 
 //bottom card
 .card-conte--button-date-buttom{
   margin-top: 2.6rem;
   grid-row: 3;
+  display: grid;
 }
 .rectangle-rigth{
   background: #FBA31B;
-  width: 3.6rem;
+  width: 4.4rem;
   height: 2.8rem;
   border-radius: 6px 6px 6px 0;
-  margin-left: 3rem;
+  margin-left: 3.2rem;
   margin-top: 0.6rem;
   padding-top: 0.4rem;
+  padding-right: 0.4rem;
+  position: absolute;
 }
 .angle-rigth {
   width:  20px;
-  height: 3.1rem;
+  height: 3.2rem;
   background: #FBA31B;
   border-radius: 4px 8px 0 8px ;
   transform: rotate(0deg) skewX(-30deg) scale(1,.866);
   margin-left:2rem;
-  margin-top: 0.47rem;
+  margin-top: 0.4rem;
 }
 .rectangle-rigth p{
   color: white;
@@ -87,13 +80,12 @@ p{
 .experiecne-date{
   text-align: center;
   margin-top: 0.4rem;
-  padding-left: 2.4rem;
+  margin-left: 1.6rem;
 }
 .experiecne-date p{
   color:#141E1D;
   font-size: 1.4rem;
   margin-top:0.2rem;
-  margin-left: -1rem;
   width: 20rem;
 }
 div .experiecne-date p{
@@ -112,12 +104,12 @@ div .experiecne-date p{
 }
 .angle-left {
   width:  2.2rem;
-  height: 3.1rem;
+  height: 3.2rem;
   background: #FBA31B;
   border-radius: 4px 8px 8px 0 ;
   transform: rotate(0deg) skewX(30deg) scale(1,.866);
-  margin-left:18.2rem;
-  margin-top:0.5rem;
+  margin-left:18.4rem;
+  margin-top:0.4rem;
 }
 .experience-buttonL{
   width: 20rem;
@@ -127,8 +119,31 @@ div .experiecne-date p{
   margin-left: 6px;
   color: white;
 }
+.more--container{
+  width: 26rem;
+  height: auto;
+  display: grid;
+  background: #CCD1D7;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.6rem;
 
+}
+.more--container p{
+  font-size: 1.4rem;
+  padding: 0.6rem 0.6rem 1rem 0.6rem;
+  background: #446063;
+  border-radius: 1rem;
+  margin-bottom: 0;
+}
 
+.logo{
+width:18rem;
+margin-left: 20rem;
+margin-top: -2rem;
+margin-bottom: 1rem;
+position:relative;
+}
 .delete{
   color: red;
   position: absolute;
