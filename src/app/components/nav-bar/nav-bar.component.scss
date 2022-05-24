@@ -48,13 +48,13 @@ nav{
 }
 .angle-rigth {
     width:  2rem;
-    height: 3.5rem;
+    height: 3.45rem;
     background: #FBA31B;
     border-radius: 4px 4px 0 8px ;
     position: absolute;
     transform: rotate(0deg) skewX(-30deg) scale(1,.866);
-    margin-top: -1.9rem;
-    margin-left: -2.8rem;
+    margin-top: -1.8rem;
+    margin-left: -2.6rem;
 }
 //angle left
 .rectangle-left{
@@ -73,7 +73,7 @@ nav{
     border-radius: 0 4px 8px 0;
     position: absolute;
     transform: rotate(0deg) skewX(30deg) scale(1,.866);
-    margin-left: 0.6rem;
+    margin-left: 0.4rem;
     margin-top: -1.8rem;
 }
 //triangle
@@ -138,9 +138,9 @@ nav{
 }
 img{
   width:6.3rem;
-  margin-top: -6.6rem;
+  margin-top: -8.2rem;
   margin-left: 0.6rem;
-  position: absolute;
+  position: relative;
 }
 
 .menu{
