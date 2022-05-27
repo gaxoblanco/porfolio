@@ -84,7 +84,6 @@
   padding: 1rem;
 }
 .edition-about-container{
-display: grid;
 justify-items: center;
 }
 
@@ -94,12 +93,14 @@ justify-items: center;
   right: 28%;
   position: absolute;
 }
+
 svg{
   color: #FBA31B;
   height: 2.8rem;
   width: 2.8rem;
   left: 26%;
   position: absolute;
+  margin-top: -1.6rem;
 }
 .change{
   display: none;
@@ -116,13 +117,4 @@ svg{
   }
 }
 
-@media (min-width: 600px){
-  .about-container{
-    margin-top: 3rem;
-    max-width: 66rem;
-  }
-  .about-containter--text{
-    width: 90%;
-    height:32rem;
-  }
-}
+

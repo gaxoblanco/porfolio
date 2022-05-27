@@ -42,15 +42,14 @@
       </svg>
     </a>
   </div>
-
-  <span class="more--container option" [class.active]="more">
-    <p> {{estudio.descripcion}} </p>
-  </span>
   <a
     (click)="deletEst()"
     class="delete option"
     [class.active]="logeado">X
   </a>
+  <span class="more--container option" [class.active]="more">
+    <p> {{estudio.descripcion}} </p>
+  </span>
 
   <span class="eddition-container">
     <div class="change" [class.active]="active">
