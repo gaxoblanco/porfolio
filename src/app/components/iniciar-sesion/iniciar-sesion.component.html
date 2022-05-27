@@ -1,12 +1,12 @@
 
 <div class="login-container">
-  <form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)" >
+  <form [formGroup]="form" class="form-login-container" (ngSubmit)="onEnviar($event)" >
     <div>
       <label for="exampleInputEmail1" class="form-label">Email</label>
       <input
         type="email" formControlName="email"
         [ngClass]="{'is-invalid':Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}"
-        class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        class="form-control form-login" id="exampleInputEmail1" aria-describedby="emailHelp">
   <!--    <div  *ngIf="Email?error && Email?.touched" >
           <p *ngIf="Email.hasError('email')" class= "text-danger"> -->
 
@@ -24,7 +24,7 @@
       <input
         type="password" formControlName="password"
         [ngClass]="{'is-invalid':Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
-        class="form-control" id="exampleInputPassword1">
+        class="form-control form-login" id="exampleInputPassword1">
       <div *ngIf="Password?.errors && Password?.touched">
         <p *ngIf="Password?.hasError('required')" class="text-danger">
           La Clave es requerida
