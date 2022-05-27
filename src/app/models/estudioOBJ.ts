@@ -1,6 +1,7 @@
 export interface Estudio{
   id: String,
   estudiado: String,
+  institucion: String,
   descripcion: String,
   ini: Date,
   fin: Date,

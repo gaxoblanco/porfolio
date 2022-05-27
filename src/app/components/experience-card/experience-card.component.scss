@@ -6,7 +6,7 @@ a{
   text-decoration: none;
 }
 h2{
-  margin-left: 0.4rem;
+  margin-top: 0.4rem;
   font-size: 2rem;
   grid-row: 1;
 }
@@ -24,7 +24,7 @@ h2{
   .rectangle{
     background: #CCD1D7;
     width: 29rem;
-    height: 13rem;
+    height: 11.6rem;
     border-radius: 12px;
     display: grid;
     grid-template-rows: 1fr auto 1fr;
@@ -34,23 +34,25 @@ h2{
   .card-conte--text{
     background: #446063;
     width: 18.9rem;
-    height: 8.5rem;
+    height: 7.2rem;
     margin-top:0.7rem;
     margin-left: 0.8rem;
     border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
+    padding-left: 0.6rem;
   }
   .card-conte--text-angle {
     width:  7rem;
-    height: 9.8rem;
+    height: 8.3rem;
     background:#446063;
     border-radius: 12px 12px 18px 0;
     transform: rotate(0deg) skewX(30deg) scale(1,.866);
     margin-left: 15rem;
+    top: 0.2rem;
   }
 
 //bottom card
 .card-conte--button-date-buttom{
-  margin-top: 2.6rem;
+  margin-top: 2rem;
   grid-row: 3;
   display: grid;
 }
@@ -95,10 +97,10 @@ div .experiecne-date p{
 
 .rectangle-left{
   background: #FBA31B;
-  width: 3.4rem;
+  width: 4rem;
   height: 2.8rem;
   margin-top:0.6rem;
-  margin-left:16rem;
+  margin-left:15.4rem;
   border-radius: 6px 6px 0 6px;
   padding-top: 0.4rem;
 }
@@ -158,18 +160,16 @@ svg{
   position: absolute;
   height: 2.8rem;
   width: 2.8rem;
-  left: 0rem;
   margin-top: -3.4rem;
 }
 .eddition-container{
   display: grid;
-  place-items: center;
+  justify-items: left;
 }
 .change{
   border: 0.4rem solid #FBA31B;
   background: #B3B3B3;
   border-radius: 2rem;
-  padding: 1rem;
   display: none;
   &.active{
     transform: translateY(0);

@@ -13,7 +13,7 @@ export class RoutUpDataComponent implements OnInit {
   DataRout: FormGroup;
 
   constructor(
-    private RoutServ: RoutService,
+
     private headCom : HeadComponent) {
       this.DataRout = new FormGroup({
         nombre: new FormControl(''),
@@ -27,5 +27,8 @@ export class RoutUpDataComponent implements OnInit {
     let DataR: Ruta = this.DataRout.value;
     this.headCom.editRout(DataR)
     console.log("post" + this.DataRout)
+  }
+  clouseWind(){
+    this.headCom.active = false;
   }
 }

@@ -4,14 +4,13 @@ app-head{
 }
 nav{
   background: #141e1df3;
-  padding-bottom: 1rem;
 }
 .nav-container{
   width: 100vw;
   display: grid;
   place-items: center;
-  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-  margin-top: 2.6rem;
+  //grid-template-columns: 1fr 1fr 2fr 1fr 1fr;  probando con mi cel
+  //margin-top: 2.6rem;
 }
 
 .button svg{
@@ -68,7 +67,7 @@ nav{
 }
 .angle-left {
     width:  2rem;
-    height: 3.4rem;
+    height: 3.45rem;
     background: #FBA31B;
     border-radius: 0 4px 8px 0;
     position: absolute;
@@ -137,12 +136,11 @@ nav{
   border-radius:0 2rem 0 23rem;
 }
 img{
-  width:6.3rem;
-  margin-top: -8.2rem;
-  margin-left: 0.6rem;
+  width:6.1rem;
+  margin-top: -8.3rem;
+  margin-left: 0.55rem;
   position: relative;
 }
-
 .menu{
   display: grid;
   place-items: center;

@@ -20,5 +20,8 @@ export class NavBarComponent implements OnInit {
   toggleMenu(){
     this.activeMenu = !this.activeMenu;
   }
+  clouseMenu(){
+    this.activeMenu = false;
+  }
 
 }

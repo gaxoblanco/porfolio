@@ -2,26 +2,39 @@
   <div class="post-taitle">
     <h3>About</h3>
   </div>
-  <form [formGroup]="aboutDTO" class="post-about">
+  <form [formGroup]="aboutDTO" class="post">
     <div class="form-container">
     <label for="" class="">nombre</label>
-    <input type="text"
+    <input
+      [ngClass]="{'is-invalid':Titulo?.errors && Titulo?.touched,
+      'is-valid': !Titulo?.errors && Titulo?.touched}"
+      class="form-control"
+      type="text"
       id="name"
-      placeholder="Your full name"
+      placeholder="Titulo de la entrada"
       formControlName="titulo"
     >
 
     <label for="" class="">descripcion</label>
-    <input type="text"
+    <textarea
+      [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,
+      'is-valid': !Descripcion?.errors && Descripcion?.touched}"
+      class="form-control"
+      class="form-control textarea-post"
       id="descripcion"
-      placeholder="Your full name"
-      formControlName="descripcion"
-    >
+      placeholder="descripcion del post"
+      type="text"
+      formControlName="descripcion">
+    </textarea>
 
     <label for="" class="">logo</label>
-    <input type="text"
-      id="logo"
-      placeholder="Your full name"
+    <input
+      [ngClass]="{'is-invalid':Foto?.errors && Foto?.touched,
+      'is-valid': !Foto?.errors && Foto?.touched}"
+      class="form-control"
+      type="text"
+      id="foto"
+      placeholder="url de la imagen"
       formControlName="foto"
     >
     </div>

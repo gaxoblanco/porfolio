@@ -2,47 +2,77 @@
   <div class="post-taitle">
     <h3>Study</h3>
   </div>
-  <form [formGroup]="StudyDTO" class="post-study">
+  <form [formGroup]="StudyDTO" class="post">
     <div class="form-container">
     <label for="" class="">Estudio</label>
-    <input type="text"
+    <input
+      [ngClass]="{'is-invalid':Estudiado?.errors && Estudiado?.touched,
+      'is-valid': !Estudiado?.errors && Estudiado?.touched}"
+      class="form-control"
+      type="text"
       id="estudiado"
-      placeholder="Your full name"
+      placeholder="Nombre del estudio"
       formControlName="estudiado"
     >
 
-    <label for="" class="">Descripcion</label>
-    <input type="text"
-      id="descripcion"
-      placeholder="Your full name"
-      formControlName="descripcion"
+    <label for="" class="">Institucion</label>
+    <input
+      [ngClass]="{'is-invalid':Institucion?.errors && Institucion?.touched,
+      'is-valid': !Institucion?.errors && Institucion?.touched}"
+      class="form-control"
+      type="text"
+      id="institucion"
+      placeholder="instituto - intro"
+      formControlName="institucion"
     >
 
+    <label for="" class="">Descripcion</label>
+    <textarea
+      [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,
+      'is-valid': !Descripcion?.errors && Descripcion?.touched}"
+      class="form-control textarea-post"
+      id="descripcion"
+      placeholder="descripcion del estudio"
+      type="text"
+      formControlName="descripcion">
+    </textarea>
+
     <label for="" class="">Inicio</label>
-    <input type="date"
+    <input
+      [ngClass]="{'is-invalid':Ini?.errors && Ini?.touched,
+      'is-valid': !Ini?.errors && Ini?.touched}"
+      class="form-control"
+      type="date"
       id="ini"
-      placeholder="Your full name"
       formControlName="ini"
     >
 
     <label for="" class="">Final</label>
-    <input type="date"
+    <input
+      type="date"
       id="fin"
-      placeholder="Your full name"
       formControlName="fin"
     >
 
     <label for="" class="">url</label>
-    <input type="text"
+    <input
+      [ngClass]="{'is-invalid':Url?.errors && Url?.touched,
+      'is-valid': !Url?.errors && Url?.touched}"
+      class="form-control"
+      type="text"
       id="url"
-      placeholder="Your full name"
+      placeholder="url - link de la academia/proyecto"
       formControlName="url"
     >
 
     <label for="" class="">logo</label>
-    <input type="text"
+    <input
+      [ngClass]="{'is-invalid':Logo?.errors && Logo?.touched,
+      'is-valid': !Logo?.errors && Logo?.touched}"
+      class="form-control"
+      type="text"
       id="logo"
-      placeholder="Your full name"
+      placeholder="url - imagen "
       formControlName="logo"
     >
     </div>

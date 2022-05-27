@@ -2,28 +2,35 @@
   <form [formGroup]="SkillDTO" class="post-skill">
     <div class="form-container">
     <label for="" class="">nombre</label>
-    <input type="text"
+    <input
+      type="text"
       id="name"
-      placeholder="Your full name"
+      placeholder="Skill-Name"
       formControlName="nombre"
     >
 
     <label for="" class="">descripcion</label>
-    <input type="text"
+    <textarea
+      [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,
+      'is-valid': !Descripcion?.errors && Descripcion?.touched}"
+      class="form-control textarea-post"
       id="descripcion"
-      placeholder="Your full name"
-      formControlName="descripcion"
-    >
+      placeholder="descripcion de la experiencia"
+      type="text"
+      formControlName="descripcion">
+    </textarea>
 
     <label for="" class="">url</label>
-    <input type="text"
+    <input
+      type="text"
       id="url"
       placeholder="Your full name"
       formControlName="url"
     >
 
     <label for="" class="">logo</label>
-    <input type="text"
+    <input
+      type="text"
       id="logo"
       placeholder="Your full name"
       formControlName="logo"

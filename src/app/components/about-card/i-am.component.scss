@@ -1,13 +1,11 @@
-
 .about-container{
-    margin-top: 70px;
+    margin-top: 3rem;
     background: #E2E2E0;
     width: 84vw;
-    max-width: 400px;
+    max-width: 34rem;
     border-radius: 20px;
     font-size: 1.6rem;
-    padding-bottom: 3rem;;
-    margin-bottom: 10px;
+    padding-bottom: 3rem;
 }
 .about-container-SM{
     display: grid;
@@ -31,14 +29,14 @@
     margin-top: -1.4rem;
 }
 .angle-left {
-    width:  40px;
-    height: 47px;
+    width:  4rem;
+    height: 4.7rem;
     background: #FBA31B;
     border-radius: 0 4px 8px 0;
     position: absolute;
     transform: rotate(0deg) skewX(30deg) scale(1,.866);
     margin-left: 4.4rem;
-    margin-top: -1.6rem;
+    margin-top: -1.7rem;
 }
 .triangle-photo img{
   width: 160px;
@@ -71,7 +69,7 @@
 .about-containter--text{
   background: #B3B3B3;
   width: 86%;
-  height:400px;
+  min-height:32rem;
   margin: 0 auto;
   border-radius: 12px;
 }

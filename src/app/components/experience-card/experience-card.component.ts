@@ -68,10 +68,10 @@ export class ExperienceCardComponent implements OnInit {
     if(upexp.trabajo == ''){
       upexp.trabajo = this.experience.trabajo
     }
-    if(upexp.ini == new Date){
+    if(upexp.ini == new Date()){
       upexp.ini = this.experience.ini
     }
-    if(upexp.fin == new Date){
+    if(upexp.fin == new Date()){
       upexp.fin = this.experience.fin
     }
     this.expServ.addNewExp(upexp)

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CreateSkillDTO } from 'src/app/models/skillObj';
 import { SkillService } from 'src/app/services/skill.service';
 
@@ -15,10 +15,10 @@ export class SkillPostComponent implements OnInit {
 
   constructor( private skillservice: SkillService) {
     this.SkillDTO = new FormGroup({
-      nombre: new FormControl(''),
-      descripcion: new FormControl(''),
-      url: new FormControl(''),
-      logo: new FormControl('')
+      nombre: new FormControl('', [Validators.required, Validators.maxLength(16)]),
+      descripcion: new FormControl('', [Validators.required, Validators.maxLength(76)]),
+      url: new FormControl('', Validators.required),
+      logo: new FormControl('', Validators.required)
     })
   }
 
@@ -32,4 +32,10 @@ export class SkillPostComponent implements OnInit {
     .subscribe(() => {
     })
   }
+
+
+  get Nombre (){return this.SkillDTO.get('nombre'); }
+  get Descripcion(){return this.SkillDTO.get('descripcion'); }
+  get Url(){return this.SkillDTO.get('url'); }
+  get Logo(){return this.SkillDTO.get('logo'); }
 }

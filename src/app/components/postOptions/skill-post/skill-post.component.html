@@ -2,35 +2,47 @@
   <div class="post-taitle">
     <h3>Skill</h3>
   </div>
-  <form [formGroup]="SkillDTO" class="post-skill">
+  <form [formGroup]="SkillDTO" class="post">
     <div class="form-container">
-    <label for="" class="">nombre</label>
-    <input type="text"
-      id="name"
-      placeholder="name - program or ability"
-      formControlName="nombre"
-    >
-
-    <label for="" class="">descripcion</label>
-    <input type="text"
-      id="descripcion"
-      placeholder="description"
-      formControlName="descripcion"
-    >
-
-    <label for="" class="">url</label>
-    <input type="text"
-      id="url"
-      placeholder="url - program description"
-      formControlName="url"
-    >
-
-    <label for="" class="">logo</label>
-    <input type="text"
-      id="logo"
-      placeholder="logo program or ability"
-      formControlName="logo"
-    >
+      <label for="" class="">nombre</label>
+      <input
+        type="text"
+        [ngClass]="{'is-invalid':Nombre?.errors && Nombre?.touched,
+        'is-valid': !Nombre?.errors && Nombre?.touched}"
+        class="form-control"
+        id="name"
+        placeholder="name - program or ability"
+        formControlName="nombre"
+      >
+      <label for="" class="">descripcion</label>
+      <textarea
+        [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,
+        'is-valid': !Descripcion?.errors && Descripcion?.touched}"
+        class="form-control textarea-post"
+        id="descripcion"
+        placeholder="descripcion del Skill"
+        type="text"
+        formControlName="descripcion">
+      </textarea>
+      <label for="" class="">url</label>
+      <input type="text"
+        [ngClass]="{'is-invalid':Url?.errors && Url?.touched,
+        'is-valid': !Url?.errors && Url?.touched}"
+        class="form-control"
+        id="url"
+        placeholder="url - program description"
+        formControlName="url"
+      >
+      <label for="" class="">logo</label>
+      <input
+        [ngClass]="{'is-invalid':Logo?.errors && Logo?.touched,
+        'is-valid': !Logo?.errors && Logo?.touched}"
+        class="form-control"
+        type="text"
+        id="logo"
+        placeholder="logo program or ability"
+        formControlName="logo"
+      >
     </div>
     <button class="button-post" (click)="saveNew()" >Post</button>
   </form>

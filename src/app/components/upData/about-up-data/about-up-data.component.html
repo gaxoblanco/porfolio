@@ -5,21 +5,23 @@
       <label for="" class="">nombre</label>
       <input type="text"
         id="name"
-        placeholder="Your full name"
+        placeholder="Nombre"
         formControlName="titulo"
       >
 
       <label for="" class="">descripcion</label>
-      <input type="text"
+      <textarea
+        class="textarea-post"
         id="descripcion"
-        placeholder="Your full name"
-        formControlName="descripcion"
-      >
+        placeholder="descripcion del post"
+        type="text"
+        formControlName="descripcion">
+      </textarea>
 
       <label for="" class="">logo</label>
       <input type="text"
-        id="logo"
-        placeholder="Your full name"
+        id="foto"
+        placeholder="Logo - Post"
         formControlName="foto">
     </div>
     <button class="button-post" (click)="saveAbout()" >Up</button>

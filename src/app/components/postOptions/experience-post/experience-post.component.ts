@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ExperienceService } from 'src/app/services/experience.service';
 import { CreateExpDTO } from 'src/app/models/experienceObj';
 @Component({
@@ -13,13 +13,13 @@ export class ExperiencePostComponent implements OnInit {
 
   constructor(private expServ: ExperienceService) {
     this.ExpDTO = new FormGroup({
-      trabajo: new FormControl(''),
-      puesto: new FormControl(''),
-      descripcion: new FormControl(''),
-      ini: new FormControl(''),
+      trabajo: new FormControl('', Validators.required),
+      puesto: new FormControl('', [Validators.required, Validators.maxLength(45)]),
+      descripcion: new FormControl('', Validators.required),
+      ini: new FormControl('', Validators.required),
       fin: new FormControl(''),
-      url: new FormControl(''),
-      logo: new FormControl('')
+      url: new FormControl('', Validators.required),
+      logo: new FormControl('', Validators.required)
     })
    }
 
@@ -32,4 +32,10 @@ export class ExperiencePostComponent implements OnInit {
     .subscribe()
   }
 
+  get Trabajo(){return this.ExpDTO.get('trabajo'); }
+  get Puesto(){return this.ExpDTO.get('puesto'); }
+  get Descripcion(){return this.ExpDTO.get('descripcion'); }
+  get Ini(){return this.ExpDTO.get('ini'); }
+  get Url(){return this.ExpDTO.get('url'); }
+  get Logo(){return this.ExpDTO.get('logo'); }
 }

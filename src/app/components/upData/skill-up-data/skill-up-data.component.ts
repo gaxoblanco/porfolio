@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CreateSkillDTO } from 'src/app/models/skillObj';
 import { SkillCardComponent } from '../../skill-card/skill-card.component';
 
@@ -15,16 +15,16 @@ export class SkillUpDataComponent implements OnInit {
   constructor( private SkillCard: SkillCardComponent) {
     this.SkillDTO = new FormGroup({
       nombre: new FormControl(''),
-      descripcion: new FormControl(''),
+      descripcion: new FormControl('', Validators.maxLength(76)),
       url: new FormControl(''),
       logo: new FormControl('')
     })
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   upSkill():void{
     let SkillInformation: CreateSkillDTO = this.SkillDTO.value;
     this.SkillCard.editSkill(SkillInformation)
   }
+  get Descripcion(){return this.SkillDTO.get('descripcion'); }
 }

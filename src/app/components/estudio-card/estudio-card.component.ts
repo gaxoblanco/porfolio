@@ -15,10 +15,12 @@ export class EstudioCardComponent implements OnInit {
   active: boolean = false;
   logeado: boolean = false;
   more: boolean = false;
+  saveDate = '';
 
   @Input() estudio: Estudio = {
     id:'',
     estudiado:'',
+    institucion: '',
     descripcion:'',
     ini: new Date(),
     fin: new Date(),
@@ -60,6 +62,9 @@ export class EstudioCardComponent implements OnInit {
     if(StudyInformation.url == ''){
       StudyInformation.url = this.estudio.url
     }
+    if(StudyInformation.institucion == ''){
+      StudyInformation.institucion = this.estudio.institucion
+    }
     if(StudyInformation.estudiado == ''){
       StudyInformation.estudiado = this.estudio.estudiado
     }
@@ -68,6 +73,7 @@ export class EstudioCardComponent implements OnInit {
     }
     if(StudyInformation.ini == new Date){
       StudyInformation.ini = this.estudio.ini
+      console.log(StudyInformation.ini)
     }
     if(StudyInformation.fin == new Date){
       StudyInformation.fin = this.estudio.fin

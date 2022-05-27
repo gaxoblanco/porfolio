@@ -2,13 +2,13 @@
   <app-head ></app-head>
   <div class="contact-container">
     <div class="contact-container--information">
-      <img class="logo" src="https://i.imgur.com/FKF99BV.png" alt="dibujo de foto carnet">
+      <img class="logo" src="https://i.imgur.com/BYalKP2.png" alt="dibujo de foto carnet">
         <div class="backgroud-input-container">
           <div class="contact-input-container-angle"></div>
           <div class="contact-input-container"></div>
         </div>
       <form class="contact-input--container" [formGroup]="emailListo" (ngSubmit)="enviarEmail()" >
-        <h2> Ponte en contacto </h2>
+        <h2> Contact to me </h2>
         <div>
             <div class="info-input-container">
               <label for="" class="form-label label-name">Name</label>
@@ -40,9 +40,10 @@
           </textarea>
         </div>
         <div>
+          <div class="button-angle-left"></div>
             <div class="button-contact--enviar">
-              <div class="button-angle-left"></div>
-              <button type="submit" class="button-rectangle-left" [disabled]="!emailListo.valid"><p>Enviar</p></button>
+
+              <button type="submit" class="button-rectangle-left" [disabled]="!emailListo.valid"><p>Submit</p></button>
             </div>
         </div>
       </form>

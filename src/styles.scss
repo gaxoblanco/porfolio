@@ -20,6 +20,7 @@ app-head{
   border-radius: 0.6rem;
   margin: 0 auto;
   margin-top: 2rem;
+  color: white;
 }
 .form-container{
   display: grid;
@@ -27,12 +28,24 @@ app-head{
 }
 .form-container label{
   margin-left: 1rem;
-  margin-bottom: 0.4rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.2rem;
 }
 .form-container input{
   margin: 0.4rem 1rem;
   border-radius: 0.4rem;
   padding-left: 0.4rem;
+}
+
+.post{
+  width: 28rem;
+  display: grid;
+  background: #446063;
+  border-radius: 1rem;
+  padding-bottom: 0.4rem;
+}
+.post input{
+  background: #CCD1D7;
 }
 .post-taitle{
   text-align: center;
@@ -44,6 +57,19 @@ app-head{
   background: #FBA31B;
   color: white;
 }
+.textarea-post{
+  width: 26rem;
+  height: 8rem;
+  margin: 0.4rem 1rem;
+  border-radius: 0.4rem;
+  padding-left: 0.4rem;
+  background: #CCD1D7;
+}
+.form-control{
+  width: 26rem;
+  border: 2px solid #CCD1D7;
+}
+
 .container-component{
   display: grid;
 }
