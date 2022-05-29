@@ -1,19 +1,20 @@
 
 <div>
-  <form [formGroup]="aboutDTO" class="post-about">
+  <form [formGroup]="aboutDTO" class="up-data">
     <div class="form-container">
       <label for="" class="">nombre</label>
       <input type="text"
-        id="name"
+        id="titulo"
+        class="form-control"
         placeholder="Nombre"
         formControlName="titulo"
       >
 
       <label for="" class="">descripcion</label>
       <textarea
-        class="textarea-post"
+        class="form-control textarea-post"
         id="descripcion"
-        placeholder="descripcion del post"
+        placeholder="Me interesan ..."
         type="text"
         formControlName="descripcion">
       </textarea>
@@ -21,6 +22,7 @@
       <label for="" class="">logo</label>
       <input type="text"
         id="foto"
+        class="form-control"
         placeholder="Logo - Post"
         formControlName="foto">
     </div>

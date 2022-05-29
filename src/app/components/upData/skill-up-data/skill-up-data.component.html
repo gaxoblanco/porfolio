@@ -1,9 +1,10 @@
 <div>
-  <form [formGroup]="SkillDTO" class="post-skill">
+  <form [formGroup]="SkillDTO" class="up-data">
     <div class="form-container">
     <label for="" class="">nombre</label>
     <input
       type="text"
+      class="form-control"
       id="name"
       placeholder="Skill-Name"
       formControlName="nombre"
@@ -11,8 +12,6 @@
 
     <label for="" class="">descripcion</label>
     <textarea
-      [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,
-      'is-valid': !Descripcion?.errors && Descripcion?.touched}"
       class="form-control textarea-post"
       id="descripcion"
       placeholder="descripcion de la experiencia"
@@ -23,6 +22,7 @@
     <label for="" class="">url</label>
     <input
       type="text"
+      class="form-control"
       id="url"
       placeholder="Your full name"
       formControlName="url"
@@ -31,6 +31,7 @@
     <label for="" class="">logo</label>
     <input
       type="text"
+      class="form-control"
       id="logo"
       placeholder="Your full name"
       formControlName="logo"

@@ -137,6 +137,7 @@ div .experiecne-date p{
   background: #446063;
   border-radius: 1rem;
   margin-bottom: 0;
+  line-height: normal;
 }
 
 .logo{
@@ -166,16 +167,7 @@ svg{
   display: grid;
   justify-items: left;
 }
-.change{
-  border: 0.4rem solid #FBA31B;
-  background: #B3B3B3;
-  border-radius: 2rem;
-  display: none;
-  &.active{
-    transform: translateY(0);
-    display: grid;
-  }
-}
+
 .option{
   display: none;
   &.active{

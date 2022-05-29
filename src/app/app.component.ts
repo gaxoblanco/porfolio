@@ -11,7 +11,6 @@ export class AppComponent {
 
   @Output()paginaActual = new EventEmitter<Ruta>();
   constructor(
-   // private ruterMo : HeadComponent
     ) { }
 
 }

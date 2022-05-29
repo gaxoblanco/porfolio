@@ -30,6 +30,7 @@ export class EstudyPostComponent implements OnInit {
     let saveStudy: CreateStudyDTO = this.StudyDTO.value;
     this.studyServ.addNewStudy(saveStudy)
     .subscribe(() => {
+      this.StudyDTO.reset();
     })
   }
   get Estudiado(){return this.StudyDTO.get('estudiado'); }

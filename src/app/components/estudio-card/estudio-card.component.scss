@@ -147,7 +147,7 @@ a{
   display: grid;
   background: #CCD1D7;
   border-radius: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   margin-top: 1.4rem;
   padding: 0.6rem;
   position: relative;
@@ -160,6 +160,7 @@ a{
   background: #446063;
   border-radius: 1rem;
   margin-bottom: 0;
+  line-height: normal;
 }
 .delete{
   color: red;
@@ -178,22 +179,15 @@ svg{
   margin-left: -18rem;
   margin-top: -3.4rem;
 }
-.eddition-container{
+.edition-container{
   display: grid;
   justify-items: right;
   position: relative;
-  left: -2.4rem;
+  left: 3.4rem;
   top: 2rem;
 }
 .change{
-  border: 0.4rem solid #FBA31B;
-  background: #B3B3B3;
-  border-radius: 2rem;
-  display: none;
-  &.active{
-    transform: translateY(0);
-    display: grid;
-  }
+  margin-left: -0.8rem;
 }
 .option{
   display: none;

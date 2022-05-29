@@ -1,15 +1,17 @@
 <div>
-  <form [formGroup]="ExpDTO" class="post-exp">
+  <form [formGroup]="ExpDTO" class="up-data">
     <div class="form-container">
     <label for="" class="">Trabajo</label>
     <input type="text"
       id="name"
+      class="form-control"
       placeholder="Trbajo - Proyecto"
       formControlName="trabajo"
     >
 
     <label for="" class="">puesto</label>
     <input type="text"
+      class="form-control form-control"
       id="descripcion"
       placeholder="pequeña descripcion"
       formControlName="puesto"
@@ -17,7 +19,7 @@
 
     <label for="" class="">descripcion</label>
     <textarea
-      class="textarea-post"
+      class="textarea-post form-control"
       id="descripcion"
       placeholder="descripcion detallada"
       type="text"
@@ -27,6 +29,7 @@
     <label for="" class="">inicio</label>
     <input type="date"
       id="ini"
+      class="form-control"
       placeholder="fecha de inicio"
       formControlName="ini"
     >
@@ -34,6 +37,7 @@
     <label for="" class="">final</label>
     <input type="date"
       id="fin"
+      class="form-control"
       placeholder="fecha de final"
       formControlName="fin"
     >
@@ -41,6 +45,7 @@
     <label for="" class="">url</label>
     <input type="text"
       id="url"
+      class="form-control"
       placeholder="URL - Trabajo/Proyecto"
       formControlName="url"
     >
@@ -48,6 +53,7 @@
     <label for="" class="">logo</label>
     <input type="text"
       id="logo"
+      class="form-control"
       placeholder="URL - Logo "
       formControlName="logo"
     >

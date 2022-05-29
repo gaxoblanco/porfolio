@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CreateSkillDTO } from 'src/app/models/skillObj';
 import { SkillService } from 'src/app/services/skill.service';
+import { PostComponent } from '../../post/post.component';
 
 @Component({
   selector: 'app-skill-post',
@@ -13,7 +14,8 @@ export class SkillPostComponent implements OnInit {
   SkillDTO: FormGroup;
 
 
-  constructor( private skillservice: SkillService) {
+  constructor( private skillservice: SkillService,
+    private  posCom : PostComponent) {
     this.SkillDTO = new FormGroup({
       nombre: new FormControl('', [Validators.required, Validators.maxLength(16)]),
       descripcion: new FormControl('', [Validators.required, Validators.maxLength(76)]),
@@ -30,6 +32,7 @@ export class SkillPostComponent implements OnInit {
     let saveSkill: CreateSkillDTO = this.SkillDTO.value;
     this.skillservice.addNewSkill(saveSkill)
     .subscribe(() => {
+      this.SkillDTO.reset();
     })
   }
 

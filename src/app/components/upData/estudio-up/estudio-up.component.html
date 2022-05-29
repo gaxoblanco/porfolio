@@ -1,9 +1,10 @@
 <div>
-  <form [formGroup]="StudyDTO" class="post-study">
+  <form [formGroup]="StudyDTO" class="up-data">
     <div class="form-container">
     <label for="" class="">Estudio</label>
     <input type="text"
       id="estudiado"
+      class="form-control"
       placeholder="Estudio realizado"
       formControlName="estudiado"
     >
@@ -11,13 +12,14 @@
     <label for="" class="">Institucion</label>
     <input type="text"
       id="institucion"
+      class="form-control"
       placeholder="instituto - intro"
       formControlName="institucion"
     >
 
     <label for="" class="">Descripcion</label>
     <textarea
-      class="textarea-post"
+      class="textarea-post form-control"
       id="descripcion"
       placeholder="descripcion del estudio"
       type="text"
@@ -26,18 +28,21 @@
 
     <label for="" class="">Inicio</label>
     <input type="date"
+      class="form-control"
       id="ini"
       formControlName="ini"
     >
 
     <label for="" class="">Final</label>
     <input type="date"
+      class="form-control"
       id="fin"
       formControlName="fin"
     >
 
     <label for="" class="">url</label>
     <input type="text"
+      class="form-control"
       id="url"
       placeholder="url del curso "
       formControlName="url"
@@ -46,6 +51,7 @@
     <label for="" class="">logo</label>
     <input type="text"
       id="logo"
+      class="form-control"
       placeholder="url - Logo"
       formControlName="logo"
     >

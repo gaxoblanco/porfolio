@@ -29,7 +29,9 @@ export class ExperiencePostComponent implements OnInit {
   saveNew(){
     let saveExp: CreateExpDTO = this.ExpDTO.value;
     this.expServ.addNewExp(saveExp)
-    .subscribe()
+    .subscribe(() => {
+      this.ExpDTO.reset();
+    })
   }
 
   get Trabajo(){return this.ExpDTO.get('trabajo'); }

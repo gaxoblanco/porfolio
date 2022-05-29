@@ -1,19 +1,22 @@
 
 <div class="post-about">
-  <form [formGroup]="DataRout" class="form-container">
+  <form [formGroup]="DataRout" class="up-data">
     <div class="form-container">
     <label for="" class="">Titulo</label>
     <input type="text"
       id="nombre"
+      class="form-control"
       placeholder="Your full name"
       formControlName="nombre"
     >
     <label for="" class="">Descripcion</label>
-    <input type="text"
-      id="descripcion"
-      placeholder="Your full name"
-      formControlName="descripcion"
-    >
+    <textarea
+    class="form-control textarea-post"
+    id="descripcion"
+    placeholder="descripcion de la experiencia"
+    type="text"
+    formControlName="descripcion">
+  </textarea>
     </div>
     <button class="button-post" (click)="UpRout()" (click)="clouseWind()"><p>Up</p> </button>
   </form>

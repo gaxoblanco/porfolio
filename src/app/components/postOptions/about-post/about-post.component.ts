@@ -10,12 +10,12 @@ import { AboutService } from 'src/app/services/about.service';
 })
 export class AboutPostComponent implements OnInit {
 
-  @Input() aboutDTO: FormGroup;
+  @Input() AboutDTO: FormGroup;
 
   constructor(private aboutServ: AboutService) {
-    this.aboutDTO = new FormGroup({
+    this.AboutDTO = new FormGroup({
       titulo: new FormControl('', Validators.required),
-      descripcion: new FormControl('', [Validators.required, Validators.minLength(80)]),
+      descripcion: new FormControl('', Validators.required),
       foto: new FormControl('', Validators.required)
     })
   }
@@ -24,12 +24,14 @@ export class AboutPostComponent implements OnInit {
   }
 
   saveNewAbout(){
-    let saveAbout: About = this.aboutDTO.value;
+    let saveAbout: About = this.AboutDTO.value;
     this.aboutServ.addNewAbout(saveAbout)
-    .subscribe(() => {})
+    .subscribe(() => {
+      this.AboutDTO.reset();
+    })
   }
-  get Titulo (){return this.aboutDTO.get('titulo'); }
-  get Descripcion (){return this.aboutDTO.get('descripcion'); }
-  get Foto (){return this.aboutDTO.get('foto'); }
+  get Titulo (){return this.AboutDTO.get('titulo'); }
+  get Descripcion (){return this.AboutDTO.get('descripcion'); }
+  get Foto (){return this.AboutDTO.get('foto'); }
 
 }

@@ -31,14 +31,14 @@ a{
 }
 .contact-input-container{
   background: #446063;
-  width: 22rem;
+  width: 21.6rem;
   height: 8.6rem;
-  border-radius: 12px 12px 12px 0;
-  margin-left: 7rem;
+  border-radius: 16px 8px 8px 0;
+  margin-left: 7.2rem;
   margin-top: 0.6rem;
 }
 .contact-input-container-angle {
-  width:  7rem;
+  width:  7.2rem;
   height: 9.9rem;
   background:#446063;
   border-radius: 18px 0px 12px 12px;
@@ -125,9 +125,10 @@ button{
   margin-top: 0.4rem;
   padding:0;
 }
-.container--email-text{
+.label-email{
   margin-left: 6rem;
   margin-top: 1rem;
+  color: white;
 }
 @media (min-width: 800px){
   .contact-container--information{
@@ -143,8 +144,9 @@ button{
     font-size: 2rem;
     margin-left: 20rem;
   }
-  .contact-input--container label{
-    margin-left: 6rem;
+  .info-input-container label{
+    margin-right: -1rem;
+    margin-left: 9rem;
   }
   .contact-input--container input{
     margin-left: 3rem;

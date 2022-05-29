@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CreateAboutDTO, UpAbout } from 'src/app/models/about';
+import { CreateAboutDTO } from 'src/app/models/about';
 import { IAmComponent } from '../../about-card/i-am.component';
 
 @Component({
@@ -27,5 +27,6 @@ export class AboutUpDataComponent implements OnInit {
     let aboutCard: CreateAboutDTO = this.aboutDTO.value;
     this.aboutCard.editAbout(aboutCard)
   }
+
 }
 

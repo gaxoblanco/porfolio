@@ -1,7 +1,7 @@
 .about-container{
     margin-top: 3rem;
     background: #E2E2E0;
-    width: 84vw;
+    width: 30rem;
     max-width: 34rem;
     border-radius: 20px;
     font-size: 1.6rem;
@@ -103,11 +103,7 @@ svg{
   margin-top: -1.6rem;
 }
 .change{
-  display: none;
-  &.active{
-    transform: translateY(0);
-    display: grid;
-  }
+  margin-top: 3rem;
 }
 .option{
   margin-top: -1.4rem;
