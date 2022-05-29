@@ -15,7 +15,8 @@ export class AboutPostComponent implements OnInit {
   constructor(private aboutServ: AboutService) {
     this.AboutDTO = new FormGroup({
       titulo: new FormControl('', Validators.required),
-      descripcion: new FormControl('', Validators.required),
+      descripcion: new FormControl('', [Validators.required, Validators.maxLength(255)]),
+      descripcion2: new FormControl('', Validators.required),
       foto: new FormControl('', Validators.required)
     })
   }

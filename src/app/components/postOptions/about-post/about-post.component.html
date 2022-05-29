@@ -19,12 +19,19 @@
     <textarea
       [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,
       'is-valid': !Descripcion?.errors && Descripcion?.touched}"
-      class="form-control"
       class="form-control textarea-post"
       id="descripcion"
       placeholder="descripcion del post"
       type="text"
       formControlName="descripcion">
+    </textarea>
+    <label for="" class="">More descripcion</label>
+    <textarea
+      class="form-control textarea-post"
+      id="descripcion2"
+      placeholder="continua aca"
+      type="text"
+      formControlName="descripcion2">
     </textarea>
 
     <label for="" class="">logo</label>

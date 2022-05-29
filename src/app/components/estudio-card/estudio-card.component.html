@@ -1,6 +1,10 @@
-<div class="card-study">
-  <div Class="card-angle-rigth">
-
+<article class="card card-study">
+  <div Class="card-angle-rigth-study">
+    <a
+    (click)="deletEst()"
+    class="delete option"
+    [class.active]="logeado">X
+  </a>
     <div Class="rectangle">
       <img class="logo" [src]="estudio.logo">
 
@@ -42,19 +46,14 @@
       </svg>
     </a>
   </div>
-  <a
-    (click)="deletEst()"
-    class="delete option"
-    [class.active]="logeado">X
-  </a>
   <span class="more--container option" [class.active]="more">
     <p> {{estudio.descripcion}} </p>
   </span>
 
-  <span class="edition-container">
+  <span class="edition-container-study">
     <div class="change" [class.active]="active">
       <app-estudio-up
       StudyDTO="estudio" ></app-estudio-up>
     </div>
   </span>
-</div>
+</article>

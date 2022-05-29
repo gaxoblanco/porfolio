@@ -19,6 +19,7 @@ export class IAmComponent implements OnInit {
     id: '',
     titulo: '',
     descripcion: '',
+    descripcion2: '',
     foto: '',
   };
 

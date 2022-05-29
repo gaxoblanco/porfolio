@@ -11,6 +11,11 @@ html{
 p{
   color: white;
 }
+.card{
+  width: 100%;
+  margin-top: 4rem;
+  background: #141E1D;
+}
 .label-up{
   color: black;
   font-size: 1.8rem;
@@ -80,9 +85,7 @@ app-head{
   border: 2px solid #CCD1D7;
 }
 
-.container-component{
-  display: grid;
-}
+
 .up-data{
   width: 28rem;
   display: grid;

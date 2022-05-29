@@ -1,6 +1,6 @@
 
 <div>
-  <form [formGroup]="aboutDTO" class="up-data">
+  <form [formGroup]="AboutDTO" class="up-data">
     <div class="form-container">
       <label for="" class="">nombre</label>
       <input type="text"
@@ -12,11 +12,23 @@
 
       <label for="" class="">descripcion</label>
       <textarea
+        [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,
+        'is-valid': !Descripcion?.errors && Descripcion?.touched}"
         class="form-control textarea-post"
         id="descripcion"
         placeholder="Me interesan ..."
         type="text"
         formControlName="descripcion">
+      </textarea>
+      <label for="" class="">More descripcion</label>
+      <textarea
+        [ngClass]="{'is-invalid':Descripcion?.errors && Descripcion?.touched,
+        'is-valid': !Descripcion?.errors && Descripcion?.touched}"
+        class="form-control textarea-post"
+        id="descripcion2"
+        placeholder="continua aca"
+        type="text"
+        formControlName="descripcion2">
       </textarea>
 
       <label for="" class="">logo</label>

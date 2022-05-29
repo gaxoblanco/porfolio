@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CreateAboutDTO } from 'src/app/models/about';
 import { IAmComponent } from '../../about-card/i-am.component';
 
@@ -10,12 +10,13 @@ import { IAmComponent } from '../../about-card/i-am.component';
 })
 export class AboutUpDataComponent implements OnInit {
 
-  aboutDTO: FormGroup;
+  AboutDTO: FormGroup;
 
   constructor(private aboutCard: IAmComponent) {
-    this.aboutDTO = new FormGroup({
+    this.AboutDTO = new FormGroup({
       titulo: new FormControl(''),
-      descripcion: new FormControl(''),
+      descripcion: new FormControl('', [Validators.required, Validators.maxLength(255)]),
+      descripcion2: new FormControl('', Validators.maxLength(255)),
       foto: new FormControl('')
     })
   }
@@ -24,9 +25,10 @@ export class AboutUpDataComponent implements OnInit {
   }
 
   saveAbout(){
-    let aboutCard: CreateAboutDTO = this.aboutDTO.value;
+    let aboutCard: CreateAboutDTO = this.AboutDTO.value;
     this.aboutCard.editAbout(aboutCard)
   }
-
+  get Descripcion (){return this.AboutDTO.get('descripcion'); }
+  get Descripcion2 (){return this.AboutDTO.get('descripcion2'); }
 }
 

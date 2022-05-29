@@ -2,6 +2,7 @@ export interface About{
   id: String,
   titulo: String,
   descripcion: String,
+  descripcion2: String,
   foto: String,
 }
 
