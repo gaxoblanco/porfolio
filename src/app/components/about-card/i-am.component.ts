@@ -55,6 +55,9 @@ export class IAmComponent implements OnInit {
     if(DatoaSubir.descripcion == ''){
       DatoaSubir.descripcion = this.about.descripcion
     }
+    if(DatoaSubir.descripcion2 == ''){
+      DatoaSubir.descripcion2 = this.about.descripcion2
+    }
     this.aboutServ.addNewAbout(DatoaSubir)
     .subscribe(()=>{
       this.aboCompo.ngOnInit();
