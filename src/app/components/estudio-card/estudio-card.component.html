@@ -21,7 +21,11 @@
         <a class="buttonL"
           [class.active]="more"
           (click)="activeMore()">
-          <p>More</p>
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+          </p>
         </a>
         </div>
         <div class="estudio-date">
@@ -32,7 +36,13 @@
         <a class="buttonL" [href]="estudio.url" target="_blank">
           <div>
             <div Class="angle-left"></div>
-            <div Class="rectangle-left"><p>Link</p></div>
+            <div Class="rectangle-left">
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+                  <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+                </svg>
+              </p>
+            </div>
           </div>
         </a>
       </div>

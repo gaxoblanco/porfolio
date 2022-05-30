@@ -85,6 +85,12 @@ a{
   margin-top:7.2rem;
   border-radius: 6px 6px 6px 0;
   padding-top: 0.6rem;
+  svg{
+    width: 3rem;
+    color:white;
+    margin-top: -1.6rem;
+    margin-left:-1.2rem;
+  }
 }
 .angle-rigth {
   grid-column: 1;
@@ -131,6 +137,12 @@ a{
   margin-left:-1.6rem;
   border-radius: 6px 6px 0 6px;
   padding-top: 0.2rem;
+  svg{
+    width: 1.8rem;
+    color:white;
+    margin-top: -0.6rem;
+    margin-left:-1rem;
+  }
 }
 .angle-left {
   grid-column: 3;

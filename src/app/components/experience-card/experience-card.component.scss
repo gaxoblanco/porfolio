@@ -59,9 +59,13 @@ h2{
   border-radius: 6px 6px 6px 0;
   margin-left: 3.2rem;
   margin-top: 0.6rem;
-  padding-top: 0.4rem;
-  padding-right: 0.4rem;
   position: absolute;
+  svg{
+    width: 3rem;
+    color:white;
+    margin-top: -1rem;
+    margin-left:-1.8rem;
+  }
 }
 .angle-rigth {
   width:  20px;
@@ -99,6 +103,12 @@ div .experiecne-date p{
   margin-left:15.4rem;
   border-radius: 6px 6px 0 6px;
   padding-top: 0.4rem;
+  svg{
+    width: 1.8rem;
+    color:white;
+    margin-top: -1.4rem;
+    margin-left:0.8rem;
+  }
 }
 .angle-left {
   width:  2.2rem;
