@@ -78,8 +78,9 @@ a{
 
 
 button{
-  margin-top: 1rem;
-  margin-left: 18rem;
+  width:  5rem;
+  height: 3.1rem;
+  margin-left: 19.4rem;
   background: #FBA31B;
   border-radius: 0.6rem 0.6rem 0 0.6rem;
   padding-left: 0.6rem;
@@ -88,11 +89,15 @@ button{
   position: absolute;
   margin-top: -3.25rem;
 }
+svg{
+  width: 2rem;
+  height: auto;
+}
 
 .button-angle-left {
   margin-top: 0.72rem;
-  margin-left: 23rem;
-  width:  2.4rem;
+  margin-left: 22.4rem;
+  width:  2.8rem;
   height: 3.5rem;
   background: #FBA31B;
   position: relative;
