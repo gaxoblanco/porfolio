@@ -10,8 +10,11 @@ import { EmailService } from 'src/app/services/email.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
   emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
   fechaActual: Date = new Date;
+ // pdf: CV\src\assets\CV Gaston-Blanco.pdf
+
 
 @Input() emailListo: FormGroup;
 
@@ -41,6 +44,9 @@ export class ContactComponent implements OnInit {
     this.ruta.navigate(['/home']);
     }else{
     }
+  }
+  abrirPDF(){
+    this.ruta.navigate(['/GastonBlanco']);
   }
   get Nombre(){return this.emailListo.get('nombre'); }
   get Email(){return this.emailListo.get('email'); }
