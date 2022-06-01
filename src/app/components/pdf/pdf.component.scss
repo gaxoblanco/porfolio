@@ -3,17 +3,33 @@ span{
   place-items: center;
 }
 embed{
-  width: 40rem;
+  width: 36rem;
   height: 60rem;
   border-radius: 1rem;
 }
 .pdf-container{
   margin-top:2rem;
-  width: 42rem;
+  width: 38rem;
   display: grid;
   place-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #CCD1D7;
   border-radius: 1rem;
+}
+@media (min-width: 500px){
+  .pdf-container{
+    width: 47rem;
+  }
+  embed{
+    width: 45rem;
+  }
+}
+@media (min-width: 800px){
+  .pdf-container{
+    width: 70rem;
+  }
+  embed{
+    width: 68rem;
+  }
 }
