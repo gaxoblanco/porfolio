@@ -15,6 +15,7 @@ export class MenuComponent implements OnInit {
   @Input() page: Ruta={
     nombre: '',
     ruta: '',
+    logo: '',
   }
   @Output() addedPage = new EventEmitter<Ruta>();
 

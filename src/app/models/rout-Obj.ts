@@ -4,4 +4,5 @@ export interface Ruta{
   nombre?: string,
   descripcion?: string,
   acess?: string,
+  logo?: string,
 }
