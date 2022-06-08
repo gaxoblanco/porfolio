@@ -20,9 +20,6 @@ nav{
     height: auto;
     border-radius: 4px 4px 4px 4px;
 }
-.button-left-angle{
-  grid-column: 2;
-}
 
 .right {
   grid-column: 5;
@@ -31,58 +28,6 @@ nav{
   grid-column: 1;
 }
 
-//angle rigth
-.button-right-angle{
-  margin: 0 auto;
-  grid-column: 4;
-}
-  .rectangle-rigth{
-    background: #FBA31B;
-    width: 4rem;
-    height: 3rem;
-    position: absolute;
-    border-radius: 6px 6px 6px 0;
-    margin-left: -1.6rem;
-    margin-top: -1.6rem;
-    color: white;
-    font-size: 1.6rem;
-    padding-left: 1rem;
-    padding-top: 0.4rem;
-}
-.angle-rigth {
-    width:  2rem;
-    height: 3.45rem;
-    background: #FBA31B;
-    border-radius: 4px 4px 0 8px ;
-    position: absolute;
-    transform: rotate(0deg) skewX(-30deg) scale(1,.866);
-    margin-top: -1.8rem;
-    margin-left: -2.6rem;
-}
-//angle left
-.rectangle-left{
-    background: #FBA31B;
-    width: 4rem;
-    height: 3rem;
-    position: absolute;
-    border-radius: 6px 6px 0 6px;
-    margin-left:-2.6rem;
-    margin-top: -1.6rem;
-    color: white;
-    font-size: 1.6rem;
-    padding-left: 1rem;
-    padding-top: 0.4rem;
-}
-.angle-left {
-    width:  2rem;
-    height: 3.45rem;
-    background: #FBA31B;
-    border-radius: 0 4px 8px 0;
-    position: absolute;
-    transform: rotate(0deg) skewX(30deg) scale(1,.866);
-    margin-left: 0.4rem;
-    margin-top: -1.8rem;
-}
 //triangle
 .triangle,
 .triangle:before,
