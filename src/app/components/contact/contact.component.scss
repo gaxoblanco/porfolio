@@ -26,7 +26,7 @@ a{
   //background-color: purple;
   width:14rem;
   position: absolute;
-  margin-left: -6rem;
+  margin-left: -5.6rem;
   margin-top: -3rem;
 }
 .contact-input-container{
@@ -39,12 +39,13 @@ a{
 }
 .contact-input-container-angle {
   width:  7.2rem;
-  height: 9.9rem;
+  height: 10rem;
   background:#446063;
   border-radius: 18px 0px 12px 12px;
   transform: rotate(0deg) skewX(-30deg) scale(1,.866);
   margin-left: 3.6rem;
   position: absolute;
+  margin-top: -0.1rem;
 }
 .contact-input--container{
   position: absolute;

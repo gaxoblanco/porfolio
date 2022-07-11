@@ -1,10 +1,11 @@
 <div class="menu-container">
     <a [routerLink]="page.ruta"
-      calss="card"
       *ngFor="let page of pages" (click)="ClickAlert()">
       <div Class="card-angle-rigth">
-          <div Class="rectangle"></div>
-          <div Class="angle-rigth"></div>
+          <div class="background-option">
+            <div Class="rectangle"></div>
+            <div Class="angle-rigth"></div>
+          </div>
           <div >
             <p> {{page.nombre}} </p>
           </div>

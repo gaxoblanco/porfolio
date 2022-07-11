@@ -20,21 +20,23 @@
   .card-angle-rigth div{
     position: absolute;
   }
-  .rectangle{
-    background: #446063;
-    width: 9rem;
-    height: 2.9rem;
-    margin-top:2.7rem;
-    border-radius: 0.8rem 0.8rem 0 0.8rem;
-  }
-  .angle-rigth {
-    width:  4rem;
-    height: 3.4rem;
-    background:#446063;
-    border-radius: 8px 8px 8px 0;
-    transform: rotate(0deg) skewX(30deg) scale(1,.866);
-    margin-left: 8rem;
-    margin-top: 2.45rem;
+  .background-option {
+    margin-top: 2.6rem;
+    .rectangle{
+      background: #446063;
+      width: 11rem;
+      height: 3rem;
+      margin-top: 0.2rem;
+      border-radius: 0.8rem 0.8rem 0 0.8rem;
+    }
+    .angle-rigth {
+      width:  4rem;
+      height: 3.4rem;
+      background:#446063;
+      border-radius: 8px 8px 8px 0;
+      transform: rotate(0deg) skewX(30deg) scale(1,.866);
+      margin-left: 8rem;
+    }
   }
  p {
    text-decoration: none;
