@@ -1,4 +1,6 @@
 # CV
+live link:
+https://porfolioweb-34e5e.web.app/home
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
