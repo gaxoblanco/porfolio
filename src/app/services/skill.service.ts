@@ -15,7 +15,7 @@ export class SkillService {
   constructor(private http: HttpClient) { }
 
   getAllSkills(){
-    return this.http.get<Skill[]>(this.url + "ver/skill");
+    return this.http.get<Skill[]>(this.url + "ver/skil");
   }
 
   addNewSkill(saveSkill: CreateSkillDTO):Observable<Skill>{

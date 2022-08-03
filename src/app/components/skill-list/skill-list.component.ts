@@ -9,7 +9,18 @@ import {SkillService} from '../../services/skill.service';
 })
 export class SkillListComponent implements OnInit {
 
-  skillList: Skill[] = [];
+  loading = {
+    nombre:'Loading...' ,
+    descripcion:'Prendiendo servidor, puede demorar algunos segundos',
+    logo:'https://i.imgur.com/ITNhgTu.png'
+  }
+
+  skillList: any[] = [
+    this.loading,
+    this.loading,
+    this.loading,
+    this.loading,
+  ];
 
   constructor(
     private skillService: SkillService,

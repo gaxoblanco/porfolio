@@ -19,7 +19,7 @@ export class EstudioCardComponent implements OnInit {
 
   @Input() estudio: Estudio = {
     id:'',
-    estudiado:'',
+    estudiado:'Loadding',
     institucion: '',
     descripcion:'',
     ini: new Date(),

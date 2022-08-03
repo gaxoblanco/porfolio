@@ -11,6 +11,11 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  loading: Ruta={
+    nombre: 'Loading...',
+    ruta: '',
+    logo: 'https://i.imgur.com/ITNhgTu.png',
+  }
 
   @Input() page: Ruta={
     nombre: '',
@@ -20,7 +25,14 @@ export class MenuComponent implements OnInit {
   @Output() addedPage = new EventEmitter<Ruta>();
 
   rutaA: Ruta = {};
-  pages: Ruta[] =[];
+  pages: Ruta[] =[
+    this.loading,
+    this.loading,
+    this.loading,
+    this.loading,
+    this.loading,
+    this.loading,
+  ];
 
   constructor(
     public routSer : RoutService,

@@ -23,7 +23,7 @@ export class HeadComponent implements OnInit {
   };
   PrintRuta : Ruta = {
     ruta: '',
-    nombre: '',
+    nombre: 'Loading...',
     descripcion: '',
   }
   @Input() headerData: Ruta = {};

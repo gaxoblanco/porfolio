@@ -1,5 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, Input,  } from '@angular/core';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { ExperienceService } from 'src/app/services/experience.service';
 import { Experience, upExpDTO} from '../../models/experienceObj';

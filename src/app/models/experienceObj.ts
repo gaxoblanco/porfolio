@@ -8,6 +8,11 @@ export interface Experience{
     logo: String,
     url: String,
 }
+export interface ExperienceLoading{
+  trabajo: String,
+  puesto: String,
+  logo: String,
+}
 export interface CreateExpDTO extends Omit<Experience, 'id'>{}
 export interface upExpDTO extends CreateExpDTO{
   id?: String,

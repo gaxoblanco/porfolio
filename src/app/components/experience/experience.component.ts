@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExperienceService } from '../../services/experience.service';
+import { ExperienceLoading} from '../../models/experienceObj';
 
 @Component({
   selector: 'app-experience',
@@ -8,7 +9,18 @@ import { ExperienceService } from '../../services/experience.service';
 })
 export class ExperienceComponent implements OnInit {
 
-  exp: any = [];
+  loading: ExperienceLoading = {
+    trabajo:'Loading...' ,
+    puesto:'Prendiendo servidor, puede demorar',
+    logo:'https://i.imgur.com/ITNhgTu.png'
+  }
+
+  exp: any = [
+    this.loading,
+    this.loading,
+    this.loading,
+    this.loading,
+  ];
 
   constructor(private experienceServ: ExperienceService) { }
 
