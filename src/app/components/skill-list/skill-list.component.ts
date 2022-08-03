@@ -11,7 +11,7 @@ export class SkillListComponent implements OnInit {
 
   loading = {
     nombre:'Loading...' ,
-    descripcion:'Prendiendo servidor, puede demorar algunos segundos',
+    descripcion:'Starting the server, wait a few minutes',
     logo:'https://i.imgur.com/ITNhgTu.png'
   }
 

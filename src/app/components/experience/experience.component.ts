@@ -11,7 +11,7 @@ export class ExperienceComponent implements OnInit {
 
   loading: ExperienceLoading = {
     trabajo:'Loading...' ,
-    puesto:'Prendiendo servidor, puede demorar',
+    puesto:'Starting the server, wait a few minutes',
     logo:'https://i.imgur.com/ITNhgTu.png'
   }
 

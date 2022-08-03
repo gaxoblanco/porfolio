@@ -12,7 +12,7 @@ export class EstudioComponent implements OnInit {
   loading: EstudioLoading = {
     id:'' ,
     estudiado:'Loading...' ,
-    institucion:'Prendiendo servidor, puede demorar algunos segundos',
+    institucion:'Starting the server, wait a few minutes',
     logo:'https://i.imgur.com/ITNhgTu.png'
   }
 
