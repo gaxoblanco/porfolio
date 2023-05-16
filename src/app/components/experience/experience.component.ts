@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ExperienceService } from '../../services/experience.service';
 import { ExperienceLoading} from '../../models/experienceObj';
+import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 
 @Component({
   selector: 'app-experience',
@@ -25,10 +26,17 @@ export class ExperienceComponent implements OnInit {
   constructor(private experienceServ: ExperienceService) { }
 
   ngOnInit(): void {
-    this.experienceServ.getAllExperiences()
-    .subscribe(data =>{
-      this.exp = data;
-    });
-  }
+    setTimeout(() => {
+      try {
+        // this.experienceServ.getAllExperiences()
+        // .subscribe(data =>{
+        //   this.exp = data;
+        // });
+        console.log(dataBase);
+        this.exp = dataBase[3].data;
+      } catch (error) {
 
+      }
+    }, 400);
+  }
 }

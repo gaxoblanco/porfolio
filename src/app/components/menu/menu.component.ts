@@ -4,28 +4,29 @@ import { Ruta } from 'src/app/models/rout-Obj';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { RoutService } from 'src/app/services/rout-.service';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss']
+  styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  loading: Ruta={
+  loading: Ruta = {
     nombre: 'Loading...',
     ruta: '',
     logo: 'https://i.imgur.com/ITNhgTu.png',
-  }
+  };
 
-  @Input() page: Ruta={
+  @Input() page: Ruta = {
     nombre: '',
     ruta: '',
     logo: '',
-  }
+  };
   @Output() addedPage = new EventEmitter<Ruta>();
 
   rutaA: Ruta = {};
-  pages: Ruta[] =[
+  pages: any = [
     this.loading,
     this.loading,
     this.loading,
@@ -35,25 +36,37 @@ export class MenuComponent implements OnInit {
   ];
 
   constructor(
-    public routSer : RoutService,
-    public navCom :NavBarComponent,
-    public authServ : AutenticacionService) { }
+    public routSer: RoutService,
+    public navCom: NavBarComponent,
+    public authServ: AutenticacionService
+  ) {}
 
-  ngOnInit(): void{
-    this.routSer.getAllRout()
-    .subscribe(data =>{
-      if (this.authServ.UsuarioAutenticado == true){
-        this.pages = data;
-      }else{
-        this.pages = data.filter(item => item.acess)
+  ngOnInit(): void {
+    // this.routSer.getAllRout()
+    // .subscribe(data =>{
+    //   if (this.authServ.UsuarioAutenticado == true){
+    //     // this.pages = data;
+    //     this.pages = dataBase[5].data;
+    //   }else{
+    //     this.pages = data.filter(item => item.acess)
+    //   }
+    // });
+
+    setTimeout(() => {
+      try {
+        if (this.authServ.UsuarioAutenticado == true) {
+          this.pages = dataBase[5].data;
+        } else {
+          const dataFilter : any = this.pages = dataBase[5].data;
+          this.pages = dataFilter.filter((item : Ruta) => item.acess == '1');
+        }
+      } catch (error) {
+        console.error(error);
       }
-    });
-
-
+    }, 400);
   }
 
-  ClickAlert(){
+  ClickAlert() {
     this.navCom.toggleMenu();
   }
-
 }

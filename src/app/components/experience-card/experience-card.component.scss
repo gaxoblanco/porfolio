@@ -174,12 +174,20 @@ svg{
   justify-items: left;
 }
 
+
 .option{
   display: none;
   &.active{
-    display: grid;
+    display: inline;
+    position: absolute;
+    transform: translate(0, 140px);
+    transition: all 0.5s ease;
+
+    z-index: 2;
   }
+
 }
+
 @media (min-width: 900px){
   .card-experience{
     margin-left: 6rem;

@@ -1,0 +1,408 @@
+[
+  { "type": "database", "name": "bvkqwz8kaistnatp2nzs" },
+  {
+    "type": "table",
+    "name": "about",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": [
+      {
+        "id": "1",
+        "descripcion": "Hola, Soy Gastón Blanco, un apasionado por descubrir el mundo, y aprender tanto como pueda de él. Soy Diseñador Industrial y me especialicé en diseño y modelado 3D.",
+        "foto": "https://i.imgur.com/sK39u2w.png",
+        "titulo": "Gaston Blanco",
+        "descripcion2": "Hoy me encuentro capacitándome en programación web, enfocado en el área del Front-End. Aspiro a convertirme en un Unicornio."
+      },
+      {
+        "id": "2",
+        "descripcion": "Opte por aprovechar la pandemia para mejorar mi carrera laboral. Me encontraba enfocado en trabajos de Diseño Industrial y servicios de modelado 3D. Por lo cual comencé un emprendimiento de impresión 3D.",
+        "foto": "https://i.imgur.com/1ebuTWj.png",
+        "titulo": "Nuevo Comienzo",
+        "descripcion2": "Como esto me dio la posibilidad manejar mis tiempos, decidí que era tiempo de mejorar mi nivel profesional, todo se dio en el momento ideal, en ese momento inicio el curso de Argentina Programa."
+      },
+      {
+        "id": "3",
+        "descripcion": "Siempre participar como arquero en los juegos mmrpg\n, y cuando me mude a Bs\n As me topé con un club de arquería. ",
+        "foto": "https://i.imgur.com/DSNNBZS.png",
+        "titulo": "Arco y Flecha",
+        "descripcion2": "Así que como persona curiosa tenía que intentarlo. Resulto ser una actividad muy entretenida y gratificante al acertar al blanco. Le recomiendo a todo el que le interese que lo intente."
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "email",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": [
+      {
+        "id": "34",
+        "email": "hacer@mejora.com",
+        "fecha": "2022-05-24 22:07:21",
+        "mensaje": "Los botones con terminación en chanfle tienen que ser 2 componentes y los llamo",
+        "nombre": "Hacer"
+      },
+      {
+        "id": "85",
+        "email": "gas@mail.com",
+        "fecha": "2022-11-03 18:47:17",
+        "mensaje": "Esto adna ",
+        "nombre": "Probando"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "experience",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": [
+      {
+        "id": "8",
+        "descripcion": "El objetivo en este proyecto personal, fue realizarlo en su totalidad con display grid.",
+        "fin": null,
+        "ini": "2022-03-03 00:00:00",
+        "logo": "https://i.imgur.com/tvUfwZg.png",
+        "puesto": "Blog con temática sobre montañismo",
+        "trabajo": "Blog",
+        "url": "https://github.com/gaxoblanco/gridPractic"
+      },
+      {
+        "id": "24",
+        "descripcion": "Me contactaba con los abonados que tenían registrado un reclamo y coordinaba la visita del técnico. Debía organizar una ruta eficiente para cada cuadrilla de reparación y controlar que los inconvenientes fueron resueltos",
+        "fin": "2018-06-06 00:00:00",
+        "ini": "2017-11-11 00:00:00",
+        "logo": "https://i.imgur.com/fF2DWVi.png",
+        "puesto": "Call center en el área de reparación",
+        "trabajo": "Antina",
+        "url": "https://www.antina.com.ar/"
+      },
+      {
+        "id": "26",
+        "descripcion": "Es un emprendimiento que comencé al mudarme a Bs As. Ya no formo parte del mismo, pero aún sigue operativo.",
+        "fin": "2016-10-10 00:00:00",
+        "ini": "2012-02-02 00:00:00",
+        "logo": "https://i.imgur.com/BBZ3flL.png",
+        "puesto": "Fundador - Vinilos autoadhesivo a medida",
+        "trabajo": "CreaTuVinilo",
+        "url": "https://www.facebook.com/Creatuvinilo-204374396395055/"
+      },
+      {
+        "id": "77",
+        "descripcion": "Utilice Notion para poder organizar mejor mi proyecto de Portafolio. Por cuestión de tiempo se realizó casi en sincrónica con el portafolio.",
+        "fin": "2022-06-06 00:00:00",
+        "ini": "2022-01-10 00:00:00",
+        "logo": "https://i.imgur.com/7iccZBn.png",
+        "puesto": "Documentacion del proyecto",
+        "trabajo": "Portafolio",
+        "url": "https://square-kiwi-373.notion.site/fed3888887be481c9de1c132a51c3775?v=f4cac9d3e661447783393f519b4fed51"
+      },
+      {
+        "id": "81",
+        "descripcion": "Proyecto/Maqueta personal realizado en Angular. Aun en proceso",
+        "fin": null,
+        "ini": "2022-06-02 00:00:00",
+        "logo": "https://i.imgur.com/YuZeoLb.png",
+        "puesto": "FrontEnd",
+        "trabajo": "Secretario Virtual",
+        "url": "https://secretariovirtual-34292.web.app/"
+      },
+      {
+        "id": "83",
+        "descripcion": "Es un showrrom de mueble de diseño. Una vez vendido el producto me encargaba de todo el proceso, desde enviar a producción hasta coordinar la entrega del pedido. ",
+        "fin": null,
+        "ini": null,
+        "logo": "https://i.imgur.com/fdVyHuu.png",
+        "puesto": "Ventas - atención y asesoramiento al cliente",
+        "trabajo": "HormigaEmergente",
+        "url": "http://www.hormigaemergente.com.ar/"
+      },
+      {
+        "id": "84",
+        "descripcion": "Este fue un proyecto rápido. Para consolidar lo aprendido sobre la librería Three.js y así comenzar a imaginar como podría usarla en otros proyectos.",
+        "fin": "2022-09-25 00:00:00",
+        "ini": "2022-09-23 00:00:00",
+        "logo": "https://i.imgur.com/CE118pP.png",
+        "puesto": "React - Three.js",
+        "trabajo": "Univers Three",
+        "url": "https://universe-three.web.app/"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "hibernate_sequence",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": [{ "next_val": "86" }, { "next_val": "1" }, { "next_val": "1" }]
+  },
+  {
+    "type": "table",
+    "name": "rout",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": [
+      {
+        "id": "10",
+        "acess": "1",
+        "descripcion": "Gaston Blanco, I'm an industrial designer, and I'm training to become a web programmer.",
+        "nombre": "Home",
+        "ruta": "/home",
+        "logo": "https://i.imgur.com/c0lBSHZ.png"
+      },
+      {
+        "id": "12",
+        "acess": "1",
+        "descripcion": "some of the skills that I learned in my life",
+        "nombre": "Skill",
+        "ruta": "/skill",
+        "logo": "https://i.imgur.com/0hCcMHk.png"
+      },
+      {
+        "id": "13",
+        "acess": "1",
+        "descripcion": "There is always something to discover. Never stop learning!",
+        "nombre": "Study",
+        "ruta": "/study",
+        "logo": "https://i.imgur.com/4i0WLiI.png"
+      },
+      {
+        "id": "14",
+        "acess": "1",
+        "descripcion": "I focus more on my learning than on the job.",
+        "nombre": "Experience",
+        "ruta": "/experience",
+        "logo": "https://i.imgur.com/xD77Iy7.png"
+      },
+      {
+        "id": "15",
+        "acess": "0",
+        "descripcion": "Se creativo, cuanto mas interesante sea antes te van a contactar",
+        "nombre": "Post",
+        "ruta": "/post",
+        "logo": "https://i.imgur.com/6lHTu5h.png"
+      },
+      {
+        "id": "16",
+        "acess": "0",
+        "descripcion": "Espero este tu pueste soñado",
+        "nombre": "Email",
+        "ruta": "/email",
+        "logo": "https://i.imgur.com/JSPMZAJ.png"
+      },
+      {
+        "id": "31",
+        "acess": "1",
+        "descripcion": "Estos son algunos de mis intereses",
+        "nombre": "About",
+        "ruta": "/about",
+        "logo": "https://i.imgur.com/giD3MBg.png"
+      },
+      {
+        "id": "71",
+        "acess": "1",
+        "descripcion": "We create incredible projects",
+        "nombre": "Contact",
+        "ruta": "/contact",
+        "logo": "https://i.imgur.com/ZCRolX8.png"
+      },
+      {
+        "id": "78",
+        "acess": "0",
+        "descripcion": "Colors have been changed to make it suitable for printing.",
+        "nombre": "Interactive PDF",
+        "ruta": "/GastonBlanco",
+        "logo": null
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "skill",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": [
+      {
+        "id": "17",
+        "descripcion": "Angular es un framework para aplicaciones web desarrollado en TypeScript",
+        "logo": "https://i.imgur.com/8hI3TcT.png",
+        "nombre": "Angular",
+        "url": "https://angular.io/"
+      },
+      {
+        "id": "18",
+        "descripcion": "Utilizo HTML Semántico tanto como puedo. Aún no lo domino como me gustaría",
+        "logo": "https://i.imgur.com/adSbz8s.png",
+        "nombre": "HTML",
+        "url": "https://es.wikipedia.org/wiki/HTML_sem%C3%A1ntico"
+      },
+      {
+        "id": "19",
+        "descripcion": "Me gusta implementar el sistema de grillas en mis proyectos.",
+        "logo": "https://i.imgur.com/xuExIoS.png",
+        "nombre": "CSS",
+        "url": "https://developer.mozilla.org/es/docs/Web/CSS"
+      },
+      {
+        "id": "28",
+        "descripcion": "El Back-End de este porfolio se realizo en SpringBoot.",
+        "logo": "https://i.imgur.com/Imx3acp.png",
+        "nombre": "Spring Boot",
+        "url": "https://spring.io/projects/spring-boot"
+      },
+      {
+        "id": "42",
+        "descripcion": "Lo utilizo las herramientas vectoriales para diseños 2D",
+        "logo": "https://i.imgur.com/WTDtyXv.png",
+        "nombre": "CorelDRAW",
+        "url": "https://www.coreldraw.com/la/"
+      },
+      {
+        "id": "43",
+        "descripcion": "Modelado y Texturas 3D. Principalmente ambientes 3D",
+        "logo": "https://i.imgur.com/WN2aweN.png",
+        "nombre": "Blender",
+        "url": "https://www.blender.org/about/"
+      },
+      {
+        "id": "44",
+        "descripcion": "Modelado 3D. Lo considero el ideal para formas orgánicas.",
+        "logo": "https://i.imgur.com/PC8ivhK.png",
+        "nombre": "Zbrush",
+        "url": "http://pixologic.com/features/about-zbrush.php"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "study",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": [
+      {
+        "id": "20",
+        "descripcion": "Se trata de una capacitación en Programación para ser un Full Stack Junior. El curso es virtual con clases en vivo asincrónicas. El objetivo del curso fue realizar este portafolio, los invito a ver mas del proyecto.",
+        "estudiado": "Full Stack Jr",
+        "fin": "2022-06-06 00:00:00",
+        "ini": "2021-11-11 00:00:00",
+        "logo": "https://i.imgur.com/IaejbCK.png",
+        "url": "https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa",
+        "institucion": "#YoProgramo - Argentina Programa"
+      },
+      {
+        "id": "22",
+        "descripcion": "El título es de Técnico Superior en Diseño Industrial. Aprendiendo a gestionar todos los pasos del proceso de diseño.",
+        "estudiado": "Diseñador Industrial",
+        "fin": "2016-11-11 00:00:00",
+        "ini": "2013-02-02 00:00:00",
+        "logo": "https://i.imgur.com/XCObyZE.png",
+        "url": "https://www.ort.edu.ar/carreras-terciarias/diseno-industrial",
+        "institucion": "ORT - Argentina"
+      },
+      {
+        "id": "23",
+        "descripcion": "Este curso fue el que me llevo a realizar este porfolio de en Mobile First. Espero les guste como resulto el diseño y cargue rápido.",
+        "estudiado": "Responsive Design",
+        "fin": null,
+        "ini": null,
+        "logo": "https://i.imgur.com/Mx85tU7.png",
+        "url": "https://platzi.com/p/gaxoblanco/curso/2030-course/diploma/detalle/",
+        "institucion": "Curso Platzi"
+      },
+      {
+        "id": "46",
+        "descripcion": "Este curso es muy bueno para aprender a manipular arrays y para mejorar con pequeños trucos, conocimiento que aplique para el saludo de home y algunas configuraciones internas del porfolio.",
+        "estudiado": "Manipulación de Arrays",
+        "fin": null,
+        "ini": null,
+        "logo": "https://i.imgur.com/NLjmjrt.png",
+        "url": "https://platzi.com/p/gaxoblanco/curso/2461-course/diploma/detalle/",
+        "institucion": null
+      },
+      {
+        "id": "47",
+        "descripcion": "En este curso aprendí lo básico para dominar lo que son listas, árboles, grafos y más para crear código más eficiente.",
+        "estudiado": "Estructuras de Datos JS",
+        "fin": null,
+        "ini": null,
+        "logo": "https://i.imgur.com/SQ6YS2k.png",
+        "url": "https://platzi.com/p/gaxoblanco/curso/2156-course/diploma/detalle/",
+        "institucion": null
+      },
+      {
+        "id": "49",
+        "descripcion": "Este curso me ayudo a vincular mis conocimientos de diseño con los conocimientos de programación web que voy adquiriendo. Me ayudo a estructurar este proyecto para poder llevarlo a buen puerto y cumplir con la fecha propuesta para finalizarlo. ",
+        "estudiado": "Sistemas de Diseño",
+        "fin": null,
+        "ini": "2022-03-03 00:00:00",
+        "logo": "https://i.imgur.com/iz7tpzH.png",
+        "url": "https://platzi.com/cursos/sistemas-diseno/",
+        "institucion": "Platzi - Organización de proyecto en Notion "
+      },
+      {
+        "id": "50",
+        "descripcion": "Con el curso de Argentina programa aprendí mucha teoría sobre Angular y como sacarle el mejor provecho, con este curso asimile los conocimientos y logre comprender su funcionamiento.",
+        "estudiado": "Angular ",
+        "fin": null,
+        "ini": null,
+        "logo": "https://i.imgur.com/8hI3TcT.png",
+        "url": "https://platzi.com/p/gaxoblanco/curso/2495-course/diploma/detalle/",
+        "institucion": "Platzi - son varios cursos donde se profundiza en las funciones de angular"
+      },
+      {
+        "id": "51",
+        "descripcion": "Es un curso básico, pero completo de las bases de html y css. Consiste en varias prácticas para comprender diferentes temas como el manejo de formularios, imágenes, etc.",
+        "estudiado": "HTML y CSS ",
+        "fin": null,
+        "ini": "2022-02-02 00:00:00",
+        "logo": "https://i.imgur.com/fh4bvWm.png",
+        "url": "https://platzi.com/cursos/html-css/",
+        "institucion": "Platzi - Escuela de desarolló web "
+      },
+      {
+        "id": "61",
+        "descripcion": "ECMAScript, es la especificación a la cual se ajusta JavaScript. En este curso fui aprendiendo las diferentes mejoras que se fueron agregando a lo largo de los años",
+        "estudiado": "ECMAScript 6+",
+        "fin": null,
+        "ini": null,
+        "logo": "https://i.imgur.com/gXubQ4E.png",
+        "url": "https://platzi.com/p/gaxoblanco/curso/1815-course/diploma/detalle/",
+        "institucion": "Platzi - Escuela de JavaScript"
+      },
+      {
+        "id": "82",
+        "descripcion": "Curso de React.\nPatrones de Rénder y Composición.\nManejo del Estado. ",
+        "estudiado": "React",
+        "fin": "2022-08-10 00:00:00",
+        "ini": "2022-06-10 00:00:00",
+        "logo": "https://i.imgur.com/uCeijzp.png",
+        "url": "https://platzi.com/p/gaxoblanco/curso/2597-course/diploma/detalle/",
+        "institucion": "Platzi"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "user",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": [
+      {
+        "id": "4",
+        "apellido": "blanco",
+        "email": "gastooon@blanco.com",
+        "foto": "",
+        "is_enabled": "1",
+        "nombre": "gaston",
+        "password": "$2a$10$mR5N.Hp0tk2QzLNbAaZty.kP2J396hTXnV1FBnEmvWR2jpNH3x7Hi"
+      },
+      {
+        "id": "72",
+        "apellido": "",
+        "email": "argentina@programa.com",
+        "foto": null,
+        "is_enabled": "1",
+        "nombre": "Invitado",
+        "password": "$2a$10$W/l0S/s8/JAuvAAJeqyXA.wGE1E4Wamp51Zk9oooNNC7rE8aBVbvW"
+      }
+    ]
+  },
+  {
+    "type": "table",
+    "name": "user_dto",
+    "database": "bvkqwz8kaistnatp2nzs",
+    "data": []
+  }
+]

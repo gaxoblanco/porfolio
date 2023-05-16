@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "porfolioweb-34e5e",
     "public": "dist",
     "ignore": [
       "firebase.json",

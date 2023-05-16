@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'post', component: PostComponent},
   {path: 'email', component: EmailsComponent},
-  {path: 'GastonBlanco', component: PDFComponent}
+  {path: 'GastonBlanco', component: PDFComponent},
 ];
 
 @NgModule({

@@ -17,7 +17,6 @@ import { MenuComponent } from './components/menu/menu.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
 import { ReactiveFormsModule} from '@angular/forms';
-//import { InterceptorService } from './services/interceptor.service';
 import { EstudioCardComponent } from './components/estudio-card/estudio-card.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { AboutComponent } from './components/about/about.component';

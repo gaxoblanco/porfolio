@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Skill } from 'src/app/models/skillObj';
 import {SkillService} from '../../services/skill.service';
+import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 
 @Component({
   selector: 'app-skill-list',
@@ -15,7 +16,7 @@ export class SkillListComponent implements OnInit {
     logo:'https://i.imgur.com/ITNhgTu.png'
   }
 
-  skillList: any[] = [
+  skillList: any = [
     this.loading,
     this.loading,
     this.loading,
@@ -28,10 +29,18 @@ export class SkillListComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.skillService.getAllSkills()
-    .subscribe(data =>{
-      this.skillList = data;
-    });
+    // this.skillService.getAllSkills()
+    // .subscribe(data =>{
+    //   this.skillList = data;
+    // });
+    setTimeout(() => {
+      try {
+        console.log(dataBase);
+        this.skillList = dataBase[6].data;
+      } catch (error) {
+        console.error(error);
+      }
+    }, 400);
   }
 
 

@@ -8,19 +8,19 @@ export const environment = {
 
   firebaseConfig: {
 
-    apiKey: "AIzaSyCXFlg2RYUpfNZitmDor4a8we9VzLAvEmA",
+    apiKey: "AIzaSyBrXbtH2SunJM-W8-xfjlx0gytv9CKoWL8",
 
-    authDomain: "porfolioweb-34e5e.firebaseapp.com",
+    authDomain: "gastonblanco-9fcfc.firebaseapp.com",
 
-    projectId: "porfolioweb-34e5e",
+    projectId: "gastonblanco-9fcfc",
 
-    storageBucket: "porfolioweb-34e5e.appspot.com",
+    storageBucket: "gastonblanco-9fcfc.appspot.com",
 
-    messagingSenderId: "1072974532249",
+    messagingSenderId: "711844515329",
 
-    appId: "1:1072974532249:web:ac5affb578f98b2b52b208",
+    appId: "1:711844515329:web:b78625c112da9ba5593a00",
 
-    measurementId: "G-NGXQ7RMM1N"
+    measurementId: "G-XLDWZ2ZXRH"
 
   }
 

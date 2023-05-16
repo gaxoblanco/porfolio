@@ -3,6 +3,7 @@ import { ActivatedRoute, ParamMap, } from '@angular/router';
 import { Ruta } from 'src/app/models/rout-Obj';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { RoutService } from 'src/app/services/rout-.service';
+import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 
 @Component({
   selector: 'app-head',
@@ -13,9 +14,8 @@ export class HeadComponent implements OnInit {
   active: boolean = false;
   logeado: boolean = false;
 
-  PRutas : Ruta[] = [
-
-  ];
+  // PRutas : Ruta[] = [];
+  PRutas : any = [];
 
   actual : any = {
     url: '',
@@ -32,15 +32,30 @@ export class HeadComponent implements OnInit {
     private authServ : AutenticacionService,
     private actiRout : ActivatedRoute,
     private routSer : RoutService) { }
-
+  log = false;
   ngOnInit(): void {
     this.actual = this.actiRout
-    this.routSer.getAllRout()
-    .subscribe(data =>{
-      this.PRutas = data;
-      this.array();
+    // this.routSer.getAllRout()
+    // .subscribe(data =>{
+    //   this.PRutas = data;
+    //   this.array();
 
-    })
+    // })
+
+    setTimeout(() => {
+      try {
+        if (this.log == true) {
+          this.PRutas = dataBase[5].data;
+          this.array();
+        } else {
+          const dataFilter : any = this.PRutas = dataBase[5].data;
+          this.PRutas = dataFilter;
+          this.array();
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }, 400);
 
     if (this.authServ.UsuarioAutenticado == true){
       this.logeado = this.authServ.UsuarioAutenticado
@@ -48,9 +63,10 @@ export class HeadComponent implements OnInit {
   }
   array(){
   //guardamos el valor de actiRout - url y lo filtramos con el array de routSer
-    const rutaFiltrada = this.PRutas.filter(PRutas => PRutas.ruta == this.actual._routerState.snapshot.url);
-    //iteramos para guardarlo en el objeto
-    this.PrintRuta = (rutaFiltrada[0]);
+  const rutaFiltrada = this.PRutas.filter((r : Ruta) => r.ruta === this.actual._routerState.snapshot.url);
+  // Iteramos para guardar el resultado en el objeto
+  this.PrintRuta = rutaFiltrada[0];
+
   }
   activeEstady(){
     this.active = !this.active;

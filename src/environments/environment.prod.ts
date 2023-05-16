@@ -1,22 +1,21 @@
 export const environment = {
   production: true,
-  API_URL: "https://prueba-j8.herokuapp.com/",
+  API_URL: "",
 
   firebaseConfig: {
+    apiKey: "AIzaSyDFgvgBa1RVc7HKhOvnvG1rfmuggVz_eEM",
 
-    apiKey: "AIzaSyCXFlg2RYUpfNZitmDor4a8we9VzLAvEmA",
+    authDomain: "gastonblanco-9fcfc.firebaseapp.com",
 
-    authDomain: "porfolioweb-34e5e.firebaseapp.com",
+    projectId: "gastonblanco-9fcfc",
 
-    projectId: "porfolioweb-34e5e",
+    storageBucket: "gastonblanco-9fcfc.appspot.com",
 
-    storageBucket: "porfolioweb-34e5e.appspot.com",
+    messagingSenderId: "711844515329",
 
-    messagingSenderId: "1072974532249",
+    appId: "1:711844515329:web:b78625c112da9ba5593a00",
 
-    appId: "1:1072974532249:web:ac5affb578f98b2b52b208",
-
-    measurementId: "G-NGXQ7RMM1N"
+    measurementId: "G-XLDWZ2ZXRH"
 
   }
 };
