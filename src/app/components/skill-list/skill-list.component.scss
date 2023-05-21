@@ -1,25 +1,15 @@
-.skills--grid{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container-component{
+  width: 100%;
 }
-
-
-@media (min-width: 900px){
-  .skills--grid{
+.container_card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+@media (max-width: 900px){
+  .container_card{
     display: grid;
+    grid-template-columns: 1fr;
     justify-items: center;
-    grid-template-columns: 1fr auto;
-    width: 80vw;
-  }
-}
-@media (min-width: 950px){
-  .skills--grid{
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1400px){
-  .skills--grid{
-    margin-left: 2%;
   }
 }

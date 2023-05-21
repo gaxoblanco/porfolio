@@ -1,24 +1,15 @@
-.experience--grid{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container-component{
+  width: 100%;
 }
-
-@media (min-width: 900px){
-  .experience--grid{
+.container_card{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+@media (max-width: 900px){
+  .container_card{
     display: grid;
+    grid-template-columns: 1fr;
     justify-items: center;
-    grid-template-columns: 1fr auto ;
-    width: 80vw;
-  }
-}
-@media (min-width: 1000px){
-  .experience--grid{
-    margin: 0 auto;
-  }
-}
-@media (min-width: 1400px){
-  .experience--grid{
-    margin-left: 2%;
   }
 }

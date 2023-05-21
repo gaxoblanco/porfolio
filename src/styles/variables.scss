@@ -1,0 +1,9 @@
+
+$background_card: #ccd1d7;
+$background_card_info: #446063;
+
+
+@mixin backGround {
+  background: pink;
+  padding: 10px 20px;
+}

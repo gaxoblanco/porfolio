@@ -1,0 +1,32 @@
+<div class="position_relative">
+  <div class="cardExample">
+    <div class="cardExample_container">
+      <figure class="cardExample_figure">
+        <img class="cardExample_img" src={{cardObj.img}} class="cardExample_img"/>
+      </figure>
+      <div class="cardExample_link_container">
+        <!-- valido si existen los links .git, .web, ... -->
+        <div class="cardExample_link git" *ngIf="cardObj.git">
+          <a href="{{cardObj.git}}">git</a>
+        </div>
+        <div class="cardExample_link web" *ngIf="cardObj.web">
+          <a href="{{cardObj.web}}">web</a>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="cardExample_container">
+      <div class="cardExample_info_container">
+        <h4 class="cardExample_info_title">{{cardObj.title}}</h4>
+        <p class="cardExample_info">{{cardObj.pp}}</p>
+      </div>
+      <div class="cardExample_more_info">
+        <span>{{cardObj.tags}}</span>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div class="cardExample_more">
+    <p>+</p>
+  </div>
+</div>

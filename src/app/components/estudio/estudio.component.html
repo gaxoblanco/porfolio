@@ -1,8 +1,8 @@
 <div class="container-component">
  <app-head ></app-head>
-  <div class="study--grid">
-      <app-estudio-card
-        [estudio]="estudio" *ngFor="let estudio of est"
-      ></app-estudio-card>
+  <div class="container_card">
+      <app-card-example
+        [cardObj]="cardObj" *ngFor="let cardObj of est"
+      ></app-card-example>
   </div>
 </div>

@@ -4,12 +4,17 @@
 @import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
 */
 
+
 html{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-p{
+a, p, span{
   color: white;
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 2rem;
 }
 .card{
   width: 100%;

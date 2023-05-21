@@ -34,6 +34,7 @@ import { EmailsComponent } from './components/emails/emails.component';
 import { EmailsCardComponent } from './components/emails-card/emails-card.component';
 import { RoutUpDataComponent } from './components/upData/rout-up-data/rout-up-data.component';
 import { PDFComponent } from './components/pdf/pdf.component';
+import { CardExampleComponent } from './components/card-example/card-example.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { PDFComponent } from './components/pdf/pdf.component';
     EmailsCardComponent,
     RoutUpDataComponent,
     PDFComponent,
+    CardExampleComponent,
   ],
   imports: [
     BrowserModule,

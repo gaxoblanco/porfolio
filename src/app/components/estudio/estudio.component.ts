@@ -9,11 +9,11 @@ import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
   styleUrls: ['./estudio.component.scss']
 })
 export class EstudioComponent implements OnInit {
-  loading: EstudioLoading = {
+  loading: any = {
     id:'' ,
-    estudiado:'Loading...' ,
-    institucion:'Starting the server, wait a few minutes',
-    logo:'https://i.imgur.com/ITNhgTu.png'
+    title:'Loading...' ,
+    pp:'Starting the server, wait a few minutes',
+    img:'https://i.imgur.com/ITNhgTu.png'
   }
 
   est: any = [
@@ -36,6 +36,8 @@ export class EstudioComponent implements OnInit {
         // console.log(dataBase);
 
         this.est = dataBase[7].data;
+        // console.log(this.est);
+
       } catch (error) {
         console.error(error);
       }
