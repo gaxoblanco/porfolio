@@ -9,6 +9,7 @@ import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
   styleUrls: ['./estudio.component.scss']
 })
 export class EstudioComponent implements OnInit {
+
   loading: any = {
     id:'' ,
     title:'Loading...' ,

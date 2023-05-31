@@ -1,6 +1,6 @@
 
 <header class="header">
- <div class="header-container">
+ <!-- <div class="header-container">
   <div class="img-left">
     <img src="https://i.imgur.com/3ZTlZlR.png">
   </div>
@@ -11,9 +11,25 @@
   <div class="img-rigth">
     <img src="https://i.imgur.com/5OSNkVM.png">
   </div>
+ </div> -->
+
+ <div class="header_container">
+    <h1 class="header-title">{{PrintRuta.nombre}}</h1>
+    <div class="header_text-container"><p>{{PrintRuta.descripcion}}</p></div>
+    <div class="header_social-container"><p>redes sociales</p></div>
+ </div>
+ <div class="header_navigation-container">
+    <div class="header_navigation">
+      <p>menu 1</p>
+    </div>
+    <div class="header_container-detail"></div>
+    <div class="header_navigation-explorer">
+      <p>buscador</p>
+    </div>
  </div>
 </header>
-<div class="eddit-container option"
+
+<!-- <div class="eddit-container option"
 [class.active]="logeado">
   <button (click)="activeEstady()">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -25,4 +41,4 @@
   <div class="change" [class.active]="active">
     <app-rout-up-data></app-rout-up-data>
   </div>
-</span>
+</span> -->

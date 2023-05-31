@@ -9,9 +9,9 @@
         <div class="cardExample_link git" *ngIf="cardObj.git">
           <a href="{{cardObj.git}}">git</a>
         </div>
-        <div class="cardExample_link web" *ngIf="cardObj.web">
-          <a href="{{cardObj.web}}">web</a>
-        </div>
+        <a href="{{cardObj.web}}" class="cardExample_link web" *ngIf="cardObj.web">
+          <p>web</p>
+        </a>
       </div>
     </div>
     <!--  -->
@@ -21,12 +21,19 @@
         <p class="cardExample_info">{{cardObj.pp}}</p>
       </div>
       <div class="cardExample_more_info">
-        <span>{{cardObj.tags}}</span>
+        <div class="text-animation">
+          <p>{{cardObj.ini}}</p>
+          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+          <p>{{cardObj.ini}}</p>
+          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+          <p>{{cardObj.ini}}</p>
+          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+          <p>{{cardObj.ini}}</p>
+          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+          <p>{{cardObj.ini}}</p>
+          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+        </div>
       </div>
     </div>
-  </div>
-  <!--  -->
-  <div class="cardExample_more">
-    <p>+</p>
   </div>
 </div>
