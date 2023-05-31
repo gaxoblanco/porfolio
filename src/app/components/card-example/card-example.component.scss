@@ -1,4 +1,5 @@
-$primary: #e38521;
+$primary: #FBA31B;
+$primary_70p: #E38521;
 $gray_30p: #ccd1d7;
 $gray_30p_gradient: #e2e8ee;
 $secondary: #446063;
@@ -37,7 +38,7 @@ $secondary: #446063;
   .cardExample_figure {
     width: 180px;
     height: 180px;
-    background-color: $primary;
+    background-color: $primary_70p;
     margin: 0;
     border-radius: 14px;
     padding: 10px;
@@ -125,23 +126,23 @@ $secondary: #446063;
 }
 //--
 //-- cardExample more
-.cardExample_more{
-  position: absolute;
-  top: 20px;
-  right: -34px;
-  background-color: orange;
-  border-radius: 0 12px 12px 0;
-  padding: 0.6rem 1.2rem;
-  p {
-    margin: 0;
-  }
-  &:hover {
-    z-index: 3;
-  }
-  @media (max-width: 620px) {
-    display: none;
-  }
-}
+// .cardExample_more{
+//   position: absolute;
+//   top: 20px;
+//   right: -34px;
+//   background-color: orange;
+//   border-radius: 0 12px 12px 0;
+//   padding: 0.6rem 1.2rem;
+//   p {
+//     margin: 0;
+//   }
+//   &:hover {
+//     z-index: 3;
+//   }
+//   @media (max-width: 620px) {
+//     display: none;
+//   }
+// }
 
 //--- cardExample ----------
 .cardExample:hover {

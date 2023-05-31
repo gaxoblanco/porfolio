@@ -14,17 +14,31 @@
  </div> -->
 
  <div class="header_container">
-    <h1 class="header-title">{{PrintRuta.nombre}}</h1>
-    <div class="header_text-container"><p>{{PrintRuta.descripcion}}</p></div>
-    <div class="header_social-container"><p>redes sociales</p></div>
+    <h1 class="header-title">{{PrintRuta.nombre}} <div class={{PrintRuta.nombre}}></div></h1>
+    <div class="header_text-container"><div class="header_text-area"><p>{{PrintRuta.descripcion}}</p></div></div>
+    <div class="header_social-container">
+      <a href="#"><div class="social_icon icon_git"></div></a>
+      <a href=""><div class="social_icon icon_in"></div></a>
+      <a href=""><div class="social_icon icon_mail"></div></a>
+    </div>
  </div>
  <div class="header_navigation-container">
-    <div class="header_navigation">
-      <p>menu 1</p>
+    <div class="border_navigation border_navigation-radiusR">
+      <div class="header_navigation">
+        <div class="backgrodun_green">
+          <p>Study</p>
+        </div>
+        <a href=""><div class="navigation_icon icon_menu"></div></a>
+      </div>
     </div>
     <div class="header_container-detail"></div>
-    <div class="header_navigation-explorer">
-      <p>buscador</p>
+    <div class="border_navigation border_navigation-radiusL">
+      <div class="header_navigation-explorer">
+        <a href=""><div class="navigation_icon icon_search"></div></a>
+        <div class="backgrodun_green">
+          <p>buscar</p>
+        </div>
+      </div>
     </div>
  </div>
 </header>
