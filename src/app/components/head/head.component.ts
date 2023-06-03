@@ -13,6 +13,7 @@ import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 export class HeadComponent implements OnInit {
   active: boolean = false;
   logeado: boolean = false;
+  public searchValue: string | null = null;
 
   // PRutas : Ruta[] = [];
   PRutas : any = [];
@@ -39,7 +40,6 @@ export class HeadComponent implements OnInit {
     // .subscribe(data =>{
     //   this.PRutas = data;
     //   this.array();
-
     // })
 
     setTimeout(() => {
@@ -87,6 +87,21 @@ export class HeadComponent implements OnInit {
     .subscribe(()=>{
       this.ngOnInit();
     });
+  }
+
+  // changeImage(iconName: string) {
+  //   const element = document.querySelector('.icon_' + iconName) as HTMLElement;
+  //   this.renderer.setStyle(element, 'background-image', 'url("../../../assets/icons/' + iconName + '_hover.svg")');
+  // }
+
+  // restoreImage(iconName: string) {
+  //   const element = document.querySelector('.icon_' + iconName) as HTMLElement;
+  //   this.renderer.setStyle(element, 'background-image', 'url("../../../assets/icons/' + iconName + '.svg")');
+  // }
+
+  //filter
+  filterEst(): string | null {
+    return this.searchValue;
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {EstudioService} from 'src/app/services/estudio.service';
 import { EstudioLoading } from 'src/app/models/estudioOBJ';
 import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
+import { HeadComponent } from '../head/head.component';
 
 @Component({
   selector: 'app-estudio',
@@ -16,6 +17,10 @@ export class EstudioComponent implements OnInit {
     pp:'Starting the server, wait a few minutes',
     img:'https://i.imgur.com/ITNhgTu.png'
   }
+
+  //array para cuando se filtra
+  estFilter: any = [];
+  // searchValue: string = '';
 
   est: any = [
     this.loading,
@@ -43,6 +48,14 @@ export class EstudioComponent implements OnInit {
         console.error(error);
       }
     }, 400);
+
+    // if (this.searchValue !== null) {
+    //   this.filteredEst = this.est.filter((item: any) =>
+    //     item.toLowerCase().includes(this.searchValue.toLowerCase())
+    //   );
+    // } else {
+    //   this.filteredEst = this.est;
+    // }
   }
 
 }
