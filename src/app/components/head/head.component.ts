@@ -1,9 +1,13 @@
-import { Component, Input, OnInit, } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, ParamMap, } from '@angular/router';
 import { Ruta } from 'src/app/models/rout-Obj';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { RoutService } from 'src/app/services/rout-.service';
 import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
+
+
+//---services
+import { SearchService } from '../../search-service.service';
 
 @Component({
   selector: 'app-head',
@@ -13,7 +17,8 @@ import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 export class HeadComponent implements OnInit {
   active: boolean = false;
   logeado: boolean = false;
-  public searchValue: string | null = null;
+  public searchValue: string = '';
+  // public searchValue: string | null = null;
 
   // PRutas : Ruta[] = [];
   PRutas : any = [];
@@ -29,10 +34,15 @@ export class HeadComponent implements OnInit {
   }
   @Input() headerData: Ruta = {};
 
+  @ViewChild('searchInput', { static: false }) searchInputRef!: ElementRef;
+  @ViewChild('subMenu', { static: false }) subMenuRef!: ElementRef;
+
+
   constructor(
     private authServ : AutenticacionService,
     private actiRout : ActivatedRoute,
-    private routSer : RoutService) { }
+    private routSer : RoutService,
+    private searchService: SearchService) { }
   log = false;
   ngOnInit(): void {
     this.actual = this.actiRout
@@ -89,19 +99,31 @@ export class HeadComponent implements OnInit {
     });
   }
 
-  // changeImage(iconName: string) {
-  //   const element = document.querySelector('.icon_' + iconName) as HTMLElement;
-  //   this.renderer.setStyle(element, 'background-image', 'url("../../../assets/icons/' + iconName + '_hover.svg")');
-  // }
+    //submenu animation
+    subMenuHeight = '0px';
+subMenuState = false;
+  handelSubMenu() {
+    this.subMenuState = !this.subMenuState;
+    const subMenu = document.querySelector('.submenu-container') as HTMLElement;
+    const computedHeight = window.getComputedStyle(subMenu).getPropertyValue('height');
+    setTimeout(() => {
+      this.subMenuHeight = this.subMenuHeight === '0px' ? computedHeight : '0px';
+    }, 10);
+  }
 
-  // restoreImage(iconName: string) {
-  //   const element = document.querySelector('.icon_' + iconName) as HTMLElement;
-  //   this.renderer.setStyle(element, 'background-image', 'url("../../../assets/icons/' + iconName + '.svg")');
-  // }
+
 
   //filter
-  filterEst(): string | null {
-    return this.searchValue;
+  filterEst() {
+    this.searchService.setSearchValue(this.searchValue);
+    this.searchValue = '';
+    this.searchInputRef.nativeElement.blur();
+    this.subMenuRef.nativeElement.blur();
+  }
+  killOpenClass() {
+    if (this.subMenuRef) {
+      this.subMenuRef.nativeElement.classList.remove('open');
+    }
   }
 
 }

@@ -4,6 +4,13 @@ import { EstudioLoading } from 'src/app/models/estudioOBJ';
 import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 import { HeadComponent } from '../head/head.component';
 
+import { Subscription } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+
+
+//---services
+import { SearchService } from '../../search-service.service';
+
 @Component({
   selector: 'app-estudio',
   templateUrl: './estudio.component.html',
@@ -18,9 +25,10 @@ export class EstudioComponent implements OnInit {
     img:'https://i.imgur.com/ITNhgTu.png'
   }
 
-  //array para cuando se filtra
-  estFilter: any = [];
-  // searchValue: string = '';
+  // variable de tipo subscription
+  private searchValueSubscription!: Subscription;
+  //arrya fiultrado
+  filteredEst:any= [];
 
   est: any = [
     this.loading,
@@ -30,20 +38,15 @@ export class EstudioComponent implements OnInit {
   ];
   estudioready: boolean = true;
 
-  constructor(private estudioServ: EstudioService) { }
+  constructor(
+    private estudioServ: EstudioService,
+    private searchService: SearchService) { }
 
   ngOnInit(): void {
+    const searchValue = this.searchService.getSearchValue();
     setTimeout(() => {
       try {
-        // this.estudioServ.getAllEstudios()
-        //   .subscribe(data =>{
-        //   this.est = data;
-        // })
-        // console.log(dataBase);
-
         this.est = dataBase[7].data;
-        // console.log(this.est);
-
       } catch (error) {
         console.error(error);
       }
@@ -56,6 +59,19 @@ export class EstudioComponent implements OnInit {
     // } else {
     //   this.filteredEst = this.est;
     // }
-  }
 
+    this.searchValueSubscription = this.searchService.getSearchValue()
+    .pipe(
+      debounceTime(300), // Opcional: agregar un tiempo de espera antes de realizar el filtrado
+      distinctUntilChanged() // Opcional: filtrar solo cambios distintos al valor anterior
+    )
+    .subscribe((value: string | null) => {
+      this.filteredEst = this.searchService.filterArray(this.est, value);
+      console.log(this.filteredEst);
+
+    });
+  }
+  ngOnDestroy(): void {
+    this.searchValueSubscription.unsubscribe();
+  }
 }

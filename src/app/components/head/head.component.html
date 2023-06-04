@@ -25,25 +25,28 @@
  <div class="header_navigation-container">
     <div class="border_navigation border_navigation-radiusR">
       <div class="header_navigation">
-        <div class="backgrodun_green">
-          <p>Study</p>
+        <div>
+          <div class="background_green" [class.open]="subMenuState">
+            <p class="p">{{PrintRuta.nombre}}</p>
+          </div>
+          <div class="submenu-container" #subMenu [class.open]="subMenuState">
+            <a *ngIf="PrintRuta.nombre !== 'Study'" href="/study" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Study</p></a>
+            <a *ngIf="PrintRuta.nombre !== 'Works'" href="/experience" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Works</p></a>
+            <a *ngIf="PrintRuta.nombre !== 'Skills'" href="/skill" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Skills</p></a>
+            <a *ngIf="PrintRuta.nombre !== 'About'" href="/about" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">About</p></a>
+          </div>
         </div>
-        <a href=""><div class="navigation_icon icon_menu"></div></a>
+        <button (click)="handelSubMenu()"><div class="navigation_icon icon_menu"></div></button>
       </div>
       <!-- menu desplegable -->
-      <div class="submenu-container">
-        <a class="submenu-option"><p>Trabajos</p></a>
-        <a class="submenu-option"><p>Skills</p></a>
-        <a class="submenu-option"><p>Algo<p></a>
-      </div>
     </div>
     <!-- right navigation -->
     <div class="header_container-detail"></div>
     <div class="border_navigation border_navigation-radiusL">
       <div class="header_navigation-explorer">
         <button (click)="filterEst()"><div class="navigation_icon icon_search"></div></button>
-        <div class="backgrodun_green">
-          <input type="text" placeholder="buscar" [(ngModel)]="searchValue" (keyup.enter)="filterEst()">
+        <div class="background_green searchAnimation" [ngClass]="{'inputVal': searchValue.length !== 0 }">
+          <input class="inputFilter" type="text" #searchInput placeholder="buscar" [(ngModel)]="searchValue" (keyup.enter)="filterEst()">
         </div>
       </div>
     </div>
