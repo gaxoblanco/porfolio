@@ -35,6 +35,7 @@ import { EmailsCardComponent } from './components/emails-card/emails-card.compon
 import { RoutUpDataComponent } from './components/upData/rout-up-data/rout-up-data.component';
 import { PDFComponent } from './components/pdf/pdf.component';
 import { CardExampleComponent } from './components/card-example/card-example.component';
+import { BlindnessComponent } from './components/blindness/blindness.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { CardExampleComponent } from './components/card-example/card-example.com
     RoutUpDataComponent,
     PDFComponent,
     CardExampleComponent,
+    BlindnessComponent,
   ],
   imports: [
     BrowserModule,

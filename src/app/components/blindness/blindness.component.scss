@@ -1,0 +1,49 @@
+$primary: #FBA31B;
+$primary_70p: #E38521;
+
+$gray_30p: #ccd1d7;
+$gray_30p_gradient: #e2e8ee;
+$gray_40p: #9099A6;
+$gray_60p: #747B85;
+$gray_80p: #595F66;
+$gray_110p: #060606;
+
+$secondary: #446063;
+
+$background_color: #141e1d;
+
+.blindness_container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 8px;
+
+  .blindness-button {
+    background: none;
+    svg {
+      width:24px;
+      height: 24px;
+      text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+    }
+  }
+  .blindness-button-red {
+    color: rgb(127, 71, 71);
+    &:hover {
+      color: red;
+    }
+  }
+  .blindness-button-blue {
+    color: rgb(72, 72, 167);
+    &:hover {
+      color: blue;
+    }
+  }
+  .blindness-button-all {
+    color: $gray_80p;
+    &:hover {
+      color: $gray_110p;
+    }
+  }
+}
