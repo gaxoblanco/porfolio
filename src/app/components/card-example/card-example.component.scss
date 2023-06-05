@@ -6,12 +6,39 @@ $gray_30p: #ccd1d7;
 $gray_30p_gradient: #e2e8ee;
 $secondary: #446063;
 
+//Acromatopsia -- ningun color
+$primary_notAll: #bbbbbb;
+$primary_70p_notAll: #bbbbbb;
+
+$secondary_notAll: #bbbbbb;
+
+$gray_30p_notAll: #dedede;
+
+//Tritanopia -- no ve rojo
+$primary_tritanopia: #f77075;
+$primary_70p_tritanopia: #e26569;
+
+$secondary_tritanopia: #456262;
+
+$gray_30p_tritanopia: #d9e2e2;
+
+//Deuteranopia -- mas amarillo
+$primary_deuteranopia: #dfe55f;
+$primary_70p_deuteranopia: #d0d658;
+
+$secondary_deuteranopia: #4f4d62;
+
+$gray_30p_deuteranopia: #dbdbe3;
+
+
+
+
+
 .position_relative {
   position: relative;
 }
 //-- cardExample link
-@mixin cardExample_link_mixin($bg_color) {
-  background-color: $bg_color;
+@mixin button_mixin() {
   width: 100%;
   text-align: center;
   padding: 8px 0px;
@@ -22,9 +49,51 @@ $secondary: #446063;
   }
 }
 
+
+//esta pensado apra que lo implemente .cardExample
+@mixin card_color_mixin($pri_70:$primary_70p, $pri:$primary, $second:$secondary, $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient) {
+  background-color: $gray_bg; //$gray_30p
+  background-image: linear-gradient(160deg, $gray_bg 0%, $gray_gradient 100%);
+  .cardExample_figure {
+    background-color: $pri; //$primary_70p
+  }
+  .cardExample_info_container {
+    background-color: $second; //$secondary
+  }
+  .cardExample_more_info{
+    background-color: $second; //$secondary
+  }
+  .cardExample_figure {
+    background-color: $pri; //$primary
+  }
+  .cardExample_info_container {
+    background-color: $second; //$secondary
+  }
+  .cardExample_link.git {
+    background-color: #9099a6;
+  }
+  .cardExample_link.web {
+    background-color: $pri;//$primary
+  }
+}
 .cardExample {
-  background-color: $gray_30p;
-  background-image: linear-gradient(160deg, $gray_30p 0%, $gray_30p_gradient 100%);
+  &.all {
+    @include card_color_mixin ();
+  }
+  &.notAll {
+    @include card_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll);
+    .cardExample_img{
+      filter: grayscale(100%);
+    }
+  }
+  &.deuteranopia {
+    @include card_color_mixin ($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia);
+  }
+  &.tritanopia {
+    @include card_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
+  }
+  // background-color: $gray_30p;
+  // background-image: linear-gradient(160deg, $gray_30p 0%, $gray_30p_gradient 100%);
   box-shadow: 4px 4px 10px 1px #000000, -6px -6px 10px 1px #000000;
 
   display: grid;
@@ -40,7 +109,7 @@ $secondary: #446063;
   .cardExample_figure {
     width: 180px;
     height: 180px;
-    background-color: $primary_70p;
+    // background-color: $primary_70p;
     margin: 0;
     border-radius: 14px;
     padding: 10px;
@@ -58,7 +127,7 @@ $secondary: #446063;
     justify-content: center;
   }
   .cardExample_info_container {
-    background-color: $secondary;
+    // background-color: $secondary;
     width: 100%;
     border-radius: 14px;
     padding: 10px 20px;
@@ -66,7 +135,7 @@ $secondary: #446063;
     box-shadow: inset -4px -4px 10px 1px #3131317b;
   }
   .cardExample_more_info{
-    background-color: $secondary;
+    // background-color: $secondary;
     display: flex;
     justify-content: space-around;
     height: 32px;
@@ -126,25 +195,6 @@ $secondary: #446063;
     opacity: 0;
   }
 }
-//--
-//-- cardExample more
-// .cardExample_more{
-//   position: absolute;
-//   top: 20px;
-//   right: -34px;
-//   background-color: orange;
-//   border-radius: 0 12px 12px 0;
-//   padding: 0.6rem 1.2rem;
-//   p {
-//     margin: 0;
-//   }
-//   &:hover {
-//     z-index: 3;
-//   }
-//   @media (max-width: 620px) {
-//     display: none;
-//   }
-// }
 
 //--- cardExample ----------
 .cardExample:hover {
@@ -172,7 +222,7 @@ $secondary: #446063;
 .cardExample_figure {
   width: 180px;
   height: 180px;
-  background-color: $primary;
+  // background-color: $primary;
   margin: 0;
   border-radius: 14px;
   padding: 10px;
@@ -190,10 +240,10 @@ $secondary: #446063;
 //-- cardExample link
 .cardExample_link_container {
   .cardExample_link.git {
-    @include cardExample_link_mixin(#9099a6);
+    @include button_mixin();
   }
   .cardExample_link.web {
-    @include cardExample_link_mixin($primary);
+    @include button_mixin();
   }
 }
 
