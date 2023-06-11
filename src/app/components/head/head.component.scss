@@ -265,6 +265,11 @@ $icon-background: none;
 .icon_search:hover, .icon_search.open {
   background-image: url("../../../assets/icons/search_hover.svg");
 }
+.icon_cancel_search {
+  background-image: url("../../../assets/icons/cancel.svg");
+  width: 30px;
+  height: 30px;
+}
 
 //---sub menu keyframes
 @keyframes openAnimate {
@@ -303,6 +308,9 @@ $icon-background: none;
   display: grid;
   max-height: 0px;
   overflow: hidden;
+  ul {
+    padding-left: 0;
+  }
   &.open {
     animation: openAnimate 2s forwards, marginTopAnimation 0.2s forwards;
     transition: 2s top 0.2s ease-in-out;

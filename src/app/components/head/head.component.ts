@@ -1,5 +1,7 @@
 import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, ParamMap, } from '@angular/router';
+
+
 import { Ruta } from 'src/app/models/rout-Obj';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { RoutService } from 'src/app/services/rout-.service';
@@ -12,12 +14,13 @@ import { SearchService } from '../../search-service.service';
 @Component({
   selector: 'app-head',
   templateUrl: './head.component.html',
-  styleUrls: ['./head.component.scss']
+  styleUrls: ['./head.component.scss'],
 })
 export class HeadComponent implements OnInit {
   active: boolean = false;
   logeado: boolean = false;
   public searchText: string = '';
+  searching: boolean = false;
 
   PRutas : any = [];
 
@@ -34,7 +37,7 @@ export class HeadComponent implements OnInit {
 
   @ViewChild('searchInput', { static: false }) searchInputRef!: ElementRef;
   @ViewChild('subMenu', { static: false }) subMenuRef!: ElementRef;
-  // @ViewChild('openSearch', { static: false }) openSearchRef!: ElementRef;
+
 
   constructor(
     private authServ : AutenticacionService,
@@ -73,38 +76,28 @@ export class HeadComponent implements OnInit {
   //--- Filtramos la ruta actual del menu de navegacion
   array(){
   //guardamos el valor de actiRout - url y lo filtramos con el array de routSer
-  const rutaFiltrada = this.PRutas.filter((r : Ruta) => r.ruta === this.actual._routerState.snapshot.url);
+  const rutaFiltrada = this.PRutas.filter((r : Ruta) =>
+    r.ruta === this.actual._routerState.snapshot.url);
   // Iteramos para guardar el resultado en el objeto
   this.PrintRuta = rutaFiltrada[0];
   }
 
 
-
-  editRout(DataRout: Ruta):void{
-    DataRout.id = this.PrintRuta.id;
-    DataRout.ruta = this.PrintRuta.ruta;
-    DataRout.acess = this.PrintRuta.acess;
-
-    if(DataRout.nombre == ''){
-      DataRout.nombre = this.PrintRuta.nombre
-    }
-    if(DataRout.descripcion == ''){
-      DataRout.descripcion = this.PrintRuta.descripcion
-    }
-    this.routSer.editRout(DataRout)
-    .subscribe(()=>{
-      this.ngOnInit();
-    });
-  }
-
-    //animation
+  //---animations
     subMenuState = false;
     filterState = false;
   handelSubMenu() {
     this.subMenuState = !this.subMenuState;
     this.filterState = false;
   }
-  //filter open
+  killOpenClass() {
+    if (this.subMenuRef) {
+      this.subMenuRef.nativeElement.classList.remove('open');
+    }
+  }
+
+
+  //-filter open
   filterOpen() {
     //cambio el estado de filterState
     this.filterState = !this.filterState;
@@ -116,7 +109,9 @@ export class HeadComponent implements OnInit {
       }, 1600);
     }
   }
-  //filter
+
+
+  //--- filter fuction
   filterEst() {
     if (this.searchText && this.searchText.trim() !== '') {
       //envio el valor a search()
@@ -127,15 +122,15 @@ export class HeadComponent implements OnInit {
       this.searchInputRef.nativeElement.blur();
       //escondo el input
       this.filterState = !this.filterState;
+      //muetro una X para cancelar el filtrado
+      this.searching = true;
     }
   }
 
-
-
-  killOpenClass() {
-    if (this.subMenuRef) {
-      this.subMenuRef.nativeElement.classList.remove('open');
-    }
+  //cancel filter
+  cancelSearching() {
+    this.searching = !this.searching;
+    this.searchService.setSearchValue('');
   }
 
 }

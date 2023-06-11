@@ -25,7 +25,7 @@ export class RoutUpDataComponent implements OnInit {
   }
   UpRout(){
     let DataR: Ruta = this.DataRout.value;
-    this.headCom.editRout(DataR)
+    // this.headCom.editRout(DataR)
     console.log("post" + this.DataRout)
   }
   clouseWind(){
