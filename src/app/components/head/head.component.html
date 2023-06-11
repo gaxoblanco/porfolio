@@ -1,25 +1,12 @@
 
 <header class="header">
- <!-- <div class="header-container">
-  <div class="img-left">
-    <img src="https://i.imgur.com/3ZTlZlR.png">
-  </div>
-  <span class="span-container" >
-    <h1> {{PrintRuta.nombre}} </h1>
-    <p> {{PrintRuta.descripcion}} </p>
-  </span>
-  <div class="img-rigth">
-    <img src="https://i.imgur.com/5OSNkVM.png">
-  </div>
- </div> -->
-
  <div class="header_container">
     <h1 class="header-title">{{PrintRuta.nombre}} <div class={{PrintRuta.nombre}} class="img_title"></div></h1>
     <div class="header_text-container"><div class="header_text-area"><p>{{PrintRuta.descripcion}}</p></div></div>
     <div class="header_social-container">
-      <a href="#"><div class="social_icon icon_git"></div></a>
-      <a href=""><div class="social_icon icon_in"></div></a>
-      <a href=""><div class="social_icon icon_mail"></div></a>
+      <a aria-label="github de gaston blanco" href="#"><div class="social_icon icon_git"></div></a>
+      <a aria-label="linkein de gaston blanco" href=""><div class="social_icon icon_in"></div></a>
+      <a aria-label="enviar un correo a gaston blanco" href=""><div class="social_icon icon_mail"></div></a>
     </div>
  </div>
  <div class="header_navigation-container">
@@ -29,14 +16,20 @@
           <div class="background_green" [class.open]="subMenuState">
             <p class="p">{{PrintRuta.nombre}}</p>
           </div>
-          <div class="submenu-container" #subMenu [class.open]="subMenuState">
-            <a *ngIf="PrintRuta.nombre !== 'Study'" href="/study" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Study</p></a>
+          <nav class="submenu-container" #subMenu [class.open]="subMenuState">
+            <ul>
+              <li><a *ngIf="PrintRuta.nombre !== 'Study'" href="/study" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Study</p></a></li>
+              <li><a *ngIf="PrintRuta.nombre !== 'Works'" href="/experience" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Works</p></a></li>
+              <li><a *ngIf="PrintRuta.nombre !== 'Skills'" href="/skill" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Skills</p></a></li>
+              <li><a *ngIf="PrintRuta.nombre !== 'About'" href="/about" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">About</p></a></li>
+            </ul>
+            <!-- <a *ngIf="PrintRuta.nombre !== 'Study'" href="/study" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Study</p></a>
             <a *ngIf="PrintRuta.nombre !== 'Works'" href="/experience" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Works</p></a>
             <a *ngIf="PrintRuta.nombre !== 'Skills'" href="/skill" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">Skills</p></a>
-            <a *ngIf="PrintRuta.nombre !== 'About'" href="/about" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">About</p></a>
-          </div>
+            <a *ngIf="PrintRuta.nombre !== 'About'" href="/about" class="background_green background_green-options" (click)="killOpenClass()"><p class="p">About</p></a> -->
+          </nav>
         </div>
-        <button (click)="handelSubMenu()"><div class="navigation_icon icon_menu"></div></button>
+        <button aria-label="open sub menu" (click)="handelSubMenu()"><div class="navigation_icon icon_menu" [class.open]="subMenuState"></div></button>
       </div>
       <!-- menu desplegable -->
     </div>
@@ -44,15 +37,21 @@
     <div class="header_container-detail"></div>
     <div class="border_navigation border_navigation-radiusL">
       <div class="header_navigation-explorer">
-        <button (click)="filterEst()"><div class="navigation_icon icon_search"></div></button>
-        <div class="background_green searchAnimation" [ngClass]="{'inputVal': searchValue.length !== 0 }">
-          <input class="inputFilter" type="text" #searchInput placeholder="buscar" [(ngModel)]="searchValue" (keyup.enter)="filterEst()">
-        </div>
+        <button aria-label="open modal filter" (click)="filterOpen()" (click)="filterEst()"><div class="navigation_icon icon_search" [class.open]="filterState"></div></button>
+          <input
+            [class.open]="filterState"
+            class="inputFilter background_green"
+            type="text"
+            #searchInput
+            placeholder="buscar"
+            [(ngModel)]="searchText"
+            (keyup.enter)="filterEst()"
+            [ngClass]="{'inputVal': searchText.length !== 0 }">
       </div>
     </div>
  </div>
 </header>
-
+<div style="height: 200px"></div>
 <!-- <div class="eddit-container option"
 [class.active]="logeado">
   <button (click)="activeEstady()">

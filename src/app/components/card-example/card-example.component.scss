@@ -6,6 +6,8 @@ $gray_30p: #ccd1d7;
 $gray_30p_gradient: #e2e8ee;
 $secondary: #446063;
 
+$backgroundPage: #141e1d;
+
 //Acromatopsia -- ningun color
 $primary_notAll: #bbbbbb;
 $primary_70p_notAll: #bbbbbb;
@@ -44,8 +46,25 @@ $gray_30p_deuteranopia: #dbdbe3;
   padding: 8px 0px;
   border-radius: 14px;
   box-shadow: inset -4px -4px 10px 1px #3131317b;
+
+  p, a {
+    font-weight: 800;
+    background-color: $backgroundPage;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
+
   &:hover {
     box-shadow: inset -4px -4px 10px 1px #31313129;
+    a {
+      // background-color: white;
+    }
+    p, a {
+      text-shadow: 2px 2px 3px rgba(130, 130, 130, 0.5);
+    }
   }
 }
 
@@ -80,7 +99,7 @@ $gray_30p_deuteranopia: #dbdbe3;
   &.all {
     @include card_color_mixin ();
   }
-  &.notAll {
+  &.acromatopsia {
     @include card_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll);
     .cardExample_img{
       filter: grayscale(100%);
@@ -88,9 +107,23 @@ $gray_30p_deuteranopia: #dbdbe3;
   }
   &.deuteranopia {
     @include card_color_mixin ($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia);
+    .cardExample_img {
+      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
+              hue-rotate(-20deg)
+              opacity(0.8)
+              drop-shadow(0 0 2px #000000);
+    }
+
   }
   &.tritanopia {
     @include card_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
+    .cardExample_img {
+      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
+              hue-rotate(90deg)
+              opacity(0.8)
+              drop-shadow(0 0 2px #000000);
+    }
+
   }
   // background-color: $gray_30p;
   // background-image: linear-gradient(160deg, $gray_30p 0%, $gray_30p_gradient 100%);

@@ -17,10 +17,8 @@ import { SearchService } from '../../search-service.service';
 export class HeadComponent implements OnInit {
   active: boolean = false;
   logeado: boolean = false;
-  public searchValue: string = '';
-  // public searchValue: string | null = null;
+  public searchText: string = '';
 
-  // PRutas : Ruta[] = [];
   PRutas : any = [];
 
   actual : any = {
@@ -36,7 +34,7 @@ export class HeadComponent implements OnInit {
 
   @ViewChild('searchInput', { static: false }) searchInputRef!: ElementRef;
   @ViewChild('subMenu', { static: false }) subMenuRef!: ElementRef;
-
+  // @ViewChild('openSearch', { static: false }) openSearchRef!: ElementRef;
 
   constructor(
     private authServ : AutenticacionService,
@@ -71,16 +69,16 @@ export class HeadComponent implements OnInit {
       this.logeado = this.authServ.UsuarioAutenticado
     }
   }
+
+  //--- Filtramos la ruta actual del menu de navegacion
   array(){
   //guardamos el valor de actiRout - url y lo filtramos con el array de routSer
   const rutaFiltrada = this.PRutas.filter((r : Ruta) => r.ruta === this.actual._routerState.snapshot.url);
   // Iteramos para guardar el resultado en el objeto
   this.PrintRuta = rutaFiltrada[0];
+  }
 
-  }
-  activeEstady(){
-    this.active = !this.active;
-  }
+
 
   editRout(DataRout: Ruta):void{
     DataRout.id = this.PrintRuta.id;
@@ -99,27 +97,41 @@ export class HeadComponent implements OnInit {
     });
   }
 
-    //submenu animation
-    subMenuHeight = '0px';
-subMenuState = false;
+    //animation
+    subMenuState = false;
+    filterState = false;
   handelSubMenu() {
     this.subMenuState = !this.subMenuState;
-    const subMenu = document.querySelector('.submenu-container') as HTMLElement;
-    const computedHeight = window.getComputedStyle(subMenu).getPropertyValue('height');
-    setTimeout(() => {
-      this.subMenuHeight = this.subMenuHeight === '0px' ? computedHeight : '0px';
-    }, 10);
+    this.filterState = false;
   }
-
-
-
+  //filter open
+  filterOpen() {
+    //cambio el estado de filterState
+    this.filterState = !this.filterState;
+    this.subMenuState = false;
+    //si paso a true, espero y ahago focus
+    if (this.filterState == true) {
+      setTimeout(() => {
+        this.searchInputRef.nativeElement.focus();
+      }, 1600);
+    }
+  }
   //filter
   filterEst() {
-    this.searchService.setSearchValue(this.searchValue);
-    this.searchValue = '';
-    this.searchInputRef.nativeElement.blur();
-    this.subMenuRef.nativeElement.blur();
+    if (this.searchText && this.searchText.trim() !== '') {
+      //envio el valor a search()
+      this.searchService.setSearchValue(this.searchText);
+      //limpio el valor de searchText
+      this.searchText = ''
+      //quito el .focus del search
+      this.searchInputRef.nativeElement.blur();
+      //escondo el input
+      this.filterState = !this.filterState;
+    }
   }
+
+
+
   killOpenClass() {
     if (this.subMenuRef) {
       this.subMenuRef.nativeElement.classList.remove('open');

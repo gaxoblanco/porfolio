@@ -89,6 +89,10 @@ $background_color: #141e1d;
         margin-left: 12px;
         box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.313);
         align-items: baseline;
+        @media (max-width: 720px) {
+          margin-right: 0px;
+          margin-left: 0px;
+        }
         button {
           background: none;
           margin-top: 6px;
@@ -97,9 +101,15 @@ $background_color: #141e1d;
           //---
       .header_navigation {
         border-radius: 0 16px 16px 0;
+        grid-template-columns: 1fr auto;
       }
       .header_navigation-explorer {
         border-radius: 16px 0px 0px 16px;
+        grid-template-columns: auto 1fr;
+        .inputFilter {
+          font-size: 18px;
+          color: white;
+        }
       }
 
     }
@@ -238,15 +248,23 @@ $icon-background: none;
 .icon_menu:hover {
   background-image: url("../../../assets/icons/menu_hover.svg");
 }
+//para mostrar el button activo en movile
+.icon_menu.open {
+  background-image: url("../../../assets/icons/menu_hover.svg");
+}
+// .icon_menu:not(:hover) {
+//   transition-delay: 0.5s; /* Agregamos un retraso antes de revertir el cambio */
+//   background-image: url("../../../assets/icons/menu.svg");
+// }
+
 .icon_search {
   background-image: url("../../../assets/icons/search.svg");
   width: 30px;
   height: 30px;
 }
-.icon_search:hover {
+.icon_search:hover, .icon_search.open {
   background-image: url("../../../assets/icons/search_hover.svg");
 }
-
 
 //---sub menu keyframes
 @keyframes openAnimate {
@@ -286,9 +304,12 @@ $icon-background: none;
   max-height: 0px;
   overflow: hidden;
   &.open {
-    animation: openAnimate 2s forwards, marginTopAnimation 0.6s forwards;
-    margin-top: 10px;
+    animation: openAnimate 2s forwards, marginTopAnimation 0.2s forwards;
+    transition: 2s top 0.2s ease-in-out;
     max-height: auto;
+    @media (max-width: 920px) {
+      animation: openAnimate 2.2s 2s forwards, marginTopAnimation 0.6s 2s forwards;
+    }
     .background_green-options {
       width: 200px !important;
       .p {
@@ -296,7 +317,10 @@ $icon-background: none;
       }
     }
   };
-
+  .background_green-options {
+    width: 200px ;
+    margin-bottom: 10px;
+  }
   align-content: flex-start;
   grid-gap: 10px;
   place-content: center;
@@ -441,6 +465,11 @@ $icon-background: none;
           }
         }
       };
+      .searchAnimation {
+        &.open {
+          width: 200px;
+        }
+      }
       .searchAnimation:focus-within {
         width: 200px !important;
       }

@@ -12,10 +12,26 @@ $secondary: #446063;
 
 $background_color: #141e1d;
 
+.blindness_p {
+  font-size:16px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding: 0 24px;
+  text-align: center;
+
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+
 .blindness_container {
   display: flex;
   justify-content: space-around;
-  padding-top: 8px;
+  padding-top: 10px;
+  margin-bottom: 10px;
 
   .blindness-button {
     background: none;

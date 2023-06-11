@@ -1,31 +1,28 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SearchService {
-  // searchValue: string | null = null;
+  private searchValueSubject = new Subject<string>();
+  searchValue = this.searchValueSubject.asObservable();
 
   constructor() {}
 
-  private searchValueSubject: BehaviorSubject<string | null> = new BehaviorSubject<string | null>(null);
+  // private searchValueSubject: BehaviorSubject<string | null> = new BehaviorSubject<string | null>(null);
 
   setSearchValue(value: string | null) {
-    this.searchValueSubject.next(value);
-  }
-
-  getSearchValue(): Observable<string | null> {
-    return this.searchValueSubject.asObservable();
-  }
-
-  filterArray(array: any[], searchValue: string | null): any[] {
-    if (searchValue !== null) {
-      return array.filter((item: any) =>
-        item.toLowerCase().includes(searchValue.toLowerCase())
-      );
-    } else {
-      return array;
+    if (typeof value === 'string') {
+      this.searchValueSubject.next(value);
     }
   }
+
+
+  // search(inputValue: string | null) {
+  //   if (typeof inputValue === 'string') {
+  //     this.searchValueSubject.next(inputValue);
+  //     console.log('hola');
+  //   }
+  // }
 }

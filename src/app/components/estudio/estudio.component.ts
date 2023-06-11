@@ -28,7 +28,7 @@ export class EstudioComponent implements OnInit {
   // variable de tipo subscription
   private searchValueSubscription!: Subscription;
   //arrya fiultrado
-  filteredEst:any= [];
+  filteredEst: any[] = [];
 
   est: any = [
     this.loading,
@@ -43,7 +43,6 @@ export class EstudioComponent implements OnInit {
     private searchService: SearchService) { }
 
   ngOnInit(): void {
-    const searchValue = this.searchService.getSearchValue();
     setTimeout(() => {
       try {
         this.est = dataBase[7].data;
@@ -51,25 +50,30 @@ export class EstudioComponent implements OnInit {
         console.error(error);
       }
     }, 400);
+// Suscribirse al observable searchValue
+this.searchValueSubscription = this.searchService.searchValue.pipe(
+  debounceTime(300), // Esperar 300ms después de la última emisión
+  distinctUntilChanged() // Ignorar emisiones consecutivas con el mismo valor
+).subscribe((inputValue: string) => {
+  if (inputValue.trim() !== '') {
+    this.est = this.est.filter((item: any) => {
+      // Convertir el valor de búsqueda y los campos relevantes a minúsculas para una comparación sin distinción entre mayúsculas y minúsculas
+      const searchValue = inputValue.toLowerCase();
+      const title = item.title.toLowerCase();
+      const pp = item.pp ? item.pp.toLowerCase() : '';
+      const tags = item.tags ? item.tags.join(' ').toLowerCase() : '';
 
-    // if (this.searchValue !== null) {
-    //   this.filteredEst = this.est.filter((item: any) =>
-    //     item.toLowerCase().includes(this.searchValue.toLowerCase())
-    //   );
-    // } else {
-    //   this.filteredEst = this.est;
-    // }
-
-    this.searchValueSubscription = this.searchService.getSearchValue()
-    .pipe(
-      debounceTime(300), // Opcional: agregar un tiempo de espera antes de realizar el filtrado
-      distinctUntilChanged() // Opcional: filtrar solo cambios distintos al valor anterior
-    )
-    .subscribe((value: string | null) => {
-      this.filteredEst = this.searchService.filterArray(this.est, value);
-      console.log(this.filteredEst);
-
+      // Comprobar si el valor de búsqueda coincide con el título, la descripción o las etiquetas
+      return (
+        title.includes(searchValue) ||
+        tags.includes(searchValue)
+      );
     });
+  } else {
+    // Si el valor de búsqueda está vacío, mostrar todos los elementos
+    this.filteredEst = this.est;
+  }
+});
   }
   ngOnDestroy(): void {
     this.searchValueSubscription.unsubscribe();

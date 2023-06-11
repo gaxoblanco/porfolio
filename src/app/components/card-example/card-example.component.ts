@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { EstudioService } from 'src/app/services/estudio.service';
 import { EstudioComponent } from '../estudio/estudio.component';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
+import { ColorStateService } from '../../color-state.service';
 
 @Component({
   selector: 'app-card-example',
@@ -9,7 +10,7 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
   styleUrls: ['./card-example.component.scss']
 })
 export class CardExampleComponent implements OnInit {
-
+  colorState: string = '';
   active: boolean = false;
   logeado: boolean = false;
   more: boolean = false;
@@ -30,13 +31,19 @@ export class CardExampleComponent implements OnInit {
     private studyServ : EstudioService,
     private reload : EstudioComponent,
     private authServ : AutenticacionService,
+    private colorStateService: ColorStateService
   ) { }
 
   ngOnInit(): void {
     if (this.authServ.UsuarioAutenticado == true){
       this.logeado = this.authServ.UsuarioAutenticado
     }
-    console.log(this.cardObj);
+
+    this.colorStateService.colorSubject.subscribe((color: string) => {
+      this.colorState = color;
+      console.log("color", this.colorState);
+    });
+
   }
 
 }
