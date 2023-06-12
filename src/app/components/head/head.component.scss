@@ -95,17 +95,24 @@ $background_color: #141e1d;
         }
         button {
           background: none;
-          margin-top: 6px;
         }
       }
           //---
       .header_navigation {
         border-radius: 0 16px 16px 0;
         grid-template-columns: 1fr auto;
+        align-items: center;
+        &.open {
+          align-items: flex-start;
+          .navigation_icon {
+            margin-top: 8px;
+          }
+        }
       }
       .header_navigation-explorer {
         border-radius: 16px 0px 0px 16px;
         grid-template-columns: auto 1fr;
+        align-items: center;
         .inputFilter {
           font-size: 18px;
           color: white;

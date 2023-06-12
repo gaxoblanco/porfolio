@@ -11,7 +11,7 @@
  </div>
  <div class="header_navigation-container">
     <div class="border_navigation border_navigation-radiusR">
-      <div class="header_navigation">
+      <div class="header_navigation" [class.open]="subMenuState">
         <div>
           <div class="background_green" [class.open]="subMenuState">
             <p class="p">{{PrintRuta.nombre}}</p>
@@ -44,7 +44,7 @@
             class="inputFilter background_green"
             type="text"
             #searchInput
-            placeholder="buscar"
+            placeholder="search"
             [(ngModel)]="searchText"
             (keyup.enter)="filterEst()"
             [ngClass]="{'inputVal': searchText.length !== 0 }">

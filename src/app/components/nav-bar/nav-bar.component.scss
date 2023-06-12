@@ -19,6 +19,13 @@ app-head {
 }
 footer {
   width: 100vw;
+  margin-bottom: 0;
+  transition: 1s margin-bottom ease-in-out;
+}
+.hidden {
+  @media (max-width: 920px){
+    margin-bottom: -70px;
+  }
 }
 .footer_text-container {
   background-color: $gray_30p;
@@ -97,6 +104,9 @@ footer {
     top: -170px;
     height: 216px;
   }
+  @media (max-width: 660px) {
+    top: -70px;
+  }
 }
 //--- border lef, buttons color blindness
 .blindness-title {
@@ -124,10 +134,14 @@ footer {
   @media (max-width: 920px) {
     grid-template-columns: 1fr 2fr 1fr;
   }
-  @media (max-width: 580px) {
-    grid-template-columns: 1fr 1fr;
+  @media (max-width: 660px) {
+    grid-template-columns: 1fr;
     &-black_space {
       display: none;
+    }
+    .footer_actions-containerL {
+      border-radius: 0;
+      box-shadow: -6px -6px 10px 1px rgba(0, 0, 0, 0.25);
     }
   }
 }
