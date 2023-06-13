@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { CreateStudyDTO } from 'src/app/models/estudioOBJ';
 import { EstudioCardComponent } from '../../estudio-card/estudio-card.component';
 
@@ -10,17 +10,17 @@ import { EstudioCardComponent } from '../../estudio-card/estudio-card.component'
 })
 export class EstudioUpComponent implements OnInit {
 
-  StudyDTO : FormGroup;
+  StudyDTO : UntypedFormGroup;
 
   constructor( private studyCard: EstudioCardComponent) {
-    this.StudyDTO = new FormGroup({
-      estudiado: new FormControl(''),
-      institucion: new FormControl(''),
-      descripcion: new FormControl(''),
-      ini: new FormControl(''),
-      fin: new FormControl(''),
-      url: new FormControl(''),
-      logo: new FormControl('')
+    this.StudyDTO = new UntypedFormGroup({
+      estudiado: new UntypedFormControl(''),
+      institucion: new UntypedFormControl(''),
+      descripcion: new UntypedFormControl(''),
+      ini: new UntypedFormControl(''),
+      fin: new UntypedFormControl(''),
+      url: new UntypedFormControl(''),
+      logo: new UntypedFormControl('')
     })
    }
 

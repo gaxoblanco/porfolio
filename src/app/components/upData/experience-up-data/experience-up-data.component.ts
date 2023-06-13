@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { CreateExpDTO } from 'src/app/models/experienceObj';
 import { ExperienceCardComponent } from '../../experience-card/experience-card.component';
 
@@ -10,17 +10,17 @@ import { ExperienceCardComponent } from '../../experience-card/experience-card.c
 })
 export class ExperienceUpDataComponent implements OnInit {
 
-  ExpDTO: FormGroup;
+  ExpDTO: UntypedFormGroup;
 
   constructor(private expCard: ExperienceCardComponent) {
-    this.ExpDTO = new FormGroup({
-      trabajo: new FormControl(''),
-      puesto: new FormControl(''),
-      descripcion: new FormControl(''),
-      ini: new FormControl(''),
-      fin: new FormControl(''),
-      url: new FormControl(''),
-      logo: new FormControl('')
+    this.ExpDTO = new UntypedFormGroup({
+      trabajo: new UntypedFormControl(''),
+      puesto: new UntypedFormControl(''),
+      descripcion: new UntypedFormControl(''),
+      ini: new UntypedFormControl(''),
+      fin: new UntypedFormControl(''),
+      url: new UntypedFormControl(''),
+      logo: new UntypedFormControl('')
     })
    }
 

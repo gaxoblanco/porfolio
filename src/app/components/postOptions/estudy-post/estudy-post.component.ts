@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { CreateStudyDTO } from 'src/app/models/estudioOBJ';
 import { EstudioService } from 'src/app/services/estudio.service';
 
@@ -10,17 +10,17 @@ import { EstudioService } from 'src/app/services/estudio.service';
 })
 export class EstudyPostComponent implements OnInit {
 
-  StudyDTO : FormGroup;
+  StudyDTO : UntypedFormGroup;
 
   constructor( private studyServ: EstudioService) {
-    this.StudyDTO = new FormGroup({
-      estudiado: new FormControl('', Validators.required),
-      institucion: new FormControl('', Validators.required),
-      descripcion: new FormControl('', [Validators.required, Validators.maxLength(76)]),
-      ini: new FormControl('', Validators.required),
-      fin: new FormControl(''),
-      url: new FormControl('', Validators.required),
-      logo: new FormControl('', Validators.required)
+    this.StudyDTO = new UntypedFormGroup({
+      estudiado: new UntypedFormControl('', Validators.required),
+      institucion: new UntypedFormControl('', Validators.required),
+      descripcion: new UntypedFormControl('', [Validators.required, Validators.maxLength(76)]),
+      ini: new UntypedFormControl('', Validators.required),
+      fin: new UntypedFormControl(''),
+      url: new UntypedFormControl('', Validators.required),
+      logo: new UntypedFormControl('', Validators.required)
     })
    }
 

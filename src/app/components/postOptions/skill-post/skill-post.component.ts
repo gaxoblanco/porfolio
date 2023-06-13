@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { CreateSkillDTO } from 'src/app/models/skillObj';
 import { SkillService } from 'src/app/services/skill.service';
 import { PostComponent } from '../../post/post.component';
@@ -11,16 +11,16 @@ import { PostComponent } from '../../post/post.component';
 })
 export class SkillPostComponent implements OnInit {
 
-  SkillDTO: FormGroup;
+  SkillDTO: UntypedFormGroup;
 
 
   constructor( private skillservice: SkillService,
     private  posCom : PostComponent) {
-    this.SkillDTO = new FormGroup({
-      nombre: new FormControl('', [Validators.required, Validators.maxLength(16)]),
-      descripcion: new FormControl('', [Validators.required, Validators.maxLength(76)]),
-      url: new FormControl('', Validators.required),
-      logo: new FormControl('', Validators.required)
+    this.SkillDTO = new UntypedFormGroup({
+      nombre: new UntypedFormControl('', [Validators.required, Validators.maxLength(16)]),
+      descripcion: new UntypedFormControl('', [Validators.required, Validators.maxLength(76)]),
+      url: new UntypedFormControl('', Validators.required),
+      logo: new UntypedFormControl('', Validators.required)
     })
   }
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CreateEmailDTO, Email } from 'src/app/models/emailObj';
 import { EmailService } from 'src/app/services/email.service';
@@ -16,10 +16,10 @@ export class ContactComponent implements OnInit {
  // pdf: CV\src\assets\CV Gaston-Blanco.pdf
 
 
-@Input() emailListo: FormGroup;
+@Input() emailListo: UntypedFormGroup;
 
   constructor(
-      private formBuilder: FormBuilder,
+      private formBuilder: UntypedFormBuilder,
       private emailSer : EmailService,
       private ruta:Router) {
       this.emailListo = this.formBuilder.group({

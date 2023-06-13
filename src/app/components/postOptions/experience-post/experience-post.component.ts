@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ExperienceService } from 'src/app/services/experience.service';
 import { CreateExpDTO } from 'src/app/models/experienceObj';
 @Component({
@@ -9,17 +9,17 @@ import { CreateExpDTO } from 'src/app/models/experienceObj';
 })
 export class ExperiencePostComponent implements OnInit {
 
-  ExpDTO: FormGroup;
+  ExpDTO: UntypedFormGroup;
 
   constructor(private expServ: ExperienceService) {
-    this.ExpDTO = new FormGroup({
-      trabajo: new FormControl('', Validators.required),
-      puesto: new FormControl('', [Validators.required, Validators.maxLength(45)]),
-      descripcion: new FormControl('', Validators.required),
-      ini: new FormControl('', Validators.required),
-      fin: new FormControl(''),
-      url: new FormControl('', Validators.required),
-      logo: new FormControl('', Validators.required)
+    this.ExpDTO = new UntypedFormGroup({
+      trabajo: new UntypedFormControl('', Validators.required),
+      puesto: new UntypedFormControl('', [Validators.required, Validators.maxLength(45)]),
+      descripcion: new UntypedFormControl('', Validators.required),
+      ini: new UntypedFormControl('', Validators.required),
+      fin: new UntypedFormControl(''),
+      url: new UntypedFormControl('', Validators.required),
+      logo: new UntypedFormControl('', Validators.required)
     })
    }
 

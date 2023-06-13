@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import {AutenticacionService} from '../../services/autenticacion.service';
 import { LoginObj } from 'src/app/models/user.model';
 import { HomeComponent } from '../home/home.component';
@@ -10,11 +10,11 @@ import { HomeComponent } from '../home/home.component';
   styleUrls: ['./iniciar-sesion.component.scss']
 })
 export class IniciarSesionComponent implements OnInit {
-  form:FormGroup;
+  form:UntypedFormGroup;
 
   constructor(
     private loginActive : HomeComponent,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private autenticacionService: AutenticacionService) {
     this.form = this.formBuilder.group({
         id: [''],

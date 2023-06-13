@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { CreateSkillDTO } from 'src/app/models/skillObj';
 import { SkillCardComponent } from '../../skill-card/skill-card.component';
 
@@ -9,15 +9,15 @@ import { SkillCardComponent } from '../../skill-card/skill-card.component';
   styleUrls: ['./skill-up-data.component.scss']
 })
 export class SkillUpDataComponent implements OnInit {
-  SkillDTO: FormGroup;
+  SkillDTO: UntypedFormGroup;
 
 
   constructor( private SkillCard: SkillCardComponent) {
-    this.SkillDTO = new FormGroup({
-      nombre: new FormControl(''),
-      descripcion: new FormControl('', Validators.maxLength(76)),
-      url: new FormControl(''),
-      logo: new FormControl('')
+    this.SkillDTO = new UntypedFormGroup({
+      nombre: new UntypedFormControl(''),
+      descripcion: new UntypedFormControl('', Validators.maxLength(76)),
+      url: new UntypedFormControl(''),
+      logo: new UntypedFormControl('')
     })
   }
 

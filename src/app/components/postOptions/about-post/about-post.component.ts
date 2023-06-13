@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { About, CreateAboutDTO } from 'src/app/models/about';
 import { AboutService } from 'src/app/services/about.service';
 
@@ -10,14 +10,14 @@ import { AboutService } from 'src/app/services/about.service';
 })
 export class AboutPostComponent implements OnInit {
 
-  @Input() AboutDTO: FormGroup;
+  @Input() AboutDTO: UntypedFormGroup;
 
   constructor(private aboutServ: AboutService) {
-    this.AboutDTO = new FormGroup({
-      titulo: new FormControl('', Validators.required),
-      descripcion: new FormControl('', [Validators.required, Validators.maxLength(255)]),
-      descripcion2: new FormControl('', Validators.required),
-      foto: new FormControl('', Validators.required)
+    this.AboutDTO = new UntypedFormGroup({
+      titulo: new UntypedFormControl('', Validators.required),
+      descripcion: new UntypedFormControl('', [Validators.required, Validators.maxLength(255)]),
+      descripcion2: new UntypedFormControl('', Validators.required),
+      foto: new UntypedFormControl('', Validators.required)
     })
   }
 

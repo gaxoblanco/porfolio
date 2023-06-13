@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { CreateAboutDTO } from 'src/app/models/about';
 import { IAmComponent } from '../../about-card/i-am.component';
 
@@ -10,14 +10,14 @@ import { IAmComponent } from '../../about-card/i-am.component';
 })
 export class AboutUpDataComponent implements OnInit {
 
-  AboutDTO: FormGroup;
+  AboutDTO: UntypedFormGroup;
 
   constructor(private aboutCard: IAmComponent) {
-    this.AboutDTO = new FormGroup({
-      titulo: new FormControl(''),
-      descripcion: new FormControl('', [Validators.required, Validators.maxLength(255)]),
-      descripcion2: new FormControl('', Validators.maxLength(255)),
-      foto: new FormControl('')
+    this.AboutDTO = new UntypedFormGroup({
+      titulo: new UntypedFormControl(''),
+      descripcion: new UntypedFormControl('', [Validators.required, Validators.maxLength(255)]),
+      descripcion2: new UntypedFormControl('', Validators.maxLength(255)),
+      foto: new UntypedFormControl('')
     })
   }
 
