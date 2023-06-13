@@ -86,9 +86,17 @@ export class HeadComponent implements OnInit {
   //---animations
     subMenuState = false;
     filterState = false;
+    navigationDelay = false;
   handelSubMenu() {
     this.subMenuState = !this.subMenuState;
     this.filterState = false;
+    if (this.subMenuState == false) {
+      setTimeout(() => {
+        this.navigationDelay = !this.navigationDelay;
+      }, 1000);
+    } else {
+      this.navigationDelay = !this.navigationDelay;
+    }
   }
   killOpenClass() {
     if (this.subMenuRef) {

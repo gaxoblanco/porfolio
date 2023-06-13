@@ -102,8 +102,10 @@ $background_color: #141e1d;
         border-radius: 0 16px 16px 0;
         grid-template-columns: 1fr auto;
         align-items: center;
+        transition-delay: 1s ease-in-out;
         &.open {
           align-items: flex-start;
+          transition-delay: 1s;
           .navigation_icon {
             margin-top: 8px;
           }
