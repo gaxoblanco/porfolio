@@ -41,7 +41,6 @@ export class CardExampleComponent implements OnInit {
 
     this.colorStateService.colorSubject.subscribe((color: string) => {
       this.colorState = color;
-      console.log("color", this.colorState);
     });
 
   }

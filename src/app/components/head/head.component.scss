@@ -4,17 +4,121 @@ $primary_70p: #E38521;
 $gray_30p: #ccd1d7;
 $gray_30p_gradient: #e2e8ee;
 $gray_40p: #9099A6;
+$downText: #565656;
 
 $secondary: #446063;
 
 $background_color: #141e1d;
 
+//Acromatopsia -- ningun color
+$primary_notAll: #bbbbbb;
+$primary_70p_notAll: #bbbbbb;
+
+$secondary_notAll: #bbbbbb;
+
+$gray_30p_notAll: #dedede;
+$background_notAll: #161616;
+
+//Tritanopia -- no ve rojo
+$primary_tritanopia: #f77075;
+$primary_70p_tritanopia: #e26569;
+
+$secondary_tritanopia: #456262;
+
+$gray_30p_tritanopia: #d9e2e2;
+$background_tritanopia: #161c1c;
+
+//Deuteranopia -- mas amarillo
+$primary_deuteranopia: #dfe55f;
+$primary_70p_deuteranopia: #d0d658;
+
+$secondary_deuteranopia: #4f4d62;
+
+$gray_30p_deuteranopia: #dbdbe3;
+$background_deuteranopia: #16161c;
+
+//usamos la misma distribucion que: card_color_mixin
+@mixin header_color_mixin(
+      $pri_70:$primary_70p, $pri:$primary,
+      $second:$secondary, $secondBlack:$background_color,
+      $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient)
+  {
+  background-color:$secondBlack;
+  .header-title {
+    background-color: $downText;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+  }
+  .header-title:hover{
+    background-color: $pri_70;
+  }
+  .header_text-container {
+    background-color: $gray_bg;
+    border-bottom: solid 10px $secondBlack;
+    .header_text-area {
+      background: $second;
+    }
+  }
+  .header_navigation-container {
+    .border_navigation {
+      background-color:  $secondBlack;
+      .header_navigation, .header_navigation-explorer {
+        background-color: $gray_bg;
+      }
+    }
+  }
+  //-- thre section - internal navigation
+  .header_navigation, .header_navigation-explorer {
+    .background_green {
+      background-color: $second;
+      .inputFilter {
+        background-color: $second;
+      }
+    }
+    .background_orange {
+      background-color: $pri_70;
+    }
+  }
+  .header_container {
+    @media (max-width: 1200px) {
+      border-bottom: solid 8px $background_color;
+      .header_text-container {
+        border-bottom: solid 8px $background_color;
+      }
+    }
+    @media (max-width: 720px) {
+      .header_text-container {
+        border-bottom: none;
+      }
+    }
+  }
+  .header_navigation-container {
+    @media (max-width: 1200px) {
+      .border_navigation {
+        background-color: #00000000;
+      };
+    }
+  }
+}
+
 .header{
   width: 100%;
-  background-color: #141e1dd2;
+  // background-color: #141e1dd2;
   display: grid;
   position: fixed;
   z-index: 2;
+//mixin
+  &.all {
+    @include header_color_mixin ();
+  }
+  &.acromatopsia {
+    @include header_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $background_notAll, $gray_30p_notAll, $gray_30p_notAll);
+  }
+  &.deuteranopia {
+    @include header_color_mixin ($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $background_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia);
+  }
+  &.tritanopia {
+    @include header_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $background_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
+  }
 //--- first section
   .header_container {
     display: grid;
@@ -25,24 +129,28 @@ $background_color: #141e1d;
     padding-bottom: 10px;
     height: 100px;
 
-    .header-title, .header_social-container {
-      width: 300px;
-    }
     .header-title {
-      font-size: 0px;
-      width: 100%;
+      margin-top: 16px;
+      font-size: 40px;
+      font-weight: 900;
       justify-content: end;
       padding-right: 20px;
+
+      color: transparent;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      @media (max-width: 720px) {
+        justify-content: center;
+        margin-top: 0px;
+      }
     }
     .header_text-container {
-      background-color: $gray_30p;
       padding: 16px;
       border-radius: 20px;
-      border-bottom: solid 10px $background_color;
 
       .header_text-area {
         width: 100%;
-        background: $secondary;
         border-radius: 20px;
         height:80px;
         box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.25);
@@ -72,13 +180,11 @@ $background_color: #141e1d;
     justify-content: space-between;
     width: 100%;
     .border_navigation {
-      background-color: #141e1d;
       height: 16px;
       //-- internal second section
       .header_navigation, .header_navigation-explorer {
         margin-top: -14px;
         height: auto;
-        background-color: $gray_30p;
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 10px;
@@ -131,7 +237,6 @@ $background_color: #141e1d;
     //---
     .header_container-detail {
       width: 110%;
-      // background-color: $gray_30p;
       border-radius: 0 0 16px 16px;
       height: 16px;
       margin-left: -8px;
@@ -144,7 +249,6 @@ $background_color: #141e1d;
 //-- thre section - internal navigation
 .header_navigation, .header_navigation-explorer {
   .background_green {
-    background-color: $secondary;
     width: 100%;
     height: 40px;
     border-radius: 10px;
@@ -153,13 +257,11 @@ $background_color: #141e1d;
     .inputFilter {
       width: 100%;
       height: 100%;
-      background-color: $secondary;
-      color: white;
       font-size: 1.8rem;
     }
   }
   .background_orange {
-    background-color: $primary_70p;
+    // background-color: $primary_70p;
     border-radius: 12px;
     width: 64px;
     height: 40px;
@@ -179,8 +281,6 @@ $icon-background: none;
 .header{
   .header-title {
     display: flex;
-    font-size: 0px;
-    margin-top: -16px;
     .img_title {
       min-width: 200px;
       background-repeat: no-repeat;
@@ -197,7 +297,6 @@ $icon-background: none;
     @media (max-width: 1200px) {
       min-width: auto;
       width: 100%;
-      margin-top: -30px;
     }
     @media (max-width: 940px) {
       .img_title {
@@ -377,11 +476,11 @@ $icon-background: none;
     @media (max-width: 1200px) {
       grid-template-columns: 1fr auto 1fr;
       box-shadow: 4px 4px 10px 1px rgba(0, 0, 0, 0.5);
-      border-bottom: solid 8px $background_color;
+      // border-bottom: solid 8px $background_color;
       padding-left: 20px;
       padding-right: 20px;
       .header_text-container {
-        border-bottom: solid 8px $background_color;
+        // border-bottom: solid 8px $background_color;
         height: 130px;
         margin-left: -10px;
         padding: 0 10px;
@@ -403,7 +502,7 @@ $icon-background: none;
     @media (max-width: 720px) {
       grid-template-columns: 1fr auto;
       .header_text-container {
-        border-bottom: none;
+        // border-bottom: none;
         height: 80px;
         margin: 0;
         .header_text-area {
@@ -412,7 +511,7 @@ $icon-background: none;
       }
       .header_social-container {
         padding-left: 0;
-        width: 160px;
+        max-width: 120px;
         .social_icon {
           width: 20px;
           height: 20px;
@@ -420,6 +519,7 @@ $icon-background: none;
       }
     }
   }
+
 
   .header_navigation-container {
     @media (max-width: 1510px) {

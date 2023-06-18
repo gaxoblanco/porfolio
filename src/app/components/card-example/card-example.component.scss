@@ -69,7 +69,7 @@ $gray_30p_deuteranopia: #dbdbe3;
 }
 
 
-//esta pensado apra que lo implemente .cardExample
+//esta pensado los colores para que lo implemente .cardExample
 @mixin card_color_mixin($pri_70:$primary_70p, $pri:$primary, $second:$secondary, $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient) {
   background-color: $gray_bg; //$gray_30p
   background-image: linear-gradient(160deg, $gray_bg 0%, $gray_gradient 100%);

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BehaviorSubject, interval } from 'rxjs';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 

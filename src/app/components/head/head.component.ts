@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, ParamMap, } from '@angular/router';
 
-
+import { ColorStateService } from '../../color-state.service';
 import { Ruta } from 'src/app/models/rout-Obj';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { RoutService } from 'src/app/services/rout-.service';
@@ -17,6 +17,7 @@ import { SearchService } from '../../search-service.service';
   styleUrls: ['./head.component.scss'],
 })
 export class HeadComponent implements OnInit {
+  colorState: string = '';
   active: boolean = false;
   logeado: boolean = false;
   public searchText: string = '';
@@ -43,6 +44,7 @@ export class HeadComponent implements OnInit {
     private authServ : AutenticacionService,
     private actiRout : ActivatedRoute,
     private routSer : RoutService,
+    private colorStateService: ColorStateService,
     private searchService: SearchService) { }
   log = false;
   ngOnInit(): void {
@@ -68,9 +70,15 @@ export class HeadComponent implements OnInit {
       }
     }, 400);
 
-    if (this.authServ.UsuarioAutenticado == true){
-      this.logeado = this.authServ.UsuarioAutenticado
-    }
+    // if (this.authServ.UsuarioAutenticado == true){
+    //   this.logeado = this.authServ.UsuarioAutenticado
+    // }
+
+    //set colors state
+    this.colorStateService.colorSubject.subscribe((color: string) => {
+      this.colorState = color;
+      console.log("color", this.colorState);
+    });
   }
 
   //--- Filtramos la ruta actual del menu de navegacion
