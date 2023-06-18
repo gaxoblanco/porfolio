@@ -47,6 +47,7 @@ $background_deuteranopia: #16161c;
   .header-title {
     background-color: $downText;
     text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    transition: background-color 0.2s ease;
   }
   .header-title:hover{
     background-color: $pri_70;

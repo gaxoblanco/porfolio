@@ -23,9 +23,19 @@ onWindowScroll(event: Event) {
 
   // Verifica si el scroll ha llegado al final de la página
   const isAtEndOfPage = scrollPosition + windowHeight >= documentHeight;
-
   // Actualiza la variable isScrolled basado en la posición del scroll
   this.isScrolled = (scrollPosition > scrollThreshold && !isAtEndOfPage) || (scrollPosition < scrollUpThreshold && scrollPosition > 0);
+
+  //ocultamos blindness
+  if (this.blindnessState) {
+    this.blindnessState = false;
+    setTimeout(() => {
+      // Verifica si el scroll ha llegado al final de la página
+      const isAtEndOfPage = scrollPosition + windowHeight >= documentHeight;
+      // Actualiza la variable isScrolled basado en la posición del scroll
+      this.isScrolled = (scrollPosition > scrollThreshold && !isAtEndOfPage) || (scrollPosition < scrollUpThreshold && scrollPosition > 0);
+    }, 3000);
+  }
 }
 
 
@@ -44,7 +54,7 @@ onWindowScroll(event: Event) {
   // }
 
   blindnessState = false;
-  handelBlindness():void {
+  handleBlindness():void {
     this.blindnessState = !this.blindnessState;
 
     setTimeout(() => {

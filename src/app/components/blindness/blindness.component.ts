@@ -16,6 +16,7 @@ export class BlindnessComponent implements OnInit {
     this.colorStateService.colorSubject.subscribe((color: string) => {
       this.colorState = color;
     });
+
   }
 
   acromatopsiaF():void {

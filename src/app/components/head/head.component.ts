@@ -77,7 +77,6 @@ export class HeadComponent implements OnInit {
     //set colors state
     this.colorStateService.colorSubject.subscribe((color: string) => {
       this.colorState = color;
-      console.log("color", this.colorState);
     });
   }
 
