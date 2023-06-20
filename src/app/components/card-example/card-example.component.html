@@ -4,36 +4,36 @@
       <figure class="cardExample_figure">
         <img class="cardExample_img" src={{cardObj.img}} class="cardExample_img" alt={{cardObj.title}}/>
       </figure>
-      <div class="cardExample_link_container">
+      <section class="cardExample_link_container">
         <!-- valido si existen los links .git, .web, ... -->
-        <div class="cardExample_link git" *ngIf="cardObj.git">
-          <a aria-label="github proyect page" href="{{cardObj.git}}">git</a>
-        </div>
-        <a aria-label="proyect page" href="{{cardObj.web}}" class="cardExample_link web" *ngIf="cardObj.web">
+        <a aria-label="go to github project" href="{{cardObj.git}}" class="cardExample_link git" *ngIf="cardObj.git">
+          <p>git</p>
+        </a>
+        <a aria-label="go to project page" href="{{cardObj.web}}" class="cardExample_link web" *ngIf="cardObj.web">
           <p>web</p>
         </a>
-      </div>
+      </section>
     </div>
     <!--  -->
     <div class="cardExample_container">
-      <div class="cardExample_info_container">
+      <section class="cardExample_info_container">
         <h4 class="cardExample_info_title">{{cardObj.title}}</h4>
         <p class="cardExample_info">{{cardObj.pp}}</p>
-      </div>
-      <div class="cardExample_more_info">
-        <div class="text-animation">
+      </section>
+      <section class="cardExample_more_info">
+        <ul class="text-animation">
           <p>{{cardObj.ini}}</p>
-          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+          <li *ngFor="let tag of cardObj.tags;"> • {{tag}}</li>
           <p>{{cardObj.ini}}</p>
-          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+          <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
           <p>{{cardObj.ini}}</p>
-          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+          <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
           <p>{{cardObj.ini}}</p>
-          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
+          <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
           <p>{{cardObj.ini}}</p>
-          <span *ngFor="let tag of cardObj.tags; "> • {{tag}}</span>
-        </div>
-      </div>
+          <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
+        </ul>
+      </section>
     </div>
   </div>
 </div>

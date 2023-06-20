@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SkillCardComponent } from './components/skill-card/skill-card.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
 import { SkillListComponent } from './components/skill-list/skill-list.component';
@@ -36,12 +36,14 @@ import { RoutUpDataComponent } from './components/upData/rout-up-data/rout-up-da
 import { PDFComponent } from './components/pdf/pdf.component';
 import { CardExampleComponent } from './components/card-example/card-example.component';
 import { BlindnessComponent } from './components/blindness/blindness.component';
+import { WorkComponent } from './components/work/work.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillCardComponent,
-    NavBarComponent,
+    WorkComponent,
+    FooterComponent,
     ExperienceComponent,
     ExperienceCardComponent,
     SkillListComponent,

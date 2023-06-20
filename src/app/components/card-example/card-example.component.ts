@@ -22,7 +22,7 @@ export class CardExampleComponent implements OnInit {
     pp:'Utilizo HTML Semántico tanto como puedo. Aún no lo domino como me gustaría -- Utilizo HTML Semántico tanto como puedo. Aún no lo domino como',
     ini: new Date(),
     fin: new Date(),
-    web: 'lizo HTML Semántico ',
+    web: 'HTML Semántico ',
     img: '../../../assets/desarollo_web.png',
     tags: ['html', "css", "storybook"],
   };

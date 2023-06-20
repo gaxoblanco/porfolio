@@ -51,18 +51,20 @@
   },
   {
     "type": "table",
-    "name": "experience",
+    "name": "works",
     "database": "bvkqwz8kaistnatp2nzs",
     "data": [
       {
         "id": "8",
-        "descripcion": "El objetivo en este proyecto personal, fue realizarlo en su totalidad con display grid.",
+        "pp": "El objetivo en este proyecto personal, fue realizarlo en su totalidad con display grid.",
         "fin": null,
         "ini": "2022-03-03",
-        "logo": "https://i.imgur.com/tvUfwZg.png",
+        "img": "https://i.imgur.com/tvUfwZg.png",
         "puesto": "Blog con temática sobre montañismo",
-        "trabajo": "Blog",
-        "url": "https://github.com/gaxoblanco/gridPractic"
+        "title": "Blog",
+        "institucion": "#YoProgramo - Argentina Programa",
+        "git": "https://github.com/gaxoblanco/gridPractic",
+        "tags": ["html", "css", "js", "angular"]
       },
       {
         "id": "24",
@@ -71,7 +73,7 @@
         "ini": "2017-11-11",
         "logo": "https://i.imgur.com/fF2DWVi.png",
         "puesto": "Call center en el área de reparación",
-        "trabajo": "Antina",
+        "title": "Antina",
         "url": "https://www.antina.com.ar/"
       },
       {
@@ -81,7 +83,7 @@
         "ini": "2012-02-02",
         "logo": "https://i.imgur.com/BBZ3flL.png",
         "puesto": "Fundador - Vinilos autoadhesivo a medida",
-        "trabajo": "CreaTuVinilo",
+        "title": "CreaTuVinilo",
         "url": "https://www.facebook.com/Creatuvinilo-204374396395055/"
       },
       {
@@ -91,7 +93,7 @@
         "ini": "2022-01-10",
         "logo": "https://i.imgur.com/7iccZBn.png",
         "puesto": "Documentacion del proyecto",
-        "trabajo": "Portafolio",
+        "title": "Portafolio",
         "url": "https://square-kiwi-373.notion.site/fed3888887be481c9de1c132a51c3775?v=f4cac9d3e661447783393f519b4fed51"
       },
       {
@@ -101,7 +103,7 @@
         "ini": "2022-06-02",
         "logo": "https://i.imgur.com/YuZeoLb.png",
         "puesto": "FrontEnd",
-        "trabajo": "Secretario Virtual",
+        "title": "Secretario Virtual",
         "url": "https://secretariovirtual-34292.web.app/"
       },
       {
@@ -111,7 +113,7 @@
         "ini": null,
         "logo": "https://i.imgur.com/fdVyHuu.png",
         "puesto": "Ventas - atención y asesoramiento al cliente",
-        "trabajo": "HormigaEmergente",
+        "title": "HormigaEmergente",
         "url": "http://www.hormigaemergente.com.ar/"
       },
       {
@@ -121,7 +123,7 @@
         "ini": "2022-09-23",
         "logo": "https://i.imgur.com/CE118pP.png",
         "puesto": "React - Three.js",
-        "trabajo": "Univers Three",
+        "title": "Univers Three",
         "url": "https://universe-three.web.app/"
       }
     ]
@@ -165,8 +167,8 @@
         "id": "14",
         "acess": "1",
         "descripcion": "I focus more on my learning than on the job.",
-        "nombre": "Experience",
-        "ruta": "/experience",
+        "nombre": "Works",
+        "ruta": "/work",
         "logo": "https://i.imgur.com/xD77Iy7.png"
       },
       {

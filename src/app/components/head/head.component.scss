@@ -6,7 +6,7 @@ $gray_30p_gradient: #e2e8ee;
 $gray_40p: #9099A6;
 $downText: #565656;
 
-$secondary: #446063;
+$secondary: #354c4f;
 
 $background_color: #141e1d;
 
@@ -186,8 +186,6 @@ $background_deuteranopia: #16161c;
       .header_navigation, .header_navigation-explorer {
         margin-top: -14px;
         height: auto;
-        display: grid;
-        grid-template-columns: 1fr auto;
         gap: 10px;
         padding: 10px;
         align-items: center;
@@ -210,6 +208,8 @@ $background_deuteranopia: #16161c;
         grid-template-columns: 1fr auto;
         align-items: center;
         transition-delay: 1s ease-in-out;
+        display: flex;
+        flex-direction: row-reverse;
         &.open {
           align-items: flex-start;
           transition-delay: 1s;
@@ -222,6 +222,7 @@ $background_deuteranopia: #16161c;
         border-radius: 16px 0px 0px 16px;
         grid-template-columns: auto 1fr;
         align-items: center;
+        display: grid;
         .inputFilter {
           font-size: 18px;
           color: white;
@@ -590,6 +591,8 @@ $icon-background: none;
       }
       .searchAnimation:focus-within {
         width: 200px !important;
+        border: solid 2px red;
+
       }
       .header_navigation-explorer {
         .inputVal {

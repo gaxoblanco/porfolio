@@ -2,37 +2,51 @@
 <header class="header all {{colorState}}">
  <div class="header_container">
     <h1 class="header-title">{{PrintRuta.nombre}}</h1>
-    <div class="header_text-container"><div class="header_text-area"><p>{{PrintRuta.descripcion}}</p></div></div>
-    <div class="header_social-container">
+    <div class="header_text-container">
+      <section class="header_text-area"><p>{{PrintRuta.descripcion}}</p></section>
+    </div>
+    <section class="header_social-container">
       <a aria-label="github de gaston blanco" href="#"><div class="social_icon icon_git"></div></a>
       <a aria-label="linkein de gaston blanco" href=""><div class="social_icon icon_in"></div></a>
       <a aria-label="enviar un correo a gaston blanco" href=""><div class="social_icon icon_mail"></div></a>
-    </div>
+    </section>
  </div>
  <div class="header_navigation-container">
     <div class="border_navigation border_navigation-radiusR">
-      <div class="header_navigation" [class.open]="navigationDelay">
+      <section class="header_navigation" [class.open]="navigationDelay">
+        <button aria-label="open sub-menu" (click)="handelSubMenu()"><div class="navigation_icon icon_menu" [class.open]="subMenuState"></div></button>
         <div>
           <div class="background_green" [class.open]="subMenuState">
             <p class="p">{{PrintRuta.nombre}}</p>
           </div>
-          <nav class="submenu-container" #subMenu [class.open]="subMenuState">
+          <nav class="submenu-container" #subMenu [class.open]="subMenuState" [attr.tabindex]="subMenuState ? null : '-1'">
             <ul>
-              <li *ngIf="PrintRuta.nombre !== 'Study'"  class="background_green background_green-options"><a href="/study" (click)="killOpenClass()"><p class="p">Study</p></a></li>
-              <li *ngIf="PrintRuta.nombre !== 'Works'" class="background_green background_green-options"><a href="/experience" (click)="killOpenClass()"><p class="p">Works</p></a></li>
-              <li *ngIf="PrintRuta.nombre !== 'Skills'" class="background_green background_green-options"><a href="/skill" (click)="killOpenClass()"><p class="p">Skills</p></a></li>
-              <li *ngIf="PrintRuta.nombre !== 'About'" class="background_green background_green-options"><a href="/about" (click)="killOpenClass()"><p class="p">About</p></a></li>
+              <li *ngIf="PrintRuta.nombre !== 'Study'"
+                class="background_green background_green-options">
+                  <a href="/study" (click)="killOpenClass()"><p class="p">Study</p></a>
+              </li>
+              <li *ngIf="PrintRuta.nombre !== 'Works'"
+                class="background_green background_green-options">
+                  <a href="/work" (click)="killOpenClass()"><p class="p">Works</p></a>
+              </li>
+              <li *ngIf="PrintRuta.nombre !== 'Skills'"
+                class="background_green background_green-options">
+                  <a href="/skill" (click)="killOpenClass()"><p class="p">Skills</p></a>
+              </li>
+              <li *ngIf="PrintRuta.nombre !== 'About'"
+                class="background_green background_green-options">
+                  <a href="/about" (click)="killOpenClass()"><p class="p">About</p></a>
+              </li>
             </ul>
           </nav>
         </div>
-        <button aria-label="open sub menu" (click)="handelSubMenu()"><div class="navigation_icon icon_menu" [class.open]="subMenuState"></div></button>
-      </div>
+      </section>
       <!-- menu desplegable -->
     </div>
     <!-- right navigation -->
     <div class="header_container-detail"></div>
     <div class="border_navigation border_navigation-radiusL">
-      <div class="header_navigation-explorer">
+      <section class="header_navigation-explorer">
         <button aria-label="open modal filter" (click)="filterOpen()" (click)="filterEst()" *ngIf="!searching">
           <div class="navigation_icon icon_search" [class.open]="filterState"></div>
         </button>
@@ -40,6 +54,7 @@
           <div class="navigation_icon icon_cancel_search"></div>
         </button>
           <input
+            aria-label="search"
             [class.open]="filterState"
             class="inputFilter background_green"
             type="text"
@@ -48,7 +63,7 @@
             [(ngModel)]="searchText"
             (keyup.enter)="filterEst()"
             [ngClass]="{'inputVal': searchText.length !== 0 }">
-      </div>
+      </section>
     </div>
  </div>
 </header>

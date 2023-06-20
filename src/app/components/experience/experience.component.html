@@ -1,8 +1,14 @@
 <div class="container-component">
   <app-head ></app-head>
   <div class="container_card">
-      <app-experience-card
+      <!-- <app-experience-card
           [experience]="experience" *ngFor="let experience of exp"
-      ></app-experience-card>
+      ></app-experience-card> -->
+      <!-- <ng-container *ngIf="filteredExp.length > 0; else estItems">
+        <app-card-example [cardObj]="cardObj" *ngFor="let cardObj of filteredExp"></app-card-example>
+      </ng-container> -->
+      <ng-template >
+        <app-card-example [cardObj]="cardObj" *ngFor="let cardObj of exp"></app-card-example>
+      </ng-template>
   </div>
 </div>

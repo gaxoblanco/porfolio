@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Ruta } from 'src/app/models/rout-Obj';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { RoutService } from 'src/app/services/rout-.service';
-import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import { FooterComponent } from '../footer/footer.component';
 import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 
 @Component({
@@ -37,7 +37,7 @@ export class MenuComponent implements OnInit {
 
   constructor(
     public routSer: RoutService,
-    public navCom: NavBarComponent,
+    public footer_: FooterComponent,
     public authServ: AutenticacionService
   ) {}
 
@@ -67,6 +67,6 @@ export class MenuComponent implements OnInit {
   }
 
   ClickAlert() {
-    this.navCom.toggleMenu();
+    this.footer_.toggleMenu();
   }
 }

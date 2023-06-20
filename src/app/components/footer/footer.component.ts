@@ -3,11 +3,11 @@ import { BehaviorSubject } from 'rxjs';
 import { Ruta } from 'src/app/models/rout-Obj';
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
-export class NavBarComponent implements OnInit {
+export class FooterComponent implements OnInit {
   activeMenu = false;
   //oculta o muestra el footer.
   isScrolled: boolean = false;
