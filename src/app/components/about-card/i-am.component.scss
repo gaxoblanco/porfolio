@@ -37,17 +37,32 @@ $secondary_deuteranopia: #4f4d62;
 $gray_30p_deuteranopia: #dbdbe3;
 $background_deuteranopia: #16161c;
 
+@mixin about_color_mixin ($pri_70:$primary_70p, $pri:$primary, $second:$secondary, $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient) {
+
+
+  //shadows
+  .section_iam, .section_link, .section_language, .section_speak, .section_program {
+    background-image: linear-gradient(160deg, $gray_bg 0%, $gray_gradient 100%);
+    box-shadow: 4px 4px 10px 1px #000000, -6px -6px 10px 1px #000000;
+  }
+  .iam_text-container, .link_container, .language_container, .speak_container, .program_container {
+    box-shadow: inset -4px -4px 10px 1px #3131317b;
+    background-color: $second;
+  }
+}
 
 .about_first-row {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 20px;
   margin-bottom: 20px;
+  @include about_color_mixin();
 }
 .about_second-row {
   display: grid;
   grid-template-columns: 4fr 1fr;
   gap: 20px;
+  @include about_color_mixin();
 }
 
 // section i-am
@@ -56,7 +71,6 @@ $background_deuteranopia: #16161c;
   height: 170px;
   display: flex;
   padding: 16px;
-  background-color: $gray_30p;
   border-radius: 12px;
   .iam_img {
     width: 140px;
@@ -64,7 +78,6 @@ $background_deuteranopia: #16161c;
     border-radius: 10px;
   }
   .iam_text-container {
-    background-color: $secondary;
     border-radius: 10px;
     width: 100%;
     margin-left: 16px;
@@ -77,10 +90,8 @@ $background_deuteranopia: #16161c;
   height: 170px;
   display: flex;
   padding: 16px;
-  background-color: $gray_30p;
   border-radius: 12px;
   .link_container {
-    background-color: $secondary;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -139,11 +150,8 @@ $background_deuteranopia: #16161c;
   height: 170px;
   display: flex;
   padding: 16px;
-  background-color: $gray_30p;
   border-radius: 12px;
-
   .language_container {
-    background-color: $secondary;
     width: 100%;
     height: 100%;
     padding-top: 14px;
@@ -168,11 +176,8 @@ $background_deuteranopia: #16161c;
 .section_speak {
   width: 100%;
   padding: 16px;
-  background-color: $gray_30p;
   border-radius: 12px;
-
   .speak_container {
-    background-color: $secondary;
     width: 100%;
     height: 100%;
     padding: 14px;
@@ -187,10 +192,8 @@ $background_deuteranopia: #16161c;
   width: 226px;
   display: flex;
   padding: 16px;
-  background-color: $gray_30p;
   border-radius: 12px;
   .program_container {
-    background-color: $secondary;
     width: 100%;
     height: 100%;
     padding-top: 14px;
