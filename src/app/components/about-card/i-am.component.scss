@@ -64,7 +64,9 @@ $background_deuteranopia: #16161c;
   gap: 20px;
   @include about_color_mixin();
 }
-
+.section-container {
+  overflow: hidden;
+}
 // section i-am
 .section_iam {
   width: 490px;

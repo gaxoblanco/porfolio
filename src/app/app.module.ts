@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SkillCardComponent } from './components/skill-card/skill-card.component';
@@ -16,7 +16,6 @@ import { IAmComponent } from './components/about-card/i-am.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 import { HomeComponent } from './components/home/home.component';
-import { ReactiveFormsModule} from '@angular/forms';
 import { EstudioCardComponent } from './components/estudio-card/estudio-card.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
 import { AboutComponent } from './components/about/about.component';
@@ -37,6 +36,7 @@ import { PDFComponent } from './components/pdf/pdf.component';
 import { CardExampleComponent } from './components/card-example/card-example.component';
 import { BlindnessComponent } from './components/blindness/blindness.component';
 import { WorkComponent } from './components/work/work.component';
+
 
 @NgModule({
   declarations: [
@@ -78,7 +78,7 @@ import { WorkComponent } from './components/work/work.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule
   ],
   providers: [
  //   {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
