@@ -50,7 +50,6 @@ $background_deuteranopia: #16161c;
     background-color: $second;
   }
 }
-
 .about_first-row {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -66,6 +65,11 @@ $background_deuteranopia: #16161c;
 }
 .section-container {
   overflow: hidden;
+  &.container {
+    @media (max-width: 992px) {
+      max-width: 80%;
+    }
+  }
 }
 // section i-am
 .section_iam {
@@ -84,6 +88,9 @@ $background_deuteranopia: #16161c;
     width: 100%;
     margin-left: 16px;
     padding: 10px;
+  }
+  @media (max-width: 1200px) {
+    width: 380px;
   }
 }
 // section redes sociales
@@ -213,5 +220,16 @@ $background_deuteranopia: #16161c;
     width:34px;
     height: 34px;
     border-radius:50%;
+  }
+}
+
+
+// 992px
+@media (max-width: 992px) {
+  .about_first-row {
+    grid-template-columns: 1fr 2fr;
+  }
+  .about_second-row {
+    grid-template-columns: 1fr;
   }
 }

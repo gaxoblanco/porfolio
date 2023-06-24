@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
+
+import { Subscription } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+
 import { EstudioService } from 'src/app/services/estudio.service';
 import { EstudioLoading } from 'src/app/models/estudioOBJ';
 import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 import { HeadComponent } from '../head/head.component';
 
-import { Subscription } from 'rxjs';
-import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 //---services
 import { SearchService } from '../../search-service.service';
@@ -14,6 +17,14 @@ import { SearchService } from '../../search-service.service';
   selector: 'app-estudio',
   templateUrl: './estudio.component.html',
   styleUrls: ['./estudio.component.scss'],
+  animations: [
+    trigger('fadeInTopp', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(100%)' }),
+        animate('500ms', style({ opacity: 1, transform: 'translateY(0)' }))
+      ])
+    ]),
+  ]
 })
 export class EstudioComponent implements OnInit {
   originalEst: any = []; // Copia del array original
@@ -72,5 +83,8 @@ export class EstudioComponent implements OnInit {
   }
   ngOnDestroy(): void {
     this.searchValueSubscription.unsubscribe();
+  }
+  obtenerAnimacion(index: number): string {
+    return index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight';
   }
 }

@@ -1,114 +1,107 @@
-//card
 
-h2{
-  margin: 0.4rem 0 0 1rem;
-}
 
-.information-skill-container{
-   display: grid;
-   grid-template-rows: auto 1fr;
- }
+$primary: #FBA31B;
+$primary_70p: #E38521;
+$gray_30p: #ccd1d7;
+$gray_30p_gradient: #e2e8ee;
+$secondary: #354c4f;
 
-.card-angle-rigth div{
-  position: absolute;
-}
-.rectangle{
-  background: #446063;
-  width: 21rem;
-  height: 7.8rem;
-  margin-top:0.45rem;
-  border-radius: 12px 12px 0 12px;
-}
-.angle-rigth {
-  width:  7rem;
-  height: 9.1rem;
-  background:#446063;
-  border-radius: 12px 12px 12px 0;
-  transform: rotate(0deg) skewX(30deg) scale(1,.866);
-  margin-left: 18rem;
-  margin-top:-0.2rem;
-}
-.information-skill-text p{
-  padding-top: 0.4rem;
-  font-size: 1.4rem;
-  margin: 0 0 0.4rem 0.6rem;
-  width: 19rem;
-}
-.buttonL{
-  position: absolute;
-  top: 4.8rem;
-  left: 19.2rem;
-}
-.buttonL .button-rectangle-left{
-  background: #FBA31B;
-  width: 3.4rem;
-  height: 2.4rem;
-  padding-top: 0.4rem;
-  padding-left: 0.4rem;
-  border-radius: 6px 6px 0 6px;
-  margin-left: 0.4rem;
-  svg{
-    width: 2rem;
-    color:white;
-    margin-top: -0.6rem;
-    margin-left:0rem;
+$backgroundPage: #141e1d;
+
+//Acromatopsia -- ningun color
+$primary_notAll: #bbbbbb;
+$primary_70p_notAll: #bbbbbb;
+
+$secondary_notAll: #bbbbbb;
+
+$gray_30p_notAll: #dedede;
+
+//Tritanopia -- no ve rojo
+$primary_tritanopia: #f77075;
+$primary_70p_tritanopia: #e26569;
+
+$secondary_tritanopia: #456262;
+
+$gray_30p_tritanopia: #d9e2e2;
+
+//Deuteranopia -- mas amarillo
+$primary_deuteranopia: #dfe55f;
+$primary_70p_deuteranopia: #d0d658;
+
+$secondary_deuteranopia: #4f4d62;
+
+$gray_30p_deuteranopia: #dbdbe3;
+
+
+@mixin skill_card_mixin ($pri_70:$primary_70p, $pri:$primary, $second:$secondary, $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient) {
+  .card_skill {
+
   }
 }
-.buttonL .button-angle-left {
-  width:  2.2rem;
-  height: 2.8rem;
-  background: #FBA31B;
-  border-radius: 4px 8px 8px 0 ;
-  transform: rotate(0deg) skewX(30deg) scale(1,.866);
-  left:2.8rem;
-  top:-0.2rem;
-}
-.button-rectangle-left p{
-  font-size: 1.2rem;
-  margin-left: 6px;
-  color: white;
-}
 
-svg{
-  color: #FBA31B;
-  position: absolute;
-  height: 2.8rem;
-  width: 2.8rem;
-  margin-top: -2.4rem;
-}
-.delete{
-  color: red;
-  position: absolute;
-  margin-top: -20px;
-  margin-left: 16rem;
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-.logo{
-  width:12rem;
-  margin-left: 23rem;
-  margin-top: -1.6rem;
-  margin-bottom: 2rem;
-  position:relative;
-}
-.eddition-container{
+//-- cardExample mismo que link de card-example
+
+
+.card_skill {
+  background-color: $gray_30p;
+  max-width: 530px;
+  border-radius: 20px;
+  padding: 10px;
+  gap: 10px;
   display: grid;
-  place-items: center;
-}
-
-.change{
-  position: relative;
-  left: -2.6rem;
-}
-.option{
-  display: none;
-  &.active{
-    display: grid;
+  grid-auto-flow: column;
+  box-shadow: 4px 4px 10px 1px #000000, -6px -6px 10px 1px #000000;
+  figure {
+    margin: 0;
   }
-}
-@media (min-width: 800px){
-  .card-skill{
-    margin-left: 6rem;
+  .skill_figure {
+    width: 150px;
+    height: 150px;
+    border-radius: 18px;
+    background-color: $primary;
+    padding: 10px;
+    box-shadow: inset -4px -4px 10px 1px #3131317b;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .skill_section {
+    height: 100%;
+    width: 100%;
+    background-color: $secondary;
+    border-radius: 12px;
+    padding: 14px;
+    position: relative;
+    box-shadow: inset -4px -4px 10px 1px #3131317b;
+  }
+  .skill_a {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0px;
+    border-radius: 14px;
+    box-shadow: inset -4px -4px 10px 1px #3131317b;
+    width: 80px;
+    display: block;
+    background-color: $primary_70p;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    p, a {
+      font-weight: 800;
+      background-color: $backgroundPage;
+      color: transparent;
+      text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+    }
+
+    &:hover {
+      box-shadow: inset -4px -4px 10px 1px #31313129;
+      p, a {
+        text-shadow: 2px 2px 3px rgba(130, 130, 130, 0.5);
+      }
+    }
   }
 }
