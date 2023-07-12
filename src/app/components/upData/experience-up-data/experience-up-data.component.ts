@@ -29,7 +29,7 @@ export class ExperienceUpDataComponent implements OnInit {
 
   saveNew(){
     let upExp: CreateExpDTO = this.ExpDTO.value;
-    this.expCard.editExp(upExp)
+    // this.expCard.editExp(upExp)
   }
 
 }

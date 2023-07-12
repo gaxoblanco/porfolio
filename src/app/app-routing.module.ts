@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { PostComponent } from './components/post/post.component';
 import { EmailsComponent } from './components/emails/emails.component';
 import { PDFComponent } from './components/pdf/pdf.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},
   {path:'home',component:HomeComponent},

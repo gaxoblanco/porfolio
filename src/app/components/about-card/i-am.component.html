@@ -1,9 +1,9 @@
 
 <article class="section-container container">
-  <div class="about_first-row">
+  <div class="about_first-row all {{colorState}}">
     <!-- section i-am -->
     <section class="section_iam" [@fadeIn_iam]>
-      <img class="iam_img" src="../../../assets/gastonBlanco.jpg" alt="gaston blanco" />
+      <img class="iam_img filterColor_img" src="../../../assets/gastonBlanco.jpg" alt="gaston blanco" />
       <div class="iam_text-container">
         <p class="p">Name: <b>Gaston Ezequiel</b></p>
         <p class="p">Last name: <b>Blanco</b></p>
@@ -72,21 +72,74 @@
     <section class="section_language" [@fadeIn_language]>
       <ul class="language_container">
         <li type="submit" class="language_entry">
-          <img src="../../../assets/programs/es.jpg" alt="icon Spanish" class="language_icon" />
+          <img class="filterColor_img" src="../../../assets/programs/es.jpg" alt="icon Spanish" class="language_icon" />
           <p>Spanish</p>
         </li>
         <li type="submit" class="language_entry">
-          <img src="../../../assets/programs/en.jpg" alt="icon English" class="language_icon" />
+          <img class="filterColor_img" src="../../../assets/programs/en.jpg" alt="icon English" class="language_icon" />
           <p>English</p>
         </li>
         <li type="submit" class="language_entry">
-          <img src="../../../assets/programs/js.jpg" alt="icon Japanese" class="language_icon" />
+          <img class="filterColor_img" src="../../../assets/programs/js.jpg" alt="icon Japanese" class="language_icon" />
           <p>Japanese</p>
         </li>
       </ul>
     </section>
   </div>
-  <div class="about_second-row">
+
+  <!-- second row -->
+  <div class="second-row all {{colorState}}">
+    <!-- section idiomas -->
+    <section class="section_language" [@fadeIn_language]>
+      <ul class="language_container">
+        <li type="submit" class="language_entry">
+          <img class="filterColor_img" src="../../../assets/programs/es.jpg" alt="icon Spanish" class="language_icon" />
+          <p>Spanish</p>
+        </li>
+        <li type="submit" class="language_entry">
+          <img class="filterColor_img" src="../../../assets/programs/en.jpg" alt="icon English" class="language_icon" />
+          <p>English</p>
+        </li>
+        <li type="submit" class="language_entry">
+          <img class="filterColor_img" src="../../../assets/programs/js.jpg" alt="icon Japanese" class="language_icon" />
+          <p>Japanese</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- section programas -->
+    <section class="section_program section_program-row" [@fadeIn_program]>
+      <ul class="program_container">
+        <li type="submit" class="social-btn">
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/angular.jpg" alt="icon Angular" />
+          <p>Angular</p>
+        </li>
+        <li type="submit" class="social-btn">
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/react.jpg" alt="icon React" />
+          <p>React</p>
+        </li>
+        <li type="submit" class="social-btn">
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/storybook.jpg" alt="icon Storybook" />
+          <p>Storybook</p>
+        </li>
+        <li type="submit" class="social-btn">
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/threejs.jpg" alt="icon TrheeJs" />
+          <p>TrheeJs</p>
+        </li>
+        <li type="submit" class="social-btn">
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/blender.jpg" alt="icon Blander" />
+          <p>Blander</p>
+        </li>
+        <li type="submit" class="social-btn">
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/z-brush.jpg" alt="icon Solid" />
+          <p>Z-brush</p>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- three row -->
+  <div class="about_three-row all {{colorState}}">
     <!-- section narrativa -->
     <section class="section_speak" [@fadeIn_speak]>
       <div class="speak_container">
@@ -104,27 +157,27 @@
     <section class="section_program" [@fadeIn_program]>
       <ul class="program_container">
         <li type="submit" class="social-btn">
-          <img class="program_img" src="../../../assets/programs/angular.jpg" alt="icon Angular" />
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/angular.jpg" alt="icon Angular" />
           <p>Angular</p>
         </li>
         <li type="submit" class="social-btn">
-          <img class="program_img" src="../../../assets/programs/react.jpg" alt="icon React" />
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/react.jpg" alt="icon React" />
           <p>React</p>
         </li>
         <li type="submit" class="social-btn">
-          <img class="program_img" src="../../../assets/programs/storybook.jpg" alt="icon Storybook" />
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/storybook.jpg" alt="icon Storybook" />
           <p>Storybook</p>
         </li>
         <li type="submit" class="social-btn">
-          <img class="program_img" src="../../../assets/programs/threejs.jpg" alt="icon TrheeJs" />
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/threejs.jpg" alt="icon TrheeJs" />
           <p>TrheeJs</p>
         </li>
         <li type="submit" class="social-btn">
-          <img class="program_img" src="../../../assets/programs/blender.jpg" alt="icon Blander" />
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/blender.jpg" alt="icon Blander" />
           <p>Blander</p>
         </li>
         <li type="submit" class="social-btn">
-          <img class="program_img" src="../../../assets/programs/z-brush.jpg" alt="icon Solid" />
+          <img class="filterColor_img" class="program_img" src="../../../assets/programs/z-brush.jpg" alt="icon Solid" />
           <p>Z-brush</p>
         </li>
       </ul>

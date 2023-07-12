@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 import { EstudioService } from 'src/app/services/estudio.service';
-import { EstudioLoading } from 'src/app/models/estudioOBJ';
 import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 import { HeadComponent } from '../head/head.component';
 

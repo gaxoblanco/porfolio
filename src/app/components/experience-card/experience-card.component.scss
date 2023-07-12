@@ -1,195 +1,282 @@
-//card
-p{
-  font-size: 1.6rem;
-}
-a{
-  text-decoration: none;
-}
-h2{
-  margin-top: 0.4rem;
-  font-size: 2rem;
-  grid-row: 1;
-}
-.card-angle-rigth{
-    display: grid;
-    grid-template-rows: 1fr auto;
-  }
-  .card-angle-rigth div{
-    position: absolute;
-  }
-  .rectangle{
-    background: #CCD1D7;
-    width: 29rem;
-    height: 11.6rem;
-    border-radius: 12px;
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
-    grid-template-columns: 1fr auto;
-  }
 
-  .card-conte--text{
-    background: #446063;
-    width: 18.9rem;
-    height: 7.2rem;
-    margin-top:0.7rem;
-    margin-left: 0.8rem;
-    border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
-    padding-left: 0.6rem;
-  }
-  .card-conte--text-angle {
-    width:  7rem;
-    height: 8.3rem;
-    background:#446063;
-    border-radius: 12px 12px 18px 0;
-    transform: rotate(0deg) skewX(30deg) scale(1,.866);
-    margin-left: 15rem;
-    top: 0.2rem;
-  }
 
-//bottom card
-.card-conte--button-date-buttom{
-  margin-top: 2rem;
-  grid-row: 3;
-  display: grid;
+$primary: #FBA31B;
+$primary_70p: #E38521;
+$gray_30p: #ccd1d7;
+$gray_30p_gradient: #e2e8ee;
+$secondary: #354c4f;
+
+$backgroundPage: #141e1d;
+
+//Acromatopsia -- ningun color
+$primary_notAll: #bbbbbb;
+$primary_70p_notAll: #bbbbbb;
+
+$secondary_notAll: #bbbbbb;
+
+$gray_30p_notAll: #dedede;
+
+//Tritanopia -- no ve rojo
+$primary_tritanopia: #f77075;
+$primary_70p_tritanopia: #e26569;
+
+$secondary_tritanopia: #456262;
+
+$gray_30p_tritanopia: #d9e2e2;
+
+//Deuteranopia -- mas amarillo
+$primary_deuteranopia: #dfe55f;
+$primary_70p_deuteranopia: #d0d658;
+
+$secondary_deuteranopia: #4f4d62;
+
+$gray_30p_deuteranopia: #dbdbe3;
+
+
+
+
+
+.position_relative {
+  position: relative;
 }
-.rectangle-rigth{
-  background: #FBA31B;
-  width: 4.4rem;
-  height: 2.8rem;
-  border-radius: 6px 6px 6px 0;
-  margin-left: 3.2rem;
-  margin-top: 0.6rem;
-  position: absolute;
-  svg{
-    width: 3rem;
-    color:white;
-    margin-top: -1rem;
-    margin-left:-1.8rem;
-  }
-}
-.angle-rigth {
-  width:  20px;
-  height: 3.2rem;
-  background: #FBA31B;
-  border-radius: 4px 8px 0 8px ;
-  transform: rotate(0deg) skewX(-30deg) scale(1,.866);
-  margin-left:2rem;
-  margin-top: 0.4rem;
-}
-.rectangle-rigth p{
-  color: white;
-}
-.experiecne-date{
+//-- cardExample link
+@mixin button_mixin() {
+  width: 100%;
   text-align: center;
-  margin-top: 0.4rem;
-  margin-left: 1.6rem;
-}
-.experiecne-date p{
-  color:#141E1D;
-  font-size: 1.4rem;
-  margin-top:0.2rem;
-  width: 20rem;
-}
-div .experiecne-date p{
-  padding: 0;
-  margin-bottom: -0.2rem;
-}
+  padding: 8px 0px;
+  border-radius: 14px;
+  box-shadow: inset -4px -4px 10px 1px #3131317b;
 
-.rectangle-left{
-  background: #FBA31B;
-  width: 4rem;
-  height: 2.8rem;
-  margin-top:0.6rem;
-  margin-left:15.4rem;
-  border-radius: 6px 6px 0 6px;
-  padding-top: 0.4rem;
-  svg{
-    width: 2rem;
-    color:white;
-    margin-top: -1.4rem;
-    margin-left:0.8rem;
+  p, a {
+    font-weight: 800;
+    background-color: $backgroundPage;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
+
+  &:hover {
+    box-shadow: inset -4px -4px 10px 1px #31313129;
+    a {
+      // background-color: white;
+    }
+    p, a {
+      text-shadow: 2px 2px 3px rgba(130, 130, 130, 0.5);
+    }
   }
 }
-.angle-left {
-  width:  2.2rem;
-  height: 3.2rem;
-  background: #FBA31B;
-  border-radius: 4px 8px 8px 0 ;
-  transform: rotate(0deg) skewX(30deg) scale(1,.866);
-  margin-left:18.4rem;
-  margin-top:0.4rem;
+
+
+//esta pensado los colores para que lo implemente .cardExample
+@mixin card_color_mixin($pri_70:$primary_70p, $pri:$primary, $second:$secondary, $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient) {
+  background-color: $gray_bg; //$gray_30p
+  background-image: linear-gradient(160deg, $gray_bg 0%, $gray_gradient 100%);
+  .cardExample_figure {
+    background-color: $pri; //$primary_70p
+  }
+  .cardExample_info_container {
+    background-color: $second; //$secondary
+  }
+  .cardExample_more_info{
+    background-color: $second; //$secondary
+  }
+  .cardExample_figure {
+    background-color: $pri; //$primary
+  }
+  .cardExample_info_container {
+    background-color: $second; //$secondary
+  }
+  .cardExample_link.git {
+    background-color: #9099a6;
+  }
+  .cardExample_link.web {
+    background-color: $pri;//$primary
+  }
 }
-.experience-buttonL{
-  width: 20rem;
-  height: 5rem;
-}
-.rectangle-left p{
-  margin-left: 6px;
-  color: white;
-}
-.more--container{
-  width: 26rem;
-  height: auto;
+.cardExample {
+  &.all {
+    @include card_color_mixin ();
+  }
+  &.acromatopsia {
+    @include card_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll);
+    .cardExample_img{
+      filter: grayscale(100%);
+    }
+  }
+  &.deuteranopia {
+    @include card_color_mixin ($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia);
+    .cardExample_img {
+      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
+              hue-rotate(-20deg)
+              opacity(0.8)
+              drop-shadow(0 0 2px #000000);
+    }
+  }
+  &.tritanopia {
+    @include card_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
+    .cardExample_img {
+      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
+              hue-rotate(90deg)
+              opacity(0.8)
+              drop-shadow(0 0 2px #000000);
+    }
+  }
+  // background-color: $gray_30p;
+  // background-image: linear-gradient(160deg, $gray_30p 0%, $gray_30p_gradient 100%);
+  box-shadow: 4px 4px 10px 1px #000000, -6px -6px 10px 1px #000000;
+
   display: grid;
-  background: #CCD1D7;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  padding: 0.6rem;
+  grid-template-columns: 1fr auto;
+  max-width: 560px;
+  gap: 10px;
+  border-radius: 20px;
+  padding: 10px;
 
-}
-.more--container p{
-  font-size: 1.4rem;
-  padding: 0.6rem 0.6rem 1rem 0.6rem;
-  background: #446063;
-  border-radius: 1rem;
-  margin-bottom: 0;
-  line-height: normal;
-}
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
 
-.logo{
-width:16rem;
-margin-left: 20rem;
-margin-top: -1.6rem;
-margin-bottom: 1rem;
-position:relative;
-}
-.delete{
-  color: red;
-  position: absolute;
-  margin-top: -3rem;
-  margin-left: 16rem;
-  font-size: 2rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-svg{
-  color: #FBA31B;
-  position: absolute;
-  height: 2.8rem;
-  width: 2.8rem;
-  margin-top: -3.4rem;
-}
-.eddition-container{
-  display: grid;
-  justify-items: left;
-}
-
-
-.option{
-  display: none;
-  &.active{
-    display: inline;
-    position: absolute;
-    transform: translate(0, 140px);
-    transition: all 0.5s ease;
-
-    z-index: 2;
+  .cardExample_figure {
+    width: 180px;
+    height: 180px;
+    // background-color: $primary_70p;
+    margin: 0;
+    border-radius: 14px;
+    padding: 10px;
+    box-shadow: inset -4px -4px 10px 1px #3131317b;
   }
+  .cardExample_link_container {
+    display: flex;
+    gap: 10px;
+  }
+  .cardExample_container{
+    height: 100%;
+    display: grid;
+    gap: 10px;
+    align-content: space-between;
+    justify-content: center;
+  }
+  .cardExample_info_container {
+    // background-color: $secondary;
+    width: 100%;
+    border-radius: 14px;
+    padding: 10px 20px;
+    height: 180px;
+    box-shadow: inset -4px -4px 10px 1px #3131317b;
+  }
+  .cardExample_more_info{
+    // background-color: $secondary;
+    display: flex;
+    justify-content: space-around;
+    height: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: inset -4px -4px 10px 1px #3131317b;
 
-}
-
-@media (min-width: 900px){
-  .card-experience{
-    margin-left: 6rem;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    span{
+      margin-top: -4px;
+    }
   }
 }
+//animation
+.text-animation {
+  animation: slide-left 30s linear infinite, visibility 2s ease-in-out;
+  display: inline-block;
+  animation-delay: -40s; /* Retraso para que el texto inicie fuera del contenedor */
+  width: 352px;
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  span {
+    width: 60px;
+    margin-left: 20px;
+  }
+  p {
+    margin-top: -4px;
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-300%);
+    opacity: 0;
+  }
+}
+
+//--- cardExample ----------
+.cardExample:hover {
+  // transform: translate(-0px, -4px);
+}
+.cardExample {
+  .cardExample_info_title{
+    font-weight: bold;
+  }
+  @media (max-width: 620px) {
+    grid-template-columns: 1fr;
+    margin: 0 28px;
+    max-width: 400px;
+    .cardExample_figure {
+      width: 100%;
+      height:auto;
+    }
+    .cardExample_info_container, .cardExample_more_info {
+      height: auto;
+    }
+  }
+}
+
+//-- cardExample figure
+.cardExample_figure {
+  width: 180px;
+  height: 180px;
+  // background-color: $primary;
+  margin: 0;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: inset -4px -4px 10px 1px #3131317b;
+  .cardExample_img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color:rgb(44, 44, 44);
+    object-fit: cover;
+  }
+}
+
+
+//-- cardExample link
+.cardExample_link_container {
+  .cardExample_link.git {
+    @include button_mixin();
+  }
+  .cardExample_link.web {
+    @include button_mixin();
+  }
+}
+
+//---
+

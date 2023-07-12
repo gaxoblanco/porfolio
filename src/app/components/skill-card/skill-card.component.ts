@@ -4,6 +4,7 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import {Skill, UpdateSkillDTO} from '../../models/skillObj';
 import {SkillService} from '../../services/skill.service';
 import { SkillListComponent } from '../skill-list/skill-list.component';
+import { ColorStateService } from '../../color-state.service';
 
 @Component({
   selector: 'app-skill-card',
@@ -11,7 +12,7 @@ import { SkillListComponent } from '../skill-list/skill-list.component';
   styleUrls: ['./skill-card.component.scss']
 })
 export class SkillCardComponent implements OnInit {
-
+  colorState: string = '';
 
   active: boolean = false;
   logeado: boolean = false;
@@ -28,13 +29,18 @@ export class SkillCardComponent implements OnInit {
     private skillServ: SkillService,
     private ruta:Router,
     private authServ : AutenticacionService,
-    public reload: SkillListComponent
+    public reload: SkillListComponent,
+    private colorStateService: ColorStateService,
     ) { }
 
   ngOnInit(): void {
     if (this.authServ.UsuarioAutenticado == true){
       this.logeado = this.authServ.UsuarioAutenticado
     }
+
+    this.colorStateService.colorSubject.subscribe((color: string) => {
+      this.colorState = color;
+    });
   }
 
    activeOption(){

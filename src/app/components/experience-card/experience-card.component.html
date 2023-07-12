@@ -1,69 +1,39 @@
-<article class="card">
-    <section class="card-angle-rigth">
-      <div class="rectangle">
-        <div class="card-conte--text-angle"></div>
-        <div class="card-conte--text">
-          <h2> {{experience.trabajo}}</h2>
-          <p>{{experience.puesto}}</p>
-        </div>
-
-        <div class="card-conte--button-date-buttom">
-          <div class="experiecne-date">
-            <p> {{experience.ini| date:'MM-yyyy' }} </p>
-            <p> {{experience.fin| date:'MM-yyyy' }}</p>
-          </div>
-          <a>
-            <div class="angle-rigth"></div>
-            <button
-              (click)="activeMore()"
-              class="rectangle-rigth"
-              [class.active]="more">
-                <p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                  </svg>
-                </p>
-            </button>
-          </a>
-          <div class="angle-left"></div>
-          <div class="rectangle-left">
-            <a [href]="experience.url" target="_blank">
-              <p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
-                  <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
-                  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
-                </svg>
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <a
-        class="edit option"
-        (click)="activeEstady()"
-        [class.active]="logeado">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-          <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-        </svg>
-      </a>
-    </section>
-    <a
-    (click)="deleteExp()"
-    class="delete option"
-    [class.active]="logeado">X</a>
-    <img class="logo" [src]="experience.logo">
-    <span class="eddition-container">
-      <div class="change" [class.active]="active">
-        <app-experience-up-data
-        ExpDTO="experience" ></app-experience-up-data>
-      </div>
-    </span>
-
-    <span class="more--container option" [class.active]="more">
-      <p> {{experience.descripcion}} </p>
-    </span>
-
-
-
-</article>
+<div class="position_relative">
+  <div class="cardExample all {{colorState}}">
+    <div class="cardExample_container">
+      <figure class="cardExample_figure">
+        <img class="cardExample_img" src={{cardObj.img}} class="cardExample_img" alt={{cardObj.title}}/>
+      </figure>
+      <section class="cardExample_link_container">
+        <!-- valido si existen los links .git, .web, ... -->
+        <a aria-label="go to github project" href="{{cardObj.git}}" class="cardExample_link git" *ngIf="cardObj.git">
+          <p>git</p>
+        </a>
+        <a aria-label="go to project page" href="{{cardObj.web}}" class="cardExample_link web" *ngIf="cardObj.web">
+          <p>web</p>
+        </a>
+      </section>
+    </div>
+    <!--  -->
+    <div class="cardExample_container">
+      <section class="cardExample_info_container">
+        <h4 class="cardExample_info_title">{{cardObj.title}}</h4>
+        <p class="cardExample_info">{{cardObj.pp}}</p>
+      </section>
+      <section class="cardExample_more_info">
+        <ul class="text-animation">
+          <p>{{cardObj.ini}}</p>
+          <li *ngFor="let tag of cardObj.tags;"> • {{tag}}</li>
+          <p>{{cardObj.ini}}</p>
+          <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
+          <p>{{cardObj.ini}}</p>
+          <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
+          <p>{{cardObj.ini}}</p>
+          <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
+          <p>{{cardObj.ini}}</p>
+          <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>

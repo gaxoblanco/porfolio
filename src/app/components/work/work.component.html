@@ -1,11 +1,13 @@
 <div class="container-component">
-  <app-head ></app-head>
+  <app-head></app-head>
   <div class="container_card">
-      <!-- <ng-container *ngIf="filteredWork.length > 0; else Works">
-        <app-card-example [cardObj]="cardObj" *ngFor="let cardObj of filteredWork"></app-card-example>
-      </ng-container> -->
-      <ng-template>
-        <app-card-example [cardObj]="cardObj" *ngFor="let cardObj of works"></app-card-example>
-      </ng-template>
+    <ng-container *ngIf="filteredExp.length > 0; else estItems">
+      <ng-container *ngFor="let cardObj of filteredExp">
+        <app-card-example [cardObj]="cardObj"></app-card-example>
+      </ng-container>
+    </ng-container>
+    <ng-template #estItems>
+      <app-card-example [cardObj]="cardObj" *ngFor="let cardObj of exp"></app-card-example>
+    </ng-template>
   </div>
 </div>

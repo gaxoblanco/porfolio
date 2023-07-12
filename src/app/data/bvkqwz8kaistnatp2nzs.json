@@ -221,50 +221,57 @@
       {
         "id": "17",
         "descripcion": "Angular es un framework para aplicaciones web desarrollado en TypeScript",
-        "logo": "https://i.imgur.com/8hI3TcT.png",
+        "logo": "https://i.imgur.com/OQzGxDm.jpg",
         "nombre": "Angular",
         "url": "https://angular.io/"
       },
       {
         "id": "18",
         "descripcion": "Utilizo el HTML semantico tanto como puedo, procuro mantener un buen estandar en acesibilidad web.",
-        "logo": "https://i.imgur.com/adSbz8s.png",
+        "logo": "https://i.imgur.com/c3mZCeF.jpg",
         "nombre": "HTML",
         "url": "https://es.wikipedia.org/wiki/HTML_sem%C3%A1ntico"
       },
       {
         "id": "19",
         "descripcion": "Me gusta implementar el sistema de grillas en mis proyectos.",
-        "logo": "https://i.imgur.com/xuExIoS.png",
+        "logo": "https://i.imgur.com/T2MHXWc.jpg",
         "nombre": "CSS",
         "url": "https://developer.mozilla.org/es/docs/Web/CSS"
       },
       {
         "id": "28",
-        "descripcion": "El Back-End de este porfolio se realizo en SpringBoot.",
-        "logo": "https://i.imgur.com/Imx3acp.png",
-        "nombre": "Spring Boot",
+        "descripcion": "sss",
+        "logo": "https://i.imgur.com/iki01kD.jpg",
+        "nombre": "Sass",
         "url": "https://spring.io/projects/spring-boot"
       },
       {
         "id": "42",
         "descripcion": "Lo utilizo las herramientas vectoriales para diseños 2D",
-        "logo": "https://i.imgur.com/WTDtyXv.png",
-        "nombre": "CorelDRAW",
+        "logo": "https://i.imgur.com/q6BfpZg.jpg",
+        "nombre": "JavaScript",
         "url": "https://www.coreldraw.com/la/"
       },
       {
         "id": "43",
         "descripcion": "Modelado y Texturas 3D. Principalmente ambientes 3D",
-        "logo": "https://i.imgur.com/WN2aweN.png",
+        "logo": "https://i.imgur.com/nyCWVK3.jpg",
         "nombre": "Blender",
         "url": "https://www.blender.org/about/"
       },
       {
         "id": "44",
         "descripcion": "Modelado 3D. Lo considero el ideal para formas orgánicas.",
-        "logo": "https://i.imgur.com/PC8ivhK.png",
+        "logo": "https://i.imgur.com/PXP4eLU.jpg",
         "nombre": "Zbrush",
+        "url": "http://pixologic.com/features/about-zbrush.php"
+      },
+      {
+        "id": "45",
+        "descripcion": "in",
+        "logo": "https://i.imgur.com/zR1nnlT.jpg",
+        "nombre": "Ingles",
         "url": "http://pixologic.com/features/about-zbrush.php"
       }
     ]

@@ -1,58 +1,62 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { trigger, transition, style, animate } from '@angular/animations';
 
-import { ExperienceService } from '../../services/experience.service';
-import { ExperienceLoading} from '../../models/experienceObj';
 import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
-//---services
+//---
 import { SearchService } from '../../search-service.service';
+import { ExperienceService } from '../../services/experience.service';
 
+import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
-  styleUrls: ['./work.component.scss']
+  styleUrls: ['./work.component.scss'],
+  animations: [
+    trigger('fadeInTopp', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(100%)' }),
+        animate('500ms', style({ opacity: 1, transform: 'translateY(0)' }))
+      ])
+    ]),
+  ]
 })
 export class WorkComponent {
-  originalWork: any = [];
-  filteredWork: any[] = [];
+  originalExp: any = []; // Copia del array original
   loading: any = {
-    id:'1',
-    title:'Loadding',
-    pp:'Utilizo HTML Semántico tanto como puedo. Aún no lo domino como me gustaría -- Utilizo HTML Semántico tanto como puedo. Aún no lo domino como',
-    ini: "2-2-22",
-    fin: "2-2-22",
-    web: 'HTML Semántico ',
-    img: '../../../assets/desarollo_web.png',
-    tags: ['html', "css", "storybook"],
-  }
+    id: '',
+    title: 'Loading...',
+    pp: 'Starting the server, wait a few minutes',
+    img: 'https://i.imgur.com/ITNhgTu.png',
+  };
+
   // variable de tipo subscription
   private searchValueSubscription!: Subscription;
-  works: any = [
-    this.loading,
-    this.loading,
-    this.loading,
-    this.loading,
-  ];
+  //arrya fiultrado
+  filteredExp: any[] = [];
 
-  constructor(
-    private experienceServ: ExperienceService,
-    private searchService: SearchService
-  ) { }
+  exp: any = [this.loading, this.loading, this.loading, this.loading];
+  experienceready: boolean = true;
+
+
+constructor(
+  private searchService: SearchService,
+  private changeDetectorRef: ChangeDetectorRef
+) {}
 
   ngOnInit(): void {
-    this.originalWork = dataBase[3].data;
-        this.works = dataBase[3].data;
+    console.log("first exp -",this.exp);
     setTimeout(() => {
       try {
-
-        console.log(this.works[0]);
+        this.originalExp = dataBase[3].data; // Guardar una copia del array
+        this.exp = dataBase[3].data;
+        console.log("second exp -",this.exp);
       } catch (error) {
         console.error(error);
       }
     }, 400);
-
     // Suscribirse al observable searchValue
     this.searchValueSubscription = this.searchService.searchValue
       .pipe(
@@ -61,25 +65,29 @@ export class WorkComponent {
       )
       .subscribe((inputValue: string) => {
         if (inputValue.trim() !== '') {
-          this.works = this.originalWork.filter((item: any) => {
+          this.exp = this.originalExp.filter((item: any) => {
             // Convertir el valor de búsqueda y los campos relevantes a minúsculas para una comparación sin distinción entre mayúsculas y minúsculas
             const searchValue = inputValue.toLowerCase();
             const title = item.title.toLowerCase();
             // const pp = item.pp ? item.pp.toLowerCase() : '';
             const tags = item.tags ? item.tags.join(' ').toLowerCase() : '';
-
+            console.log("three exp -",this.exp);
             // Comprobar si el valor de búsqueda coincide con el título, la descripción o las etiquetas
             return title.includes(searchValue) || tags.includes(searchValue);
           });
+          this.changeDetectorRef.detectChanges();
         } else {
           // Si el valor de búsqueda está vacío, mostrar todos los elementos
-          this.works = this.originalWork;
-
+          this.exp = this.originalExp;
+          console.log("threeII exp -",this.exp);
         }
       });
+      console.log("forth exp -",this.exp);
   }
-
   ngOnDestroy(): void {
     this.searchValueSubscription.unsubscribe();
+  }
+  obtenerAnimacion(index: number): string {
+    return index % 2 === 0 ? 'fadeInLeft' : 'fadeInRight';
   }
 }

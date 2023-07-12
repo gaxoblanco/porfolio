@@ -6,6 +6,7 @@ import { About, UpAbout } from 'src/app/models/about';
 import { AboutService } from 'src/app/services/about.service';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { AboutComponent } from '../about/about.component';
+import { ColorStateService } from '../../color-state.service';
 
 
 
@@ -47,6 +48,7 @@ import { AboutComponent } from '../about/about.component';
   ]
 })
 export class IAmComponent implements OnInit {
+  colorState: string = '';
   active: boolean = false;
   logeado: boolean = false;
   @Input() about: About = {
@@ -60,12 +62,18 @@ export class IAmComponent implements OnInit {
   constructor(
     private aboutServ: AboutService,
     private authServ : AutenticacionService,
-    private aboCompo : AboutComponent) { }
+    private aboCompo : AboutComponent,
+    private colorStateService: ColorStateService,
+    ) { }
 
   ngOnInit(): void {
     if (this.authServ.UsuarioAutenticado == true){
       this.logeado = this.authServ.UsuarioAutenticado
     }
+
+    this.colorStateService.colorSubject.subscribe((color: string) => {
+      this.colorState = color;
+    });
   }
 
   activeEstady(){

@@ -113,7 +113,6 @@ $gray_30p_deuteranopia: #dbdbe3;
               opacity(0.8)
               drop-shadow(0 0 2px #000000);
     }
-
   }
   &.tritanopia {
     @include card_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
@@ -123,7 +122,6 @@ $gray_30p_deuteranopia: #dbdbe3;
               opacity(0.8)
               drop-shadow(0 0 2px #000000);
     }
-
   }
   // background-color: $gray_30p;
   // background-image: linear-gradient(160deg, $gray_30p 0%, $gray_30p_gradient 100%);

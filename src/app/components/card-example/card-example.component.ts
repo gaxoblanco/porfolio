@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { EstudioService } from 'src/app/services/estudio.service';
-import { EstudioComponent } from '../estudio/estudio.component';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { ColorStateService } from '../../color-state.service';
 
@@ -29,7 +28,6 @@ export class CardExampleComponent implements OnInit {
 
   constructor(
     private studyServ : EstudioService,
-    private reload : EstudioComponent,
     private authServ : AutenticacionService,
     private colorStateService: ColorStateService
   ) { }

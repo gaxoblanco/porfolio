@@ -34,16 +34,54 @@ $gray_30p_deuteranopia: #dbdbe3;
 
 
 @mixin skill_card_mixin ($pri_70:$primary_70p, $pri:$primary, $second:$secondary, $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient) {
-  .card_skill {
-
-  }
+    background-color: $gray_bg;
+    .skill_figure {
+      background-color: $pri;
+    }
+    .skill_section {
+      background-color: $second;
+    }
+    .skill_a {
+    background-color: $pri_70;
+    }
 }
 
 //-- cardExample mismo que link de card-example
 
-
+//paso las variantes para los diferentes casos de color
 .card_skill {
-  background-color: $gray_30p;
+  &.all {
+    @include skill_card_mixin();
+  }
+  &.acromatopsia {
+    @include skill_card_mixin($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll);
+    .filterColor_img{
+      filter: grayscale(100%);
+    }
+  }
+  &.deuteranopia {
+    @include skill_card_mixin($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia);
+    .filterColor_img {
+      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
+              hue-rotate(-20deg)
+              opacity(0.8)
+              drop-shadow(0 0 2px #000000);
+    }
+  }
+  &.tritanopia {
+    @include skill_card_mixin($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
+    .filterColor_img {
+      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
+              hue-rotate(90deg)
+              opacity(0.8)
+              drop-shadow(0 0 2px #000000);
+    }
+  }
+}
+
+// styles de la card
+.card_skill {
+  //
   max-width: 530px;
   border-radius: 20px;
   padding: 10px;
@@ -58,18 +96,19 @@ $gray_30p_deuteranopia: #dbdbe3;
     width: 150px;
     height: 150px;
     border-radius: 18px;
-    background-color: $primary;
+    // background-color: $primary;
     padding: 10px;
     box-shadow: inset -4px -4px 10px 1px #3131317b;
     img {
       width: 100%;
       height: auto;
+      border-radius: 10px;
     }
   }
   .skill_section {
     height: 100%;
     width: 100%;
-    background-color: $secondary;
+    // background-color: $secondary;
     border-radius: 12px;
     padding: 14px;
     position: relative;
@@ -83,7 +122,7 @@ $gray_30p_deuteranopia: #dbdbe3;
     box-shadow: inset -4px -4px 10px 1px #3131317b;
     width: 80px;
     display: block;
-    background-color: $primary_70p;
+    // background-color: $primary_70p;
     position: absolute;
     right: 10px;
     bottom: 10px;
