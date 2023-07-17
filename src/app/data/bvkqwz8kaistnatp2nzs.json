@@ -150,7 +150,7 @@
       {
         "id": "12",
         "acess": "1",
-        "descripcion": "some of the skills that I learned in my life",
+        "descripcion": "Thanks to my curiosity and eagerness to continuously learn and master new technologies, I strive to tackle increasingly complex and challenging projects. If you're interested in learning more about a specific tool, you can find further information in each entry.",
         "nombre": "Skill",
         "ruta": "/skill",
         "logo": "https://i.imgur.com/0hCcMHk.png"
@@ -158,7 +158,7 @@
       {
         "id": "13",
         "acess": "1",
-        "descripcion": "There is always something to discover. Never stop learning!",
+        "descripcion": "I'm always engaged in constant learning, whether it's in an academic or professional setting. In this section, I'd like to share some of the courses I have taken. Most of them are aligned with my two passions: design and programming.",
         "nombre": "Study",
         "ruta": "/study",
         "logo": "https://i.imgur.com/4i0WLiI.png"
@@ -166,7 +166,7 @@
       {
         "id": "14",
         "acess": "1",
-        "descripcion": "I focus more on my learning than on the job.",
+        "descripcion": "My work experiences have been diverse. Here, you can find the most relevant ones, along with the most interesting projects I have completed thus far. If you'd like to explore more 3D models, I invite you to visit my Behance profile.",
         "nombre": "Works",
         "ruta": "/work",
         "logo": "https://i.imgur.com/xD77Iy7.png"
@@ -190,7 +190,7 @@
       {
         "id": "31",
         "acess": "1",
-        "descripcion": "Estos son algunos de mis intereses",
+        "descripcion": "Welcome to my profile! Here, you can discover more about me as an individual, the programs and frameworks I feel most comfortable working with, and information that I believe might pique your interest.",
         "nombre": "About",
         "ruta": "/about",
         "logo": "https://i.imgur.com/giD3MBg.png"
@@ -220,49 +220,49 @@
     "data": [
       {
         "id": "17",
-        "descripcion": "Angular es un framework para aplicaciones web desarrollado en TypeScript",
+        "descripcion": "It's used to build single-page web applications and provides a structured approach to development using components, services, and other concepts.",
         "logo": "https://i.imgur.com/OQzGxDm.jpg",
         "nombre": "Angular",
         "url": "https://angular.io/"
       },
       {
         "id": "18",
-        "descripcion": "Utilizo el HTML semantico tanto como puedo, procuro mantener un buen estandar en acesibilidad web.",
+        "descripcion": "It's a markup language used to create the structure and content of web pages. It consists of tags that define the function and appearance of the content.",
         "logo": "https://i.imgur.com/c3mZCeF.jpg",
         "nombre": "HTML",
         "url": "https://es.wikipedia.org/wiki/HTML_sem%C3%A1ntico"
       },
       {
         "id": "19",
-        "descripcion": "Me gusta implementar el sistema de grillas en mis proyectos.",
+        "descripcion": "It allows you to control the appearance of HTML elements, such as colors, fonts, margins, and sizes, to enhance the visual aspect and presentation of web pages.",
         "logo": "https://i.imgur.com/T2MHXWc.jpg",
         "nombre": "CSS",
         "url": "https://developer.mozilla.org/es/docs/Web/CSS"
       },
       {
         "id": "28",
-        "descripcion": "sss",
+        "descripcion": "It's an extension of CSS. It simplifies writing and maintaining CSS code by enabling a more modular and reusable approach to styling.",
         "logo": "https://i.imgur.com/iki01kD.jpg",
         "nombre": "Sass",
         "url": "https://spring.io/projects/spring-boot"
       },
       {
         "id": "42",
-        "descripcion": "Lo utilizo las herramientas vectoriales para diseños 2D",
+        "descripcion": "It's mainly used to add interactivity to web pages, like animations, form validations, effects, and dynamic elements.",
         "logo": "https://i.imgur.com/q6BfpZg.jpg",
         "nombre": "JavaScript",
         "url": "https://www.coreldraw.com/la/"
       },
       {
         "id": "43",
-        "descripcion": "Modelado y Texturas 3D. Principalmente ambientes 3D",
+        "descripcion": "It's open-source software for creating and animating 3D graphics, modeling, texturing, rendering, and video editing.",
         "logo": "https://i.imgur.com/nyCWVK3.jpg",
         "nombre": "Blender",
         "url": "https://www.blender.org/about/"
       },
       {
         "id": "44",
-        "descripcion": "Modelado 3D. Lo considero el ideal para formas orgánicas.",
+        "descripcion": "It's a 3D digital sculpting and modeling program. Its powerful sculpting engine allows artists to sculpt intricate details directly on 3D models.",
         "logo": "https://i.imgur.com/PXP4eLU.jpg",
         "nombre": "Zbrush",
         "url": "http://pixologic.com/features/about-zbrush.php"

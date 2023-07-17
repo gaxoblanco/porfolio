@@ -162,17 +162,18 @@ $background_deuteranopia: #16161c;
       .header_text-area {
         width: 100%;
         border-radius: 20px;
-        height:80px;
+        min-height:80px;
         box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.25);
         padding: 12px;
+        align-items: center;
+        display: flex;
       }
     }
     .header_social-container {
       display: flex;
       gap: 20px;
       justify-content: space-around;
-      align-items: center;
-      margin-bottom: 20px;
+      margin-top: 30px;
 
       .social_icon {
         width: 30px;
@@ -492,7 +493,7 @@ $icon-background: none;
       padding-right: 20px;
       .header_text-container {
         // border-bottom: solid 8px $background_color;
-        height: 130px;
+        height: 140px;
         margin-left: -10px;
         padding: 0 10px;
         margin-right: -10px;
@@ -500,14 +501,13 @@ $icon-background: none;
 
         .header_text-area {
           width: auto;
-          height: 110px;
+          height: 120px;
         }
       }
       .header_social-container {
         margin-bottom: 0px;
         width: auto;
         padding-left: 20px;
-        margin-top: -26px;
       }
     }
     @media (max-width: 720px) {
@@ -518,11 +518,21 @@ $icon-background: none;
         margin: 0;
         .header_text-area {
           height: 70px;
+          min-height: auto;
+          align-items: initial;
+
+          overflow: hidden; /* Aseguramos que el contenido que desborda esté oculto */
+          position: relative; /* Permitirá posicionar los elementos hijos correctamente */
+          .header_truncate-container {
+            animation: updown 14s infinite; /* Añadimos la animación vertical */
+            animation-timing-function: linear; /* Ajustamos la función de temporización para que sea lineal */
+          }
         }
       }
       .header_social-container {
         padding-left: 0;
         max-width: 120px;
+        margin-top: -26px;
         .social_icon {
           width: 20px;
           height: 20px;
@@ -530,7 +540,20 @@ $icon-background: none;
       }
     }
   }
-
+  @keyframes updown {
+    0% {
+      transform: translateY(0%);
+    }
+    2%, 100% {
+      transform: translateY(0%);
+    }
+    46% {
+      transform: translateY(-100%);
+    }
+    50% {
+      transform: translateY(-100%);
+    }
+  }
 
   .header_navigation-container {
     @media (max-width: 1510px) {

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { EstudioService } from 'src/app/services/estudio.service';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { ColorStateService } from '../../color-state.service';
@@ -14,6 +14,11 @@ export class CardExampleComponent implements OnInit {
   logeado: boolean = false;
   more: boolean = false;
   saveDate = '';
+
+  @ViewChild('truncateContainer') truncateContainerRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('truncateContent') truncateContentRef!: ElementRef<HTMLParagraphElement>;
+
+  isTruncated = true;
 
   @Input() cardObj: any = {
     id:'1',
@@ -42,5 +47,7 @@ export class CardExampleComponent implements OnInit {
     });
 
   }
-
+  toggleTruncate(): void {
+    this.isTruncated = !this.isTruncated;
+  }
 }

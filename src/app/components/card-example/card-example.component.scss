@@ -43,7 +43,7 @@ $gray_30p_deuteranopia: #dbdbe3;
 @mixin button_mixin() {
   width: 100%;
   text-align: center;
-  padding: 8px 0px;
+  padding: 3px 0px;
   border-radius: 14px;
   box-shadow: inset -4px -4px 10px 1px #3131317b;
 
@@ -195,11 +195,12 @@ $gray_30p_deuteranopia: #dbdbe3;
   display: flex;
   opacity: 1;
   visibility: visible;
+  height: 10px;
   span {
     width: 60px;
     margin-left: 20px;
   }
-  p {
+  .li {
     margin-top: -4px;
     margin-left: 40px;
     margin-right: 10px;
@@ -238,7 +239,7 @@ $gray_30p_deuteranopia: #dbdbe3;
   @media (max-width: 620px) {
     grid-template-columns: 1fr;
     margin: 0 28px;
-    max-width: 400px;
+    max-width: 300px;
     .cardExample_figure {
       width: 100%;
       height:auto;
@@ -280,3 +281,16 @@ $gray_30p_deuteranopia: #dbdbe3;
 
 //---
 
+.cardExample {
+  @media (min-width: 620px) {
+    .cardExample_info_title {
+      font-weight: bold;
+    }
+    /* Agregamos estilos para el truncate */
+    .truncate-container {
+      position: relative;
+      overflow-y: auto; /* Usamos "auto" para que solo muestre el scroll cuando es necesario */
+      max-height: 130px; /* Altura máxima para mostrar el texto truncado */
+    }
+  }
+}
