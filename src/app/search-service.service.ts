@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class SearchService {
-  private searchValueSubject = new Subject<string>();
+  private searchValueSubject = new BehaviorSubject<string>('');
   searchValue = this.searchValueSubject.asObservable();
 
   constructor() {}

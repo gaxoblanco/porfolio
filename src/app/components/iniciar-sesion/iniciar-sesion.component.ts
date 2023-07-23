@@ -38,7 +38,7 @@ export class IniciarSesionComponent implements OnInit {
     let conectar: LoginObj = this.form.value;
     event.preventDefault;
     this.autenticacionService.IniciarSesion(conectar).subscribe(()=>{
-      this.loginActive.activeEstady();
+      // this.loginActive.activeEstady();
       console.log("se envia pero vuelve?")
     })
 
