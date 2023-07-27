@@ -17,7 +17,7 @@
         <button aria-label="open sub-menu" (click)="handelSubMenu()"><div class="navigation_icon icon_menu" [class.open]="subMenuState"></div></button>
         <div>
           <div class="background_green" [class.open]="subMenuState">
-            <p class="p">{{PrintRuta.nombre}}</p>
+            <p class="pp">{{PrintRuta.nombre}}</p>
           </div>
           <nav class="submenu-container" #subMenu [class.open]="subMenuState" [attr.tabindex]="subMenuState ? null : '-1'">
             <ul>

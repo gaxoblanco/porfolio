@@ -284,6 +284,10 @@ $background_deuteranopia: #16161c;
 }
 .header_navigation {
   .background_green .p {padding-left: 40px;}
+  .background_green .pp {
+    margin-left: 12px;
+    font-size: 1.6rem;
+  }
  }
 //--- icon hover
 $icon-border-radius: 2px;
@@ -584,7 +588,7 @@ $icon-background: none;
           width: 0px;
           display: none;
           transition: width 2s 0.2s ease-in-out;
-          .p {
+          .pp {
             font-size: 0rem;
             transition: font-size 0.3s 1s ease-in-out;
           }
@@ -593,6 +597,11 @@ $icon-background: none;
             .p {
               font-size: 1.6rem;
             }
+            .pp {
+              margin-left: 12px;
+              font-size: 1.6rem;
+            }
+
           }
         }
       };

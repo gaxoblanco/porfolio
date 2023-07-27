@@ -86,7 +86,7 @@ export class HomeComponent implements OnInit {
         textGeometry.center();
         const meshText = new THREE.Mesh(textGeometry, material2);
         this.scene.add(meshText);
-        this.camera.position.z = 5;
+        this.camera.position.z = 7;
 
         // Asignar un nombre único al texto para poder encontrarlo y eliminarlo en el futuro
         meshText.name = 'text';

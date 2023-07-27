@@ -56,7 +56,7 @@
     "data": [
       {
         "id": "8",
-        "pp": "Web realizada trabajando para TDIL, la web esta realizada en Drupal y utiliza StoryBook. Yo me encargue del maquetado web y la contruccion del StoryBook.",
+        "pp": "I created this website while working for TDIL. The website is developed in Drupal and uses StoryBook. My responsibility was web layout and building the StoryBook, taking charge of that area.",
         "img": "/assets/work/b-nutrition.jpg",
         "title": "Bnutrition",
         "web": "https://bnutrition.com/",
@@ -64,7 +64,7 @@
       },
       {
         "id": "9",
-        "pp": "Consiste en un servicio de mensajaria para que los abogados reciban notificaciones cada vez que sus expedientes tienen una resolucion en el jugazdo correspondiente.",
+        "pp": "Messaging service for lawyers, notifying each case resolution in progress. Enhances legal communication and efficiency.",
         "img": "/assets/work/secretarioVirtual.jpg",
         "title": "Secretario Virtual",
         "web": "https://secretariovirtual-34292.web.app/",
@@ -72,29 +72,35 @@
       },
       {
         "id": "10",
-        "pp": "Consiste en un servicio de mensajaria para que los abogados reciban notificaciones cada vez que sus expedientes tienen una resolucion en el jugazdo correspondiente.",
-        "three": "asd",
-        "title": "Three",
-        "web": "https://secretariovirtual-34292.web.app/",
-        "tags": ["SolidWorks", "Sass", "PHP"]
+        "pp": "This 3D printable design was created for a grow shop, with the main requirements being the support for both fan sizes sold in the store and adaptability to their two grow tent models.",
+        "three": ["Scooler.glb", true, 100],
+        "title": "Fan support",
+        "web": "https://www.behance.net/gallery/132313969/Fan-support-for-indoor",
+        "tags": ["SolidWorks", "Blender", "KeyShot", "3D printer"]
       },
       {
-        "id": "26",
-        "descripcion": "Es un emprendimiento que comencé al mudarme a Bs As. Ya no formo parte del mismo, pero aún sigue operativo.",
-        "fin": "2016-10-10",
-        "ini": "2012-02-02",
-        "logo": "https://i.imgur.com/BBZ3flL.png",
-        "puesto": "Fundador - Vinilos autoadhesivo a medida",
-        "title": "CreaTuVinilo",
-        "url": "https://www.facebook.com/Creatuvinilo-204374396395055/"
+        "id": "11",
+        "pp": "Design of a cup inspired by the character Pochita from the anime Chainsaw Man. An original prototype was created for molding and subsequent ceramic production.",
+        "three": ["ChainsawManCup.glb", true, 1],
+        "title": "ChainsawMan Cup",
+        "web": "https://",
+        "tags": ["Blender", "Substance Painter", "3D printer"]
+      },
+      {
+        "id": "12",
+        "pp": "Concept art of the character from the light novel No Game No Life. The design is based on the drawings by the artist Yū Kamiya, the creator of the novel.",
+        "three": ["Holou.glb", true, 60],
+        "title": "Holou",
+        "web": "https://www.behance.net/gallery/120027887/Holou-No-Game-No-Life",
+        "tags": ["Zbrush", "Substance Painter", "Blender"]
       },
       {
         "id": "83",
-        "descripcion": "Es un showrrom de mueble de diseño. Una vez vendido el producto me encargaba de todo el proceso, desde enviar a producción hasta coordinar la entrega del pedido. ",
-        "logo": "/assets/work/b-nutrition.jpg",
-        "tags": ["Ventas", "Atencion al cliente", "Diseño"],
-        "title": "HormigaEmergente",
-        "url": "http://www.hormigaemergente.com.ar/"
+        "pp": "A customer-focused 3D design and printing service that emerged during the pandemic. The website was wireframed using Figma, ensuring a personalized experience.",
+        "three": ["2mas1.glb", false, 2],
+        "tags": ["Enprendimiento", "Impresion 3D", "Diseño"],
+        "title": "2+1Disegno",
+        "web": "https://www.figma.com/proto/Ee0DoeVWHbFVyyYy2QZ9N7/2%2B1Disegno?node-id=1-2&starting-point-node-id=4%3A290"
       }
     ]
   },

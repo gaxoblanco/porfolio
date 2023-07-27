@@ -1,7 +1,21 @@
 .canvasElement {
   width: 160px;
   height: 160px;
-  border-radius: 10px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  border-radius: 12px;
+  @media (max-width: 620px) {
+    width: 260px;
+    height: 260px;
+  }
+}
+.cardExample_img{
+  position: absolute;
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  background-color:rgb(44, 44, 44);
+  object-fit: cover;
+  @media (max-width: 620px) {
+    width: 260px;
+    height: auto;
+  }
 }

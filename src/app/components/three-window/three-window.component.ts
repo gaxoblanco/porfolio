@@ -25,11 +25,14 @@ export class ThreeWindowComponent {
   private controls!: OrbitControls;
   private rotationAngle = 0;
 
+  // Variable para controlar la visibilidad de la pantalla de carga
+  public isSceneLoaded: boolean = false;
+
   constructor(private http: HttpClient, private searchService: SearchService) {}
 
   ngOnInit(): void {
     this.setupScene();
-    this.loadGLTFModel('Scooler.glb');
+    this.loadGLTFModel(this.cardThree[0]);
     this.setupOrbitControls();
     this.startAnimation();
   }
@@ -37,6 +40,8 @@ export class ThreeWindowComponent {
   //scene
   private setupScene(): void {
     this.scene = new THREE.Scene();
+    //cambiar el color de fondo de la scena
+    this.scene.background = new THREE.Color(0x333333);
     this.camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000); // Cambiamos el aspecto inicial a 1
 
     // Obtenemos el contenedor HTML del componente utilizando la referencia
@@ -68,7 +73,7 @@ export class ThreeWindowComponent {
     // Agregar una luz direccional
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(1, 1, 1); // Posición de la luz (x, y, z)
-    // this.scene.add(directionalLight);
+    this.scene.add(directionalLight);
   }
 
   //orbitControl
@@ -77,11 +82,6 @@ export class ThreeWindowComponent {
 
     // Bloquear el movimiento del objeto en el espacio
     this.controls.enablePan = false;
-
-    // const minZoom = 1; // Valor mínimo de zoom
-    // const maxZoom = 3; // Valor máximo de zoom
-    // this.controls.minDistance = minZoom;
-    // this.controls.maxDistance = maxZoom;
   }
 
   // animation
@@ -101,18 +101,20 @@ export class ThreeWindowComponent {
 
     const animate = (currentTime: number) => {
       // Calcular el deltaTime (tiempo en milisegundos desde el cuadro anterior)
-      const deltaTime = (currentTime - previousTime) * 0.001; // Convertir de milisegundos a segundos
+      const deltaTime = (currentTime - previousTime) * 0.0006; // Convertir de milisegundos a segundos
       previousTime = currentTime;
 
-      // Si no se está orbitando, incrementar la rotación en función del deltaTime
-      if (!isOrbiting) {
-        const rotationSpeed = 1; // Ajusta la velocidad de rotación aquí
-        this.rotationAngle += rotationSpeed * deltaTime;
+      if (this.cardThree[1]) {
+        // Si no se está orbitando, incrementar la rotación en función del deltaTime
+        if (!isOrbiting) {
+          const rotationSpeed = 1; // Ajusta la velocidad de rotación aquí
+          this.rotationAngle += rotationSpeed * deltaTime;
 
-        // Aplicar la rotación al objeto
-        this.scene.children.forEach((child) => {
-          child.rotation.y = this.rotationAngle;
-        });
+          // Aplicar la rotación al objeto
+          this.scene.children.forEach((child) => {
+            child.rotation.y = this.rotationAngle;
+          });
+        }
       }
 
       // Solicitar el siguiente cuadro de animación
@@ -141,7 +143,7 @@ export class ThreeWindowComponent {
     model.position.z += model.position.z - center.z;
 
     camera.position.copy(center);
-    camera.position.z += (size + -100);
+    camera.position.z += (size - this.cardThree[2]);
 
     // Ajustar los valores 'near' y 'far' de la cámara en función del tamaño del modelo
     const minDistance = size * 0.1;
@@ -166,6 +168,8 @@ export class ThreeWindowComponent {
         // Ajustar posición y escala del modelo para que ocupe el espacio total de la cámara
 
         this.fitToCamera(model, this.camera);
+        // Ocultar la pantalla de carga una vez que el modelo se haya cargado
+        this.isSceneLoaded = true;
       },
       (xhr) => {
         // Progreso de la carga (opcional)
