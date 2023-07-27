@@ -21,6 +21,10 @@
           </div>
           <nav class="submenu-container" #subMenu [class.open]="subMenuState" [attr.tabindex]="subMenuState ? null : '-1'">
             <ul>
+              <li *ngIf="PrintRuta.nombre !== 'Home'"
+                class="background_green background_green-options">
+                  <a href="/home" (click)="killOpenClass()"><p class="p">Home</p></a>
+              </li>
               <li *ngIf="PrintRuta.nombre !== 'Study'"
                 class="background_green background_green-options">
                   <a href="/study" (click)="killOpenClass()"><p class="p">Study</p></a>
@@ -29,7 +33,7 @@
                 class="background_green background_green-options">
                   <a href="/work" (click)="killOpenClass()"><p class="p">Works</p></a>
               </li>
-              <li *ngIf="PrintRuta.nombre !== 'Skills'"
+              <li *ngIf="PrintRuta.nombre !== 'Skill'"
                 class="background_green background_green-options">
                   <a href="/skill" (click)="killOpenClass()"><p class="p">Skills</p></a>
               </li>
@@ -48,7 +52,9 @@
     <div class="border_navigation border_navigation-radiusL">
       <section class="header_navigation-explorer">
         <button aria-label="open modal filter" (click)="filterOpen()" (click)="filterEst()" *ngIf="!searching">
-          <div class="navigation_icon icon_search" [class.open]="filterState"></div>
+          <!-- <div class="navigation_icon icon_search" [class.open]="filterState"></div> -->
+
+          <div [class]="PrintRuta.nombre === 'Home' ? 'navigation_icon icon_pencil' : 'navigation_icon icon_search'" [class.open]="filterState"></div>
         </button>
         <button aria-label="cancel filter" (click)="cancelSearching()" *ngIf="searching">
           <div class="navigation_icon icon_cancel_search"></div>
@@ -59,7 +65,7 @@
             class="inputFilter background_green"
             type="text"
             #searchInput
-            placeholder="search"
+            [placeholder]="PrintRuta.nombre === 'Home' ? 'Write something' : PrintRuta.nombre === 'About' ? 'Dont search' : 'search'"
             [(ngModel)]="searchText"
             (keyup.enter)="filterEst()"
             [ngClass]="{'inputVal': searchText.length !== 0 }">

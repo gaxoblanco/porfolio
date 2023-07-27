@@ -36,6 +36,7 @@ import { PDFComponent } from './components/pdf/pdf.component';
 import { CardExampleComponent } from './components/card-example/card-example.component';
 import { BlindnessComponent } from './components/blindness/blindness.component';
 import { WorkComponent } from './components/work/work.component';
+import { ThreeWindowComponent } from './components/three-window/three-window.component';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { WorkComponent } from './components/work/work.component';
     PDFComponent,
     CardExampleComponent,
     BlindnessComponent,
+    ThreeWindowComponent,
   ],
   imports: [
     BrowserModule,

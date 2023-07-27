@@ -56,25 +56,27 @@
     "data": [
       {
         "id": "8",
-        "pp": "El objetivo en este proyecto personal, fue realizarlo en su totalidad con display grid.",
-        "fin": null,
-        "ini": "2022-03-03",
-        "img": "https://i.imgur.com/tvUfwZg.png",
-        "puesto": "Blog con temática sobre montañismo",
-        "title": "Blog",
-        "institucion": "#YoProgramo - Argentina Programa",
-        "git": "https://github.com/gaxoblanco/gridPractic",
-        "tags": ["html", "css", "js", "angular"]
+        "pp": "Web realizada trabajando para TDIL, la web esta realizada en Drupal y utiliza StoryBook. Yo me encargue del maquetado web y la contruccion del StoryBook.",
+        "img": "/assets/work/b-nutrition.jpg",
+        "title": "Bnutrition",
+        "web": "https://bnutrition.com/",
+        "tags": ["Drupal9", "Storybook", "Sass", "JS"]
       },
       {
-        "id": "24",
-        "descripcion": "Me contactaba con los abonados que tenían registrado un reclamo y coordinaba la visita del técnico. Debía organizar una ruta eficiente para cada cuadrilla de reparación y controlar que los inconvenientes fueron resueltos",
-        "fin": "2018-06-06",
-        "ini": "2017-11-11",
-        "logo": "https://i.imgur.com/fF2DWVi.png",
-        "puesto": "Call center en el área de reparación",
-        "title": "Antina",
-        "url": "https://www.antina.com.ar/"
+        "id": "9",
+        "pp": "Consiste en un servicio de mensajaria para que los abogados reciban notificaciones cada vez que sus expedientes tienen una resolucion en el jugazdo correspondiente.",
+        "img": "/assets/work/secretarioVirtual.jpg",
+        "title": "Secretario Virtual",
+        "web": "https://secretariovirtual-34292.web.app/",
+        "tags": ["Angular", "Sass", "PHP"]
+      },
+      {
+        "id": "10",
+        "pp": "Consiste en un servicio de mensajaria para que los abogados reciban notificaciones cada vez que sus expedientes tienen una resolucion en el jugazdo correspondiente.",
+        "three": "asd",
+        "title": "Three",
+        "web": "https://secretariovirtual-34292.web.app/",
+        "tags": ["SolidWorks", "Sass", "PHP"]
       },
       {
         "id": "26",
@@ -87,44 +89,12 @@
         "url": "https://www.facebook.com/Creatuvinilo-204374396395055/"
       },
       {
-        "id": "77",
-        "descripcion": "Utilice Notion para poder organizar mejor mi proyecto de Portafolio. Por cuestión de tiempo se realizó casi en sincrónica con el portafolio.",
-        "fin": "2022-06-06",
-        "ini": "2022-01-10",
-        "logo": "https://i.imgur.com/7iccZBn.png",
-        "puesto": "Documentacion del proyecto",
-        "title": "Portafolio",
-        "url": "https://square-kiwi-373.notion.site/fed3888887be481c9de1c132a51c3775?v=f4cac9d3e661447783393f519b4fed51"
-      },
-      {
-        "id": "81",
-        "descripcion": "Proyecto/Maqueta personal realizado en Angular. Aun en proceso",
-        "fin": null,
-        "ini": "2022-06-02",
-        "logo": "https://i.imgur.com/YuZeoLb.png",
-        "puesto": "FrontEnd",
-        "title": "Secretario Virtual",
-        "url": "https://secretariovirtual-34292.web.app/"
-      },
-      {
         "id": "83",
         "descripcion": "Es un showrrom de mueble de diseño. Una vez vendido el producto me encargaba de todo el proceso, desde enviar a producción hasta coordinar la entrega del pedido. ",
-        "fin": null,
-        "ini": null,
-        "logo": "https://i.imgur.com/fdVyHuu.png",
-        "puesto": "Ventas - atención y asesoramiento al cliente",
+        "logo": "/assets/work/b-nutrition.jpg",
+        "tags": ["Ventas", "Atencion al cliente", "Diseño"],
         "title": "HormigaEmergente",
         "url": "http://www.hormigaemergente.com.ar/"
-      },
-      {
-        "id": "84",
-        "descripcion": "Este fue un proyecto rápido. Para consolidar lo aprendido sobre la librería Three.js y así comenzar a imaginar como podría usarla en otros proyectos.",
-        "fin": "2022-09-25",
-        "ini": "2022-09-23",
-        "logo": "https://i.imgur.com/CE118pP.png",
-        "puesto": "React - Three.js",
-        "title": "Univers Three",
-        "url": "https://universe-three.web.app/"
       }
     ]
   },

@@ -1,10 +1,8 @@
 import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute, ParamMap, } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router, NavigationEnd } from '@angular/router';
 
 import { ColorStateService } from '../../color-state.service';
 import { Ruta } from 'src/app/models/rout-Obj';
-import { AutenticacionService } from 'src/app/services/autenticacion.service';
-import { RoutService } from 'src/app/services/rout-.service';
 import dataBase from '../../data/bvkqwz8kaistnatp2nzs.json';
 
 
@@ -21,6 +19,7 @@ export class HeadComponent implements OnInit {
   active: boolean = false;
   logeado: boolean = false;
   public searchText: string = '';
+  currentRoute!: string;
   searching: boolean = false;
 
   PRutas : any = [];
@@ -41,19 +40,13 @@ export class HeadComponent implements OnInit {
 
 
   constructor(
-    private authServ : AutenticacionService,
     private actiRout : ActivatedRoute,
-    private routSer : RoutService,
     private colorStateService: ColorStateService,
-    private searchService: SearchService) { }
+    private searchService: SearchService,
+    private router: Router) {  }
   log = false;
   ngOnInit(): void {
     this.actual = this.actiRout
-    // this.routSer.getAllRout()
-    // .subscribe(data =>{
-    //   this.PRutas = data;
-    //   this.array();
-    // })
 
     setTimeout(() => {
       try {
@@ -68,11 +61,9 @@ export class HeadComponent implements OnInit {
       } catch (error) {
         console.error(error);
       }
-    }, 400);
+      console.log(this.router.url);
 
-    // if (this.authServ.UsuarioAutenticado == true){
-    //   this.logeado = this.authServ.UsuarioAutenticado
-    // }
+    }, 400);
 
     //set colors state
     this.colorStateService.colorSubject.subscribe((color: string) => {

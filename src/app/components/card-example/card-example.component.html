@@ -2,14 +2,15 @@
   <div class="cardExample all {{colorState}}">
     <div class="cardExample_container">
       <figure class="cardExample_figure">
-        <img class="cardExample_img" src={{cardObj.img}} class="cardExample_img" alt={{cardObj.title}}/>
+        <img class="cardExample_img" src={{cardObj.img}} class="cardExample_img" alt={{cardObj.title}} *ngIf="!cardObj.three"/>
+        <app-three-window [cardThree]="cardObj.three" class="cardExample_img" *ngIf="cardObj.three"></app-three-window>
       </figure>
       <section class="cardExample_link_container">
         <!-- valido si existen los links .git, .web, ... -->
-        <a aria-label="go to github project" href="{{cardObj.git}}" class="cardExample_link git" *ngIf="cardObj.git">
+        <a aria-label="go to github project" href="{{cardObj.git}}" target="_blank" class="cardExample_link git" *ngIf="cardObj.git">
           <p>git</p>
         </a>
-        <a aria-label="go to project page" href="{{cardObj.web}}" class="cardExample_link web" *ngIf="cardObj.web">
+        <a aria-label="go to project page" href="{{cardObj.web}}" target="_blank" class="cardExample_link web" *ngIf="cardObj.web">
           <p>web</p>
         </a>
       </section>
@@ -24,15 +25,15 @@
       </section>
       <section class="cardExample_more_info">
         <ul class="text-animation">
-          <p>{{cardObj.ini}}</p>
+          <!-- <p>{{cardObj.ini}}</p> -->
           <li *ngFor="let tag of cardObj.tags;"> • {{tag}}</li>
-          <p>{{cardObj.ini}}</p>
+          <!-- <p>{{cardObj.ini}}</p> -->
           <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
-          <p>{{cardObj.ini}}</p>
+          <!-- <p>{{cardObj.ini}}</p> -->
           <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
-          <p>{{cardObj.ini}}</p>
+          <!-- <p>{{cardObj.ini}}</p> -->
           <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
-          <p>{{cardObj.ini}}</p>
+          <!-- <p>{{cardObj.ini}}</p> -->
           <li *ngFor="let tag of cardObj.tags;" aria-hidden="true"> • {{tag}}</li>
         </ul>
       </section>

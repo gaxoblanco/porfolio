@@ -391,6 +391,15 @@ $icon-background: none;
   height: 30px;
 }
 
+.icon_pencil {
+  background-image: url("../../../assets/icons/pencil.svg");
+  width: 30px;
+  height: 30px;
+}
+.icon_pencil:hover, .icon_search.open {
+  background-image: url("../../../assets/icons/pencil_hover.svg");
+}
+
 //---sub menu keyframes
 @keyframes openAnimate {
   0% {
