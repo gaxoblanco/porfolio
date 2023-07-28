@@ -197,58 +197,58 @@
       {
         "id": "17",
         "descripcion": "It's used to build single-page web applications and provides a structured approach to development using components, services, and other concepts.",
-        "logo": "https://i.imgur.com/OQzGxDm.jpg",
+        "logo": "../assets/skill/angular.jpg",
         "nombre": "Angular",
         "url": "https://angular.io/"
       },
       {
         "id": "18",
         "descripcion": "It's a markup language used to create the structure and content of web pages. It consists of tags that define the function and appearance of the content.",
-        "logo": "https://i.imgur.com/c3mZCeF.jpg",
+        "logo": "../assets/skill/html.jpg",
         "nombre": "HTML",
         "url": "https://es.wikipedia.org/wiki/HTML_sem%C3%A1ntico"
       },
       {
         "id": "19",
         "descripcion": "It allows you to control the appearance of HTML elements, such as colors, fonts, margins, and sizes, to enhance the visual aspect and presentation of web pages.",
-        "logo": "https://i.imgur.com/T2MHXWc.jpg",
+        "logo": "../assets/skill/css.jpg",
         "nombre": "CSS",
         "url": "https://developer.mozilla.org/es/docs/Web/CSS"
       },
       {
         "id": "28",
         "descripcion": "It's an extension of CSS. It simplifies writing and maintaining CSS code by enabling a more modular and reusable approach to styling.",
-        "logo": "https://i.imgur.com/iki01kD.jpg",
+        "logo": "../assets/skill/sass.jpg",
         "nombre": "Sass",
-        "url": "https://spring.io/projects/spring-boot"
+        "url": "https://sass-lang.com/"
       },
       {
         "id": "42",
         "descripcion": "It's mainly used to add interactivity to web pages, like animations, form validations, effects, and dynamic elements.",
-        "logo": "https://i.imgur.com/q6BfpZg.jpg",
+        "logo": "../assets/skill/js.jpg",
         "nombre": "JavaScript",
-        "url": "https://www.coreldraw.com/la/"
+        "url": "https://es.wikipedia.org/wiki/JavaScript"
       },
       {
         "id": "43",
         "descripcion": "It's open-source software for creating and animating 3D graphics, modeling, texturing, rendering, and video editing.",
-        "logo": "https://i.imgur.com/nyCWVK3.jpg",
+        "logo": "../assets/skill/blender.jpg",
         "nombre": "Blender",
         "url": "https://www.blender.org/about/"
       },
       {
         "id": "44",
         "descripcion": "It's a 3D digital sculpting and modeling program. Its powerful sculpting engine allows artists to sculpt intricate details directly on 3D models.",
-        "logo": "https://i.imgur.com/PXP4eLU.jpg",
+        "logo": "../assets/skill/zbrush.jpg",
         "nombre": "Zbrush",
-        "url": "http://pixologic.com/features/about-zbrush.php"
+        "url": "https://www.maxon.net/en/zbrush"
       },
       {
         "id": "45",
-        "descripcion": "in",
-        "logo": "https://i.imgur.com/zR1nnlT.jpg",
-        "nombre": "Ingles",
-        "url": "http://pixologic.com/features/about-zbrush.php"
+        "descripcion": "React builds single-page web apps with a structured approach using components, state management, and reusable UI elements.",
+        "logo": "/assets/skill/react.jpg",
+        "nombre": "React",
+        "url": "https://es.react.dev/"
       }
     ]
   },
