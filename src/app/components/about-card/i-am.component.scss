@@ -198,26 +198,26 @@ $background_deuteranopia: #16161c;
   }
 
   .link_icon-linkedin {
-    padding: 6px;
+    padding: 4px 4px 0 6px;
     svg {
       color: #007cff;
     }
   }
   .link_icon-github {
-    padding: 6px;
+    padding: 3px 6px 0 6px;
     svg {
       color: #353535;
     }
   }
   .link_icon-behance {
-    padding: 6px;
+    padding: 3px 6px 0 7px;
     background-color: #007cff;
     svg {
       color: #ffffff;
     }
   }
   .link_icon-blog {
-    padding: 6px;
+    padding: 4px 4px 0 6px;
     svg {
       color: #62482e;
     }
@@ -360,5 +360,10 @@ $background_deuteranopia: #16161c;
       justify-content: space-around;
       padding-top: 22px;
     }
+  }
+}
+@media (max-width: 620px) {
+  .iam_text-container {
+    grid-template-columns: 1fr;
   }
 }
