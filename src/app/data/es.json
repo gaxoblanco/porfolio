@@ -312,14 +312,6 @@
         "tags": ["Notion", "Tipografy", "UI", "Voice and tone"]
       },
       {
-        "id": "87",
-        "pp": "I learned about the main HTTP basic requests in Angular. I also learned about good practices for handling environments and errors, as well as how to implement user authentication.",
-        "title": "Angular ApiRest",
-        "img": "/assets/study/angular/angularApiRest.jpg",
-        "web": "https://platzi.com/p/gaxoblanco/curso/2495-course/diploma/detalle/",
-        "tags": ["Angular", "TypeScript", "Angular", "TypeScript"]
-      },
-      {
         "id": "51",
         "pp": "Course on HTML tags, semantics, CSS, how to style elements of your website, EM/REM units, box model, and much more.",
         "title": "HTML y CSS ",
@@ -345,16 +337,15 @@
       },
       {
         "id": "83",
-        "pp": "The URLs allow us to access the different views that a website has, as well as organizing our site better. In this course, I practiced the use of React Router.",
+        "pp": "Las URL nos permiten acceder a las diferentes vistas que tiene una web, además de organizar mejor nuestro sitio. En este curso practiqué el uso de React Router",
         "title": "React Router",
         "img": "/assets/study/react/reactNavigationRouter.jpg",
-        "git": "https://github.com/gaxoblanco/reactNeomorfismo",
         "web": "https://platzi.com/p/gaxoblanco/curso/3468-course/diploma/detalle/",
         "tags": ["React", "UI", "UX"]
       },
       {
         "id": "84",
-        "pp": "A course on the key concepts of state machines, learning when to use them and what their benefits are. Understand what XState is and what its functionalities are to improve my workflow.",
+        "pp": "Curso sobre los conceptos clave de las máquinas de estado aprendiendo cuándo usarlas y cuáles son sus beneficios. Comprende qué es XState y cuáles son sus funcionalidades para mejorar mi flujos de trabajo.",
         "title": "React Machines",
         "img": "/assets/study/react/reactMachine.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/3108-course/diploma/detalle/",
@@ -362,36 +353,35 @@
       },
       {
         "id": "85",
-        "pp": "In this course, I learned how to create independent or compound states, imperative or declarative, with functions or classes, using useState or useReducer, and identify the best tools for each use case.",
+        "pp": "En este curso aprendi a Crea estados independientes o compuestos, imperativos o declarativos, con funciones o clases, con useState o useReducer  e identificar las mejores herramientas para cada caso de uso",
         "title": "React State",
         "img": "/assets/study/react/reactState.jpg",
-        "git": "https://github.com/gaxoblanco/reactNeomorfismo",
         "web": "https://platzi.com/p/gaxoblanco/curso/2597-course/diploma/detalle/",
         "tags": ["React", "UI", "UX"]
       },
       {
         "id": "86",
-        "pp": "I learned how to share information between components using render props, high-order components, and React Hooks. Additionally, I learned the principles of design, component composition, and state placement in React.js to scale my web applications.",
+        "pp": "Aprendi como comparte información entre componentes con render props, high order components y React Hooks. Ademas los  principios de diseño, composición de componentes y colocación del estado en React.js para escalar mis aplicación web",
         "title": "React Render and Composition",
         "img": "/assets/study/react/reactRenderComposicion.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/2457-course/diploma/detalle/",
-        "tags": ["React", "UI", "UX"]
-      },
-      {
-        "id": "87",
-        "pp": "I understood everything related to the DOM, to manipulate it and achieve with pure JavaScript anything I need, instead of relying on so many libraries.",
-        "title": "DOM Manipulation",
-        "img": "/assets/study/manipulacionDelDom.jpg",
-        "web": "https://platzi.com/p/gaxoblanco/curso/2193-course/diploma/detalle/",
         "tags": ["React", "Angular", "JavaScript"]
       },
       {
-        "id": "88",
-        "pp": "A course to learn more about the architecture of this framework is essential. It connects applications with an API to fetch data from a Backend system.",
+        "id": "87",
+        "pp": "Aprendi sobre las principales solicitudes HTTP basic en Angular. Tambien aprendi sobre las buenas prácticas para el manejo de ambientes y errores, ademas de como Implementa la autenticación de users",
+        "title": "Angular ApiRest",
+        "img": "/assets/study/angular/angularApiRest.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/curso/2495-course/diploma/detalle/",
+        "tags": ["Angular", "TypeScript"]
+      },
+      {
+        "id": "87",
+        "pp": "Curso para conoce más sobre la arquitectura de este framework. Conecta las aplicaciones con una API para obtener datos de un sistema de Backend",
         "title": "Angular Component and Services",
         "img": "/assets/study/angular/angularComServ.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/2486-course/diploma/detalle/",
-        "tags": ["Angular", "TypeScript", "Angular", "TypeScript"]
+        "tags": ["Angular", "TypeScript"]
       },
       {
         "id": "89",
@@ -403,24 +393,23 @@
       },
       {
         "id": "90",
-        "pp": "I learned to configure your animation sequences and micro-interactions using the animation and keyframes properties. Explore the best practices of implementing (or not) animations in your applications.",
-        "title": "CSS Animation",
-        "img": "/assets/study/animationCSS.jpg",
-        "git": "https://github.com/gaxoblanco/AnimacionesCSS",
-        "web": "https://platzi.com/p/gaxoblanco/curso/2337-course/diploma/detalle/",
+        "pp": "Aprendí a  configura tus secuencias de animaciones y micro-interacciones con las propiedades animation y keyframes. Explora las buenas prácticas de implementar (o no) animaciones en tus aplicaciones.",
+        "title": "Animation CSS",
+        "img": "/assets/study/accesibilidadWeb.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/curso/1802-course/diploma/detalle/",
         "tags": ["HTML", "CSS", "HTML", "CSS"]
       },
       {
         "id": "91",
-        "pp": "In this course, I understood what virtual environments and virtual hosts are and how they work. I also started using constants, variables, superglobal variables, and variable functions.",
-        "title": "PHP Virtual Environments",
-        "img": "/assets/study/php/entornosVirtuales.jpg",
+        "pp": "En este curso comprendí qué son y cómo funcionan los entornos virtuales y los virtual hosts. Empieza a usar constantes, variables, variables superglobales y funciones variables.",
+        "title": "PHP Entornos virtuales",
+        "img": "/assets/study/animationCSS.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/3151-course/diploma/detalle/",
         "tags": ["HTML", "PHP", "HTML", "PHP"]
       },
       {
         "id": "92",
-        "pp": "I learned about cookies, sessions, handling exceptions, date functions, and code modularization in your code.",
+        "pp": "Aprendí sobre las cookies, sesiones, manejo de excepciones, funciones para fechas y modularización en tu código.",
         "title": "PHP Cookies and Sesiones",
         "img": "/assets/study/php/cookieSesion.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/3144-course/diploma/detalle/",
@@ -428,15 +417,15 @@
       },
       {
         "id": "93",
-        "pp": "I understood how to connect a backend in PHP with relational databases. Additionally, I learned about the differences between MySQLi and PDO for executing SQL statements and avoiding security issues such as SQL injection.",
+        "pp": "Comprendí como conectar un backend en PHP con bases de datos relacionales. Además de las diferencias entre MySQLi y PDO para ejecutar sentencias SQL y evitar problemas de seguridad como SQL Injection",
         "title": "PHP Database",
-        "img": "/assets/study/php/database.jpg",
-        "web": "",
+        "img": "/assets/study/php/cookieSesion.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/curso/3144-course/diploma/detalle/",
         "tags": ["HTML", "PHP", "HTML", "PHP"]
       },
       {
         "id": "94",
-        "pp": "I learned about the fundamental concepts of web page design and studied the use cases, differences, and similarities between Flexbox and CSS Grid.",
+        "pp": "Aprendí sobre los conceptos fundamentales de diseño para páginas web y estudie los casos de uso, diferencias y similitudes entre Flexbox y CSS Grid",
         "title": "CSS Grid y Flexbox",
         "img": "/assets/study/cssGridFlexbox.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/2229-course/diploma/detalle/",
@@ -444,7 +433,7 @@
       },
       {
         "id": "95",
-        "pp": "I learned to understand the architecture of components, design tokens, testing, and plugins to ensure the quality of the project. Additionally, I learned how to transform a design system in CSS and JavaScript code.",
+        "pp": "Aprendí a comprender la arquitectura de componentes, design tokens, pruebas y plugins para asegurar la calidad del proyecto y atransforma un design system en Figma a código CSS y JavaScript",
         "title": "StoryBook",
         "img": "/assets/study/storyBookP.jpg",
         "git": "https://github.com/gaxoblanco/storyBookOrganism/tree/master",

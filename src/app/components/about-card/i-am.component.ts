@@ -13,7 +13,7 @@ import { ColorStateService } from '../../color-state.service';
 @Component({
   selector: 'app-i-am',
   templateUrl: './i-am.component.html',
-  styleUrls: ['./i-am.component.scss'],
+  styleUrls: [ './i-am.component.scss'],
   animations: [
     trigger('fadeIn_iam', [
       transition(':enter', [

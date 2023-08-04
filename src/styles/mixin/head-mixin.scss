@@ -1,0 +1,89 @@
+
+//usamos la misma distribucion que: card_color_mixin
+@mixin header_color_mixin(
+      $pri_70:$primary_70p, $pri:$primary,
+      $second:$secondary, $secondBlack:$background_color,
+      $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient, $gray_40:$gray_40p)
+  {
+  background-color:$secondBlack;
+  .header-title {
+    background-color: $downText;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    transition: background-color 0.2s ease;
+  }
+  .header-title:hover{
+    background-color: $pri_70;
+  }
+  .header_text-container {
+    background-color: $gray_bg;
+    border-bottom: solid 10px $secondBlack;
+    .header_text-area {
+      background: $second;
+    }
+  }
+  .header_navigation-container {
+    .border_navigation {
+      background-color:  $secondBlack;
+      .header_navigation, .header_navigation-explorer {
+        background-color: $gray_bg;
+      }
+    }
+  }
+  //-- thre section - internal navigation
+  .header_navigation, .header_navigation-explorer {
+    .background_green {
+      background-color: $second;
+      .inputFilter {
+        background-color: $second;
+      }
+    }
+    .background_orange {
+      background-color: $pri_70;
+    }
+  }
+  //sub-menu
+  .submenu-container {
+    .background_green-options {
+      background-color: $gray_40;
+      &:hover {
+        background-color: $pri_70;
+      }
+    }
+  }
+  .header_container {
+    background: $gray_bg;
+    @media (max-width: 1200px) {
+      border-bottom: solid 8px $secondBlack;
+      .header_text-container {
+        border-bottom: solid 8px $secondBlack;
+      }
+    }
+    @media (max-width: 720px) {
+      .header_text-container {
+        border-bottom: none;
+      }
+    }
+  }
+  .header_navigation-container {
+    @media (max-width: 1200px) {
+      .border_navigation {
+        background-color: #00000000;
+      };
+    }
+  }
+}
+
+.header{
+  &.all {
+    @include header_color_mixin ();
+  }
+  &.acromatopsia {
+    @include header_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $background_notAll, $gray_30p_notAll, $gray_30p_notAll);
+  }
+  &.deuteranopia {
+    @include header_color_mixin ($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $background_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia);
+  }
+  &.tritanopia {
+    @include header_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $background_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
+  }
+}

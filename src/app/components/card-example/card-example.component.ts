@@ -31,6 +31,8 @@ export class CardExampleComponent implements OnInit {
     tags: ['html', "css", "storybook"],
   };
 
+  imgLoad: string = "../../../assets/loading.jpg"
+
   constructor(
     private studyServ : EstudioService,
     private authServ : AutenticacionService,

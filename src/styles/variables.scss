@@ -1,9 +1,36 @@
 
-$background_card: #ccd1d7;
-$background_card_info: #446063;
+$primary: #FBA31B;
+$primary_70p: #E38521;
 
+$gray_30p: #ccd1d7;
+$gray_30p_gradient: #e2e8ee;
+$gray_40p: #9099A6;
+$downText: #565656;
 
-@mixin backGround {
-  background: pink;
-  padding: 10px 20px;
-}
+$secondary: #354c4f;
+
+$background_color: #141e1d;
+
+$primary_notAll: #a1a1a1;
+$primary_70p_notAll: #a1a1a1;
+
+$secondary_notAll: #a1a1a1;
+
+$gray_30p_notAll: #dedede;
+$background_notAll: #161616;
+
+$primary_tritanopia: #f77075;
+$primary_70p_tritanopia: #e26569;
+
+$secondary_tritanopia: #456262;
+
+$gray_30p_tritanopia: #d9e2e2;
+$background_tritanopia: #161c1c;
+
+$primary_deuteranopia: #dfe55f;
+$primary_70p_deuteranopia: #d0d658;
+
+$secondary_deuteranopia: #4f4d62;
+
+$gray_30p_deuteranopia: #dbdbe3;
+$background_deuteranopia: #16161c;

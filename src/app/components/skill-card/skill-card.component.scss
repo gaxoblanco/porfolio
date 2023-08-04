@@ -1,84 +1,5 @@
 
 
-$primary: #FBA31B;
-$primary_70p: #E38521;
-$gray_30p: #ccd1d7;
-$gray_30p_gradient: #e2e8ee;
-$secondary: #354c4f;
-
-$backgroundPage: #141e1d;
-
-//Acromatopsia -- ningun color
-$primary_notAll: #bbbbbb;
-$primary_70p_notAll: #bbbbbb;
-
-$secondary_notAll: #bbbbbb;
-
-$gray_30p_notAll: #dedede;
-
-//Tritanopia -- no ve rojo
-$primary_tritanopia: #f77075;
-$primary_70p_tritanopia: #e26569;
-
-$secondary_tritanopia: #456262;
-
-$gray_30p_tritanopia: #d9e2e2;
-
-//Deuteranopia -- mas amarillo
-$primary_deuteranopia: #dfe55f;
-$primary_70p_deuteranopia: #d0d658;
-
-$secondary_deuteranopia: #4f4d62;
-
-$gray_30p_deuteranopia: #dbdbe3;
-
-
-@mixin skill_card_mixin ($pri_70:$primary_70p, $pri:$primary, $second:$secondary, $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient) {
-    background-color: $gray_bg;
-    .skill_figure {
-      background-color: $pri;
-    }
-    .skill_section {
-      background-color: $second;
-    }
-    .skill_a {
-    background-color: $pri_70;
-    }
-}
-
-//-- cardExample mismo que link de card-example
-
-//paso las variantes para los diferentes casos de color
-.card_skill {
-  &.all {
-    @include skill_card_mixin();
-  }
-  &.acromatopsia {
-    @include skill_card_mixin($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll);
-    .filterColor_img{
-      filter: grayscale(100%);
-    }
-  }
-  &.deuteranopia {
-    @include skill_card_mixin($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia);
-    .filterColor_img {
-      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
-              hue-rotate(-20deg)
-              opacity(0.8)
-              drop-shadow(0 0 2px #000000);
-    }
-  }
-  &.tritanopia {
-    @include skill_card_mixin($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
-    .filterColor_img {
-      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
-              hue-rotate(90deg)
-              opacity(0.8)
-              drop-shadow(0 0 2px #000000);
-    }
-  }
-}
-
 // styles de la card
 .card_skill {
   //
@@ -108,7 +29,6 @@ $gray_30p_deuteranopia: #dbdbe3;
   .skill_section {
     height: 100%;
     width: 100%;
-    // background-color: $secondary;
     border-radius: 12px;
     padding: 14px;
     position: relative;
@@ -122,13 +42,11 @@ $gray_30p_deuteranopia: #dbdbe3;
     box-shadow: inset -4px -4px 10px 1px #3131317b;
     width: 80px;
     display: block;
-    // background-color: $primary_70p;
     position: absolute;
     right: 10px;
     top: 10px;
     p, a {
       font-weight: 800;
-      background-color: $backgroundPage;
       color: transparent;
       text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
       -webkit-background-clip: text;

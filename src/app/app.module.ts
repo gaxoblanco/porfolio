@@ -37,6 +37,7 @@ import { CardExampleComponent } from './components/card-example/card-example.com
 import { BlindnessComponent } from './components/blindness/blindness.component';
 import { WorkComponent } from './components/work/work.component';
 import { ThreeWindowComponent } from './components/three-window/three-window.component';
+import { ColorStateService } from './color-state.service';
 
 
 @NgModule({
@@ -83,7 +84,7 @@ import { ThreeWindowComponent } from './components/three-window/three-window.com
     BrowserAnimationsModule
   ],
   providers: [
- //   {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
+    ColorStateService
   ],
   bootstrap: [AppComponent]
 })

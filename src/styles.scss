@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(./styles/reset.scss);
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+/*mixin */
+@import "./styles/mixin/head-mixin.scss";
+@import "./styles/mixin/about-mixin.scss";
+@import "./styles/mixin/card-mixin.scss";
+@import "./styles/mixin/skill-mixin.scss";
+
+/* Animaton */
+@import "./styles/animation/head-animation.scss";
+@import "./styles/animation/card-animation.scss";
+
+/* Media */
+@import "./styles/media/head-media.scss";
 
 /*falta importar bien boostrap
 @import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -32,7 +45,6 @@ h4 {
   font-size: 1.8rem;
 }
 label{
- // color: black;
   font-size: 1.8rem;
 }
 app-head{
@@ -135,3 +147,4 @@ app-head{
     margin: 0;
   }
 }
+

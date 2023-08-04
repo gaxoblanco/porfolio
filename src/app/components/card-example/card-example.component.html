@@ -2,7 +2,7 @@
   <div class="cardExample all {{colorState}}">
     <div class="cardExample_container">
       <figure class="cardExample_figure">
-        <img class="cardExample_img" src={{cardObj.img}} class="cardExample_img" alt={{cardObj.title}} *ngIf="!cardObj.three"/>
+        <img class="cardExample_img" [src]="cardObj.img ? cardObj.img : imgLoad" class="cardExample_img" alt={{cardObj.title}} *ngIf="!cardObj.three"/>
         <app-three-window [cardThree]="cardObj.three" class="cardExample_img" *ngIf="cardObj.three"></app-three-window>
       </figure>
       <section class="cardExample_link_container">
