@@ -53,7 +53,6 @@
       <section class="header_navigation-explorer">
         <button aria-label="open modal filter" (click)="filterOpen()" (click)="filterEst()" *ngIf="!searching">
           <!-- <div class="navigation_icon icon_search" [class.open]="filterState"></div> -->
-
           <div [class]="PrintRuta.nombre === 'Home' ? 'navigation_icon icon_pencil' : 'navigation_icon icon_search'" [class.open]="filterState"></div>
         </button>
         <button aria-label="cancel filter" (click)="cancelSearching()" *ngIf="searching">
