@@ -23,23 +23,23 @@
             <ul>
               <li *ngIf="PrintRuta.nombre !== 'Home'"
                 class="background_green background_green-options">
-                  <a href="/home" (click)="killOpenClass()"><p class="p">Home</p></a>
+                  <a routerLink="/home" (click)="killOpenClass()"><p class="p">Home</p></a>
               </li>
               <li *ngIf="PrintRuta.nombre !== 'Study'"
                 class="background_green background_green-options">
-                  <a href="/study" (click)="killOpenClass()"><p class="p">Study</p></a>
+                  <a routerLink="/study" (click)="killOpenClass()"><p class="p">Study</p></a>
               </li>
               <li *ngIf="PrintRuta.nombre !== 'Works'"
                 class="background_green background_green-options">
-                  <a href="/work" (click)="killOpenClass()"><p class="p">Works</p></a>
+                  <a routerLink="/work" (click)="killOpenClass()"><p class="p">Works</p></a>
               </li>
               <li *ngIf="PrintRuta.nombre !== 'Skill'"
                 class="background_green background_green-options">
-                  <a href="/skill" (click)="killOpenClass()"><p class="p">Skills</p></a>
+                  <a routerLink="/skill" (click)="killOpenClass()"><p class="p">Skills</p></a>
               </li>
               <li *ngIf="PrintRuta.nombre !== 'About'"
                 class="background_green background_green-options">
-                  <a href="/about" (click)="killOpenClass()"><p class="p">About</p></a>
+                  <a routerLink="/about" (click)="killOpenClass()"><p class="p">About</p></a>
               </li>
             </ul>
           </nav>

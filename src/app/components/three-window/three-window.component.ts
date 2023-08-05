@@ -164,7 +164,6 @@ export class ThreeWindowComponent {
       (gltf) => {
         const model = gltf.scene; // El modelo cargado
         this.scene.add(model); // Agregar el modelo a la escena
-        console.log('Modelo cargado correctamente:', gltf);
         // Ajustar posición y escala del modelo para que ocupe el espacio total de la cámara
 
         this.fitToCamera(model, this.camera);
@@ -173,7 +172,6 @@ export class ThreeWindowComponent {
       },
       (xhr) => {
         // Progreso de la carga (opcional)
-        console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
       },
       (error) => {
         // Manejo de errores en caso de que falle la carga (opcional)

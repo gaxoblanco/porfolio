@@ -1,4 +1,3 @@
-
 //usamos la misma distribucion que: card_color_mixin
 @mixin header_color_mixin(
       $pri_70:$primary_70p, $pri:$primary,
@@ -8,7 +7,7 @@
   background-color:$secondBlack;
   .header-title {
     background-color: $downText;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    text-shadow: 2px 2px 3px $gray_40;
     transition: background-color 0.2s ease;
   }
   .header-title:hover{
@@ -50,12 +49,20 @@
       }
     }
   }
+  .submenu-option {
+    border-bottom: solid 2px $gray_40;
+  }
+  .submenu-option:hover {
+    p {
+      background-color: $pri_70;
+    }
+  }
   .header_container {
-    background: $gray_bg;
+    background: $gray_30p;
     @media (max-width: 1200px) {
-      border-bottom: solid 8px $secondBlack;
+      border-bottom: solid 8px $background_color;
       .header_text-container {
-        border-bottom: solid 8px $secondBlack;
+        border-bottom: solid 8px $background_color;
       }
     }
     @media (max-width: 720px) {
@@ -72,6 +79,7 @@
     }
   }
 }
+/* end mixin */
 
 .header{
   &.all {
@@ -86,4 +94,5 @@
   &.tritanopia {
     @include header_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $background_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
   }
+
 }

@@ -37,7 +37,6 @@ export class AboutComponent implements OnInit {
         //   .subscribe(data =>{
         //   this.est = data;
         // })
-        console.log(dataBase[7]);
         this.aboutList = dataBase[1].data;
         this.about1 = this.aboutList.slice(0 , 1)
       } catch (error) {

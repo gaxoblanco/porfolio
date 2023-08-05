@@ -7,12 +7,16 @@
 @import "./styles/mixin/card-mixin.scss";
 @import "./styles/mixin/skill-mixin.scss";
 
+/* Media */
+@import "./styles/media/head-media.scss";
+
+/* Components */
+@import "./styles/components/atom/head-icon.scss";
+@import "./styles/components/organism/head-organism.scss";
+
 /* Animaton */
 @import "./styles/animation/head-animation.scss";
 @import "./styles/animation/card-animation.scss";
-
-/* Media */
-@import "./styles/media/head-media.scss";
 
 /*falta importar bien boostrap
 @import 'node_modules/bootstrap/dist/css/bootstrap.min.css';

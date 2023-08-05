@@ -33,6 +33,9 @@ export class HeadComponent implements OnInit {
     nombre: 'Loading...',
     descripcion: 'Starting the server, wait a few minutes',
   }
+
+  nowURL: string = '';
+
   @Input() headerData: Ruta = {};
 
   @ViewChild('searchInput', { static: false }) searchInputRef!: ElementRef;
@@ -61,7 +64,6 @@ export class HeadComponent implements OnInit {
       } catch (error) {
         console.error(error);
       }
-      console.log(this.router.url);
 
     }, 400);
 
@@ -69,16 +71,32 @@ export class HeadComponent implements OnInit {
     this.colorStateService.colorSubject.subscribe((color: string) => {
       this.colorState = color;
     });
+
+    // Suscripción al evento NavigationEnd
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.nowURL = this.actual._futureSnapshot._routerState.url
+        this.array();
+      }
+    });
   }
 
   //--- Filtramos la ruta actual del menu de navegacion
-  array(){
-  //guardamos el valor de actiRout - url y lo filtramos con el array de routSer
-  const rutaFiltrada = this.PRutas.filter((r : Ruta) =>
-    r.ruta === this.actual._routerState.snapshot.url);
-  // Iteramos para guardar el resultado en el objeto
-  this.PrintRuta = rutaFiltrada[0];
+  array() {
+    if (this.actual && this.PRutas && this.PRutas.length > 0) {
+      const rutaFiltrada = this.PRutas.find((r: Ruta) => r.ruta === this.nowURL);
+      if (rutaFiltrada) {
+        this.PrintRuta = rutaFiltrada;
+      } else {
+        this.PrintRuta = {
+          ruta: '',
+          nombre: 'Not Found',
+          descripcion: 'The route was not found in the PRutas array.',
+        };
+      }
+    }
   }
+
 
 
   //---animations

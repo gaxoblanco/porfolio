@@ -73,7 +73,6 @@ export class EstudioCardComponent implements OnInit {
     }
     if(StudyInformation.ini == new Date){
       StudyInformation.ini = this.estudio.ini
-      console.log(StudyInformation.ini)
     }
     if(StudyInformation.fin == new Date){
       StudyInformation.fin = this.estudio.fin

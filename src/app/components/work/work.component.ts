@@ -47,12 +47,10 @@ constructor(
 ) {}
 
   ngOnInit(): void {
-    console.log("first exp -",this.exp);
     setTimeout(() => {
       try {
         this.originalExp = dataBase[3].data; // Guardar una copia del array
         this.exp = dataBase[3].data;
-        console.log("second exp -",this.exp);
       } catch (error) {
         console.error(error);
       }
@@ -71,7 +69,6 @@ constructor(
             const title = item.title.toLowerCase();
             // const pp = item.pp ? item.pp.toLowerCase() : '';
             const tags = item.tags ? item.tags.join(' ').toLowerCase() : '';
-            console.log("three exp -",this.exp);
             // Comprobar si el valor de búsqueda coincide con el título, la descripción o las etiquetas
             return title.includes(searchValue) || tags.includes(searchValue);
           });
@@ -79,10 +76,8 @@ constructor(
         } else {
           // Si el valor de búsqueda está vacío, mostrar todos los elementos
           this.exp = this.originalExp;
-          console.log("threeII exp -",this.exp);
         }
       });
-      console.log("forth exp -",this.exp);
   }
   ngOnDestroy(): void {
     this.searchValueSubscription.unsubscribe();

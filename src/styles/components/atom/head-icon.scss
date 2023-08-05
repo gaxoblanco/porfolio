@@ -1,0 +1,89 @@
+//--- icon hover
+$icon-border-radius: 2px;
+$icon-background: none;
+
+//--- root icons
+.header{
+  .header-title {
+    .Study {
+      background-image: url("../../../assets/icons/root/study.svg");
+    }
+    .Study:hover {
+      background-image: url("../../../assets/icons/root/study_hover.svg");
+    }
+  }
+}
+//--- social icons
+.icon_git,
+.icon_in,
+.icon_mail {
+  border-radius: $icon-border-radius;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+}
+
+.icon_git {
+  background-image: url("../../../assets/icons/git.svg");
+}
+.icon_git:hover {
+  background-image: url("../../../assets/icons/git_hover.svg");
+}
+
+.icon_in {
+  background-image: url("../../../assets/icons/link.svg");
+}
+.icon_in:hover {
+  background-image: url("../../../assets/icons/link_hover.svg");
+}
+
+.icon_mail {
+  background-image: url("../../../assets/icons/correo.svg");
+}
+.icon_mail:hover {
+  background-image: url("../../../assets/icons/correo_hover.svg");
+}
+
+//--- navigation icons
+.navigation_icon {
+  margin: 0 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.icon_menu {
+  background-image: url("../../../assets/icons/menu.svg");
+  width: 24px;
+  height: 24px;
+}
+.icon_menu:hover {
+  background-image: url("../../../assets/icons/menu_hover.svg");
+}
+//para mostrar el button activo en movile
+.icon_menu.open {
+  background-image: url("../../../assets/icons/menu_hover.svg");
+}
+
+.icon_search {
+  background-image: url("../../../assets/icons/search.svg");
+  width: 30px;
+  height: 30px;
+}
+.icon_search:hover, .icon_search.open {
+  background-image: url("../../../assets/icons/search_hover.svg");
+}
+.icon_cancel_search {
+  background-image: url("../../../assets/icons/cancel.svg");
+  width: 30px;
+  height: 30px;
+}
+
+.icon_pencil {
+  background-image: url("../../../assets/icons/pencil.svg");
+  width: 30px;
+  height: 30px;
+}
+.icon_pencil:hover, .icon_search.open {
+  background-image: url("../../../assets/icons/pencil_hover.svg");
+}
