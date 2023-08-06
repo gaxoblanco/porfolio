@@ -5,24 +5,30 @@ import {HomeComponent} from './components/home/home.component';
 import { WorkComponent } from './components/work/work.component';
 import { SkillListComponent } from './components/skill-list/skill-list.component';
 import { EstudioComponent } from './components/estudio/estudio.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
-import { PostComponent } from './components/post/post.component';
-import { EmailsComponent } from './components/emails/emails.component';
 import { PDFComponent } from './components/pdf/pdf.component';
-import { ExperienceComponent } from './components/experience/experience.component';
+
 const routes: Routes = [
-  {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'home',component:HomeComponent},
-  {path:'login',component:IniciarSesionComponent},
-  {path: 'work', component:WorkComponent},
-  {path: 'skill', component:SkillListComponent},
-  {path: 'study', component:EstudioComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'post', component: PostComponent},
-  {path: 'email', component: EmailsComponent},
-  {path: 'GastonBlanco', component: PDFComponent},
+  // {path:'',redirectTo:'home',pathMatch:'full'},
+  // {path:'home',
+  //   component:HomeComponent,
+  //   loadChildren: () => import('./components/home/home.component').then(m => m.HomeComponent)},
+  // {path: 'work', component:WorkComponent,
+  //   loadChildren: () => import('./components/work/work.component').then(m => m.WorkComponent)},
+  // {path: 'skill', component:SkillListComponent,
+  // loadChildren: () => import('./components/skill-list/skill-list.component').then(m => m.SkillListComponent)},
+  // {path: 'study', component:EstudioComponent,
+  // loadChildren: () => import('./components/estudio/estudio.component').then(m => m.EstudioComponent)},
+  // {path: 'about', component: AboutComponent,
+  // loadChildren: () => import('./components/about/about.component').then(m => m.AboutComponent)},
+
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', loadChildren: () => import('./module/home/home.module').then(m => m.HomeModule) },
+  { path: 'work', loadChildren: () => import('./module/work/work.module').then(m => m.WorkModule) },
+  { path: 'skill', loadChildren: () => import('./module/skill/skill.module').then(m => m.SkillModule) },
+  { path: 'study', loadChildren: () => import('./module/estudio/estudio.module').then(m => m.EstudioModule) },
+  { path: 'about', loadChildren: () => import('./module/about/about.module').then(m => m.AboutModule) },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

@@ -1,13 +1,5 @@
 .header{
-//--- first section
-  .header_container {
-    .header-title {
-      @media (max-width: 720px) {
-        justify-content: center;
-        margin-top: 0px;
-      }
-    }
-  }
+
 //--- second section
   .header_navigation-container {
 
@@ -25,8 +17,10 @@
 
 //--- root icons
 .header{
-  .header-title {
-    // root icons media
+  //--- first section
+  .header_container {
+    .header-title {
+      // root icons media
     @media (max-width: 1200px) {
       min-width: auto;
       width: 100%;
@@ -35,6 +29,11 @@
       .img_title {
         min-width: auto;
         width: 160px;
+      }
+    }
+      @media (max-width: 720px) {
+        justify-content: center;
+        margin-top: 0px;
       }
     }
   }
