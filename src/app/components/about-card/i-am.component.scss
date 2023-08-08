@@ -250,3 +250,25 @@
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 460px) {
+  .section_link {
+    .link_container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .section_program-row {
+    height: 190px;
+    .program_container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .section_language{
+    .language_container{
+      justify-content: space-between;
+      padding: 24px;
+    }
+    .liJapanese {
+      display: none;
+    }
+  }
+}

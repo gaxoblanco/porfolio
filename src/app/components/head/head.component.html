@@ -6,9 +6,9 @@
       <section class="header_text-area"><div class="header_truncate-container"><p>{{PrintRuta.descripcion}}</p></div></section>
     </div>
     <section class="header_social-container">
-      <a aria-label="github de gaston blanco" href="#"><div class="social_icon icon_git"></div></a>
-      <a aria-label="linkein de gaston blanco" href=""><div class="social_icon icon_in"></div></a>
-      <a aria-label="enviar un correo a gaston blanco" href=""><div class="social_icon icon_mail"></div></a>
+      <a aria-label="github de gaston blanco" href="https://github.com/gaxoblanco" target="_blank"><div class="social_icon icon_git"></div></a>
+      <a aria-label="linkein de gaston blanco" href="https://www.linkedin.com/in/gaxoblanco/" target="_blank"><div class="social_icon icon_in"></div></a>
+      <a aria-label="enviar un correo a gaston blanco" href="mailto:contact@gaxoblanco.com" target="_blank"><div class="social_icon icon_mail"></div></a>
     </section>
  </div>
  <div class="header_navigation-container">
@@ -59,7 +59,7 @@
           <div class="navigation_icon icon_cancel_search"></div>
         </button>
           <input
-            aria-label="search"
+          [attr.aria-label]="searchText ? searchText : 'search'"
             [class.open]="filterState"
             class="inputFilter background_green"
             type="text"

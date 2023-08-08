@@ -25,6 +25,10 @@
       height: auto;
       border-radius: 10px;
     }
+    @media (max-width: 550px) {
+      width: 100%;
+    height: auto;
+    }
   }
   .skill_section {
     height: 100%;
@@ -68,8 +72,13 @@
   @media (max-width: 550px) {
     max-width: auto;
     grid-auto-flow: row;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
-
+  }
+  @media (max-width: 400px) {
+    width: 70%;
+  }
+  @media (max-width: 370px) {
+    width: 80%;
   }
 }

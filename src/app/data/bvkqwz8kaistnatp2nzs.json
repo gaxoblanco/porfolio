@@ -118,7 +118,7 @@
       {
         "id": "10",
         "acess": "1",
-        "descripcion": "Gaston Blanco, I'm an industrial designer, and I'm training to become a web programmer.",
+        "descripcion": "I was passionate about design. I studied industrial design, where I discovered 3D modeling, and started giving life to my ideas. However, I found myself unsure of how to share them with others. That's why I ventured into programming, and now I'm shaping my path as a web3 developer.",
         "nombre": "Home",
         "ruta": "/home",
         "logo": "https://i.imgur.com/c0lBSHZ.png"
@@ -238,13 +238,41 @@
       },
       {
         "id": "44",
+        "descripcion": " It's a development tool for building and showcasing user interface components in isolation. It enables developers to create and view components individually.",
+        "logo": "../assets/skill/storybook.jpg",
+        "nombre": "Storybook",
+        "url": "https://storybook.js.org/"
+      },
+      {
+        "id": "45",
+        "descripcion": "Design tool, used to create user interfaces, interactive prototypes, and engaging experiences. It allows testing user interactions.",
+        "logo": "../assets/skill/figma.jpg",
+        "nombre": "Figma",
+        "url": "https://www.figma.com/"
+      },
+      {
+        "id": "46",
+        "descripcion": "It's a server-side scripting language commonly used for web development. It allows developers to create dynamic and interactive web applications.",
+        "logo": "../assets/skill/php.jpg",
+        "nombre": "PHP",
+        "url": "https://www.php.net/manual/es/index.php"
+      },
+      {
+        "id": "47",
+        "descripcion": "It's a library that abstracts many of the complexities associated with WebGL, allowing the generation of user experiences in a 3D environment.",
+        "logo": "../assets/skill/three.jpg",
+        "nombre": "Threejs",
+        "url": "https://threejs.org/"
+      },
+      {
+        "id": "48",
         "descripcion": "It's a 3D digital sculpting and modeling program. Its powerful sculpting engine allows artists to sculpt intricate details directly on 3D models.",
         "logo": "../assets/skill/zbrush.jpg",
         "nombre": "Zbrush",
         "url": "https://www.maxon.net/en/zbrush"
       },
       {
-        "id": "45",
+        "id": "49",
         "descripcion": "React builds single-page web apps with a structured approach using components, state management, and reusable UI elements.",
         "logo": "/assets/skill/react.jpg",
         "nombre": "React",
@@ -431,7 +459,7 @@
         "pp": "I understood how to connect a backend in PHP with relational databases. Additionally, I learned about the differences between MySQLi and PDO for executing SQL statements and avoiding security issues such as SQL injection.",
         "title": "PHP Database",
         "img": "/assets/study/php/database.jpg",
-        "web": "",
+        "web": "https://platzi.com/p/gaxoblanco/curso/4228-php-sql/diploma/detalle/",
         "tags": ["HTML", "PHP", "HTML", "PHP"]
       },
       {

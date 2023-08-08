@@ -117,6 +117,10 @@ export class HeadComponent implements OnInit {
   killOpenClass() {
     if (this.subMenuRef) {
       this.subMenuRef.nativeElement.classList.remove('open');
+      this.subMenuState = !this.subMenuState;
+      setTimeout(() => {
+        this.navigationDelay = !this.navigationDelay;
+      }, 2000);
     }
   }
 
@@ -140,8 +144,6 @@ export class HeadComponent implements OnInit {
     if (this.searchText && this.searchText.trim() !== '') {
       //envio el valor a search()
       this.searchService.setSearchValue(this.searchText);
-      //limpio el valor de searchText
-      this.searchText = ''
       //quito el .focus del search
       this.searchInputRef.nativeElement.blur();
       //escondo el input
@@ -155,6 +157,10 @@ export class HeadComponent implements OnInit {
   cancelSearching() {
     this.searching = !this.searching;
     this.searchService.setSearchValue('');
+    //limpio el valor de searchText
+    this.searchText = ''
+    //escondo el input
+    this.filterState = false;
   }
 
 }

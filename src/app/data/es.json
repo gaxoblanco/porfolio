@@ -238,13 +238,41 @@
       },
       {
         "id": "44",
+        "descripcion": "Es una herramienta de desarrollo para construir y mostrar componentes de interfaz de usuario de manera aislada. Permite a los desarrolladores crear y visualizar componentes de manera individual, lo que facilita su desarrollo, prueba y documentación.",
+        "logo": "../assets/skill/storybook.jpg",
+        "nombre": "Storybook",
+        "url": "https://storybook.js.org/"
+      },
+      {
+        "id": "45",
+        "descripcion": "Herramienta de diseño, para crear interfaces de usuario, prototipos interactivos y experiencias atractivas. Permite probar interacciones con el usuario",
+        "logo": "../assets/skill/figma.jpg",
+        "nombre": "Figma",
+        "url": "https://www.figma.com/"
+      },
+      {
+        "id": "46",
+        "descripcion": "Es un lenguaje de scripting en el lado del servidor comúnmente utilizado para el desarrollo web. Permite a los desarrolladores crear aplicaciones web dinámicas e interactivas al incrustar código ejecutable dentro de HTML",
+        "logo": "../assets/skill/php.jpg",
+        "nombre": "PHP",
+        "url": "https://www.php.net/manual/es/index.php"
+      },
+      {
+        "id": "47",
+        "descripcion": "Es una librería que abstrae muchas de las complejidades asociadas con WebGL, permitiendo generar experiencias para el usuario en un entorno 3D, llevando la web al siguiente nivel",
+        "logo": "../assets/skill/three.jpg",
+        "nombre": "Threejs",
+        "url": "https://threejs.org/"
+      },
+      {
+        "id": "48",
         "descripcion": "It's a 3D digital sculpting and modeling program. Its powerful sculpting engine allows artists to sculpt intricate details directly on 3D models.",
         "logo": "../assets/skill/zbrush.jpg",
         "nombre": "Zbrush",
         "url": "https://www.maxon.net/en/zbrush"
       },
       {
-        "id": "45",
+        "id": "49",
         "descripcion": "React builds single-page web apps with a structured approach using components, state management, and reusable UI elements.",
         "logo": "/assets/skill/react.jpg",
         "nombre": "React",
