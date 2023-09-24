@@ -475,6 +475,14 @@
         "img": "/assets/study/interfaceDesign.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/1493-course/diploma/detalle/",
         "tags": ["Design", "UX", "Mobile First", "UI"]
+      },
+      {
+        "id": "97",
+        "pp": "Aprendí a configurar SASS en un proyecto básico de HTML y CSS, y a utilizarlo para optimizar mi flujo de trabajo. Además de aprovechar las características que ofrece.",
+        "title": "Sass",
+        "img": "../assets/skill/sass.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/curso/6867-sass/diploma/detalle/",
+        "tags": ["Sass", "CSS", "JavaScript"]
       }
     ]
   },

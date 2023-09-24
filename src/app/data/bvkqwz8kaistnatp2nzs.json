@@ -67,7 +67,7 @@
         "pp": "Messaging service for lawyers, notifying each case resolution in progress. Enhances legal communication and efficiency.",
         "img": "/assets/work/secretarioVirtual.jpg",
         "title": "Secretario Virtual",
-        "web": "https://secretariovirtual-34292.web.app/",
+        "web": "http://secretario.gaxoblanco.com/",
         "tags": ["Angular", "Sass", "PHP"]
       },
       {
@@ -234,7 +234,8 @@
         "descripcion": "It's open-source software for creating and animating 3D graphics, modeling, texturing, rendering, and video editing.",
         "logo": "../assets/skill/blender.jpg",
         "nombre": "Blender",
-        "url": "https://www.blender.org/about/"
+        "url": "https://www.blender.org/about/",
+        "tag": "blender"
       },
       {
         "id": "44",
@@ -286,17 +287,17 @@
     "database": "bvkqwz8kaistnatp2nzs",
     "data": [
       {
-        "id": "20",
+        "id": "18",
         "pp": "It is a training program in languages and programming knowledge, testing, and digital skills to enhance employability in the software and technology sector.",
         "title": "Argentina Programa 4.0",
         "img": "https://i.imgur.com/KroZYpS.jpg",
-        "git": "url:https://github.com/gaxoblanco",
+        "git": "https://colab.research.google.com/drive/1wMUydm_GmuvBiqh5wRv-swIcnbR2cUNm",
         "web": "https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa",
         "institucion": "#YoProgramo - Argentina Programa",
         "tags": ["html", "css", "js", "angular", "SpringBoot"]
       },
       {
-        "id": "22",
+        "id": "19",
         "pp": "As a professional trained at ORT Arg. I have the skills to analyze, design, and manage products and their commercialization. I generate innovation and optimization in processes.",
         "title": "Industrial Design",
         "fin": "2016-11-11",
@@ -304,6 +305,23 @@
         "img": "https://i.imgur.com/OZHjKnd.jpg",
         "web": "https://www.ort.edu.ar/carreras-terciarias/diseno-industrial",
         "tags": ["Design process", "Prototipe", "Maquetado"]
+      },
+      {
+        "id": "20",
+        "pp": "Course where we build a neural network with 1 neuron and then take a larger model and incorporate our neural network, all using TensorFlow.",
+        "title": "Redes Neuronales",
+        "img": "/assets/study/redesNeuronalesTensorflow.jpg",
+        "git": "https://colab.research.google.com/drive/1wMUydm_GmuvBiqh5wRv-swIcnbR2cUNm?usp=sharing",
+        "web": "https://platzi.com/p/gaxoblanco/curso/2565-redes-neuronales-tensorflow/diploma/detalle/",
+        "tags": ["Python", "GoogleColab", "TensorFlow", "Keras"]
+      },
+      {
+        "id": "21",
+        "pp": "I learned concepts like functions, comprehensions, errors, and file handling. Additionally, I created graphs using Matplotlib.",
+        "title": "Python",
+        "img": "/assets/study/python/python.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/curso/4260-python-funciones/diploma/detalle/",
+        "tags": ["Python", "Python", "Python", "Python"]
       },
       {
         "id": "23",
@@ -486,6 +504,22 @@
         "img": "/assets/study/interfaceDesign.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/1493-course/diploma/detalle/",
         "tags": ["Design", "UX", "Mobile First", "UI"]
+      },
+      {
+        "id": "97",
+        "pp": "I learned how to set up SASS in a basic HTML and CSS project, and how to use it to optimize my workflow, in addition to taking advantage of the features it offers.",
+        "title": "Sass",
+        "img": "../assets/skill/sass.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/curso/6867-sass/diploma/detalle/",
+        "tags": ["Sass", "CSS", "JavaScript"]
+      },
+      {
+        "id": "98",
+        "pp": "Through this course, I delved into diverse CSS architecture methodologies, enabling me to achieve enhanced organization of files and styles. I learned to implement these methodologies to optimize project structure and bolster development efficiency.",
+        "title": "Arquitectura CSS",
+        "img": "/assets/study/arquitecturaCSS.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/curso/7991-arquitecturas-css/diploma/detalle/",
+        "tags": ["Sass", "SMACSS", "Bem", "ITCSS"]
       }
     ]
   },
