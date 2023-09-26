@@ -25,13 +25,13 @@
                 class="background_green background_green-options">
                   <a routerLink="/home" (click)="killOpenClass()"><p class="p">Home</p></a>
               </li>
-              <li *ngIf="PrintRuta.nombre !== 'Study'"
-                class="background_green background_green-options">
-                  <a routerLink="/study" (click)="killOpenClass()"><p class="p">Study</p></a>
-              </li>
               <li *ngIf="PrintRuta.nombre !== 'Works'"
                 class="background_green background_green-options">
                   <a routerLink="/work" (click)="killOpenClass()"><p class="p">Works</p></a>
+              </li>
+              <li *ngIf="PrintRuta.nombre !== 'Study'"
+                class="background_green background_green-options">
+                  <a routerLink="/study" (click)="killOpenClass()"><p class="p">Study</p></a>
               </li>
               <li *ngIf="PrintRuta.nombre !== 'Skill'"
                 class="background_green background_green-options">
