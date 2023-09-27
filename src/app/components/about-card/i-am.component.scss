@@ -140,6 +140,7 @@
   width: 100%;
   padding: 16px;
   border-radius: 12px;
+  min-height: 300px;
   .speak_container {
     width: 100%;
     height: 100%;
@@ -242,9 +243,13 @@
     width: 100%;
     height: 100px;
     .language_container {
-      display: flex;
+      display: grid;
       justify-content: space-around;
+      grid-template-columns: 1fr 1fr 1fr;
       padding-top: 22px;
+      .language_entry {
+        padding-left: 10px;
+      }
     }
   }
 }
@@ -267,7 +272,7 @@
   }
   .section_language{
     .language_container{
-      justify-content: space-between;
+      grid-template-columns: 1fr 1fr;
       padding: 24px;
     }
     .liJapanese {
