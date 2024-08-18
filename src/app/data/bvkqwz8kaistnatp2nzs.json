@@ -67,8 +67,34 @@
         "pp": "Messaging service for lawyers, notifying each case resolution in progress. Enhances legal communication and efficiency.",
         "img": "/assets/work/secretarioVirtual.jpg",
         "title": "Secretario Virtual",
-        "web": "http://secretario.gaxoblanco.com/",
+        "web": "https://secretariovirtual.ar/",
         "tags": ["Angular", "Sass", "PHP"]
+      },
+      {
+        "id": "10",
+        "pp": "Project carried out in TDIL. It is a static webpage in which a design template was used to streamline the process.",
+        "img": "/assets/work/meyer.jpg",
+        "title": "Meyer Action",
+        "web": "https://meyeraction.com/es/index.html",
+        "tags": ["HTML", "CSS", "JavaScript"]
+      },
+      {
+        "id": "11",
+        "pp": "Project under construction. Online store made using Vite-React with TailwindCSS and Ts. I invite you to check the git and the demo that I update every week.",
+        "img": "/assets/work/nubiStore.jpg",
+        "title": "Nubi Store",
+        "git": "https://github.com/gaxoblanco/NubiDev",
+        "web": "https://nubi-dev.vercel.app/",
+        "tags": ["React", "Tailwind", "TypeScript", "Vite"]
+      },
+      {
+        "id": "15",
+        "pp": "This is a construction company that aimed to establish an online presence and showcase the services it provides, along with a contact channel.",
+        "img": "/assets/work/divad.jpg",
+        "title": "DIVAD S.A",
+        "git": "https://github.com/gaxoblanco/divad/tree/main",
+        "web": "https://entitled-ramp.000webhostapp.com/",
+        "tags": ["HTML", "CSS", "JavaScript"]
       },
       {
         "id": "10",
@@ -83,7 +109,7 @@
         "pp": "Design of a cup inspired by the character Pochita from the anime Chainsaw Man. An original prototype was created for molding and subsequent ceramic production.",
         "three": ["ChainsawManCup.glb", true, 1],
         "title": "ChainsawMan Cup",
-        "web": "https://",
+        "web": "https://www.behance.net/gaston-blanco",
         "tags": ["Blender", "Substance Painter", "3D printer"]
       },
       {
@@ -95,7 +121,7 @@
         "tags": ["Zbrush", "Substance Painter", "Blender"]
       },
       {
-        "id": "83",
+        "id": "13",
         "pp": "A customer-focused 3D design and printing service that emerged during the pandemic. The website was wireframed using Figma, ensuring a personalized experience.",
         "three": ["2mas1.glb", false, 2],
         "tags": ["Enprendimiento", "Impresion 3D", "Diseño"],
@@ -291,10 +317,10 @@
         "pp": "It is a training program in languages and programming knowledge, testing, and digital skills to enhance employability in the software and technology sector.",
         "title": "Argentina Programa 4.0",
         "img": "https://i.imgur.com/KroZYpS.jpg",
-        "git": "https://colab.research.google.com/drive/1wMUydm_GmuvBiqh5wRv-swIcnbR2cUNm",
+        "git": "https://github.com/gaxoblanco/porfolio",
         "web": "https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa",
         "institucion": "#YoProgramo - Argentina Programa",
-        "tags": ["html", "css", "js", "angular", "SpringBoot"]
+        "tags": ["HTML", "CSS", "JS", "angular", "SpringBoot"]
       },
       {
         "id": "19",
@@ -308,12 +334,65 @@
       },
       {
         "id": "20",
-        "pp": "Course where we build a neural network with 1 neuron and then take a larger model and incorporate our neural network, all using TensorFlow.",
-        "title": "Redes Neuronales",
-        "img": "/assets/study/redesNeuronalesTensorflow.jpg",
-        "git": "https://colab.research.google.com/drive/1wMUydm_GmuvBiqh5wRv-swIcnbR2cUNm?usp=sharing",
-        "web": "https://platzi.com/p/gaxoblanco/curso/2565-redes-neuronales-tensorflow/diploma/detalle/",
-        "tags": ["Python", "GoogleColab", "TensorFlow", "Keras"]
+        "pp": "Complete learning path to become a Frontend web developer. I learned semantic HTML, CSS for animations, SASS for styling architecture, and JavaScript for page logic.",
+        "title": "HTML y CSS a Profundidad",
+        "img": "/assets/study/htmlCSSprofundidad.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/learning-path/7040-web-frontend/diploma/detalle/",
+        "tags": ["HTML", "CSS", "SASS", "JavaScript"]
+      },
+      {
+        "id": "21",
+        "pp": "I learned how to set up SASS in a basic HTML and CSS project, and how to use it to optimize my workflow, in addition to taking advantage of the features it offers.",
+        "title": "Sass",
+        "img": "../assets/skill/sass.jpg",
+        "web": "https://platzi.com/p/gaxoblanco/curso/6867-sass/diploma/detalle/",
+        "tags": ["Sass", "CSS", "JavaScript"]
+      },
+      {
+        "id": "83",
+        "pp": "The URLs allow us to access the different views that a website has, as well as organizing our site better. In this course, I practiced the use of React Router.",
+        "title": "React Router",
+        "img": "/assets/study/react/reactNavigationRouter.jpg",
+        "git": "https://github.com/gaxoblanco/reactNeomorfismo",
+        "web": "https://platzi.com/p/gaxoblanco/curso/3468-course/diploma/detalle/",
+        "tags": ["React", "UI", "UX"]
+      },
+      {
+        "id": "85",
+        "pp": "In this course, I learned how to create independent or compound states, imperative or declarative, with functions or classes, using useState or useReducer, and identify the best tools for each use case.",
+        "title": "React State",
+        "img": "/assets/study/react/reactState.jpg",
+        "git": "https://github.com/gaxoblanco/reactNeomorfismo",
+        "web": "https://platzi.com/p/gaxoblanco/curso/2597-course/diploma/detalle/",
+        "tags": ["React", "UI", "UX"]
+      },
+
+      {
+        "id": "90",
+        "pp": "I learned to configure your animation sequences and micro-interactions using the animation and keyframes properties. Explore the best practices of implementing (or not) animations in your applications.",
+        "title": "CSS Animation",
+        "img": "/assets/study/animationCSS.jpg",
+        "git": "https://github.com/gaxoblanco/AnimacionesCSS",
+        "web": "https://platzi.com/p/gaxoblanco/curso/2337-course/diploma/detalle/",
+        "tags": ["HTML", "CSS", "HTML", "CSS"]
+      },
+      {
+        "id": "95",
+        "pp": "I learned to understand the architecture of components, design tokens, testing, and plugins to ensure the quality of the project. Additionally, I learned how to transform a design system in CSS and JavaScript code.",
+        "title": "StoryBook",
+        "img": "/assets/study/storyBookP.jpg",
+        "git": "https://github.com/gaxoblanco/storyBookOrganism/tree/master",
+        "web": "https://platzi.com/p/gaxoblanco/curso/6175-course/diploma/detalle/",
+        "tags": ["StoryBook", "CSS", "JavaScript", "UI"]
+      },
+      {
+        "id": "99",
+        "pp": "I learned about the different types of Jupyter Notebooks, and also implemented Anaconda to work on each project in its respective virtual environment",
+        "title": "Jupyter Notebook",
+        "img": "/assets/study/python/jupyterNotbook.jpg",
+        "git": "https://github.com/gaxoblanco/RL_algorithm",
+        "web": "https://platzi.com/p/gaxoblanco/curso/2434-jupyter-notebook/diploma/detalle/",
+        "tags": ["Python", "Jupyter Notebook", "Anaconda"]
       },
       {
         "id": "21",
@@ -390,15 +469,6 @@
         "tags": ["React", "UI", "UX"]
       },
       {
-        "id": "83",
-        "pp": "The URLs allow us to access the different views that a website has, as well as organizing our site better. In this course, I practiced the use of React Router.",
-        "title": "React Router",
-        "img": "/assets/study/react/reactNavigationRouter.jpg",
-        "git": "https://github.com/gaxoblanco/reactNeomorfismo",
-        "web": "https://platzi.com/p/gaxoblanco/curso/3468-course/diploma/detalle/",
-        "tags": ["React", "UI", "UX"]
-      },
-      {
         "id": "84",
         "pp": "A course on the key concepts of state machines, learning when to use them and what their benefits are. Understand what XState is and what its functionalities are to improve my workflow.",
         "title": "React Machines",
@@ -407,18 +477,9 @@
         "tags": ["React", "UI", "UX"]
       },
       {
-        "id": "85",
-        "pp": "In this course, I learned how to create independent or compound states, imperative or declarative, with functions or classes, using useState or useReducer, and identify the best tools for each use case.",
-        "title": "React State",
-        "img": "/assets/study/react/reactState.jpg",
-        "git": "https://github.com/gaxoblanco/reactNeomorfismo",
-        "web": "https://platzi.com/p/gaxoblanco/curso/2597-course/diploma/detalle/",
-        "tags": ["React", "UI", "UX"]
-      },
-      {
         "id": "86",
-        "pp": "I learned how to share information between components using render props, high-order components, and React Hooks. Additionally, I learned the principles of design, component composition, and state placement in React.js to scale my web applications.",
-        "title": "React Render and Composition",
+        "pp": "I learned in react, how to share information between components using render props, high-order components, and React Hooks. Additionally, I learned the principles of design, component composition, and state placement in React.js",
+        "title": "Render & Composition",
         "img": "/assets/study/react/reactRenderComposicion.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/2457-course/diploma/detalle/",
         "tags": ["React", "UI", "UX"]
@@ -446,15 +507,6 @@
         "img": "/assets/study/accesibilidadWeb.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/1802-course/diploma/detalle/",
         "tags": ["HTML", "CSS", "JavaScript", "Resposive Design", "UX"]
-      },
-      {
-        "id": "90",
-        "pp": "I learned to configure your animation sequences and micro-interactions using the animation and keyframes properties. Explore the best practices of implementing (or not) animations in your applications.",
-        "title": "CSS Animation",
-        "img": "/assets/study/animationCSS.jpg",
-        "git": "https://github.com/gaxoblanco/AnimacionesCSS",
-        "web": "https://platzi.com/p/gaxoblanco/curso/2337-course/diploma/detalle/",
-        "tags": ["HTML", "CSS", "HTML", "CSS"]
       },
       {
         "id": "91",
@@ -489,15 +541,6 @@
         "tags": ["HTML", "CSS", "HTML", "CSS"]
       },
       {
-        "id": "95",
-        "pp": "I learned to understand the architecture of components, design tokens, testing, and plugins to ensure the quality of the project. Additionally, I learned how to transform a design system in CSS and JavaScript code.",
-        "title": "StoryBook",
-        "img": "/assets/study/storyBookP.jpg",
-        "git": "https://github.com/gaxoblanco/storyBookOrganism/tree/master",
-        "web": "https://platzi.com/p/gaxoblanco/curso/6175-course/diploma/detalle/",
-        "tags": ["StoryBook", "CSS", "JavaScript", "UI"]
-      },
-      {
         "id": "96",
         "pp": "Amazing digital experiences start with in-depth research and a clear interaction flow. I learned to design attractive and functional interfaces for users.",
         "title": "Interface Design",
@@ -507,11 +550,12 @@
       },
       {
         "id": "97",
-        "pp": "I learned how to set up SASS in a basic HTML and CSS project, and how to use it to optimize my workflow, in addition to taking advantage of the features it offers.",
-        "title": "Sass",
-        "img": "../assets/skill/sass.jpg",
-        "web": "https://platzi.com/p/gaxoblanco/curso/6867-sass/diploma/detalle/",
-        "tags": ["Sass", "CSS", "JavaScript"]
+        "pp": "Course where we build a neural network with 1 neuron and then take a larger model and incorporate our neural network, all using TensorFlow.",
+        "title": "Neural Networks",
+        "img": "/assets/study/redesNeuronalesTensorflow.jpg",
+        "git": "https://colab.research.google.com/drive/1wMUydm_GmuvBiqh5wRv-swIcnbR2cUNm?usp=sharing",
+        "web": "https://platzi.com/p/gaxoblanco/curso/2565-redes-neuronales-tensorflow/diploma/detalle/",
+        "tags": ["Python", "GoogleColab", "TensorFlow", "Keras"]
       },
       {
         "id": "98",

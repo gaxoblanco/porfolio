@@ -67,7 +67,7 @@
         "pp": "Messaging service for lawyers, notifying each case resolution in progress. Enhances legal communication and efficiency.",
         "img": "/assets/work/secretarioVirtual.jpg",
         "title": "Secretario Virtual",
-        "web": "https://secretariovirtual-34292.web.app/",
+        "web": "https://secretariovirtual.ar/",
         "tags": ["Angular", "Sass", "PHP"]
       },
       {
@@ -83,7 +83,7 @@
         "pp": "Design of a cup inspired by the character Pochita from the anime Chainsaw Man. An original prototype was created for molding and subsequent ceramic production.",
         "three": ["ChainsawManCup.glb", true, 1],
         "title": "ChainsawMan Cup",
-        "web": "https://",
+        "web": "https://www.behance.net/gaston-blanco",
         "tags": ["Blender", "Substance Painter", "3D printer"]
       },
       {
@@ -290,7 +290,7 @@
         "pp": "It is a training program in languages and programming knowledge, testing, and digital skills to enhance employability in the software and technology sector.",
         "title": "Argentina Programa 4.0",
         "img": "https://i.imgur.com/KroZYpS.jpg",
-        "git": "url:https://github.com/gaxoblanco",
+        "git": "https://github.com/gaxoblanco/porfolio",
         "web": "https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa",
         "institucion": "#YoProgramo - Argentina Programa",
         "tags": ["html", "css", "js", "angular", "SpringBoot"]

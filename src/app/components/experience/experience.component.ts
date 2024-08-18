@@ -31,7 +31,7 @@ export class ExperienceComponent implements OnInit {
   //arrya fiultrado
   filteredEst: any[] = [];
 
-  est: any = [this.loading, this.loading, this.loading, this.loading];
+  est: any = [this.loading, this.loading, this.loading, this.loading, this.loading, this.loading];
   estudioready: boolean = true;
 
   constructor(

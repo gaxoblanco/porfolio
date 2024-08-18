@@ -226,8 +226,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+    .section_link {
+      height: auto;
+    }
     .link_container {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       padding-left: 24px;
     }
   }
@@ -258,10 +261,11 @@
     grid-template-columns: 1fr;
   }
 }
-@media (max-width: 460px) {
+@media (max-width: 500px) {
   .section_link {
     .link_container {
       grid-template-columns: 1fr 1fr;
+      gap: 18px;
     }
   }
   .section_program-row {

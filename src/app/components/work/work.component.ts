@@ -37,7 +37,7 @@ export class WorkComponent {
   //arrya fiultrado
   filteredExp: any[] = [];
 
-  exp: any = [this.loading, this.loading, this.loading, this.loading];
+  exp: any = [this.loading, this.loading, this.loading, this.loading, this.loading, this.loading];
   experienceready: boolean = true;
 
 
