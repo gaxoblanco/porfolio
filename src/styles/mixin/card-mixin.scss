@@ -1,5 +1,3 @@
-
-
 $primary: #FBA31B;
 $primary_70p: #E38521;
 $gray_30p: #ccd1d7;
@@ -8,6 +6,8 @@ $secondary: #354c4f;
 
 $backgroundPage: #141e1d;
 
+$figma_background: #bd2abd;
+
 /*Acromatopsia -- ningun color */
 $primary_notAll: #a1a1a1;
 $primary_70p_notAll: #a1a1a1;
@@ -15,6 +15,7 @@ $primary_70p_notAll: #a1a1a1;
 $secondary_notAll: #a1a1a1;
 
 $gray_30p_notAll: #dedede;
+$figma_background_notAll: #a1a1a1;
 
 /* Tritanopia -- no ve rojo */
 $primary_tritanopia: #f77075;
@@ -23,6 +24,8 @@ $primary_70p_tritanopia: #e26569;
 $secondary_tritanopia: #456262;
 
 $gray_30p_tritanopia: #d9e2e2;
+$figma_background_tritanopia: #c32cc3; // se mantiene el color
+
 
 /* Deuteranopia -- mas amarillo */
 $primary_deuteranopia: #dfe55f;
@@ -31,6 +34,7 @@ $primary_70p_deuteranopia: #d0d658;
 $secondary_deuteranopia: #4f4d62;
 
 $gray_30p_deuteranopia: #dbdbe3;
+$figma_background_deuteranopia: #b9b92c;
 
 
 @mixin button_mixin() {
@@ -40,11 +44,12 @@ $gray_30p_deuteranopia: #dbdbe3;
   border-radius: 14px;
   box-shadow: inset -4px -4px 10px 1px #3131317b;
 
-  p, a {
+  p,
+  a {
     font-weight: 800;
     background-color: $backgroundPage;
     color: transparent;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
@@ -52,7 +57,9 @@ $gray_30p_deuteranopia: #dbdbe3;
 
   &:hover {
     box-shadow: inset -4px -4px 10px 1px #31313129;
-    p, a {
+
+    p,
+    a {
       text-shadow: 2px 2px 3px rgba(130, 130, 130, 0.5);
     }
   }
@@ -60,29 +67,52 @@ $gray_30p_deuteranopia: #dbdbe3;
 
 
 /*esta pensado los colores para que lo implemente .cardExample */
-@mixin card_color_mixin($pri_70:$primary_70p, $pri:$primary, $second:$secondary, $gray_bg:$gray_30p, $gray_gradient:$gray_30p_gradient) {
-  background-color: $gray_bg; /*$gray_30p */
+@mixin card_color_mixin($pri_70: $primary_70p, $pri: $primary, $second: $secondary, $gray_bg: $gray_30p, $gray_gradient: $gray_30p_gradient, $figma_bg: $figma_background) {
+  background-color: $gray_bg;
+  /*$gray_30p */
   background-image: linear-gradient(160deg, $gray_bg 0%, $gray_gradient 100%);
+
   .cardExample_figure {
-    background-color: $pri; /*$primary_70p*/
+    background-color: $pri;
+    /*$primary_70p*/
   }
+
   .cardExample_info_container {
-    background-color: $second; /*$secondary*/
+    background-color: $second;
+    /*$secondary*/
   }
-  .cardExample_more_info{
-    background-color: $second; /*$secondary*/
+
+  .cardExample_more_info {
+    background-color: $second;
+    /*$secondary*/
   }
+
   .cardExample_figure {
-    background-color: $pri; /*$primary*/
+    background-color: $pri;
+    /*$primary*/
   }
+
   .cardExample_info_container {
-    background-color: $second; /*$secondary*/
+    background-color: $second;
+    /*$secondary*/
   }
+
   .cardExample_link.git {
     background-color: #9099a6;
   }
+
   .cardExample_link.web {
-    background-color: $pri;/*$primary*/
+    background-color: $pri;
+    /*$primary*/
+  }
+
+  .cardExample_link.figma {
+    background-color: $figma_bg;
+
+    p {
+      color: #e0e0e0;
+      text-shadow: 2px 2px 3px rgba(12, 12, 12, 0.5);
+    }
   }
 }
 
@@ -90,28 +120,28 @@ $gray_30p_deuteranopia: #dbdbe3;
   &.all {
     @include card_color_mixin ();
   }
+
   &.acromatopsia {
-    @include card_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll);
-    .cardExample_img{
+    @include card_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll, $figma_background_notAll);
+
+    .cardExample_img {
       filter: grayscale(100%);
     }
   }
+
   &.deuteranopia {
-    @include card_color_mixin ($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia);
+    @include card_color_mixin ($primary_deuteranopia, $primary_70p_deuteranopia, $secondary_deuteranopia, $gray_30p_deuteranopia, $gray_30p_deuteranopia, $figma_background_deuteranopia);
+
     .cardExample_img {
-      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
-              hue-rotate(-20deg)
-              opacity(0.8)
-              drop-shadow(0 0 2px #000000);
+      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9) hue-rotate(-20deg) opacity(0.8) drop-shadow(0 0 2px #000000);
     }
   }
+
   &.tritanopia {
-    @include card_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia);
+    @include card_color_mixin ($primary_tritanopia, $primary_70p_tritanopia, $secondary_tritanopia, $gray_30p_tritanopia, $gray_30p_tritanopia, $figma_background_tritanopia);
+
     .cardExample_img {
-      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9)
-              hue-rotate(90deg)
-              opacity(0.8)
-              drop-shadow(0 0 2px #000000);
+      filter: saturate(0) contrast(0.9) brightness(1.1) sepia(0.1) grayscale(0.9) hue-rotate(90deg) opacity(0.8) drop-shadow(0 0 2px #000000);
     }
   }
 }
@@ -121,23 +151,12 @@ $gray_30p_deuteranopia: #dbdbe3;
   .cardExample_link.git {
     @include button_mixin();
   }
+
   .cardExample_link.web {
     @include button_mixin();
   }
+
+  .cardExample_link.figma {
+    @include button_mixin();
+  }
 }
-
-// /* Define la animación con @keyframes */
-// @keyframes slideIn {
-//   from {
-//     margin-top: 700px;
-//   }
-//   to {
-//     margin-top: 0;
-//   }
-// }
-
-// /* Aplica la animación a la clase .container_card */
-// .container_card {
-//   margin-top: 700px; /* Establece el valor inicial */
-//   animation: slideIn 2s ease-in-out; /* Nombre de la animación, duración y función de temporización */
-// }

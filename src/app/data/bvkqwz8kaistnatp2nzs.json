@@ -55,6 +55,23 @@
     "database": "bvkqwz8kaistnatp2nzs",
     "data": [
       {
+        "id": "5",
+        "pp": "I developed a web app that generates playlists from images using OCR. The backend processes images, extracts text, and matches it with music services to create playlists automatically.",
+        "img": "/assets/work/lineup.jpg",
+        "title": "Lineup - PlayList Generator",
+        "web": "https://lineup.gaxoblanco.com/",
+        "tags": ["Angular", "OCR", "Python", "Docker"]
+      },
+      {
+        "id": "7",
+        "pp": "Logic project: The aim was to create a database by cross-referencing information and using a series of scripts. AI was employed to translate from Dutch to English.",
+        "img": "/assets/work/sponsor.jpg",
+        "title": "Sponsors - Data Base",
+        "web": "http://sponsor.gaxoblanco.com",
+        "git": "https://github.com/gaxoblanco/register-sponsor",
+        "tags": ["Python", "Huggingface", "Python", "IA"]
+      },
+      {
         "id": "8",
         "pp": "I created this website while working for TDIL. The website is developed in Drupal and uses StoryBook. My responsibility was web layout and building the StoryBook, taking charge of that area.",
         "img": "/assets/work/b-nutrition.jpg",
@@ -68,6 +85,7 @@
         "img": "/assets/work/secretarioVirtual.jpg",
         "title": "Secretario Virtual",
         "web": "https://secretariovirtual.ar/",
+        "git": "https://github.com/gaxoblanco/SecretarioVirtual",
         "tags": ["Angular", "Sass", "PHP"]
       },
       {
@@ -221,6 +239,13 @@
     "database": "bvkqwz8kaistnatp2nzs",
     "data": [
       {
+        "id": "16",
+        "descripcion": "A versatile language used for web development, automation, data analysis, and AI. Known for its readability and extensive libraries.",
+        "logo": "../assets/skill/python.jpg",
+        "nombre": "Python",
+        "url": "https://www.python.org/"
+      },
+      {
         "id": "17",
         "descripcion": "It's used to build single-page web applications and provides a structured approach to development using components, services, and other concepts.",
         "logo": "../assets/skill/angular.jpg",
@@ -247,6 +272,13 @@
         "logo": "../assets/skill/sass.jpg",
         "nombre": "Sass",
         "url": "https://sass-lang.com/"
+      },
+      {
+        "id": "29",
+        "descripcion": "A platform that simplifies application deployment using containers, ensuring consistency and scalability across environments.",
+        "logo": "../assets/skill/docker.jpg",
+        "nombre": "Docker",
+        "url": "https://www.docker.com/"
       },
       {
         "id": "42",
