@@ -1,3 +1,22 @@
+/*
+ * Sistema de mixins para tarjetas de proyecto
+ *
+ * Este sistema permite:
+ * 1. Mantener consistencia visual entre componentes
+ * 2. Soportar diferentes modos de visualización (como varia la pagina alguien con acromatopsia, deuteranopia, tritanopia)
+ * 3. Añadir nuevos elementos fácilmente
+ * 4. Evitar código duplicado
+ */
+/*
+ * Mixin system for project cards
+ *
+ * This system allows:
+ * 1. Maintain visual consistency between components
+ * 2. Support different display modes (how the page varies for someone with achromatopsia, deuteranopia, tritanopia)
+ * 3. Add new elements easily
+ * 4. Avoid duplicate code
+ */
+
 $primary: #FBA31B;
 $primary_70p: #E38521;
 $gray_30p: #ccd1d7;
@@ -37,6 +56,9 @@ $gray_30p_deuteranopia: #dbdbe3;
 $figma_background_deuteranopia: #b9b92c;
 
 
+/*
+ * button_mixin: Aplica estilos base para botones. Con una simple classe alcanza
+ */
 @mixin button_mixin() {
   width: 100%;
   text-align: center;
@@ -65,8 +87,11 @@ $figma_background_deuteranopia: #b9b92c;
   }
 }
 
-
-/*esta pensado los colores para que lo implemente .cardExample */
+/*
+ * card_color_mixin acepta parámetros para personalizar colores
+ * Esto permite reutilizar la misma estructura con diferentes esquemas de color
+ * Último parámetro añadido: $figma_bg para soportar enlaces a Figma
+ */
 @mixin card_color_mixin($pri_70: $primary_70p, $pri: $primary, $second: $secondary, $gray_bg: $gray_30p, $gray_gradient: $gray_30p_gradient, $figma_bg: $figma_background) {
   background-color: $gray_bg;
   /*$gray_30p */
@@ -106,6 +131,7 @@ $figma_background_deuteranopia: #b9b92c;
     /*$primary*/
   }
 
+  // Nuevo button
   .cardExample_link.figma {
     background-color: $figma_bg;
 
@@ -116,7 +142,18 @@ $figma_background_deuteranopia: #b9b92c;
   }
 }
 
+/*
+ * Implementación de estilos para diferentes modos de visualización
+ *
+ * Esta sección aplica los mixins con los colores apropiados para cada modo:
+ * - all: Visión normal con colores estándar
+ * - acromatopsia: Simulación de visión sin color (blanco y negro)
+ * - deuteranopia: Simulación de dificultad para distinguir rojo/verde
+ * - tritanopia: Simulación de dificultad para distinguir azul/amarillo
+ */
 .cardExample {
+
+  /* Modo normal - usa los colores predeterminados */
   &.all {
     @include card_color_mixin ();
   }
@@ -124,6 +161,7 @@ $figma_background_deuteranopia: #b9b92c;
   &.acromatopsia {
     @include card_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll, $figma_background_notAll);
 
+    /* Aplicamos filtro a las imágenes */
     .cardExample_img {
       filter: grayscale(100%);
     }
@@ -146,7 +184,10 @@ $figma_background_deuteranopia: #b9b92c;
   }
 }
 
-//-- cardExample link
+/*
+ * Agrego los styles generales para los botones
+ * Esto permite mantener la consistencia visual entre los botones y tener un mixing mas limpio
+*/
 .cardExample_link_container {
   .cardExample_link.git {
     @include button_mixin();

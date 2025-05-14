@@ -55,7 +55,7 @@
     "database": "bvkqwz8kaistnatp2nzs",
     "data": [
       {
-        "id": "5",
+        "id": "3",
         "pp": "I developed a web app that generates playlists from images using OCR. The backend processes images, extracts text, and matches it with music services to create playlists automatically.",
         "img": "/assets/work/lineup.jpg",
         "title": "Lineup - PlayList Generator",
@@ -63,16 +63,16 @@
         "tags": ["Angular", "OCR", "Python", "Docker"]
       },
       {
-        "id": "7",
+        "id": "4",
         "pp": "Logic project: The aim was to create a database by cross-referencing information and using a series of scripts. AI was employed to translate from Dutch to English.",
         "img": "/assets/work/sponsor.jpg",
         "title": "Sponsors - Data Base",
-        "web": "http://sponsor.gaxoblanco.com",
+        "web": "https://gaxoblanco.com/sponsor",
         "git": "https://github.com/gaxoblanco/register-sponsor",
         "tags": ["Python", "Huggingface", "Python", "IA"]
       },
       {
-        "id": "8",
+        "id": "5",
         "pp": "I created this website while working for TDIL. The website is developed in Drupal and uses StoryBook. My responsibility was web layout and building the StoryBook, taking charge of that area.",
         "img": "/assets/work/b-nutrition.jpg",
         "title": "Bnutrition",
@@ -80,7 +80,7 @@
         "tags": ["Drupal9", "Storybook", "Sass", "JS"]
       },
       {
-        "id": "9",
+        "id": "6",
         "pp": "Messaging service for lawyers, notifying each case resolution in progress. Enhances legal communication and efficiency.",
         "img": "/assets/work/secretarioVirtual.jpg",
         "title": "Secretario Virtual",
@@ -89,7 +89,7 @@
         "tags": ["Angular", "Sass", "PHP"]
       },
       {
-        "id": "10",
+        "id": "7",
         "pp": "Project carried out in TDIL. It is a static webpage in which a design template was used to streamline the process.",
         "img": "/assets/work/meyer.jpg",
         "title": "Meyer Action",
@@ -97,7 +97,7 @@
         "tags": ["HTML", "CSS", "JavaScript"]
       },
       {
-        "id": "11",
+        "id": "8",
         "pp": "Project under construction. Online store made using Vite-React with TailwindCSS and Ts. I invite you to check the git and the demo that I update every week.",
         "img": "/assets/work/nubiStore.jpg",
         "title": "Nubi Store",
@@ -106,7 +106,7 @@
         "tags": ["React", "Tailwind", "TypeScript", "Vite"]
       },
       {
-        "id": "15",
+        "id": "9",
         "pp": "This is a construction company that aimed to establish an online presence and showcase the services it provides, along with a contact channel.",
         "img": "/assets/work/divad.jpg",
         "title": "DIVAD S.A",
@@ -144,7 +144,7 @@
         "three": ["2mas1.glb", false, 2],
         "tags": ["Enprendimiento", "Impresion 3D", "Diseño"],
         "title": "2+1Disegno",
-        "web": "https://www.figma.com/proto/Ee0DoeVWHbFVyyYy2QZ9N7/2%2B1Disegno?node-id=1-2&starting-point-node-id=4%3A290"
+        "figma": "https://www.figma.com/proto/Ee0DoeVWHbFVyyYy2QZ9N7/2%2B1Disegno?node-id=1-2&starting-point-node-id=4%3A290"
       }
     ]
   },
