@@ -25,7 +25,7 @@ $secondary: #354c4f;
 
 $backgroundPage: #141e1d;
 
-$figma_background: #bd2abd;
+$figma_background: #a02abd;
 
 /*Acromatopsia -- ningun color */
 $primary_notAll: #a1a1a1;
@@ -43,7 +43,7 @@ $primary_70p_tritanopia: #e26569;
 $secondary_tritanopia: #456262;
 
 $gray_30p_tritanopia: #d9e2e2;
-$figma_background_tritanopia: #c32cc3; // se mantiene el color
+$figma_background_tritanopia: #c32c7f; // se mantiene el color
 
 
 /* Deuteranopia -- mas amarillo */
@@ -137,7 +137,7 @@ $figma_background_deuteranopia: #b9b92c;
 
     p {
       color: #e0e0e0;
-      text-shadow: 2px 2px 3px rgba(12, 12, 12, 0.5);
+      text-shadow: none;
     }
   }
 }
