@@ -55,6 +55,15 @@
     "database": "bvkqwz8kaistnatp2nzs",
     "data": [
       {
+        "id": "2",
+        "pp": "Redesign of Flextech's website. The goal was to improve the user experience and navigation. Figma was used for design, and PHP was used for development and email sending.",
+        "img": "/assets/work/flextech.jpg",
+        "title": "Flextech web site",
+        "web": "https://www.flextech.com.ar/",
+        "figma": "https://www.figma.com/design/0V8gyY8p1RgJonnNBJy3D1/Flex-Tech?node-id=1-2&p=f&t=OGDBeGIWjGWmv3vY-0",
+        "tags": ["Figma", "HTML", "css", "PHP"]
+      },
+      {
         "id": "3",
         "pp": "I developed a web app that generates playlists from images using OCR. The backend processes images, extracts text, and matches it with music services to create playlists automatically.",
         "img": "/assets/work/lineup.jpg",
@@ -115,6 +124,14 @@
         "tags": ["HTML", "CSS", "JavaScript"]
       },
       {
+        "id": "13",
+        "pp": "A customer-focused 3D design and printing service that emerged during the pandemic. The website was wireframed using Figma, ensuring a personalized experience.",
+        "three": ["2mas1.glb", false, 2],
+        "tags": ["Enprendimiento", "Impresion 3D", "Diseño"],
+        "title": "2+1Disegno",
+        "figma": "https://www.figma.com/proto/Ee0DoeVWHbFVyyYy2QZ9N7/2%2B1Disegno?node-id=1-2&starting-point-node-id=4%3A290"
+      },
+      {
         "id": "10",
         "pp": "This 3D printable design was created for a grow shop, with the main requirements being the support for both fan sizes sold in the store and adaptability to their two grow tent models.",
         "three": ["Scooler.glb", true, 100],
@@ -137,14 +154,6 @@
         "title": "Holou",
         "web": "https://www.behance.net/gallery/120027887/Holou-No-Game-No-Life",
         "tags": ["Zbrush", "Substance Painter", "Blender"]
-      },
-      {
-        "id": "13",
-        "pp": "A customer-focused 3D design and printing service that emerged during the pandemic. The website was wireframed using Figma, ensuring a personalized experience.",
-        "three": ["2mas1.glb", false, 2],
-        "tags": ["Enprendimiento", "Impresion 3D", "Diseño"],
-        "title": "2+1Disegno",
-        "figma": "https://www.figma.com/proto/Ee0DoeVWHbFVyyYy2QZ9N7/2%2B1Disegno?node-id=1-2&starting-point-node-id=4%3A290"
       }
     ]
   },
@@ -367,7 +376,7 @@
       {
         "id": "20",
         "pp": "Complete learning path to become a Frontend web developer. I learned semantic HTML, CSS for animations, SASS for styling architecture, and JavaScript for page logic.",
-        "title": "HTML y CSS a Profundidad",
+        "title": "HTML y CSS in depth",
         "img": "/assets/study/htmlCSSprofundidad.jpg",
         "web": "https://platzi.com/p/gaxoblanco/learning-path/7040-web-frontend/diploma/detalle/",
         "tags": ["HTML", "CSS", "SASS", "JavaScript"]
@@ -445,7 +454,7 @@
       {
         "id": "46",
         "pp": "Course on all functions to manipulate arrays professionally, understanding when the array is mutated or cloned, with examples of use.",
-        "title": "Manipulación de Arrays",
+        "title": "Arrays Manipulation",
         "img": "https://i.imgur.com/FT8Pqp0.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/2461-course/diploma/detalle/",
         "tags": ["JavaScript", "JavaScript", "JavaScript"]
@@ -453,7 +462,7 @@
       {
         "id": "47",
         "pp": "Course where I learned about lists, trees, and graphs, as well as their differences, to create more efficient code.",
-        "title": "Estructuras de Datos JS",
+        "title": "JS Data Structures",
         "img": "https://i.imgur.com/6CiS8g4.jpg",
         "web": "https://platzi.com/p/gaxoblanco/curso/2156-course/diploma/detalle/",
         "tags": ["JavaScript", "Estructura de Datos", "TypeScript"]
