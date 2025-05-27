@@ -22,39 +22,38 @@ $primary_70p: #E38521;
 $gray_30p: #ccd1d7;
 $gray_30p_gradient: #e2e8ee;
 $secondary: #354c4f;
-
 $backgroundPage: #141e1d;
+$figma_background: #198acd;
 
-$figma_background: #a02abd;
+// ===== ACROMATOPSIA (Monocromatismo - Solo grises) =====
+$primary_achromatopsia: #a8a8a8;
+$primary_70p_achromatopsia: #898989;
+$secondary_achromatopsia: #484848;
+$gray_30p_achromatopsia: #cfcfcf;
+$figma_background_achromatopsia: #6b6b6b;
 
-/*Acromatopsia -- ningun color */
-$primary_notAll: #a1a1a1;
-$primary_70p_notAll: #a1a1a1;
+// ===== PROTANOPIA (No ve ROJO) =====
+// Tritanopia es "no ve azul"
+$primary_protanopia: #B8A31B;
+$primary_70p_protanopia: #A18521;
+$secondary_protanopia: #35504f;
+$gray_30p_protanopia: #ccd1d7;
+$figma_background_protanopia: #5a8acd;
 
-$secondary_notAll: #a1a1a1;
+// ===== DEUTERANOPIA (No ve VERDE) =====
+$primary_deuteranopia: #FB8A1B;
+$primary_70p_deuteranopia: #E36C21;
+$secondary_deuteranopia: #354c4f;
+$gray_30p_deuteranopia: #ccd1d7;
+$figma_background_deuteranopia: #4f8acd;
 
-$gray_30p_notAll: #dedede;
-$figma_background_notAll: #a1a1a1;
-
-/* Tritanopia -- no ve rojo */
-$primary_tritanopia: #f77075;
-$primary_70p_tritanopia: #e26569;
-
-$secondary_tritanopia: #456262;
-
-$gray_30p_tritanopia: #d9e2e2;
-$figma_background_tritanopia: #c32c7f; // se mantiene el color
-
-
-/* Deuteranopia -- mas amarillo */
-$primary_deuteranopia: #dfe55f;
-$primary_70p_deuteranopia: #d0d658;
-
-$secondary_deuteranopia: #4f4d62;
-
-$gray_30p_deuteranopia: #dbdbe3;
-$figma_background_deuteranopia: #b9b92c;
-
+// ===== TRITANOPIA (No ve AZUL) =====
+// Tritanopia = sin azul
+$primary_tritanopia: #FBA350;
+$primary_70p_tritanopia: #E38556;
+$secondary_tritanopia: #354c3a;
+$gray_30p_tritanopia: #ccd1c2;
+$figma_background_tritanopia: #198a5f;
 
 /*
  * button_mixin: Aplica estilos base para botones. Con una simple classe alcanza
@@ -135,10 +134,6 @@ $figma_background_deuteranopia: #b9b92c;
   .cardExample_link.figma {
     background-color: $figma_bg;
 
-    p {
-      color: #e0e0e0;
-      text-shadow: none;
-    }
   }
 }
 
@@ -159,7 +154,7 @@ $figma_background_deuteranopia: #b9b92c;
   }
 
   &.acromatopsia {
-    @include card_color_mixin ($primary_notAll, $primary_70p_notAll, $secondary_notAll, $gray_30p_notAll, $gray_30p_notAll, $figma_background_notAll);
+    @include card_color_mixin ($primary_achromatopsia, $primary_70p_achromatopsia, $secondary_achromatopsia, $gray_30p_achromatopsia, $gray_30p_achromatopsia, $figma_background_achromatopsia);
 
     /* Aplicamos filtro a las imágenes */
     .cardExample_img {
