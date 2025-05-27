@@ -407,7 +407,15 @@
         "web": "https://platzi.com/p/gaxoblanco/curso/2597-course/diploma/detalle/",
         "tags": ["React", "UI", "UX"]
       },
-
+      {
+        "id": "86",
+        "pp": "",
+        "title": "",
+        "img": "/assets/study/animationCSS.jpg",
+        "git": "https://github.com/gaxoblanco/AnimacionesCSS",
+        "web": "https://platzi.com/p/gaxoblanco/curso/2337-course/diploma/detalle/",
+        "tags": ["sofware", "sofware", "sofware"]
+      },
       {
         "id": "90",
         "pp": "I learned to configure your animation sequences and micro-interactions using the animation and keyframes properties. Explore the best practices of implementing (or not) animations in your applications.",
